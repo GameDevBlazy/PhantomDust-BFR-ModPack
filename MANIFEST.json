@@ -1,12 +1,13 @@
 {
  "name": "BFR mod pack",
- "version": "1.42.4",
+ "version": "1.42.5",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "d2d952716ba6a7e7c6665d7e79d1aca76c44a01405ede63da74a9eb1402be734",
-  "launcher/CwoLoader.dll": "b4464723911b5edab3e18343cc3e727a3999f6da1df1820f2876f30730fae41b",
+  "launcher/CwoLaunch.exe": "f2bf8c39fe9d7d4011eb62946c9cac858aaf8d6fbbe3c09cf51cd213315d9931",
+  "launcher/CwoLoader.dll": "95082d4b43d7a9af66f3bac33dca374a1ed8e3135ed384b183179b94c7720e47",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
+  "data/CwoOutfitNames.txt": "4e1dff48bc3be52ade6875d16cf408bcd9b621575fde73eca24d816571f9d995",
   "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "08667873df66895beef48eeeeb032340419c4682215ab67fa3a1b9950fcfeb12",
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "2709d74ee9b59c1ccd02f38fe6293988753f9990f1672676512258eb67da5ad8",
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "e94d2bc3e2722488efbf409912be2f943e046a8d0d849f57d135af76e75117bc",
@@ -14,12 +15,13 @@
   "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "ec95f00d9b2b5aeecf4a004eccfadf98e97a6733e466ad6ff4eba770e0ee8915",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "4092b09e30d1457fbd7d844eb5da0be65cc13726ae31148a0ac7d20e7eb569ae",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
+  "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "ec3a5152de823bef9b1f1c1702c8aa6d4387ecf84b08fb49a07ce85ac72b3047",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
   "install_bfr.ps1": "05bfbbaff5692e2f87bc3ece642e3b84df782bd278e5368cd9aa508586670064",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "3c2ac3fba600c30638b48add825f6e2f3eacd42d0ecff9a961c4cf56c2ef2ac5"
+  "README.md": "4902896016ff53bbbda6c73c71c387f95a4228614892c9ad2b073aae2065ede7"
  },
  "patches": [
   {
@@ -77,6 +79,14 @@
    "our_bytes": 0,
    "copied_from_your_file": 1005,
    "carries": "Single Play's first opponent: the practice dummy"
+  },
+  {
+   "file": "Assets/Data/Menu/livecharasel_en.ssb",
+   "clean_sha256": "5339439242a1c25de818c7cfd45bacaeb7452600e44cca0038b925e483de5fdc",
+   "result_sha256": "8e37e68430d837464afe9cf311e0aa29ec908e9322651e726ce3e3338765b09c",
+   "our_bytes": 46,
+   "copied_from_your_file": 1327,
+   "carries": "Xbox Live COLORS: the outfit names"
   },
   {
    "file": "Assets/Data/Menu/livestagesel_en.ssb",

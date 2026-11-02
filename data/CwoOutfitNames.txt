@@ -1,0 +1,309 @@
+# outfit names (stem, outfit from 0, name)
+pc00a 4 OG Phantom Dust
+pc00a 5 Fire
+pc00a 6 Ice
+pc00a 7 Shadow
+pc00a 8 Royal gold
+pc00a 9 Toxic
+pc00a 10 Crimson
+pc00a 11 Ocean
+pc00a 12 Urban camo
+pc00a 13 Neon circuit
+pc00a 14 Spectral ghost
+pc01a 4 OG Phantom Dust
+pc01a 5 Fire
+pc01a 6 Ice
+pc01a 7 Shadow
+pc01a 8 Royal gold
+pc01a 9 Toxic
+pc01a 10 Crimson
+pc01a 11 Ocean
+pc01a 12 Urban camo
+pc01a 13 Neon circuit
+pc01a 14 Spectral ghost
+pc02a 4 OG Phantom Dust
+pc02a 5 Fire
+pc02a 6 Ice
+pc02a 7 Shadow
+pc02a 8 Royal gold
+pc02a 9 Toxic
+pc02a 10 Crimson
+pc02a 11 Ocean
+pc02a 12 Urban camo
+pc02a 13 Neon circuit
+pc02a 14 Spectral ghost
+pc03a 4 OG Phantom Dust
+pc03a 5 Fire
+pc03a 6 Ice
+pc03a 7 Shadow
+pc03a 8 Royal gold
+pc03a 9 Toxic
+pc03a 10 Crimson
+pc03a 11 Ocean
+pc03a 12 Urban camo
+pc03a 13 Neon circuit
+pc03a 14 Spectral ghost
+pc04a 4 OG Phantom Dust
+pc04a 5 Fire
+pc04a 6 Ice
+pc04a 7 Shadow
+pc04a 8 Royal gold
+pc04a 9 Toxic
+pc04a 10 Crimson
+pc04a 11 Ocean
+pc04a 12 Urban camo
+pc04a 13 Neon circuit
+pc04a 14 Spectral ghost
+pc05a 4 OG Phantom Dust
+pc05a 5 Fire
+pc05a 6 Ice
+pc05a 7 Shadow
+pc05a 8 Royal gold
+pc05a 9 Toxic
+pc05a 10 Crimson
+pc05a 11 Ocean
+pc05a 12 Urban camo
+pc05a 13 Neon circuit
+pc05a 14 Spectral ghost
+pc06a 4 OG Phantom Dust
+pc06a 5 Fire
+pc06a 6 Ice
+pc06a 7 Shadow
+pc06a 8 Royal gold
+pc06a 9 Toxic
+pc06a 10 Crimson
+pc06a 11 Ocean
+pc06a 12 Urban camo
+pc06a 13 Neon circuit
+pc06a 14 Spectral ghost
+pc07a 4 OG Phantom Dust
+pc07a 5 Fire
+pc07a 6 Ice
+pc07a 7 Shadow
+pc07a 8 Royal gold
+pc07a 9 Toxic
+pc07a 10 Crimson
+pc07a 11 Ocean
+pc07a 12 Urban camo
+pc07a 13 Neon circuit
+pc07a 14 Spectral ghost
+pc08a 4 OG Phantom Dust
+pc08a 5 Fire
+pc08a 6 Ice
+pc08a 7 Shadow
+pc08a 8 Royal gold
+pc08a 9 Toxic
+pc08a 10 Crimson
+pc08a 11 Ocean
+pc08a 12 Urban camo
+pc08a 13 Neon circuit
+pc08a 14 Spectral ghost
+pc09a 4 OG Phantom Dust
+pc09a 5 Fire
+pc09a 6 Ice
+pc09a 7 Shadow
+pc09a 8 Royal gold
+pc09a 9 Toxic
+pc09a 10 Crimson
+pc09a 11 Ocean
+pc09a 12 Urban camo
+pc09a 13 Neon circuit
+pc09a 14 Spectral ghost
+pc10a 4 OG Phantom Dust
+pc10a 5 Fire
+pc10a 6 Ice
+pc10a 7 Shadow
+pc10a 8 Royal gold
+pc10a 9 Toxic
+pc10a 10 Crimson
+pc10a 11 Ocean
+pc10a 12 Urban camo
+pc10a 13 Neon circuit
+pc10a 14 Spectral ghost
+pc11a 4 Fire
+pc11a 5 Ice
+pc11a 6 Shadow
+pc11a 7 Royal gold
+pc11a 8 Toxic
+pc11a 9 Crimson
+pc11a 10 Ocean
+pc11a 11 Urban camo
+pc11a 12 Neon circuit
+pc11a 13 Spectral ghost
+pc11a 14 Ivory
+enm00a 4 Fire
+enm00a 5 Ice
+enm00a 6 Shadow
+enm00a 7 Royal gold
+enm00a 8 Toxic
+enm00a 9 Crimson
+enm00a 10 Ocean
+enm00a 11 Urban camo
+enm00a 12 Neon circuit
+enm00a 13 Spectral ghost
+enm00a 14 Ivory
+enm01a 4 Fire
+enm01a 5 Ice
+enm01a 6 Shadow
+enm01a 7 Royal gold
+enm01a 8 Toxic
+enm01a 9 Crimson
+enm01a 10 Ocean
+enm01a 11 Urban camo
+enm01a 12 Neon circuit
+enm01a 13 Spectral ghost
+enm01a 14 Ivory
+enm02a 4 Fire
+enm02a 5 Ice
+enm02a 6 Shadow
+enm02a 7 Royal gold
+enm02a 8 Toxic
+enm02a 9 Crimson
+enm02a 10 Ocean
+enm02a 11 Urban camo
+enm02a 12 Neon circuit
+enm02a 13 Spectral ghost
+enm02a 14 Ivory
+enm03a 4 Fire
+enm03a 5 Ice
+enm03a 6 Shadow
+enm03a 7 Royal gold
+enm03a 8 Toxic
+enm03a 9 Crimson
+enm03a 10 Ocean
+enm03a 11 Urban camo
+enm03a 12 Neon circuit
+enm03a 13 Spectral ghost
+enm03a 14 Ivory
+enm04a 4 Fire
+enm04a 5 Ice
+enm04a 6 Shadow
+enm04a 7 Royal gold
+enm04a 8 Toxic
+enm04a 9 Crimson
+enm04a 10 Ocean
+enm04a 11 Urban camo
+enm04a 12 Neon circuit
+enm04a 13 Spectral ghost
+enm04a 14 Ivory
+enm05a 4 Fire
+enm05a 5 Ice
+enm05a 6 Shadow
+enm05a 7 Royal gold
+enm05a 8 Toxic
+enm05a 9 Crimson
+enm05a 10 Ocean
+enm05a 11 Urban camo
+enm05a 12 Neon circuit
+enm05a 13 Spectral ghost
+enm05a 14 Ivory
+enm06a 4 Fire
+enm06a 5 Ice
+enm06a 6 Shadow
+enm06a 7 Royal gold
+enm06a 8 Toxic
+enm06a 9 Crimson
+enm06a 10 Ocean
+enm06a 11 Urban camo
+enm06a 12 Neon circuit
+enm06a 13 Spectral ghost
+enm06a 14 Ivory
+enm07a 4 Fire
+enm07a 5 Ice
+enm07a 6 Shadow
+enm07a 7 Royal gold
+enm07a 8 Toxic
+enm07a 9 Crimson
+enm07a 10 Ocean
+enm07a 11 Urban camo
+enm07a 12 Neon circuit
+enm07a 13 Spectral ghost
+enm07a 14 Ivory
+enm08a 4 Fire
+enm08a 5 Ice
+enm08a 6 Shadow
+enm08a 7 Royal gold
+enm08a 8 Toxic
+enm08a 9 Crimson
+enm08a 10 Ocean
+enm08a 11 Urban camo
+enm08a 12 Neon circuit
+enm08a 13 Spectral ghost
+enm08a 14 Ivory
+enm09a 4 Fire
+enm09a 5 Ice
+enm09a 6 Shadow
+enm09a 7 Royal gold
+enm09a 8 Toxic
+enm09a 9 Crimson
+enm09a 10 Ocean
+enm09a 11 Urban camo
+enm09a 12 Neon circuit
+enm09a 13 Spectral ghost
+enm09a 14 Ivory
+enm10a 4 Fire
+enm10a 5 Ice
+enm10a 6 Shadow
+enm10a 7 Royal gold
+enm10a 8 Toxic
+enm10a 9 Crimson
+enm10a 10 Ocean
+enm10a 11 Urban camo
+enm10a 12 Neon circuit
+enm10a 13 Spectral ghost
+enm10a 14 Ivory
+enm11a 4 Fire
+enm11a 5 Ice
+enm11a 6 Shadow
+enm11a 7 Royal gold
+enm11a 8 Toxic
+enm11a 9 Crimson
+enm11a 10 Ocean
+enm11a 11 Urban camo
+enm11a 12 Neon circuit
+enm11a 13 Spectral ghost
+enm11a 14 Ivory
+enm12a 4 Fire
+enm12a 5 Ice
+enm12a 6 Shadow
+enm12a 7 Royal gold
+enm12a 8 Toxic
+enm12a 9 Crimson
+enm12a 10 Ocean
+enm12a 11 Urban camo
+enm12a 12 Neon circuit
+enm12a 13 Spectral ghost
+enm12a 14 Ivory
+enm13a 4 Fire
+enm13a 5 Ice
+enm13a 6 Shadow
+enm13a 7 Royal gold
+enm13a 8 Toxic
+enm13a 9 Crimson
+enm13a 10 Ocean
+enm13a 11 Urban camo
+enm13a 12 Neon circuit
+enm13a 13 Spectral ghost
+enm13a 14 Ivory
+enm14a 4 Fire
+enm14a 5 Ice
+enm14a 6 Shadow
+enm14a 7 Royal gold
+enm14a 8 Toxic
+enm14a 9 Crimson
+enm14a 10 Ocean
+enm14a 11 Urban camo
+enm14a 12 Neon circuit
+enm14a 13 Spectral ghost
+enm14a 14 Ivory
+enm15a 4 Fire
+enm15a 5 Ice
+enm15a 6 Shadow
+enm15a 7 Royal gold
+enm15a 8 Toxic
+enm15a 9 Crimson
+enm15a 10 Ocean
+enm15a 11 Urban camo
+enm15a 12 Neon circuit
+enm15a 13 Spectral ghost
+enm15a 14 Ivory

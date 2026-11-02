@@ -1,4 +1,4 @@
-# BFR mod pack 1.42.4
+# BFR mod pack 1.42.5
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -19,6 +19,8 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **Split screen**: Edit Arsenal, Change Rule with the Create a Mode modes, game type, the stage shown behind the level
   list.
 - **Bigger skill table and stage memory**, Download Battle choices (stage, characters, arsenal).
+- **15 outfits** for every playable and enemy fighter: the 5th is the OG outfit, then colour themes (built from your
+  own game files the first time one is picked).
 - **Edgar's Dream** (offline): Create a Stage, Create a Mode, Spectator, Create an Outfit (skin tone, head accessory,
   jacket and pants colours, with a turning preview).
 
