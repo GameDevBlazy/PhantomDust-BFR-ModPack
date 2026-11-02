@@ -1,0 +1,5 @@
+# select portraits per outfit (build_select_outfits.py): atlas w h cell_w cell_h columns; image menu-slot textures sprites texture sprite hash0 hash1 first-player-sprite
+#atlas	2040	1056	136	96	15
+#stems	pc00a	pc01a	pc02a	pc03a	pc04a	pc05a	pc06a	pc07a	pc08a	pc09a	pc10a
+#image	0	6	76	5	75	3352552575	128388800	21
+#image	3	14	96	13	95	2417648050	622080000	38

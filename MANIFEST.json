@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.42.16",
+ "version": "1.43.0",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "0419c1976e61aa00dfcd514221bab45117146e18d397049cada7fede36a4eb08",
-  "launcher/CwoLoader.dll": "fa47dc7e207c74338325897ba9092919eb2c86a04f17282590ccf3be746a3279",
+  "launcher/CwoLaunch.exe": "f523a4930c40e4b5fdbd8699e526eec1dc5af427e140cdc88655e3617094453d",
+  "launcher/CwoLoader.dll": "374bcb96c2ea2c79451329df4e6c941cad9a5ffbdcfb71948c2639bc1fcec673",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoOutfitNames.txt": "3c9b8b4067b3ef11c63cf9eb4b7353fceb72c9cba29987948ba5e8d42bd36c97",
@@ -12,10 +12,12 @@
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "2709d74ee9b59c1ccd02f38fe6293988753f9990f1672676512258eb67da5ad8",
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "fd95a23ca09bf5f7ff098570978035fbcfe8fc00bdc237b730059c70b34d37e5",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "e7bd8cf5c3ad62f3963e5fd15d47e68172b1378a4eec4d7d84cc08a7637a8835",
-  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "604f88abd36eaf6f22ac2c574d1a27214a631d2e4767083eab6ef5ea49b3b0a1",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "919ea80aefa93e7c20f83654f90a2098e3f928cc8d35b894177de2d516e3b41f",
+  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "f60151f067f165a2a61e0d01edd9ea0692cf4239100581fb7ee352137299dfc0",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
-  "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "ec3a5152de823bef9b1f1c1702c8aa6d4387ecf84b08fb49a07ce85ac72b3047",
+  "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "a5d31ad737ad8ac3cbfd4616140f666528c1695a505299774266349c8e9690a4",
+  "data/patches/Assets/Data/Menu/VsMode.alr.cwopatch": "ed5a8c45afbd53d053ba53d160e432612516f30360aac487e01268836a443b47",
+  "data/patches/Assets/Data/Menu/MNet.alr.cwopatch": "2a61cb319f166330b8c719eb96452a57e95fc4d3896bf1a0afebc63c1e1be031",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
   "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "1731eabfbe0566e3578dbc6ea9d81c57827c9d5dfdf1bb449ed9781a3bc9212a",
   "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "36ca20eae6d36c9963f06d64977fba82054c888288ebc4d931b8bc53c3143a89",
@@ -33,11 +35,13 @@
   "data/game/Assets/Data/Map/mx_list.txt": "f6eb445193fc59a640b177c440dae01ebf21cd8357b43bdbc2c352ba9f9b3fdb",
   "data/game/Assets/Data/Menu/cwo_faces.dxt": "368d2c49887c5e3c1df34e7590436ca0b8e964067134d91baa9d75ea7e288df7",
   "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
+  "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "8b70ce79b95c259f05d67a43068306fa32a0c9a9586d22585595448919153a26",
+  "data/game/Assets/Data/Menu/cwo_select_outfits.txt": "95871ea5ea8d852b951a26bba362637a24960b585a7efbc6d6f0e3930e2fed16",
   "install_bfr.ps1": "05bfbbaff5692e2f87bc3ece642e3b84df782bd278e5368cd9aa508586670064",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "9caa9e310e0d3792970ede2ddff21037be4a44f908460fa75ec3faf58e7f6fce"
+  "README.md": "0f956292595375b15031dc6efde5cb8f8872b13156d11191f6a14da072a323f5"
  },
  "patches": [
   {
@@ -75,18 +79,18 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "bb8162adef6c82a41bfc5b253b2bdc2b0e1e497cd3467342d52eaec2dbb245ff",
-   "our_bytes": 5530,
+   "result_sha256": "82fc62e07abf219854ac1027b2f7d8b73b62605dc9586b865c79c6228056a8a5",
+   "our_bytes": 5633,
    "copied_from_your_file": 3346,
-   "carries": "main menu: EDGAR'S DREAM and the BFR MOD PACK line"
+   "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line"
   },
   {
    "file": "Assets/Data/Menu/vsmenu_en.ssb",
    "clean_sha256": "4b4a803d441e4f087436e636f76e885d409b63971be31960d833aedfcafb7185",
-   "result_sha256": "a3d8146e29faca56e567e403bdf44e05b735910d8cb80d62de0717e1fd9ffa0d",
-   "our_bytes": 5570,
-   "copied_from_your_file": 7946,
-   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title, the extra stage rows (Edgar's Dream: Summit)"
+   "result_sha256": "6f3f91cc6bb40b290d12c494fa9c3f26eb7e7e449f7a8309dcf1a504b4a38e5d",
+   "our_bytes": 5766,
+   "copied_from_your_file": 7964,
+   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title, the extra stage rows (Edgar's Dream: Summit); 1.43: monster portraits on X, COMING SOON, the portrait follows the highlighted COLORS outfit"
   },
   {
    "file": "Assets/Data/com/single2.csv",
@@ -99,10 +103,26 @@
   {
    "file": "Assets/Data/Menu/livecharasel_en.ssb",
    "clean_sha256": "5339439242a1c25de818c7cfd45bacaeb7452600e44cca0038b925e483de5fdc",
-   "result_sha256": "8e37e68430d837464afe9cf311e0aa29ec908e9322651e726ce3e3338765b09c",
-   "our_bytes": 46,
-   "copied_from_your_file": 1327,
-   "carries": "Xbox Live COLORS: the outfit names"
+   "result_sha256": "46ec419441ea7bc5eb21c0211ddb61f8267c2e5948a71f53a36c33744ea0e045",
+   "our_bytes": 209,
+   "copied_from_your_file": 1362,
+   "carries": "Xbox Live COLORS: the outfit names; 1.43: monster portraits on X, the portrait follows the highlighted outfit"
+  },
+  {
+   "file": "Assets/Data/Menu/VsMode.alr",
+   "clean_sha256": "5b292b1168193dba8c9ca49d5cef2d2664a43134eb8bfd1fef03f3023dc8fab2",
+   "result_sha256": "3aae414b32300c2cbb6fbade4b55f68a97426cff057c99f8a23453ef9ab5c9d2",
+   "our_bytes": 204631,
+   "copied_from_your_file": 634606,
+   "carries": "split-screen select: new player faces, the monster portraits, the outfit cell (1.43)"
+  },
+  {
+   "file": "Assets/Data/Menu/MNet.alr",
+   "clean_sha256": "f2d9855f15d2badd3775531beb69555b3546901c0ddb42e2614a3cb7e1f780cf",
+   "result_sha256": "9b27ca4ad750c947124180279eded1a520f075d3cafc105178111a81b49a76c6",
+   "our_bytes": 201294,
+   "copied_from_your_file": 576980,
+   "carries": "Xbox Live select: new player faces, the monster portraits, the outfit cell (1.43; display only, AGENTS.md exception)"
   },
   {
    "file": "Assets/Data/Menu/livestagesel_en.ssb",

@@ -1,4 +1,4 @@
-# BFR mod pack 1.42.16
+# BFR mod pack 1.43.0
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -40,6 +40,18 @@ and the same skill choice; the pack gives the game its own skill update version 
   Crimson Shadow (built from your own game files the first time one is picked).
 - **Edgar's Dream** (offline): Create a Stage, Create a Mode, Spectator, Create an Outfit (skin tone, head accessory,
   jacket and pants colours, with a turning preview).
+- **1.43 - Outfit effects** (Create an Outfit, offline matches): a skill's flames, ice, thunder, psychic or vibration on the
+  body - around the whole outline or in one spot; move it left / right, up / down, front / back from the middle of the body,
+  size 25-300%, speed 0-300% (0 = paused), and show it always, as a reward at aura level 10, or growing with the aura.
+  Outfits in the stock keep their effect.
+- **1.43 - Character select**: new faces for every player at one framing, monster portraits on X, COMING SOON in the empty
+  cell, and the portrait follows the outfit highlighted in COLORS (split screen and Xbox Live; display only).
+- **1.43 - Intro poses**: every fighter strikes their quest intro pose during the 3-second countdown (offline).
+- **1.43 - Holiday themes**: on New Year, Valentine's Day, St. Patrick's Day, Easter, the 4th of July, Halloween,
+  Thanksgiving and Christmas the title screen and main menu take the holiday's colors (the CRT lines stay), with a
+  greeting banner and a What's New window (CwoTheme.txt: auto / off / a holiday's name).
+- **1.43 - MOD LIST** on the main menu: every mod and what it does (read-only).
+- **1.43 - Realistic collision** (Create a Mode rule, offline): shots hit whoever is in the way, teammates too.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
