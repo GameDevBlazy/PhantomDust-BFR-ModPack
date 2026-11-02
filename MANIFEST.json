@@ -1,0 +1,63 @@
+{
+ "name": "BFR mod pack",
+ "version": "1.42",
+ "game": "Phantom Dust (Microsoft Store) 1.40",
+ "files": {
+  "launcher/CwoLaunch.exe": "46550744329064bf60e7d713959839cbabe95e14d128b86c5833b0062b7078de",
+  "launcher/CwoLoader.dll": "8d6708ccb7ed2a0ad6da9195c9a5167338d0cf4b6e8efdf83c98b5d3886f4c54",
+  "data/CwoBFR.txt": "35a6f3d6067939c47bc55c2448b1a74a63f47e0968bef6ca5c7567c85e5b2829",
+  "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
+  "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "2f9fd459c731893e57693412c98229e86238e0e37cc6b7cfbf762f010af48359",
+  "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "2f03d6e46598b91ca0b488dfccbd5b77b71bf8bbcc60a7f4ad7f58c4c052cfe6",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "70027454f6777d93e537ec1c1d86748f579776870a948eb0f08163eacfe62e05",
+  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "76be01d00f73da6a2b50c4a90d7c6104f7452e2b72aa516a33e7a9ebfca7c539",
+  "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
+  "install_bfr.ps1": "05bfbbaff5692e2f87bc3ece642e3b84df782bd278e5368cd9aa508586670064",
+  "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
+  "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
+  "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
+  "README.md": "742fcf4a0712d4946fa9dfafd7948d101e49a05f34c466b20f25c857a02c0c94"
+ },
+ "patches": [
+  {
+   "file": "Assets/Data/Menu/livelobby_en.ssb",
+   "clean_sha256": "9d425dd99edbf49b233e12dde9cfe43b68a439cbf2285dfcfd8562944cf4b751",
+   "result_sha256": "8c3d1e3d3fb7de3d9e35b3bcc186be70430388d04e950d295323f4f2b22c2984",
+   "our_bytes": 4051,
+   "copied_from_your_file": 13675,
+   "carries": "Xbox Live / system link lobby: 3v3 layout, Edit Arsenal + lists 1-3, Change Rule (+ Most KOs, First to 5 KOs, Survival 3 revives), Change Game Type, session W/L, Next Map row, Tiebreaker Vote"
+  },
+  {
+   "file": "Assets/Data/Menu/laboratory_en.ssb",
+   "clean_sha256": "f18494157354c171caa9865a9e02bccb8de0f2b426c4ed457280338fc9a5c27b",
+   "result_sha256": "ce55a4e17ed4856e180efa5ec748a82cbb182d7cff468b33c225c599326a7ff3",
+   "our_bytes": 334,
+   "copied_from_your_file": 2975,
+   "carries": "the Lab: Enable Battle for Reality skill pack (1-466) / Revert back to OG Phantom Dust skills (0-374)"
+  },
+  {
+   "file": "Assets/Data/Menu/mainmenu_en.ssb",
+   "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
+   "result_sha256": "4dfdf131dabeb65c245a8843a0de0958e4a6a15cc2834a4a6026fc7be168845d",
+   "our_bytes": 6404,
+   "copied_from_your_file": 4777,
+   "carries": "main menu: EDGAR'S DREAM (the BFR edition shows Create a Stage, Create a Mode, Spectator) and the BFR MOD PACK line"
+  },
+  {
+   "file": "Assets/Data/Menu/vsmenu_en.ssb",
+   "clean_sha256": "4b4a803d441e4f087436e636f76e885d409b63971be31960d833aedfcafb7185",
+   "result_sha256": "7ea516cb6ee3e9d387b072d099ef1dc177a1b10d12b78389421b0abb8673407c",
+   "our_bytes": 7063,
+   "copied_from_your_file": 13647,
+   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal + lists, Change Rule with the Create a Mode modes, game type, stage view"
+  },
+  {
+   "file": "Assets/Data/Menu/livestagesel_en.ssb",
+   "clean_sha256": "349300953517a60cf43901a6e97381e1bebb8cb71541d7b53592075acb7a8e72",
+   "result_sha256": "a047bb09961e743a6547c8233583c146be59e0579562b4ef4db62537e16d3d1c",
+   "our_bytes": 145,
+   "copied_from_your_file": 1350,
+   "carries": "Xbox Live LEVEL LIST: the highlighted stage shown live behind the list"
+  }
+ ]
+}
