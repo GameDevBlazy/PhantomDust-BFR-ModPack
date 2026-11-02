@@ -1,4 +1,4 @@
-# BFR mod pack 1.42.8
+# BFR mod pack 1.42.9
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -22,6 +22,8 @@ and the same skill choice; the pack gives the game its own skill update version 
   to the next list), Erase Arsenal, Reset All Arsenals and Acquire All Skills.
 - **Arsenal Data**: Y switches the Xbox Live results between All and each stage (Palace, Highway, Panorama, City,
   Refinery, Lane, Ruins).
+- **Edgar's Dream: Summit** (split screen STAGE LIST, after the stock stages): the top of Edgar's Dream's stairs - the
+  arena of the Demented Freia fight - as a stage of its own, 4 players (built from your own Edgar's Dream files).
 - **Bigger skill table and stage memory**, Download Battle choices (stage, characters, arsenal).
 - **15 outfits** for every playable and enemy fighter: the 5th is the OG outfit, then colour themes (built from your
   own game files the first time one is picked).

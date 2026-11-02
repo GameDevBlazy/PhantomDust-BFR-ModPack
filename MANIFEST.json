@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.42.8",
+ "version": "1.42.9",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "3209aefe4716478fc5728aba9d002058ae21190f77e4c18495f79ed28580e351",
-  "launcher/CwoLoader.dll": "6d4a350e8c2dfcef39785c9d6bf71f16d1fc5c23025b37000f8ee1f6a24ba00d",
+  "launcher/CwoLaunch.exe": "18b83dbbd6c1f9296fbc9abdca6f6d2235d4932c97b60e66444ffd6c6dac9feb",
+  "launcher/CwoLoader.dll": "fab6bd89f2e399c9e1f5a5fee5541dc8d601ab94ec831e6ebd67f11b39ed011b",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoOutfitNames.txt": "4e1dff48bc3be52ade6875d16cf408bcd9b621575fde73eca24d816571f9d995",
@@ -13,15 +13,28 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "fd95a23ca09bf5f7ff098570978035fbcfe8fc00bdc237b730059c70b34d37e5",
   "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "e7bd8cf5c3ad62f3963e5fd15d47e68172b1378a4eec4d7d84cc08a7637a8835",
-  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "0b1580872ca072561c1bcc00850e89485c02a2e8ff40e3f7fef7c7df92b4ef42",
+  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "604f88abd36eaf6f22ac2c574d1a27214a631d2e4767083eab6ef5ea49b3b0a1",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
   "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "ec3a5152de823bef9b1f1c1702c8aa6d4387ecf84b08fb49a07ce85ac72b3047",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
+  "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "36ca20eae6d36c9963f06d64977fba82054c888288ebc4d931b8bc53c3143a89",
+  "data/patches/Assets/Data/Map/mx401.dat.cwofrom": "1e42613a1bd8bab30f5ebe3c21ff3ee24e0a17a277073d019e3adc77714e5ebd",
+  "data/patches/Assets/Data/Map/mx401.alr.cwopatch": "55b5f798a32380ec420195e89a4de70f3dbe8c8fa06eb2f38328f755565dfe09",
+  "data/patches/Assets/Data/Map/mx401.alr.cwofrom": "3f0a977c19f5699df2985541b36a40c5baa53e03b8239718b52c9711b835853b",
+  "data/patches/Assets/Data/Map/st00cam.alr.cwopatch": "baaf11f3b78647390f683cafa854d380005393721edb899c02a917e056584e01",
+  "data/patches/Assets/Data/Map/st00cam.alr.cwofrom": "1bb42a235901e95ac960cde0fbc67ba98dd37f6831a7c8f2c08f9093db97b9c5",
+  "data/patches/Assets/Data/com/st00/camdata.cam.cwopatch": "e0a7e19563b2ed5a1da5774ea925d3d370581701660a16573ddc1979b4ae9148",
+  "data/patches/Assets/Data/com/st00/camdata.cam.cwofrom": "f394f02722dad2d261d8827d46e1e81dc630d41f7ce44cd1eabb81b30fc2064b",
+  "data/patches/Assets/Data/com/st00/comdata0.cad.cwopatch": "9c3445c3a16a8fb834571eeda06c41fce31f3079044ed51638f9487b4d7f85fb",
+  "data/patches/Assets/Data/com/st00/comdata0.cad.cwofrom": "515723333329932b54d24dacc4d0d0ceb00e18fcabf456932cb354c6f12ad23b",
+  "data/patches/Assets/Data/com/st00/comdata1.cad.cwopatch": "9c3445c3a16a8fb834571eeda06c41fce31f3079044ed51638f9487b4d7f85fb",
+  "data/patches/Assets/Data/com/st00/comdata1.cad.cwofrom": "97315d7a9b91cb9576700a88f9e1996b55eb3887de91f2ba1881bfeeede2ce80",
+  "data/game/Assets/Data/Map/mx_list.txt": "f6eb445193fc59a640b177c440dae01ebf21cd8357b43bdbc2c352ba9f9b3fdb",
   "install_bfr.ps1": "05bfbbaff5692e2f87bc3ece642e3b84df782bd278e5368cd9aa508586670064",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "c2b149dbb1c78b605961e4b602b82138447cca8c54378db4474876283a99198c"
+  "README.md": "9846630ef2874489a4e7d181cb94c5d37f3103c7dcb3680ffc22d1925117b33b"
  },
  "patches": [
   {
@@ -67,10 +80,10 @@
   {
    "file": "Assets/Data/Menu/vsmenu_en.ssb",
    "clean_sha256": "4b4a803d441e4f087436e636f76e885d409b63971be31960d833aedfcafb7185",
-   "result_sha256": "728c504aab18dc0b8bea78385cdcfb8aaed60638dee1d665c0ab00d570def28f",
-   "our_bytes": 5358,
-   "copied_from_your_file": 7881,
-   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title"
+   "result_sha256": "a3d8146e29faca56e567e403bdf44e05b735910d8cb80d62de0717e1fd9ffa0d",
+   "our_bytes": 5570,
+   "copied_from_your_file": 7946,
+   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title, the extra stage rows (Edgar's Dream: Summit)"
   },
   {
    "file": "Assets/Data/com/single2.csv",
@@ -95,6 +108,60 @@
    "our_bytes": 145,
    "copied_from_your_file": 1350,
    "carries": "Xbox Live level list: the highlighted stage shown behind the list"
+  },
+  {
+   "file": "Assets/Data/Map/mx401.dat",
+   "made_from": "Assets/Data/Map/st01.dat",
+   "clean_sha256": "25625bfce6d1a300899d087c604fda58c8b357f9bb8183d0d609a05e19b9a82c",
+   "result_sha256": "0bad81b97cf460e9e97150541fbc3d0900e1ea3f019e9332e6582f20fd919402",
+   "our_bytes": 262,
+   "copied_from_your_file": 672,
+   "carries": "Edgar's Dream: Summit - the top of the stairs (ruin pieces out, 4 starts on the summit ring)"
+  },
+  {
+   "file": "Assets/Data/Map/mx401.alr",
+   "made_from": "Assets/Data/Map/st01.alr",
+   "clean_sha256": "91f6e31d15e6859e7676d503fc8906948e92c6942e2f33736d590a8c01278885",
+   "result_sha256": "91f6e31d15e6859e7676d503fc8906948e92c6942e2f33736d590a8c01278885",
+   "our_bytes": 0,
+   "copied_from_your_file": 0,
+   "carries": "Edgar's Dream: Summit - Edgar's Dream's own model"
+  },
+  {
+   "file": "Assets/Data/Map/st00cam.alr",
+   "made_from": "Assets/Data/Map/st02cam.alr",
+   "clean_sha256": "376ffa157b3a7653a344c50e2d6f77e213283567253ef87015bad7abcc6a9326",
+   "result_sha256": "376ffa157b3a7653a344c50e2d6f77e213283567253ef87015bad7abcc6a9326",
+   "our_bytes": 0,
+   "copied_from_your_file": 0,
+   "carries": "Map Slot 7 (stage 10): its camera file"
+  },
+  {
+   "file": "Assets/Data/com/st00/camdata.cam",
+   "made_from": "Assets/Data/com/st02/camdata.cam",
+   "clean_sha256": "91818b717f03bd4ac3264912fbd6215a2e7964127da4305c6fca7d3d9ad1c62a",
+   "result_sha256": "91818b717f03bd4ac3264912fbd6215a2e7964127da4305c6fca7d3d9ad1c62a",
+   "our_bytes": 0,
+   "copied_from_your_file": 0,
+   "carries": "Map Slot 7: CPU data"
+  },
+  {
+   "file": "Assets/Data/com/st00/comdata0.cad",
+   "made_from": "Assets/Data/com/st02/comdata0.cad",
+   "clean_sha256": "7ff01d83e04cd99da2db8c86aadc00d806a03ffca073030fe53c2867e2faa61f",
+   "result_sha256": "7ff01d83e04cd99da2db8c86aadc00d806a03ffca073030fe53c2867e2faa61f",
+   "our_bytes": 0,
+   "copied_from_your_file": 0,
+   "carries": "Map Slot 7: CPU data"
+  },
+  {
+   "file": "Assets/Data/com/st00/comdata1.cad",
+   "made_from": "Assets/Data/com/st02/comdata1.cad",
+   "clean_sha256": "7ff01d83e04cd99da2db8c86aadc00d806a03ffca073030fe53c2867e2faa61f",
+   "result_sha256": "7ff01d83e04cd99da2db8c86aadc00d806a03ffca073030fe53c2867e2faa61f",
+   "our_bytes": 0,
+   "copied_from_your_file": 0,
+   "carries": "Map Slot 7: CPU data"
   }
  ]
 }
