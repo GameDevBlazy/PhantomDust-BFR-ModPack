@@ -1,0 +1,2 @@
+# byte-exact: the install checks every file against MANIFEST.json
+* -text
