@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.42.15",
+ "version": "1.42.16",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "64a75623b9e15a1b35ad730b1f245f848e04acad041fc7560754266bac971af2",
-  "launcher/CwoLoader.dll": "9fb6fe777f029d66e0d7d3fa111ae86294f2adedcfd92fc77374e10a572ff555",
+  "launcher/CwoLaunch.exe": "0419c1976e61aa00dfcd514221bab45117146e18d397049cada7fede36a4eb08",
+  "launcher/CwoLoader.dll": "fa47dc7e207c74338325897ba9092919eb2c86a04f17282590ccf3be746a3279",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoOutfitNames.txt": "3c9b8b4067b3ef11c63cf9eb4b7353fceb72c9cba29987948ba5e8d42bd36c97",
@@ -17,6 +17,7 @@
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
   "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "ec3a5152de823bef9b1f1c1702c8aa6d4387ecf84b08fb49a07ce85ac72b3047",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
+  "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "1731eabfbe0566e3578dbc6ea9d81c57827c9d5dfdf1bb449ed9781a3bc9212a",
   "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "36ca20eae6d36c9963f06d64977fba82054c888288ebc4d931b8bc53c3143a89",
   "data/patches/Assets/Data/Map/mx401.dat.cwofrom": "1e42613a1bd8bab30f5ebe3c21ff3ee24e0a17a277073d019e3adc77714e5ebd",
   "data/patches/Assets/Data/Map/mx401.alr.cwopatch": "55b5f798a32380ec420195e89a4de70f3dbe8c8fa06eb2f38328f755565dfe09",
@@ -30,11 +31,13 @@
   "data/patches/Assets/Data/com/st00/comdata1.cad.cwopatch": "9c3445c3a16a8fb834571eeda06c41fce31f3079044ed51638f9487b4d7f85fb",
   "data/patches/Assets/Data/com/st00/comdata1.cad.cwofrom": "97315d7a9b91cb9576700a88f9e1996b55eb3887de91f2ba1881bfeeede2ce80",
   "data/game/Assets/Data/Map/mx_list.txt": "f6eb445193fc59a640b177c440dae01ebf21cd8357b43bdbc2c352ba9f9b3fdb",
+  "data/game/Assets/Data/Menu/cwo_faces.dxt": "368d2c49887c5e3c1df34e7590436ca0b8e964067134d91baa9d75ea7e288df7",
+  "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
   "install_bfr.ps1": "05bfbbaff5692e2f87bc3ece642e3b84df782bd278e5368cd9aa508586670064",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "1d8a3f87582e69c180c63dc3b460d8549cf3c7c9e20b6dc4408cbc29a863eb67"
+  "README.md": "9caa9e310e0d3792970ede2ddff21037be4a44f908460fa75ec3faf58e7f6fce"
  },
  "patches": [
   {
@@ -108,6 +111,14 @@
    "our_bytes": 145,
    "copied_from_your_file": 1350,
    "carries": "Xbox Live level list: the highlighted stage shown behind the list"
+  },
+  {
+   "file": "Assets/Data/Menu/BtMenuEn.alr",
+   "clean_sha256": "3a8d622f25a296615fc4deed8ae790e0f6d7eaadd3bdd612f3e7e4f4bb0efa46",
+   "result_sha256": "d5525f5b5639013a07eadad7d3e8dc9042241edd743d09e2ceb207c1bfaabcbd",
+   "our_bytes": 4551,
+   "copied_from_your_file": 423804,
+   "carries": "battle HUD: 4 face spots (the free strip of its own page 2) for each fighter's face beside its name"
   },
   {
    "file": "Assets/Data/Map/mx401.dat",

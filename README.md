@@ -1,4 +1,4 @@
-# BFR mod pack 1.42.15
+# BFR mod pack 1.42.16
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -25,6 +25,13 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **HUD presets** (lobby > OPTIONS > BFR Options > HUD Preset; A cycles): 0 the game's own, 1 Split Look (the split-screen
   look: black bars, the skill wheel in the bottom bar), 2 Wide Bars, 3 Centre Stage, 4 Low Profile, 5 Mirror, 6 Minimal.
   Display only, each player's own choice.
+- **HUD faces**: every fighter's face beside their name and life bar (full screen, split screen, every line-up). It changes
+  with the fight: hurt at life 10 / 5 / 3, a red pulse at 1, KO at 0, a flash on each hit, and faces for poison, freeze,
+  paralysis, reversed controls, invisible, power / speed / recovery up. CwoFaces.txt in the data folder moves it.
+- **Download Battle line-ups** (Scoreboard > Download Battle): 1 vs 1, 1 vs 2, 1 vs 3 or 2 vs 2 with a CPU ally, a
+  character for each added fighter. Download Battles send no rating or win count.
+- **Create an Outfit**: the model shown from the start beside the page (right stick turns it), color and skin sliders,
+  Save and apply into any of the 15 slots, and an outfit stock of up to 50 per character (OutfitStock folder).
 - **Edgar's Dream: Summit** (split screen STAGE LIST, after the stock stages): the top of Edgar's Dream's stairs - the
   arena of the Demented Freia fight - as a stage of its own, 4 players (built from your own Edgar's Dream files).
 - **Bigger skill table and stage memory**, Download Battle choices (stage, characters, arsenal).
