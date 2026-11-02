@@ -1,4 +1,4 @@
-# BFR mod pack 1.42.6
+# BFR mod pack 1.42.7
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -20,6 +20,8 @@ and the same skill choice; the pack gives the game its own skill update version 
   list.
 - **Arsenal lists**: the list title shows its number; Y > ARSENAL OPTIONS adds Add Arsenal (a full list of 16 sends it
   to the next list), Erase Arsenal, Reset All Arsenals and Acquire All Skills.
+- **Arsenal Data**: Y switches the Xbox Live results between All and each stage (Palace, Highway, Panorama, City,
+  Refinery, Lane, Ruins).
 - **Bigger skill table and stage memory**, Download Battle choices (stage, characters, arsenal).
 - **15 outfits** for every playable and enemy fighter: the 5th is the OG outfit, then colour themes (built from your
   own game files the first time one is picked).

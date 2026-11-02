@@ -1,16 +1,16 @@
 {
  "name": "BFR mod pack",
- "version": "1.42.6",
+ "version": "1.42.7",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "05597d5970ef80c93c1b9ad575eb39c5673b2a84a4c33f4e3bc27dd22b8d2565",
-  "launcher/CwoLoader.dll": "4283b0b0babcc3181dd90016d64d68b22a3f43a512b0db366eb9b823cbc71937",
+  "launcher/CwoLaunch.exe": "9c40a561b526d4dbd8a8824a2a50f3b6a3efb66429067415c633f3bdd41d1b87",
+  "launcher/CwoLoader.dll": "e8d0b9973a34c7ad2bcf9ca119bf67bd6a93c4209d99fea11fc479f02aac18a7",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoOutfitNames.txt": "4e1dff48bc3be52ade6875d16cf408bcd9b621575fde73eca24d816571f9d995",
   "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "08667873df66895beef48eeeeb032340419c4682215ab67fa3a1b9950fcfeb12",
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "2709d74ee9b59c1ccd02f38fe6293988753f9990f1672676512258eb67da5ad8",
-  "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "6b77b689ce249ec90f8ed4d298f6bbb36305403b3ea080bea8deda8b54a40d8d",
+  "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "fd95a23ca09bf5f7ff098570978035fbcfe8fc00bdc237b730059c70b34d37e5",
   "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "ec95f00d9b2b5aeecf4a004eccfadf98e97a6733e466ad6ff4eba770e0ee8915",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "4092b09e30d1457fbd7d844eb5da0be65cc13726ae31148a0ac7d20e7eb569ae",
@@ -21,7 +21,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "0fee54e1da182db26fe26e8d2a739b386873ef78101c9186d513221a226909ae"
+  "README.md": "0a20ef4f6afff928661154455e31bd2b765eeaa57b255bb882732d020ccaf71b"
  },
  "patches": [
   {
@@ -43,10 +43,10 @@
   {
    "file": "Assets/Data/Menu/arsenaledit_en.ssb",
    "clean_sha256": "03109981e4ac91f726b5cbb23f669c62271a86352179a8147afe0d3cac182a51",
-   "result_sha256": "a0bdc9b7215331c576a021e8aa9eede1f4ccd78a9189599d14a3df32adfb7c7a",
-   "our_bytes": 235,
-   "copied_from_your_file": 11417,
-   "carries": "arsenal list title with its number; ARSENAL OPTIONS: Add Arsenal, Erase Arsenal, Reset All Arsenals, Acquire All Skills"
+   "result_sha256": "a371fe3166459a6c615716c43fcbf66b9c8634a061b2b0d5829d8ff11dfdae6c",
+   "our_bytes": 432,
+   "copied_from_your_file": 11431,
+   "carries": "arsenal list title with its number; ARSENAL OPTIONS: Add Arsenal, Erase Arsenal, Reset All Arsenals, Acquire All Skills; Arsenal Data: Y picks the stage of the Xbox Live results"
   },
   {
    "file": "Assets/Data/Menu/livearsel_en.ssb",
