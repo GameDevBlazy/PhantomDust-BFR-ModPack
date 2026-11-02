@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.42.13",
+ "version": "1.42.14",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "7c57ec3765e0ebcad6862119c72f3c9dcc73cbe88d711688ab9aea352a607588",
-  "launcher/CwoLoader.dll": "346f210c9901b2d67eba8a2a19c8fe9dc0a5f689c866a7dcca84431792fdc7a1",
+  "launcher/CwoLaunch.exe": "1bbba8123ba1b0abbedcdb45c3efa41410ccd27b37671efb634b11d74c31bd52",
+  "launcher/CwoLoader.dll": "34cdb85191139dbe8bf9abed8390cb17bd9233bc014516a97387794efc021836",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoOutfitNames.txt": "4e1dff48bc3be52ade6875d16cf408bcd9b621575fde73eca24d816571f9d995",
@@ -34,7 +34,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "e52cf09ea8bcc4575712eda3747f675ed9618b0536580696b8e675972f44675f"
+  "README.md": "8aed4af32709d2b5cb7a6b5dd07fc84aae7aa9c4ec298d062e86188e3900a0ee"
  },
  "patches": [
   {

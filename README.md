@@ -1,4 +1,4 @@
-# BFR mod pack 1.42.13
+# BFR mod pack 1.42.14
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
