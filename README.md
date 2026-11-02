@@ -1,4 +1,4 @@
-# BFR mod pack 1.43.0
+# BFR mod pack 1.43.1
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -46,7 +46,8 @@ and the same skill choice; the pack gives the game its own skill update version 
   Outfits in the stock keep their effect.
 - **1.43 - Character select**: new faces for every player at one framing, monster portraits on X, COMING SOON in the empty
   cell, and the portrait follows the outfit highlighted in COLORS (split screen and Xbox Live; display only).
-- **1.43 - Intro poses**: every fighter strikes their quest intro pose during the 3-second countdown (offline).
+- **1.43 - Intro poses**: every fighter strikes their quest intro pose during the 3-second countdown (1.43.1: online
+  matches too).
 - **1.43 - Holiday themes**: on New Year, Valentine's Day, St. Patrick's Day, Easter, the 4th of July, Halloween,
   Thanksgiving and Christmas the title screen and main menu take the holiday's colors (the CRT lines stay), with a
   greeting banner and a What's New window (CwoTheme.txt: auto / off / a holiday's name).
