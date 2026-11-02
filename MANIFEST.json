@@ -1,11 +1,11 @@
 {
  "name": "BFR mod pack",
- "version": "1.42.1",
+ "version": "1.42.2",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "6679fb4459a0b2ec2d6d5024d2b9aef97950d79eec665bcf663ab11ce0d863da",
-  "launcher/CwoLoader.dll": "5b49180ac5e7a2ec39ba26811dd33db7bf3166d3990afc359e617b839b25795b",
-  "data/CwoBFR.txt": "1f3f75daa541992e94737c9a29cae0a17382a780e11e62f104139ab3c64c718c",
+  "launcher/CwoLaunch.exe": "961cd7d0d2d7e33a88eb19f4c33c27603c20d94648b7ff8bd936a45328ef47d2",
+  "launcher/CwoLoader.dll": "97a822fb1b3434d9805fe41a64ef65e205a0d0e4f1eeea95848f9256df710c6d",
+  "data/CwoBFR.txt": "a1f26f0db5243ef4adee2f4462ba6d435dc14b877488fb339a00ae161d62c4be",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "2f9fd459c731893e57693412c98229e86238e0e37cc6b7cfbf762f010af48359",
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "2709d74ee9b59c1ccd02f38fe6293988753f9990f1672676512258eb67da5ad8",
@@ -19,7 +19,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "b8bf2f9f0311e819e300ee1ee3f7761c2dc764381fe83dbce551fe57172cabee"
+  "README.md": "e9fc32a32e69cffbd151e5146fae164b2e3061a38b4877346d55abbdb7f2df3f"
  },
  "patches": [
   {
