@@ -1,4 +1,4 @@
-# BFR mod pack 1.42
+# BFR mod pack 1.42.1
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -46,6 +46,6 @@ Play online only with players who run this same pack. Offline-only parts (Create
 own modes) stay offline.
 
 ## Credits
-- Battle for Reality skill data: the pack owner's Omni Arsenal Lab.
+- Battle for Reality skill data: the pack's author.
 - Loader, launcher, menu patches and tools: written for this project by Claude (Anthropic), working with the pack owner.
 - Phantom Dust belongs to Microsoft. This pack contains none of the game's files; you need your own copy of the game.
