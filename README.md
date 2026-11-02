@@ -1,4 +1,4 @@
-# BFR mod pack 1.42.3
+# BFR mod pack 1.42.4
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -8,8 +8,8 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **Battle for Reality skill pack**: revised skills 1-374 and new skills 375-465. Switch it in the Lab: "Enable Battle for
   Reality skill pack (1-466)" or "Revert back to OG Phantom Dust skills (0-374)".
 - **Xbox Live / system link lobby**: Edit Arsenal and arsenal lists 1-3; for the host, Change Rule (the game's rules plus
-  Most KOs, First to 5 KOs and Survival with 3 revives a fighter), Change Game Type, and a Next Map ON / OFF row; a
-  Tiebreaker Vote row for everyone; this session's wins and losses.
+  Most KOs, First to 5 KOs and Survival with 3 revives a fighter) and Change Game Type; BFR Options for everyone:
+  Teammate Lock-on, Tiebreaker Vote, and Next Map for the host; this session's wins and losses.
 - **Game rules**: First to 5 KOs scores the last fighter who did damage (knocking yourself out scores nothing); the KO
   tally shows beside each name; a downed fighter's name plate keeps flashing until revived; Most KOs is decided when the
   match clock runs out.
