@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.45.4",
+ "version": "1.45.5",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "d62199c40aa4303a0c92fef20284981d83c35850317edbddb726c924c9a5c2d6",
-  "launcher/CwoLoader.dll": "9124cfbbcb0f486d728f2dbfcc92abc5958bb2985880bda4b054edb9912b5134",
+  "launcher/CwoLaunch.exe": "572f5b8b6d523bf21a8335995d316be60a2240d6312e0c206b9c1378a6260b99",
+  "launcher/CwoLoader.dll": "b2a22f2ab84be3f58486a27aae450e1acc4484fde24a5270f66866b7bdf4c1d1",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
@@ -15,9 +15,9 @@
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "fd95a23ca09bf5f7ff098570978035fbcfe8fc00bdc237b730059c70b34d37e5",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "de1843713b29b33711978a9c25285956ff9abc7b0b18f4a64d546e9e930aef90",
   "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "919ea80aefa93e7c20f83654f90a2098e3f928cc8d35b894177de2d516e3b41f",
-  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "78366e8fbb41fd87adb9d57750e7054dfe4b2a0b667a90d16e0fdb785e673505",
+  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "fcc4a7596b3f5aecec03abd43a855d1dca138bf9cb3892f48d8ff6aca01a984c",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
-  "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "247247d09c871779b3f0f9e6db14307800c0007a1a28c475257b24e0e7a72aa2",
+  "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "962a48a5f9b18264737fdf6d4df7e09fdb64222cd47a9e3df58b4373b9da170b",
   "data/patches/Assets/Data/Menu/VsMode.alr.cwopatch": "ed5a8c45afbd53d053ba53d160e432612516f30360aac487e01268836a443b47",
   "data/patches/Assets/Data/Menu/MNet.alr.cwopatch": "2a61cb319f166330b8c719eb96452a57e95fc4d3896bf1a0afebc63c1e1be031",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
@@ -48,7 +48,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "8bb136dda6a70cbe5ce1959b91fa587c8673aa364278571718869804065cef59"
+  "README.md": "402c8ab98a841d5a6e9d1a74f7d482675373b9fdb16cb12760794a6e45c83e27"
  },
  "patches": [
   {
@@ -102,10 +102,10 @@
   {
    "file": "Assets/Data/Menu/vsmenu_en.ssb",
    "clean_sha256": "4b4a803d441e4f087436e636f76e885d409b63971be31960d833aedfcafb7185",
-   "result_sha256": "7eff2c71af3c3a94b02330021bd9a13e1227ec3f20be3f6a9a4c7718093ea683",
-   "our_bytes": 5977,
+   "result_sha256": "99c201809b04b46328d56cd83bf516a3c1a3c61c4fab724ee3d5be7e335cd747",
+   "our_bytes": 5799,
    "copied_from_your_file": 7964,
-   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title, the extra stage rows (Edgar's Dream: Summit); 1.43: monster portraits on X, COMING SOON, the portrait follows the highlighted COLORS outfit; 1.45.4: the grid at 82 %, COLORS on the far left over no portrait (build_select_grid.py)"
+   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title, the extra stage rows (Edgar's Dream: Summit); 1.43: monster portraits on X, COMING SOON, the portrait follows the highlighted COLORS outfit; 1.45: COLORS opens on the side away from the face"
   },
   {
    "file": "Assets/Data/com/single2.csv",
@@ -118,10 +118,10 @@
   {
    "file": "Assets/Data/Menu/livecharasel_en.ssb",
    "clean_sha256": "5339439242a1c25de818c7cfd45bacaeb7452600e44cca0038b925e483de5fdc",
-   "result_sha256": "3f00aab9cac1bea675b4fc6150947aacc4442af60cdb775285e0ad06fca57ba6",
-   "our_bytes": 420,
+   "result_sha256": "b705e919950302ec04b0d54c8e6cd0939cab74941182b13d89317e4d39df6c23",
+   "our_bytes": 242,
    "copied_from_your_file": 1362,
-   "carries": "Xbox Live COLORS: 1.43 monster portraits on X, the portrait follows the highlighted outfit; 1.45.4 the grid at 82 %, COLORS on the far left (build_select_grid.py)"
+   "carries": "Xbox Live COLORS: 1.43 monster portraits on X, the portrait follows the highlighted outfit; 1.45 COLORS on the side away from the face"
   },
   {
    "file": "Assets/Data/Menu/VsMode.alr",
