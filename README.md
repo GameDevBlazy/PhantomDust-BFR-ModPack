@@ -1,4 +1,4 @@
-# BFR mod pack 1.45.7
+# BFR mod pack 1.45.8
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -70,6 +70,7 @@ and the same skill choice; the pack gives the game its own skill update version 
   extra rows 257 / 294 (the game's hidden Jump / Dash copies).
 - **1.45.6**: COLORS opens in the left black bar (split screen and Xbox Live), every full-size portrait visible.
 - **1.45.7**: Create an Outfit shows the outfit effect on the turning preview model right away, and follows every change.
+- **1.45.8**: YOU WIN: the winners do the victory pose; a time-out draw: everyone standing does the losing pose (offline); the split-screen lobby's Tag Team / Battle Royale CPUs now join the match.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
