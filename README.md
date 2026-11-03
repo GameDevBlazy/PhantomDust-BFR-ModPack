@@ -1,4 +1,4 @@
-# BFR mod pack 1.47.1
+# BFR mod pack 1.47.2
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -79,6 +79,8 @@ and the same skill choice; the pack gives the game its own skill update version 
   effect from your deck, an Aura color per outfit, fuller flames above 150 % size; mission select portraits; the Download
   Battle free camera.
 - **1.47.1**: loader 5.99.0 (the MODS edition's NPC page code; off in BFR).
+- **1.47.2**: loader 5.101.0: Create an Outfit lists every skill of your arsenal in use as an Outfit effect, Effect size /
+  speed in 1 % steps (RT held: 25 %), the old Preview live screen removed.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
