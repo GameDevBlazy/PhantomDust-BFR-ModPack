@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.46.0",
+ "version": "1.47.0",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "bd0297f4eccc5368d70262be5e1fe045851ba1485eace3060354dc7798ba963a",
-  "launcher/CwoLoader.dll": "6058cfefb1057907c1a3a1d61344809fa8f2af8755bc6f223fb502899116b6ec",
+  "launcher/CwoLaunch.exe": "30854f9754d4d65517d4b328c8ea2a00fb33f767461a4a061d5add085b000d78",
+  "launcher/CwoLoader.dll": "282dc9039d56aa481a56bbe73bf913d5241609c247158e8395f9ebb14ba5c6ea",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
@@ -18,8 +18,10 @@
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "7c788eaf8ad3ba20f3b85bcd3638e1be89e3a8c986f791d97b5c0ab0578dc3a2",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
   "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "02afab9cdb245f3d8b7a78b799594a3d32f33a5aa9ebc69a7496d127812c6b07",
-  "data/patches/Assets/Data/Menu/VsMode.alr.cwopatch": "f2865fb942f4a5734078f1b289d935b5a39080584ddbac7869705b0148f76979",
-  "data/patches/Assets/Data/Menu/MNet.alr.cwopatch": "98167eb3c6d30207993f2072949e7a591013bbfe750cc464f83658289d7a972e",
+  "data/patches/Assets/Data/Menu/VsMode.alr.cwopatch": "baf66e557eb5f2943a9481b8885cc839c2d80abe541a742ebbc512d59a1bb81d",
+  "data/patches/Assets/Data/Menu/MNet.alr.cwopatch": "1929614779d4ad3189161bb4ddd6ab4c8c0f30732c7a3453939f3b4bcef3ef7b",
+  "data/patches/Assets/Data/Menu/liverulesel_en.ssb.cwopatch": "7219c52f01bcfd3d3376ea276ec27505a464856b23c39bc47f0dbb878fd72273",
+  "data/patches/Assets/Data/Menu/Mission.alr.cwopatch": "4710eda5d2dae41deef5c37fcdcab1d39938390a7f76d285fd8dfb6e912d92ad",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
   "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "1731eabfbe0566e3578dbc6ea9d81c57827c9d5dfdf1bb449ed9781a3bc9212a",
   "data/patches/Assets/Data/setup/charaset/charaset_en.dat.cwopatch": "c53584781abe45f53f8984c2e8df67925b67dccca5baa5ec312c2bf5b1a868f4",
@@ -44,14 +46,12 @@
   "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
   "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "9225580912860967f2eeef338b2429d0411dfe9dbc8bcd161892d4a746cfa371",
   "data/game/Assets/Data/Menu/cwo_select_outfits.txt": "a50149919a2fae58afa0b8e63a94fc813c6661de4dcef38dd26a1756a2274e98",
-  "data/game/Assets/Data/Menu/cwo_lobby_strips.dxt": "f31a81f231d1bb3c7a4e1c666c3e3cc9fd1562105f93df725e2e10a6ea0fb1bd",
-  "data/game/Assets/Data/Menu/cwo_lobby_strips.txt": "658e18f50464820f0d382201b962753e27f326f83ce29493bd0fa8ebb3e25bdf",
   "data/game/Assets/Data/Menu/cwo_lobby_rows.txt": "eff6f2694c226bdc657a4552b41ef313afbe98cdfd62232afabde9dec8fc0c58",
   "install_bfr.ps1": "4719c1fee8bcf4e01d1970650928f2bbc384ef5a4ee4d75f794e2e9c5e583e2f",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "6c87c2164d86db69cd09159162b2940e162f5c0de9f8405e39c932efa2d54fb7"
+  "README.md": "68597cf772a9ceefee28d31ca2038356466a2fa7affde145d9e8d049a5433e5f"
  },
  "patches": [
   {
@@ -129,18 +129,34 @@
   {
    "file": "Assets/Data/Menu/VsMode.alr",
    "clean_sha256": "5b292b1168193dba8c9ca49d5cef2d2664a43134eb8bfd1fef03f3023dc8fab2",
-   "result_sha256": "a5c226f66b3abf12382dec34be71c70fb99fe975c6ed67c41a8268f90b34c2b2",
-   "our_bytes": 221611,
-   "copied_from_your_file": 736520,
-   "carries": "split-screen select: new player faces, the monster portraits, the outfit cell (1.43); 1.46 the lobby row cells"
+   "result_sha256": "cd59b32e1cb7da33fedd3811a0bb61a0cc6ed7b6f69b623a3eb370ebe799bb27",
+   "our_bytes": 247856,
+   "copied_from_your_file": 710275,
+   "carries": "split-screen select: new player faces, the monster portraits, the outfit cell (1.43); 1.46 the lobby row cells; 1.47 the lobby portraits in colour"
   },
   {
    "file": "Assets/Data/Menu/MNet.alr",
    "clean_sha256": "f2d9855f15d2badd3775531beb69555b3546901c0ddb42e2614a3cb7e1f780cf",
-   "result_sha256": "84fe89d0c4a788474985002fa2c11f94a99276c74f514f0de215d4b5fc2ac5fd",
-   "our_bytes": 219907,
-   "copied_from_your_file": 642186,
-   "carries": "Xbox Live select: new player faces, the monster portraits, the outfit cell (1.43; display only, AGENTS.md exception); 1.46 the lobby row cells"
+   "result_sha256": "abbecb7362b8cc3c7c5e2ca1b8fec693247eb49cef70ce67cbadcde369dcb34d",
+   "our_bytes": 245961,
+   "copied_from_your_file": 616132,
+   "carries": "Xbox Live select: new player faces, the monster portraits, the outfit cell (1.43; display only, AGENTS.md exception); 1.46 the lobby row cells; 1.47 the lobby portraits in colour"
+  },
+  {
+   "file": "Assets/Data/Menu/liverulesel_en.ssb",
+   "clean_sha256": "df692a9af7e5545bf87dd39351ab6c35a12b6f9e728016e20582c396e7828b11",
+   "result_sha256": "80a2cb737a3dd2d75e3fecaafcfa0f2e7cdab9edadc2d213aff30963d37a6f36",
+   "our_bytes": 110,
+   "copied_from_your_file": 2574,
+   "carries": "Create Game Session: the BFR rules after Annihilate the Odd One (King of the Hill, Shrinking Arena, Aura Rush, Sudden Death, Realistic Collision ...) (1.47)"
+  },
+  {
+   "file": "Assets/Data/Menu/Mission.alr",
+   "clean_sha256": "4f83288855127fdc2d6703e45223084c00c9ed4065bdbf4fc0faaa4d60b95af7",
+   "result_sha256": "e4c06aac247b0d9e8bc95bbf381c3309fa50370f6abedb655d9f4a735ea7f385",
+   "our_bytes": 95549,
+   "copied_from_your_file": 30934,
+   "carries": "mission select: the new character portraits (1.47)"
   },
   {
    "file": "Assets/Data/Menu/livestagesel_en.ssb",
