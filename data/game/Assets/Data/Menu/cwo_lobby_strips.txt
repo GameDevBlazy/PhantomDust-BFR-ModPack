@@ -1,0 +1,3 @@
+# lobby face strips per outfit (build_lobby_strips.py): atlas w h cell_w cell_h columns
+#atlas	1140	528	76	24	15
+#stems	pc00a	pc01a	pc02a	pc03a	pc04a	pc05a	pc06a	pc07a	pc08a	pc09a	pc10a	enm00a	enm01a	enm02a	enm03a	enm05a	enm08a	enm09a	enm10a	enm11a	enm12a	enm13a
