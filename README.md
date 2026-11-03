@@ -1,4 +1,4 @@
-# BFR mod pack 1.43.2
+# BFR mod pack 1.44.0
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -53,6 +53,13 @@ and the same skill choice; the pack gives the game its own skill update version 
   greeting banner and a What's New window (CwoTheme.txt: auto / off / a holiday's name).
 - **1.43 - MOD LIST** on the main menu: every mod and what it does (read-only).
 - **1.43 - Realistic collision** (Create a Mode rule, offline): shots hit whoever is in the way, teammates too.
+- **1.44 - 15 outfits really there**: the character table itself now lists 15 outfits for every fighter (before, the
+  selects could still show 4); outfits 5-15 are built from your own files the first time each is picked.
+- **1.44 - Visions** (offline): graphics presets in the data folder's CwoVisions.txt - clarity, vivid, cinematic, soft,
+  noir or off (or "custom sharpen blur saturation contrast vignette warmth brightness").
+- **1.44 - Preview Stage** (split screen STAGE LIST, last row): a plain grid room to show characters, built from your own
+  stage 32.
+- **1.44 - Create an Outfit fixes**: saving from outfits 5-15 works; the name keyboard shows the chosen letter in brackets.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).

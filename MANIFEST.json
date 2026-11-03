@@ -1,12 +1,14 @@
 {
  "name": "BFR mod pack",
- "version": "1.43.2",
+ "version": "1.44.0",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
   "launcher/CwoLaunch.exe": "22286b623f318d6ca7986a7aa5e621e93e77d2d9cbe90979b1341209f1708d5b",
   "launcher/CwoLoader.dll": "850a79cdbd4615f6f2183affbdf58c31a1979f36a9c0855291d7b95c7d851ccf",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
+  "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
+  "data/CwoTheme.txt": "6d1dbb9c582de44ad1dbc0d24eca4d831d8172bef0593680ecd24f6d0ce9def5",
   "data/CwoOutfitNames.txt": "3c9b8b4067b3ef11c63cf9eb4b7353fceb72c9cba29987948ba5e8d42bd36c97",
   "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "cb4c4f713bbf886b3eb10b3b94e65ff07000b36a78069c34afc7546dbc683ba5",
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "2709d74ee9b59c1ccd02f38fe6293988753f9990f1672676512258eb67da5ad8",
@@ -20,6 +22,7 @@
   "data/patches/Assets/Data/Menu/MNet.alr.cwopatch": "2a61cb319f166330b8c719eb96452a57e95fc4d3896bf1a0afebc63c1e1be031",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
   "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "1731eabfbe0566e3578dbc6ea9d81c57827c9d5dfdf1bb449ed9781a3bc9212a",
+  "data/patches/Assets/Data/setup/charaset/charaset_en.dat.cwopatch": "c53584781abe45f53f8984c2e8df67925b67dccca5baa5ec312c2bf5b1a868f4",
   "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "36ca20eae6d36c9963f06d64977fba82054c888288ebc4d931b8bc53c3143a89",
   "data/patches/Assets/Data/Map/mx401.dat.cwofrom": "1e42613a1bd8bab30f5ebe3c21ff3ee24e0a17a277073d019e3adc77714e5ebd",
   "data/patches/Assets/Data/Map/mx401.alr.cwopatch": "55b5f798a32380ec420195e89a4de70f3dbe8c8fa06eb2f38328f755565dfe09",
@@ -32,7 +35,11 @@
   "data/patches/Assets/Data/com/st00/comdata0.cad.cwofrom": "515723333329932b54d24dacc4d0d0ceb00e18fcabf456932cb354c6f12ad23b",
   "data/patches/Assets/Data/com/st00/comdata1.cad.cwopatch": "9c3445c3a16a8fb834571eeda06c41fce31f3079044ed51638f9487b4d7f85fb",
   "data/patches/Assets/Data/com/st00/comdata1.cad.cwofrom": "97315d7a9b91cb9576700a88f9e1996b55eb3887de91f2ba1881bfeeede2ce80",
-  "data/game/Assets/Data/Map/mx_list.txt": "f6eb445193fc59a640b177c440dae01ebf21cd8357b43bdbc2c352ba9f9b3fdb",
+  "data/patches/Assets/Data/Map/mx402.dat.cwopatch": "a1cdad0377eb550a46f75e1dae0fc907a46de20a122b8c49d26cf93652e5c16c",
+  "data/patches/Assets/Data/Map/mx402.dat.cwofrom": "27a344e69e78efc2d5fb48687aa138ac1cb7883b5636ddf7a46e1b1d58a8f989",
+  "data/patches/Assets/Data/Map/mx402.alr.cwopatch": "206b83ac750742a21c68942f04f86b26de9462366a94fefedbe63c9cef856043",
+  "data/patches/Assets/Data/Map/mx402.alr.cwofrom": "3f4f9e85d59f81932f8480c0efce26cf47583b31ecd0c1568b18232f6afaa7ef",
+  "data/game/Assets/Data/Map/mx_list.txt": "f6702c002c01d898c54109a0af996ae9aa1ea6a7a4bc808ddf354f932a9eb7d6",
   "data/game/Assets/Data/Menu/cwo_faces.dxt": "368d2c49887c5e3c1df34e7590436ca0b8e964067134d91baa9d75ea7e288df7",
   "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
   "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "8b70ce79b95c259f05d67a43068306fa32a0c9a9586d22585595448919153a26",
@@ -41,7 +48,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "036988275bcaad78e6376d14bb2284bd4d88f9a1be1703f3e0c0b3a0484bdaf6"
+  "README.md": "36c38932bd073e0fc661e5a912e189edfeefc921b801cd598358d5575d3761f9"
  },
  "patches": [
   {
@@ -141,6 +148,14 @@
    "carries": "battle HUD: 4 face spots (the free strip of its own page 2) for each fighter's face beside its name"
   },
   {
+   "file": "Assets/Data/setup/charaset/charaset_en.dat",
+   "clean_sha256": "eed6db87e64e054c23c807c90bf7e5899d99156a07d3dcdc763891a8505fb82b",
+   "result_sha256": "eea72c8d6b926515f3c87b00c950c7ecc136bdb65c81fc5b080c213ca98ecc4a",
+   "our_bytes": 27,
+   "copied_from_your_file": 0,
+   "carries": "character table: 15 outfits for every playable and enemy fighter (the loader builds outfits 5-15 from your own files)"
+  },
+  {
    "file": "Assets/Data/Map/mx401.dat",
    "made_from": "Assets/Data/Map/st01.dat",
    "clean_sha256": "25625bfce6d1a300899d087c604fda58c8b357f9bb8183d0d609a05e19b9a82c",
@@ -193,6 +208,24 @@
    "our_bytes": 0,
    "copied_from_your_file": 0,
    "carries": "Map Slot 7: CPU data"
+  },
+  {
+   "file": "Assets/Data/Map/mx402.dat",
+   "made_from": "Assets/Data/Map/st32.dat",
+   "clean_sha256": "f6434dca80d41947e06c7be01c070be686eb3f6278fdcaab8308ad11fb45cfc8",
+   "result_sha256": "496a00a86c001d4f97d82993ce20afe3a67fd5c0421fc2524c02da46aa38fa91",
+   "our_bytes": 261,
+   "copied_from_your_file": 98,
+   "carries": "Preview Stage - the grid room of stage 32, the four starts on a ring in the middle (to show characters)"
+  },
+  {
+   "file": "Assets/Data/Map/mx402.alr",
+   "made_from": "Assets/Data/Map/st32.alr",
+   "clean_sha256": "dfa293a1b70d99cf121e684a2c5666c167759efca4420253008f47f3d63929df",
+   "result_sha256": "dfa293a1b70d99cf121e684a2c5666c167759efca4420253008f47f3d63929df",
+   "our_bytes": 0,
+   "copied_from_your_file": 0,
+   "carries": "Preview Stage - stage 32's own model"
   }
  ]
 }
