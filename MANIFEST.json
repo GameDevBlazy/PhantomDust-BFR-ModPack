@@ -3,8 +3,8 @@
  "version": "1.45.6",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "9161f74da9d786400fed72ab31b1353be7c79d24325cde087ca14ee03a15429d",
-  "launcher/CwoLoader.dll": "567f5f54c59a363ed7f2e0629bb0c57392a03a02c8c8156f080564768e88dc11",
+  "launcher/CwoLaunch.exe": "66000680f4c78d66a06705ac7774598a3cf9ede7ede732e3d88981771b8dd76d",
+  "launcher/CwoLoader.dll": "1ccf2526c1ae0cc1ef45c46d49b35adc56f4b3a9718d20fd3bccfcbba917f7b0",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
