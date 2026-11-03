@@ -13,6 +13,8 @@ foreach ($p in $man.files.PSObject.Properties) {
 $data = Join-Path $pkg 'AC\Temp\CwoLoaderBFR'
 New-Item -ItemType Directory -Force -Path $data | Out-Null
 Get-ChildItem -LiteralPath (Join-Path $here 'data') | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $data -Recurse -Force }
+$names = Join-Path $data 'CwoOutfitNames.txt'   # 1.45: COLORS shows COLOR 1-15 again
+if (Test-Path -LiteralPath $names) { Move-Item -LiteralPath $names -Destination ($names + '.old') -Force }
 $lnk = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Phantom Dust BFR.lnk'
 $s = (New-Object -ComObject WScript.Shell).CreateShortcut($lnk)
 $s.TargetPath = Join-Path $here 'launcher\CwoLaunch.exe'

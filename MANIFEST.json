@@ -1,23 +1,22 @@
 {
  "name": "BFR mod pack",
- "version": "1.44.1",
+ "version": "1.45.0",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "45eed011a1e1b47e6333fc7a4e45c3d51513c056d0a56e6686f49faea3ab1998",
-  "launcher/CwoLoader.dll": "7c61689ef18096ee31ca17697f82d510c1939f4bddfd0e38c1cd3c4767ca017b",
+  "launcher/CwoLaunch.exe": "acaa1ed45de77540ded7a1357e1e1d00e6fbf6851ebc6df4ceedb6f0e6a6b793",
+  "launcher/CwoLoader.dll": "e6b8e1232467538acc05b245c526355e840e1f03c6c0003e03dcaf173276aa4b",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoTheme.txt": "6d1dbb9c582de44ad1dbc0d24eca4d831d8172bef0593680ecd24f6d0ce9def5",
-  "data/CwoOutfitNames.txt": "3c9b8b4067b3ef11c63cf9eb4b7353fceb72c9cba29987948ba5e8d42bd36c97",
   "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "cb4c4f713bbf886b3eb10b3b94e65ff07000b36a78069c34afc7546dbc683ba5",
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "2709d74ee9b59c1ccd02f38fe6293988753f9990f1672676512258eb67da5ad8",
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "fd95a23ca09bf5f7ff098570978035fbcfe8fc00bdc237b730059c70b34d37e5",
   "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "919ea80aefa93e7c20f83654f90a2098e3f928cc8d35b894177de2d516e3b41f",
-  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "f60151f067f165a2a61e0d01edd9ea0692cf4239100581fb7ee352137299dfc0",
+  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "fcc4a7596b3f5aecec03abd43a855d1dca138bf9cb3892f48d8ff6aca01a984c",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
-  "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "a5d31ad737ad8ac3cbfd4616140f666528c1695a505299774266349c8e9690a4",
+  "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "962a48a5f9b18264737fdf6d4df7e09fdb64222cd47a9e3df58b4373b9da170b",
   "data/patches/Assets/Data/Menu/VsMode.alr.cwopatch": "ed5a8c45afbd53d053ba53d160e432612516f30360aac487e01268836a443b47",
   "data/patches/Assets/Data/Menu/MNet.alr.cwopatch": "2a61cb319f166330b8c719eb96452a57e95fc4d3896bf1a0afebc63c1e1be031",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
@@ -44,11 +43,11 @@
   "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
   "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "8b70ce79b95c259f05d67a43068306fa32a0c9a9586d22585595448919153a26",
   "data/game/Assets/Data/Menu/cwo_select_outfits.txt": "95871ea5ea8d852b951a26bba362637a24960b585a7efbc6d6f0e3930e2fed16",
-  "install_bfr.ps1": "05bfbbaff5692e2f87bc3ece642e3b84df782bd278e5368cd9aa508586670064",
+  "install_bfr.ps1": "4719c1fee8bcf4e01d1970650928f2bbc384ef5a4ee4d75f794e2e9c5e583e2f",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "4797bfdf1a260a86813ddcefa9cdd18eb1d1f538428e0aaa478b134d2024a502"
+  "README.md": "ecd16c8e76913387e81266f57dd3519c9dd05c4d2b23822b9d3dbb8567f929d6"
  },
  "patches": [
   {
@@ -94,10 +93,10 @@
   {
    "file": "Assets/Data/Menu/vsmenu_en.ssb",
    "clean_sha256": "4b4a803d441e4f087436e636f76e885d409b63971be31960d833aedfcafb7185",
-   "result_sha256": "6f3f91cc6bb40b290d12c494fa9c3f26eb7e7e449f7a8309dcf1a504b4a38e5d",
-   "our_bytes": 5766,
+   "result_sha256": "99c201809b04b46328d56cd83bf516a3c1a3c61c4fab724ee3d5be7e335cd747",
+   "our_bytes": 5799,
    "copied_from_your_file": 7964,
-   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title, the extra stage rows (Edgar's Dream: Summit); 1.43: monster portraits on X, COMING SOON, the portrait follows the highlighted COLORS outfit"
+   "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title, the extra stage rows (Edgar's Dream: Summit); 1.43: monster portraits on X, COMING SOON, the portrait follows the highlighted COLORS outfit; 1.45: COLORS opens on the side away from the face"
   },
   {
    "file": "Assets/Data/com/single2.csv",
@@ -110,10 +109,10 @@
   {
    "file": "Assets/Data/Menu/livecharasel_en.ssb",
    "clean_sha256": "5339439242a1c25de818c7cfd45bacaeb7452600e44cca0038b925e483de5fdc",
-   "result_sha256": "46ec419441ea7bc5eb21c0211ddb61f8267c2e5948a71f53a36c33744ea0e045",
-   "our_bytes": 209,
+   "result_sha256": "b705e919950302ec04b0d54c8e6cd0939cab74941182b13d89317e4d39df6c23",
+   "our_bytes": 242,
    "copied_from_your_file": 1362,
-   "carries": "Xbox Live COLORS: the outfit names; 1.43: monster portraits on X, the portrait follows the highlighted outfit"
+   "carries": "Xbox Live COLORS: 1.43 monster portraits on X, the portrait follows the highlighted outfit; 1.45 COLORS on the side away from the face"
   },
   {
    "file": "Assets/Data/Menu/VsMode.alr",
