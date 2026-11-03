@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.45.0",
+ "version": "1.45.1",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "acaa1ed45de77540ded7a1357e1e1d00e6fbf6851ebc6df4ceedb6f0e6a6b793",
-  "launcher/CwoLoader.dll": "e6b8e1232467538acc05b245c526355e840e1f03c6c0003e03dcaf173276aa4b",
+  "launcher/CwoLaunch.exe": "5733a67a091f163024e81e3227cde91e0309b2803c0b39cbd8de2c13834a0a3b",
+  "launcher/CwoLoader.dll": "44142e09838c1f97695f1d8525bad3c3bd499c507665543fcf6c0411bb3cdbf5",
   "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
@@ -13,6 +13,7 @@
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "2709d74ee9b59c1ccd02f38fe6293988753f9990f1672676512258eb67da5ad8",
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "fd95a23ca09bf5f7ff098570978035fbcfe8fc00bdc237b730059c70b34d37e5",
+  "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "2d18a9be899b0d70af5020503e6f7024d4351643dcf5f7f9f8db3a7f36fd541d",
   "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "919ea80aefa93e7c20f83654f90a2098e3f928cc8d35b894177de2d516e3b41f",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "fcc4a7596b3f5aecec03abd43a855d1dca138bf9cb3892f48d8ff6aca01a984c",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -47,7 +48,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "ecd16c8e76913387e81266f57dd3519c9dd05c4d2b23822b9d3dbb8567f929d6"
+  "README.md": "edfbd58b2fb9a1fbc89c0ed44c868d12c9952dc75fe5a24c469074fec15b8934"
  },
  "patches": [
   {
@@ -81,6 +82,14 @@
    "our_bytes": 33,
    "copied_from_your_file": 1897,
    "carries": "Xbox Live arsenal list title with its number"
+  },
+  {
+   "file": "Assets/Data/Menu/option_en.ssb",
+   "clean_sha256": "9d509e9fb683eadf874f37a133ed9978e199d95860d7783b925fab7fcbabed77",
+   "result_sha256": "4de14188ba5bce4791a7d649e401ff7fa5b99e736d5b1ae97a2f177a75fa0828",
+   "our_bytes": 127,
+   "copied_from_your_file": 5056,
+   "carries": "main menu OPTIONS: HUD Preset with a preview (1.45.1, build_hud_option.py)"
   },
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",

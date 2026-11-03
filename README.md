@@ -1,4 +1,4 @@
-# BFR mod pack 1.45.0
+# BFR mod pack 1.45.1
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -63,6 +63,9 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **1.45**: CPUs revive their downed teammates (offline); Edgar's Dream > Visions; Revert to OG skills also takes the new
   skills out of the stock; What's New is at the top of MOD LIST; COLORS opens on the side away from the highlighted face
   and reads COLOR 1-15; the hidden Jump / Dash copies ("Psycho Wave" #257 / #294) stay out of the stock.
+- **1.45.1**: OPTIONS > HUD Preset (choose with a preview of where the HUD sits); the tiebreaker: teams stay locked for
+  two battles, after 1 win each with the same teams a vote opens by itself (everyone YES = the tiebreaker round, a NO =
+  the teams are free); monster select portraits follow COLORS.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
