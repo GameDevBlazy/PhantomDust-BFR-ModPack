@@ -1,4 +1,4 @@
-# BFR mod pack 1.47.8
+# BFR mod pack 1.47.9
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -94,6 +94,8 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.47.9**: loader 5.107.0: split screen shows every fighter's own panel (the game's life bar, hand, deck and aura, with
+  their face) stacked under each player's panel.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
