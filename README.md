@@ -1,4 +1,4 @@
-# BFR mod pack 1.47.4
+# BFR mod pack 1.47.5
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -86,6 +86,8 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **1.47.4**: loader 5.102.0: the BFR rules (Most KOs, First to 5 KOs, Survival, King of the Hill, Shrinking Arena, Aura
   Rush, Sudden Death, Realistic Collision) no longer change your rating - like the game's own Heavy, Special Environment and
   Annihilate the Odd One. Standard Battle (One-on-One, Tag Team, Battle Royale) stays rated.
+- **1.47.5**: loader 5.103.0: Downed Glow - a glow on every downed fighter until revived (display only); the host switches
+  it in the lobby's BFR Options (Downed Glow: ON / OFF, default ON) and everyone in the session follows.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
