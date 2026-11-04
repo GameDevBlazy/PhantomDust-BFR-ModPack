@@ -1,11 +1,11 @@
 {
  "name": "BFR mod pack",
- "version": "1.47.5",
+ "version": "1.47.6",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "0c09d649f896e6f7f307c11e20a7cb3d637387f5fa5de071ecdc17ae64408442",
-  "launcher/CwoLoader.dll": "5eab32d895f665e0f1cf9292f422ad37235ba088ff4f17dff61d0afc2d8da488",
-  "data/CwoBFR.txt": "a819ad245d6d5630aaabe3360650178ddd3605a29d439082823af2810466b93c",
+  "launcher/CwoLaunch.exe": "423008d2a007a6f3510561d137322e0982e08aa20ee32b6ec6d38f5cfd61e005",
+  "launcher/CwoLoader.dll": "17135188605b5eae37a6bc940c5c29fc93a5046a02dea0a6f2e92e72f76e0f15",
+  "data/CwoBFR.txt": "300f79229af341efd5537a388ba477213a8ac9c02507171992a339cba40442ac",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoTheme.txt": "6d1dbb9c582de44ad1dbc0d24eca4d831d8172bef0593680ecd24f6d0ce9def5",
@@ -29,6 +29,8 @@
   "data/patches/Assets/Data/Map/mx401.dat.cwofrom": "1e42613a1bd8bab30f5ebe3c21ff3ee24e0a17a277073d019e3adc77714e5ebd",
   "data/patches/Assets/Data/Map/mx401.alr.cwopatch": "55b5f798a32380ec420195e89a4de70f3dbe8c8fa06eb2f38328f755565dfe09",
   "data/patches/Assets/Data/Map/mx401.alr.cwofrom": "3f0a977c19f5699df2985541b36a40c5baa53e03b8239718b52c9711b835853b",
+  "data/patches/Assets/Data/Player/pc09a/pc09a3.alr.cwopatch": "7ef492863ff022d3865e4ddf16409de7c8bde7554251cac16bbac1dd8c12b419",
+  "data/patches/Assets/Data/Player/pc09a/pc09a3.alr.cwofrom": "c005eebf5e1e1449d183ffff2da42ec46ab9a07b2694b992eb5fe24eabb2c837",
   "data/patches/Assets/Data/Map/st00cam.alr.cwopatch": "baaf11f3b78647390f683cafa854d380005393721edb899c02a917e056584e01",
   "data/patches/Assets/Data/Map/st00cam.alr.cwofrom": "1bb42a235901e95ac960cde0fbc67ba98dd37f6831a7c8f2c08f9093db97b9c5",
   "data/patches/Assets/Data/com/st00/camdata.cam.cwopatch": "e0a7e19563b2ed5a1da5774ea925d3d370581701660a16573ddc1979b4ae9148",
@@ -51,7 +53,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "b97c9be47a85804052268ff0537dce71ffa00c12ddc63adfe4b898e1b8f0c496"
+  "README.md": "46855c479636681046407ac681e0518760f7a265451ffd00ae51e2a15f5491fc"
  },
  "patches": [
   {
@@ -199,6 +201,15 @@
    "our_bytes": 0,
    "copied_from_your_file": 0,
    "carries": "Edgar's Dream: Summit - Edgar's Dream's own model"
+  },
+  {
+   "file": "Assets/Data/Player/pc09a/pc09a3.alr",
+   "made_from": "Assets/Data/Player/pc09a/pc09a0.alr",
+   "clean_sha256": "7e34fa73b1218ce346d1cde89fec7d345eb3a4a8970e732507d8154caab05892",
+   "result_sha256": "7e34fa73b1218ce346d1cde89fec7d345eb3a4a8970e732507d8154caab05892",
+   "our_bytes": 0,
+   "copied_from_your_file": 0,
+   "carries": "JD colour 4: JD's own model (the game's colour 4 is Mac) (1.47.6)"
   },
   {
    "file": "Assets/Data/Map/st00cam.alr",
