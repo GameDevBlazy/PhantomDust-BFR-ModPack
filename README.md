@@ -89,7 +89,7 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **1.47.5**: loader 5.103.0: Downed Glow - a glow on every downed fighter until revived (display only); the host switches
   it in the lobby's BFR Options (Downed Glow: ON / OFF, default ON) and everyone in the session follows.
 - **1.47.6**: loader 5.104.0: Downed Glow fixed (it never started); split-screen name list moved below the item icons;
-  skills whose text says "Aura cost +N per use" (Traveling Thorn ...) now really cost +N more each use; JD's colour 4 is JD (not Mac).
+  skills whose text says "Aura cost +N per use" (Traveling Thorn ...) now really cost +N more each use; Blood Eclipse hits every fighter, as its text says; JD's colour 4 is JD (not Mac).
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
