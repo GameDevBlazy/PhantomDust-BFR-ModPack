@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.47.7",
+ "version": "1.47.8",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "4adcf1c661095b7c809698833d9c4e24e532b09c6a083b148d4a542b3bd39f98",
-  "launcher/CwoLoader.dll": "b44e8ab19e46595db7a130a3019614dec2052f87fd040921d8307f57a4bffc04",
+  "launcher/CwoLaunch.exe": "e06449da89151d90ed1e0f8640f7e92a93337965407708d98b0713c6dcf56c1b",
+  "launcher/CwoLoader.dll": "67574d4d4f14005e00b7b767a1c93cc7c0560747d23a5e5e716a452a2ed843c1",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
@@ -46,14 +46,14 @@
   "data/game/Assets/Data/Map/mx_list.txt": "f6702c002c01d898c54109a0af996ae9aa1ea6a7a4bc808ddf354f932a9eb7d6",
   "data/game/Assets/Data/Menu/cwo_faces.dxt": "368d2c49887c5e3c1df34e7590436ca0b8e964067134d91baa9d75ea7e288df7",
   "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
-  "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "9225580912860967f2eeef338b2429d0411dfe9dbc8bcd161892d4a746cfa371",
-  "data/game/Assets/Data/Menu/cwo_select_outfits.txt": "a50149919a2fae58afa0b8e63a94fc813c6661de4dcef38dd26a1756a2274e98",
+  "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "e97bfbade7c874d7a9726f6c659b1adac4d3406c6e2cb6f2947d2617b71396ae",
+  "data/game/Assets/Data/Menu/cwo_select_outfits.txt": "e447d8ad88ff399ebeb4ef4279e672a7a5c5e659168836e35c019176b6e0addd",
   "data/game/Assets/Data/Menu/cwo_lobby_rows.txt": "eff6f2694c226bdc657a4552b41ef313afbe98cdfd62232afabde9dec8fc0c58",
   "install_bfr.ps1": "4719c1fee8bcf4e01d1970650928f2bbc384ef5a4ee4d75f794e2e9c5e583e2f",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "2912b18be9b5fce43e0959748b44235a91dbd6f0a256a25ea577e038e93bb837"
+  "README.md": "e4903a0df778f12bfcf25edc5591d9d0ba1a3b2d4d29b9ba15f237e61357fdd1"
  },
  "patches": [
   {
