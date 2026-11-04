@@ -1,4 +1,4 @@
-# BFR mod pack 1.47.3
+# BFR mod pack 1.47.4
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -71,7 +71,7 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **1.45.6**: COLORS opens in the left black bar (split screen and Xbox Live), every full-size portrait visible.
 - **1.45.7**: Create an Outfit shows the outfit effect on the turning preview model right away, and follows every change.
 - **1.45.8**: YOU WIN: the winners do the victory pose; a time-out draw: everyone standing does the losing pose (offline);   the split-screen lobby's Tag Team / Battle Royale CPUs now join the match.
-- **1.46**: the lobbies (split screen and Xbox Live) show each member's face strip in their outfit's colours.
+- **1.46**: lobby face strips per outfit (replaced in 1.47 by the colour lobby portraits).
 - **1.47**: the lobby portraits in colour (the MODS edition's player art, the monsters coloured in; no more red strips),
   in the split-screen and Xbox Live lobbies; the NPC page is MODS-only for now; split screen shows the other fighters' names and life;
   Create Game Session and the lobby rule list carry King of the Hill, Shrinking Arena, Aura Rush, Sudden Death and Realistic
@@ -83,6 +83,9 @@ and the same skill choice; the pack gives the game its own skill update version 
   speed in 1 % steps (RT held: 25 %).
 - **1.47.3**: loader 5.101.2: Preview live (turning model) back in Create an Outfit, showing only the model and its effect;
   holding left / right on Effect size / speed keeps stepping.
+- **1.47.4**: loader 5.102.0: the BFR rules (Most KOs, First to 5 KOs, Survival, King of the Hill, Shrinking Arena, Aura
+  Rush, Sudden Death, Realistic Collision) no longer change your rating - like the game's own Heavy, Special Environment and
+  Annihilate the Odd One. Standard Battle (One-on-One, Tag Team, Battle Royale) stays rated.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
