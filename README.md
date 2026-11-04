@@ -1,4 +1,4 @@
-# BFR mod pack 1.47.6
+# BFR mod pack 1.47.7
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -90,6 +90,8 @@ and the same skill choice; the pack gives the game its own skill update version 
   it in the lobby's BFR Options (Downed Glow: ON / OFF, default ON) and everyone in the session follows.
 - **1.47.6**: loader 5.104.0: Downed Glow fixed (it never started); split-screen name list moved below the item icons;
   skills whose text says "Aura cost +N per use" (Traveling Thorn ...) now really cost +N more each use; Blood Eclipse hits every fighter, as its text says; JD's colour 4 is JD (not Mac).
+- **1.47.7**: loader 5.105.0: COMING SOON hides while a COLORS list is open; the split-screen text list of the other
+  fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 
 ## Requirements
 - Windows 10 or 11 and Phantom Dust from the Microsoft Store (game version 1.40, not modified).
