@@ -26,6 +26,18 @@ Get-ChildItem -LiteralPath $src -Recurse -File | ForEach-Object {
     $kept++
   }
 }
+# 1.49.1: game files the loader builds from the pack's patches at the first start (stages, outfits, menus) - a different
+# copy of yours is kept too (the loader itself keeps your data-folder models as <name>.before_pack)
+foreach ($p in $man.patches) {
+  if ($p.file.StartsWith('_data/')) { continue }
+  $t = Join-Path $data ('game\' + ($p.file -replace '/', '\'))
+  if ((Test-Path -LiteralPath $t) -and ((Get-FileHash -LiteralPath $t -Algorithm SHA256).Hash.ToLower() -ne $p.result_sha256)) {
+    $b = Join-Path $bk ('game\' + ($p.file -replace '/', '\'))
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $b) | Out-Null
+    Copy-Item -LiteralPath $t -Destination $b -Force
+    $kept++
+  }
+}
 if ($kept) { Write-Host "$kept of your own files that the pack replaces were kept in $bk" }
 Get-ChildItem -LiteralPath $src | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $data -Recurse -Force }
 # the CREATE editor's font: made on this PC from Windows' own Segoe UI fonts (never shipped)

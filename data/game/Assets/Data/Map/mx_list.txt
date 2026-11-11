@@ -1,5 +1,8 @@
 mx401	Edgar's Dream: Summit	1	4
 mx402	Preview Stage	1	4
+mx300	The Bunker	3	6
+mx301	Grand Panorama	3	6
+mx302	Grand Panorama (Sunset)	3	6
 mx330	Palace Ascended	3	12	-150.1
 mx331	Sky Ring Highway	3	6	200.0
 mx332	Highway to the Alley	3	6	150.0

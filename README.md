@@ -1,4 +1,4 @@
-# BFR mod pack 1.49.0
+# BFR mod pack 1.49.1
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -94,6 +94,11 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.49.1**: the rest of the pack author's BFR edition:
+  - three more stages in the stage list: The Bunker, Grand Panorama and Grand Panorama (Sunset) (built on your PC from
+    your own game files at the first start);
+  - Edgar's outfit 6 as the pack's author saved it (Create an Outfit);
+  - the install also keeps your own copy of any game file the pack rebuilds (stages, outfits, menus).
 - **1.49.0**: loader 5.150.0 - everyone gets the same pack:
   - every setting the pack's author plays with is in the pack: the BFR skill pack switch, HUD preset, outfits and outfit
     effects (and the saved outfits), modes, Edgar's Dream, Spectator, Download Battle, game type, schools, records,

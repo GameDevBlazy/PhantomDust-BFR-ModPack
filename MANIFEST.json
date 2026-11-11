@@ -1,6 +1,6 @@
 {
  "name": "BFR mod pack",
- "version": "1.49.0",
+ "version": "1.49.1",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
   "launcher/CwoLaunch.exe": "3c34b5bbf27176af311e7b37e3138d56dc81f431cdcef211ddfba3d72959599f",
@@ -76,7 +76,21 @@
   "data/patches/Assets/Data/Map/mx336.alr.cwofrom": "1be4dbb2c0e84ce8cc0ffb3690ebc5f8daae34667f44c6fdcb5fd43a3921c250",
   "data/patches/Assets/Data/Map/mx336.dat.cwopatch": "877d7346298732a171ab28af6d84734cba8571ccb64ae83316f3d15db677e7c9",
   "data/patches/Assets/Data/Map/mx336.dat.cwofrom": "8a4b315889b01e5808fa4a67721befce32239d4ac9a27b8a091257ed3c2a1493",
-  "data/game/Assets/Data/Map/mx_list.txt": "5ebcd1267ddf3ac3afb21e5a7997e152f0f031b4633374b42546cf48495282b6",
+  "data/patches/Assets/Data/Map/mx300.alr.cwopatch": "da4b52218fc59dbd445ef60b5c7191d2e53d83b5d31bda552507dbc701f47c37",
+  "data/patches/Assets/Data/Map/mx300.alr.cwofrom": "fe56095024c1525fd126ccafb1fae2afe218d396bae5f3190c6cae598e9288ae",
+  "data/patches/Assets/Data/Map/mx300.dat.cwopatch": "14b0919abd7cbec566b0b9d0f6e56b8b2068dcadff1436c9664712f9a3f7bb2b",
+  "data/patches/Assets/Data/Map/mx300.dat.cwofrom": "494df8b8227ca6d9825eadf9b16cae6be33e40a5132f0c8cf208beaae6229118",
+  "data/patches/Assets/Data/Map/mx301.alr.cwopatch": "e312f2e6330306d949e458b09111420f8157ef94e70e807db40d5b0c039fc458",
+  "data/patches/Assets/Data/Map/mx301.alr.cwofrom": "aed495801668b2c69d1b4d609c15aa3ab9c96d66b2174766f982481a77f82812",
+  "data/patches/Assets/Data/Map/mx301.dat.cwopatch": "07aaacdb345e18f88cba9cffdff5d39be1a7f6442c033d0d96a348f32709bf53",
+  "data/patches/Assets/Data/Map/mx301.dat.cwofrom": "667fdd4cfee4077ed9b57e2eb6eac675a0c017ae242f643733607872dcacbe16",
+  "data/patches/Assets/Data/Map/mx302.alr.cwopatch": "85afcfb0dd0907e8fda9e36eb8ad6d413a4133605e91ef755e0d49bbb6d157a0",
+  "data/patches/Assets/Data/Map/mx302.alr.cwofrom": "29ddbcaa771e718b7cfdbdb419ecffa770934a6ac1fa0b65ee1eae270e3aa0c7",
+  "data/patches/Assets/Data/Map/mx302.dat.cwopatch": "15ee274c8558e4b338405beb1cd9a6c0881401705b7bde5f86c39f6014653d66",
+  "data/patches/Assets/Data/Map/mx302.dat.cwofrom": "50ae5466e7428c622cddbf8fc12ad1d81bf2d467f12568bfaac3dd03592d84e5",
+  "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwopatch": "aa97ef18c8761393f1f4b9b8d5f8a0e8ed499ff24f2c3fae1190eb6b89559382",
+  "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/game/Assets/Data/Map/mx_list.txt": "4ae7db0c6ed05d6221c5681d5bfb477f137dccb8438f06db3a8b46e06ef89b55",
   "data/game/Assets/Data/Menu/cwo_faces.dxt": "368d2c49887c5e3c1df34e7590436ca0b8e964067134d91baa9d75ea7e288df7",
   "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
   "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "e97bfbade7c874d7a9726f6c659b1adac4d3406c6e2cb6f2947d2617b71396ae",
@@ -164,11 +178,11 @@
   "data/patches/_data/OutfitStock/pc01a/17 Air Element.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
   "data/patches/_data/outfit_base/pc01a5.alr.cwopatch": "211782f312d7a278d6f5ab1bdcad215d7611614be29dfce8cf16391e122b1c44",
   "data/patches/_data/outfit_base/pc01a5.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
-  "install_bfr.ps1": "7c712c6c5323de9ede1226e557a8bca59c538af6b1f7cbb1d56f96fecc3d6018",
+  "install_bfr.ps1": "47334a762b8ab7b2e918214135a57d68998b873a497ce2396c3e5634fd639477",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "07adb4021407610904706417186b6b1febeaf3a1fc9dacb4237e62919f3b6569"
+  "README.md": "1c4d2d457c17881b44f593822655c83d80576884e6e170fdc80a3b94b99811d6"
  },
  "patches": [
   {
@@ -612,6 +626,103 @@
    "our_bytes": 122747,
    "copied_from_your_file": 52717,
    "carries": "new stage (1.48, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx300.alr",
+   "made_from": [
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st09_06.alr",
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st14.alr",
+    "Assets/Data/Map/st25.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st03.alr",
+    "Assets/Data/Map/st09_03.alr"
+   ],
+   "result_sha256": "f24570949c176dc22c17aba2de2aceb7e077faf9ec76f8538d103b084372abd4",
+   "our_bytes": 477325,
+   "copied_from_your_file": 19699497,
+   "carries": "The Bunker (owner-installed 2026-11-05) (1.49.1, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx300.dat",
+   "made_from": [
+    "Assets/Data/Map/st01.dat"
+   ],
+   "result_sha256": "8815ea0c415fe6554e99eca90b38a31e52c6eed19c63236f6aceca84c4c8fa61",
+   "our_bytes": 6067848,
+   "copied_from_your_file": 860632,
+   "carries": "The Bunker (owner-installed 2026-11-05) (1.49.1, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx301.alr",
+   "made_from": [
+    "Assets/Data/Map/st06.alr",
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st14.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st09_06.alr"
+   ],
+   "result_sha256": "e60eeeaeeb6816f18cfdd5f036688bd5913a106a12a1359be41e0a0e579eff03",
+   "our_bytes": 2972910,
+   "copied_from_your_file": 20769618,
+   "carries": "Grand Panorama (owner-installed 2026-11-06) (1.49.1, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx301.dat",
+   "made_from": [
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st16.dat",
+    "Assets/Data/Map/st26.dat"
+   ],
+   "result_sha256": "0c98cfa616937920cf994d7b201cc2d35fa03300ef06582261b4ef9498bdebc1",
+   "our_bytes": 297556,
+   "copied_from_your_file": 451008,
+   "carries": "Grand Panorama (owner-installed 2026-11-06) (1.49.1, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx302.alr",
+   "made_from": [
+    "Assets/Data/Map/st16.alr",
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st06.alr",
+    "Assets/Data/Map/st14.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st03.alr"
+   ],
+   "result_sha256": "ab5a1f9da2945a8bda32fdb7b30acaccea3851e6883780000ec2e412360d59a6",
+   "our_bytes": 2972658,
+   "copied_from_your_file": 21576014,
+   "carries": "Grand Panorama (Sunset) (owner-installed 2026-11-06) (1.49.1, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx302.dat",
+   "made_from": [
+    "Assets/Data/Map/st16.dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st26.dat",
+    "Assets/Data/Map/st04.dat"
+   ],
+   "result_sha256": "818aca08411a45efc25192b1643ebff36c60b7e36e66da41bd2cc911dcd1343b",
+   "our_bytes": 296830,
+   "copied_from_your_file": 451374,
+   "carries": "Grand Panorama (Sunset) (owner-installed 2026-11-06) (1.49.1, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Player/pc01a/pc01a5.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "2ba7587bbde88fa3fb65d9a33817a034488439c17e2e223aea0891e80189fd52",
+   "our_bytes": 161392,
+   "copied_from_your_file": 1338240,
+   "carries": "Edgar's outfit 6 - the owner's own saved outfit (Create an Outfit, 2026-11-08) (1.49.1, patch format 2)"
   },
   {
    "file": "_data/preview_outfit.alr",
