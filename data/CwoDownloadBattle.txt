@@ -1,0 +1,2 @@
+# Download Battle choices (loader): stage_row you you_outfit opp opp_outfit arsenal opp_level lineup fighter3 fighter4
+6 1 0 4 0 10 0 3 0 0

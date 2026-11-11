@@ -12,7 +12,24 @@ foreach ($p in $man.files.PSObject.Properties) {
 }
 $data = Join-Path $pkg 'AC\Temp\CwoLoaderBFR'
 New-Item -ItemType Directory -Force -Path $data | Out-Null
-Get-ChildItem -LiteralPath (Join-Path $here 'data') | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $data -Recurse -Force }
+# 1.49: every file of yours that the pack replaces is kept first (AC\Temp\CwoLoaderBFR_backup_<date>), never deleted
+$src = Join-Path $here 'data'
+$bk = $data + '_backup_' + (Get-Date -Format 'yyyy-MM-dd_HHmmss')
+$kept = 0
+Get-ChildItem -LiteralPath $src -Recurse -File | ForEach-Object {
+  $rel = $_.FullName.Substring($src.Length + 1)
+  $t = Join-Path $data $rel
+  if ((Test-Path -LiteralPath $t) -and ((Get-FileHash -LiteralPath $t -Algorithm SHA256).Hash -ne (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash)) {
+    $b = Join-Path $bk $rel
+    New-Item -ItemType Directory -Force -Path (Split-Path -Parent $b) | Out-Null
+    Copy-Item -LiteralPath $t -Destination $b -Force
+    $kept++
+  }
+}
+if ($kept) { Write-Host "$kept of your own files that the pack replaces were kept in $bk" }
+Get-ChildItem -LiteralPath $src | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $data -Recurse -Force }
+# the CREATE editor's font: made on this PC from Windows' own Segoe UI fonts (never shipped)
+& (Join-Path $here 'launcher\CwoLaunch.exe') --bake-font (Join-Path $data 'CwoUiFont.bin') | Out-Null
 $names = Join-Path $data 'CwoOutfitNames.txt'   # 1.45: COLORS shows COLOR 1-15 again
 if (Test-Path -LiteralPath $names) { Move-Item -LiteralPath $names -Destination ($names + '.old') -Force }
 $lnk = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Phantom Dust BFR.lnk'

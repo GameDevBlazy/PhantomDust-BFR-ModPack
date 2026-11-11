@@ -1,4 +1,4 @@
-# BFR mod pack 1.48.1
+# BFR mod pack 1.49.0
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -94,6 +94,14 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.49.0**: loader 5.150.0 - everyone gets the same pack:
+  - every setting the pack's author plays with is in the pack: the BFR skill pack switch, HUD preset, outfits and outfit
+    effects (and the saved outfits), modes, Edgar's Dream, Spectator, Download Battle, game type, schools, records,
+    arsenal lists, Arsenal Data, the Map Slot choice; the install keeps your own copies first (CwoLoaderBFR_backup_<date>);
+  - Edgar's Dream > CREATE: the full-screen editor (stage, skill, outfit, character and more) next to Create a Mode;
+  - CREATE: while the keyboard and mouse drive the editor, your fighter no longer reacts to them (clicks and held keys
+    used to reach the game too);
+  - the CREATE editor's font is made on your PC from Windows' own Segoe UI fonts (install and first start).
 - **1.48.1**: loader 5.149.2 - no new skills in this pack yet (Revive Mend, Body Pull, Mirror, Hologram, Spiritual
   Projection, Thunder Punch, Ice Punch, Fiery Tornado, Mega Photon Burst and Giant Meteor are still being tested); the
   60 FPS display is on (CwoFps.txt: 60, or off).

@@ -1,0 +1,2 @@
+# SPECTATOR: name then 2 values (Player 1 starts as a CPU, CPU program)
+My Setup 1	1	0

@@ -1,0 +1,2 @@
+# CREATE AN OUTFIT: name then 17 values (Character, Outfit, Skin tone, Head accessory, Jacket color, Pants color, Save to slot, Outfit stock, Outfit effect, Effect placement, Effect left / right, Effect up / down, Effect front / back, Effect size, Effect speed, Effect shows, Aura color)
+My O	1	5	15	4	0	1	6	13	2	0	0	0	0	25	1	0	8

@@ -1,0 +1,2 @@
+# outfit effects (loader): model stem, outfit 1-15, preset, placement (0 outline, 1 one spot), left/right, up/down, front/back, size %, speed % (0 paused)
+pc01a 6 2 0 0 0 0 25 1 0 7

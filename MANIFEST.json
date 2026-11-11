@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.48.1",
+ "version": "1.49.0",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "77af155f25caa7173e7b4a20dd7d84d3c92b619794d191148a87fc0e9052f1c9",
-  "launcher/CwoLoader.dll": "39b9be3d9b52480c069b2c966180b24bb4883604e1991a1ea6cafe67bac79c2d",
+  "launcher/CwoLaunch.exe": "3c34b5bbf27176af311e7b37e3138d56dc81f431cdcef211ddfba3d72959599f",
+  "launcher/CwoLoader.dll": "3a9dba7da78858f7d0458f5f6693ef69542e11af4084bbdd9bd92c1ba52fd8af",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
   "data/CwoNewSkills.txt": "be97286fcec42b5ccf8db8c7615834659216f7c7d2d14afdc073b7bf1ab8ad81",
   "data/CwoStageFx.txt": "06d1f3c62882259c3e396b6a73f82ca2183c481ce5f811081881dd36fef669a1",
@@ -82,11 +82,93 @@
   "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "e97bfbade7c874d7a9726f6c659b1adac4d3406c6e2cb6f2947d2617b71396ae",
   "data/game/Assets/Data/Menu/cwo_select_outfits.txt": "e447d8ad88ff399ebeb4ef4279e672a7a5c5e659168836e35c019176b6e0addd",
   "data/game/Assets/Data/Menu/cwo_lobby_rows.txt": "eff6f2694c226bdc657a4552b41ef313afbe98cdfd62232afabde9dec8fc0c58",
-  "install_bfr.ps1": "4719c1fee8bcf4e01d1970650928f2bbc384ef5a4ee4d75f794e2e9c5e583e2f",
+  "data/CwoArsStages.txt": "b0c7db51bc43e12cb8759a206e7a7312250f38ca86919b7ac4b4fcfe837fb0d1",
+  "data/CwoArsenalLists.bin": "84779d45f8c5334c244f7980488ea0165060085034016edcb19414067c1b7cc9",
+  "data/CwoBFR_state.txt": "5f83d28513d145eecfc18170706d6e6de8644c8b20d23ad237ca079e99003648",
+  "data/CwoDownloadBattle.txt": "a3704c54df224861d5c57483dbfe1746e2fe8c498f47b83c1b15f1ab444909fd",
+  "data/CwoEdgar.txt": "f85ab422232afaf407eae7f7d46e44fae6403224825f75ddd8229e213e946c3a",
+  "data/CwoGameType.txt": "dfb11bde5c3250f6c2caeb7e707ce43b87aba43b3a8a3513045348f3e504edb3",
+  "data/CwoHud.txt": "48703eec446bb80592f344486bd41261abe154f6e48a5484568f838299f0a911",
+  "data/CwoModes.txt": "b78c1eb14cd5edef1f689f15a4d15274c1394f1dac3968a83161cfae584fb775",
+  "data/CwoOutfitFx.txt": "d19563a49212ed11a2794fe61d08a6eb469a6920372da32e9dba941981cc6c2b",
+  "data/CwoOutfits.txt": "1a0c5fa6f696b783b8d8dbc94141d49871a9f71f9aeb47998fae366aea7d11e6",
+  "data/CwoRecords.txt": "c855cdbeea557020cd9fa9a9463b3c91ac9d853facc662bf8da7b0f042e4e3fc",
+  "data/CwoSchools.txt": "192a3606baf702f5e8ade90d7bcf33a2b257ccef2187f861159115aa0e8fa7df",
+  "data/CwoSpectator.txt": "42a855977ea9047c0bc55cf70b0dbd0e1ef4ad6e4988547c1d105af015c9f673",
+  "data/CwoStormRemoved.txt": "15475a797d3e4ff596e97b8c6453e75c4eaac5328cdc29d62d048fb53e4600b9",
+  "data/markers_st08.csv": "22f92c1fe6bc1362c66eecb1708a287bf92e380a0b27bc9f24f6b6ddc16f26e1",
+  "data/mx_choice.txt": "6a06fc1b53a9447822231893e47a0abcfbebaa68ca4d783b5fe0f9ce1b9e556d",
+  "data/patches/_data/preview_outfit.alr.cwopatch": "664a7c93e11893cd62c646d70cc69a86d49c0336d55e9ee11b19252fe46ff36e",
+  "data/patches/_data/preview_outfit.alr.cwofrom": "11991535a663e44b22569e868155a5a76d0d2c7ac0c4f0844be6f0769ad17500",
+  "data/patches/_data/charsrc/pc00a0.alr.cwopatch": "b3d3c6861faacbc016049fc05ec2d71f330383ed24f885703873c95d4b3b7d1b",
+  "data/patches/_data/charsrc/pc00a0.alr.cwofrom": "36eeac828dfe147f371f7d0dbc38c5641c2cab1e7b66d2cba51ed06d97c9e0db",
+  "data/patches/_data/charsrc/pc01a.alr.cwopatch": "b7f1fa952aa3f5afd131863dc3a6327dea9cc1ffcad6d0a65cccb5c58f197ef7",
+  "data/patches/_data/charsrc/pc01a.alr.cwofrom": "103d3106bc9e7e19e9b24b1a48f959e0f27496dbde22c7f9ee2db7f59df54979",
+  "data/patches/_data/charsrc/pc01a0.alr.cwopatch": "311c730479c92f9003bd686d17b1d34ac077d58bada60962014716f54423ed08",
+  "data/patches/_data/charsrc/pc01a0.alr.cwofrom": "b2e89fc222e44884db0fb3d171225d2aad389422e245ab5e178794801ad259ef",
+  "data/patches/_data/charsrc/pc02a.alr.cwopatch": "594d30e77b77edcdc3aadc0aa6ee435d9e9357d0674ceeee7fbd49bd949c163c",
+  "data/patches/_data/charsrc/pc02a.alr.cwofrom": "f397cd3ead1dfce66010dcede7b012bb273367f2a93180d48d35222d2beca49e",
+  "data/patches/_data/charsrc/pc02a0.alr.cwopatch": "5ecc89890cea262109dca30ce95572268d8933a09f4b9a1dc2974a8d1ce2389a",
+  "data/patches/_data/charsrc/pc02a0.alr.cwofrom": "098c290808ca5b1dbf685f0d2e5b7cc0014f0e1b8c2fb63a9d6c173c73dfa4e7",
+  "data/patches/_data/charsrc/pc03a0.alr.cwopatch": "7c6981488c0a1c901febdb2a3378ec3b8c06cfb562630563ea6ee2d5a8221072",
+  "data/patches/_data/charsrc/pc03a0.alr.cwofrom": "4ea2fd388272fdbce074c62ddd6fc1180d801c99524a5b33302e86dd5e90bac1",
+  "data/patches/_data/charsrc/pc04a0.alr.cwopatch": "da6b162388f49af067197fe7bb1a6b7a987f7050b2f1868b0e28beea8f69727d",
+  "data/patches/_data/charsrc/pc04a0.alr.cwofrom": "22034fadf4bd0cab2b4b8f8cbbc390ade5a33155be97f3ed51e548b88d461424",
+  "data/patches/_data/charsrc/pc05a0.alr.cwopatch": "ca5674e5d025a09a49e85bcbb2df5a20b5b1dbcd0176dd6dec4c6bea5eaa71c3",
+  "data/patches/_data/charsrc/pc05a0.alr.cwofrom": "3397b28d80f290f4f9cb574f78bc11ee604a64899e9184e48e1fc61fe9c7910c",
+  "data/patches/_data/charsrc/pc06a0.alr.cwopatch": "6586aea660466ad16d7301fc8170de057cb85c890ea0492dfbd9635649cfd97d",
+  "data/patches/_data/charsrc/pc06a0.alr.cwofrom": "b3ed95a57d6eadae5512903fe1b591becef3d12e36382de3ac1fcd66dd20f9ce",
+  "data/patches/_data/charsrc/pc07a0.alr.cwopatch": "fb60a8b0a5c026f0d492df3101aea5e0f2ef1a0289e7fbe23152296ec1aefed8",
+  "data/patches/_data/charsrc/pc07a0.alr.cwofrom": "1326ad8a21f553df87e430c3afe042edb0713ab79d80c37491ae8d2aae9c2a46",
+  "data/patches/_data/charsrc/pc08a.alr.cwopatch": "e486151d01271252da88ac8209b13d8d5a9b50ce402df44fd5b5a6f8447185fb",
+  "data/patches/_data/charsrc/pc08a.alr.cwofrom": "0e2eef74acb16f25436cf9e2be360417bd771cd3d63ae4013415d82ae6a89e0c",
+  "data/patches/_data/charsrc/pc08a0.alr.cwopatch": "286ea9b86709e0862c2e65eb1c5f3c07fbae39f3c04774cd1979096ff94f8177",
+  "data/patches/_data/charsrc/pc08a0.alr.cwofrom": "21bbc9d088df55d5a7b9b3544f7986c6adae315c2ea8ebfa700253278f418e4d",
+  "data/patches/_data/charsrc/pc09a0.alr.cwopatch": "c534d1f6758abc01c487a26e130db7d4d49429a493b6a20738907d6100702a93",
+  "data/patches/_data/charsrc/pc09a0.alr.cwofrom": "723ff602c860afc34322d851782f353683be38c5c55545c9939159548e6d26b1",
+  "data/patches/_data/charsrc/pc10a0.alr.cwopatch": "f75d901abf6cfd7a74968c296b903238d71f3a08dcfb3b18b441e5ded9af480c",
+  "data/patches/_data/charsrc/pc10a0.alr.cwofrom": "e9266ab7565b90ae738cf10d3d780a7f479fa6ac770f220a036559baea9d8452",
+  "data/patches/_data/OutfitStock/pc01a/01 Cyberpunk.alr.cwopatch": "8f0d6c9d8be9ed52ab2f779a46f1b05445b2dc51a3d2bd9654e11000bcfb670e",
+  "data/patches/_data/OutfitStock/pc01a/01 Cyberpunk.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/02 Dystopian.alr.cwopatch": "3054e48f0e440dd0ed65072ac64721c77c3c4126098fa88a3123232495503c91",
+  "data/patches/_data/OutfitStock/pc01a/02 Dystopian.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/03 Digital Rain.alr.cwopatch": "4e0247bc9a07a4534a0b25b3ecb28cdddda9b9c62130e0f4d2ceb42d30de9f27",
+  "data/patches/_data/OutfitStock/pc01a/03 Digital Rain.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/04 Edgerunner.alr.cwopatch": "e745e92ca5fd5e8df9da8ff5d277236b2ec97b3983adf9873d665ab0f08f6c5a",
+  "data/patches/_data/OutfitStock/pc01a/04 Edgerunner.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/05 Edgerunner II.alr.cwopatch": "a1b250d346a577af492f58b635853f264c837ce624f3c62d0cf99514178955ac",
+  "data/patches/_data/OutfitStock/pc01a/05 Edgerunner II.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/06 Wild Beast.alr.cwopatch": "f4d4b970581cd25b89a61ad82a7697423ca318053c70f7afbec9f2100e48b030",
+  "data/patches/_data/OutfitStock/pc01a/06 Wild Beast.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/07 Samurai.alr.cwopatch": "88d6db23b3af396ce90afdef93c39393ec23ca1a99c69d8b44faeb635e0411ca",
+  "data/patches/_data/OutfitStock/pc01a/07 Samurai.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/08 Cosmic.alr.cwopatch": "ae9872ddb2b1c04df0354c98a82ae764648c10f265016688ba74e02b68183469",
+  "data/patches/_data/OutfitStock/pc01a/08 Cosmic.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/09 Seraph.alr.cwopatch": "897b6f86e7ce3704d33b4a79132c2eb6214c87a667f06c8421e9ed9754133475",
+  "data/patches/_data/OutfitStock/pc01a/09 Seraph.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/10 Demonic.alr.cwopatch": "1a50bce8d4591dd65822aca9351da79774d743ec14b4256cf9180110fd2f2fe4",
+  "data/patches/_data/OutfitStock/pc01a/10 Demonic.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/11 Psychokinesis.alr.cwopatch": "d2c82acb5d6702b5c728205371f0ce7b0217017c2da22c8efbda1a235d7b7e25",
+  "data/patches/_data/OutfitStock/pc01a/11 Psychokinesis.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/12 Fire Element.alr.cwopatch": "e6a5ad67eb29a9ab0c48036d204f9c8e6c26b2b248cf4190f9beba558e07e19c",
+  "data/patches/_data/OutfitStock/pc01a/12 Fire Element.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/13 Ice Element.alr.cwopatch": "aa97ef18c8761393f1f4b9b8d5f8a0e8ed499ff24f2c3fae1190eb6b89559382",
+  "data/patches/_data/OutfitStock/pc01a/13 Ice Element.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/14 Thunder Element.alr.cwopatch": "71b6f7d804fc29eb8295982b12be98a5c89f3374c4b2a9c441b839b6caf1d8f1",
+  "data/patches/_data/OutfitStock/pc01a/14 Thunder Element.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/15 Water Element.alr.cwopatch": "d76dfc3d9512b363528809f97fd02bc1c746fe933bc244e8f0d3b85c0fa0e4d7",
+  "data/patches/_data/OutfitStock/pc01a/15 Water Element.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/16 Earth Element.alr.cwopatch": "8dde012e8ab8b675f2f113b059dcfcb4a76d9962b72897b74b59af1046391616",
+  "data/patches/_data/OutfitStock/pc01a/16 Earth Element.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/OutfitStock/pc01a/17 Air Element.alr.cwopatch": "eed711a8919dbd5e922c52c4e5a0e1bea4f55dcc0b4db3c0157d86ad94c5b4f6",
+  "data/patches/_data/OutfitStock/pc01a/17 Air Element.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/patches/_data/outfit_base/pc01a5.alr.cwopatch": "211782f312d7a278d6f5ab1bdcad215d7611614be29dfce8cf16391e122b1c44",
+  "data/patches/_data/outfit_base/pc01a5.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "install_bfr.ps1": "7c712c6c5323de9ede1226e557a8bca59c538af6b1f7cbb1d56f96fecc3d6018",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "ec573f156e6c93d4e70d65c9978360af475445925074306dd95183b03d6e6c60"
+  "README.md": "07adb4021407610904706417186b6b1febeaf3a1fc9dacb4237e62919f3b6569"
  },
  "patches": [
   {
@@ -530,6 +612,358 @@
    "our_bytes": 122747,
    "copied_from_your_file": 52717,
    "carries": "new stage (1.48, patch format 2)"
+  },
+  {
+   "file": "_data/preview_outfit.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01aOg - Copy.alr",
+    "Assets/Data/Player/pc01a/pc01a0.alr",
+    "Assets/Data/Player/pc04a/pc04a0.alr",
+    "Assets/Data/Player/pc06a/pc06a.alr"
+   ],
+   "result_sha256": "66d7ea4557490d502634e20ffc7fe8fbbc9f6a353911edb85c0f741b2b46a58e",
+   "our_bytes": 148634,
+   "copied_from_your_file": 1688146,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc00a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc00a/pc00a0 - Copy (2).alr"
+   ],
+   "result_sha256": "db5497b69f99c4b10cb0ddb3d5bb1fcfd23b0f8b1a4ed2a0d0d16f951bdcd421",
+   "our_bytes": 0,
+   "copied_from_your_file": 1464320,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc01a.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "67c19967c484ce5486bf740733a71cef9ee31b2bdd295e0a0149bc6a50df3285",
+   "our_bytes": 0,
+   "copied_from_your_file": 1437184,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc01a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a0 - Copy.alr"
+   ],
+   "result_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
+   "our_bytes": 0,
+   "copied_from_your_file": 1499648,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc02a.alr",
+   "made_from": [
+    "Assets/Data/Player/pc02a/pc02a - Copy.alr"
+   ],
+   "result_sha256": "f612db45b0d76a705ae2dd35f8d06c152d1e2054c0e65d638d3f1ba1d36a2125",
+   "our_bytes": 0,
+   "copied_from_your_file": 1355904,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc02a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc02a/pc02a0 - Copy.alr"
+   ],
+   "result_sha256": "c7cbee7aa5222621bd9179b6159575c19fcb4d28567aec27b6e31b89d8010631",
+   "our_bytes": 0,
+   "copied_from_your_file": 1406720,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc03a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc03a/pc03a0 - Copy.alr"
+   ],
+   "result_sha256": "290ce56d322f052f9414ef34a1e9bf614b0b33230720061669fe5b2b9aae7c28",
+   "our_bytes": 0,
+   "copied_from_your_file": 1418880,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc04a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc04a/pc04a0 - Copy.alr"
+   ],
+   "result_sha256": "682ac3722a009aaffbf03849aba57e7b8ffc74cceec581abb3be8732e218582c",
+   "our_bytes": 0,
+   "copied_from_your_file": 1454720,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc05a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc05a/pc05a0 - Copy.alr"
+   ],
+   "result_sha256": "f7546dc096b35dd70f5d3e41acd514ccca791f9de8907f3488d88d8d2a46bc78",
+   "our_bytes": 0,
+   "copied_from_your_file": 1404928,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc06a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc06a/pc06a0.alr"
+   ],
+   "result_sha256": "5fc57f73016f781930d6f78cb2186ed55d9ca718e7c2b5408d02911a23f3ca7f",
+   "our_bytes": 0,
+   "copied_from_your_file": 1482624,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc07a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc07a/pc07a0 - Copy.alr"
+   ],
+   "result_sha256": "41858511d48759df8a2f6d60af45e2c40186b9694ce46ef1aaf3e4dd49b75a95",
+   "our_bytes": 0,
+   "copied_from_your_file": 1460352,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc08a.alr",
+   "made_from": [
+    "Assets/Data/Player/pc08a/pc08a - Copy.alr"
+   ],
+   "result_sha256": "032465534c5bf86121bf8448db236eeca9086cb3032db93b8639db905ae68337",
+   "our_bytes": 0,
+   "copied_from_your_file": 1371264,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc08a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc08a/pc08a0 - Copy.alr"
+   ],
+   "result_sha256": "18723d2d6df5d114e6443c5323f77b1ef745d961b689dc77b218628b3af88582",
+   "our_bytes": 0,
+   "copied_from_your_file": 1408128,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc09a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc09a/pc09a0 - Copy.alr"
+   ],
+   "result_sha256": "7e34fa73b1218ce346d1cde89fec7d345eb3a4a8970e732507d8154caab05892",
+   "our_bytes": 0,
+   "copied_from_your_file": 1398144,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/charsrc/pc10a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc10a/pc10a0 - Copy.alr"
+   ],
+   "result_sha256": "3edc6a2e34d457ec1ad18e04bcd1679d2186137db453499841a16a00036229da",
+   "our_bytes": 0,
+   "copied_from_your_file": 1486464,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/01 Cyberpunk.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "b8e87a5c9151bda8b3055bd65296589948f828140dcafc6c63af140108019e1a",
+   "our_bytes": 161345,
+   "copied_from_your_file": 1338287,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/02 Dystopian.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "a31a69fe85a77b8123d926fc970bf3e0e8fcabb966c6fdf852a4d565407dcca6",
+   "our_bytes": 161341,
+   "copied_from_your_file": 1338291,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/03 Digital Rain.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "ff4c1806952297d630ed487d32fcfabae5f573571eb2649ec4447b0adc817fc6",
+   "our_bytes": 152209,
+   "copied_from_your_file": 1347423,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/04 Edgerunner.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "b7485b62ba313939b5c84ffb235b525636b98d44f61a873e31bf142a2c478697",
+   "our_bytes": 161343,
+   "copied_from_your_file": 1338289,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/05 Edgerunner II.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "e94ec936ea11efccdc43991d32f60462ef94e1e7a72c5b2f98277ee09e53a7dd",
+   "our_bytes": 161338,
+   "copied_from_your_file": 1338294,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/06 Wild Beast.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "e1c7e82f7e36e89876966805e41d57d9aa465610fa749ed172ccf13d9cf12e5b",
+   "our_bytes": 161263,
+   "copied_from_your_file": 1338369,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/07 Samurai.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "fff7a53163f20d3a5e11ba258143ecb7604eb289a33c8fe491328b5c014a7776",
+   "our_bytes": 161343,
+   "copied_from_your_file": 1338289,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/08 Cosmic.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "79647edc0b3424831db2a500cff269a8f038f51381dad92f24e5e56676554191",
+   "our_bytes": 161349,
+   "copied_from_your_file": 1338283,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/09 Seraph.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "6258d67c7cee87c6777f3cbc271c5ac684ec2fd659d59632d029e25a526381db",
+   "our_bytes": 161391,
+   "copied_from_your_file": 1338241,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/10 Demonic.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "5c3e7aafe66fc13b06c2e503df5badd08ce47fd8ba49019fc17eeefa26669f45",
+   "our_bytes": 151193,
+   "copied_from_your_file": 1348435,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/11 Psychokinesis.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "a1fdd69edb9faba13bbd1070cd7966496837b2f49fe60b4d2180bd73cd410932",
+   "our_bytes": 161349,
+   "copied_from_your_file": 1338283,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/12 Fire Element.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "04cddeb13ab35d142bfda052a055c9164a92418b704ec36d206f43175bd58a40",
+   "our_bytes": 161342,
+   "copied_from_your_file": 1338290,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/13 Ice Element.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "2ba7587bbde88fa3fb65d9a33817a034488439c17e2e223aea0891e80189fd52",
+   "our_bytes": 161392,
+   "copied_from_your_file": 1338240,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/14 Thunder Element.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "912e49d3514ec04bbaf32ca7ebdadb499b13f960cebf001120eeb03afa378112",
+   "our_bytes": 161065,
+   "copied_from_your_file": 1338567,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/15 Water Element.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "78b7a645b6dbcfb0627c12f1be77d959365c870916abbc45d944763e294f6994",
+   "our_bytes": 161351,
+   "copied_from_your_file": 1338281,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/16 Earth Element.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "2d98f934107b983b6e21c4ed924a867247f10228c329efdf882e75055ffc2bf9",
+   "our_bytes": 161276,
+   "copied_from_your_file": 1338356,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/OutfitStock/pc01a/17 Air Element.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "7ba381b8e6002145e0db324bfed692a4944456b6f6af6be3923af2f1c023f623",
+   "our_bytes": 161395,
+   "copied_from_your_file": 1338237,
+   "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "_data/outfit_base/pc01a5.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a0 - Copy (2).alr",
+    "Assets/Data/Player/pc01a/pc01a - Copy.alr"
+   ],
+   "result_sha256": "b78784c3681772fc1728f5a4cd9f76c634af12d4beb682d2cdf08c6c90b27fce",
+   "our_bytes": 159720,
+   "copied_from_your_file": 1339912,
+   "carries": "data folder model (1.49 pack parity)"
   }
  ]
 }

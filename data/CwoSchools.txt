@@ -1,0 +1,2 @@
+# CREATE A SCHOOL: name then 29 values (Based on, Aura colour, Colour strength, Colour brightness, Aura effect, Aura effect part, Aura effect shows, School skill 1, School skill 2, School skill 3, School skill 4, Effect on,   move up / down,   move left / right,   move fwd / back,   tilt,   turn,   size,   width,   height,   speed, Effect pieces,   piece 1,   piece 2,   piece 3,   piece 4, Replace the aura, Effect colour,   colour strength)
+My School 1	1	-10	80	70	-1	0	0	-1	-1	-1	-1	0	0	0	0	0	0	100	100	100	100	0	-1	-1	-1	-1	0	-10	100

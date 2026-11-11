@@ -1,0 +1,2 @@
+# split-screen lobby game type (loader): 0 One-on-One, 1 Tag Team, 2 Battle Royale, 3 3 vs 3
+gametype 0
