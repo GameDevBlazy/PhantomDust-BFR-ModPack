@@ -1,16 +1,16 @@
 {
  "name": "BFR mod pack",
- "version": "1.48.0",
+ "version": "1.48.1",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "b17c4f8338498790b8f33baa272690e9f57b149e78eba694bac3d02ede939624",
-  "launcher/CwoLoader.dll": "a5e7ce601c4ad3a1af87d721fd2a277f6e180bd1cd58dbf2cf56ce12ca4f6b5d",
+  "launcher/CwoLaunch.exe": "77af155f25caa7173e7b4a20dd7d84d3c92b619794d191148a87fc0e9052f1c9",
+  "launcher/CwoLoader.dll": "39b9be3d9b52480c069b2c966180b24bb4883604e1991a1ea6cafe67bac79c2d",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
-  "data/CwoNewSkills.txt": "5e7e0a0d7c218bc0f4f3b5aa38ddc64a5229d0bda39527b49f1035a9415fce02",
+  "data/CwoNewSkills.txt": "be97286fcec42b5ccf8db8c7615834659216f7c7d2d14afdc073b7bf1ab8ad81",
   "data/CwoStageFx.txt": "06d1f3c62882259c3e396b6a73f82ca2183c481ce5f811081881dd36fef669a1",
   "data/CwoStageSound.txt": "e55ee9880f39502e7ff6affed386ffbc22862cd41d18062c109ebc830ea909e3",
   "data/CwoFps.txt": "a7b785fcacb4beb3fa3061e79befd2eb06605e1a407e42dd565709459f4304eb",
-  "data/CwoFxSize.txt": "2afb392859460014441c8acb4ca9248035e2f26f53205829a0cbf8c185bccab1",
+  "data/CwoFxSize.txt": "0f4229aedc687e86a1b99c05e7299f0b50408c6044fee885afbf7d64537ec474",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoTheme.txt": "6d1dbb9c582de44ad1dbc0d24eca4d831d8172bef0593680ecd24f6d0ce9def5",
@@ -86,7 +86,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "61495dd88fae6fbdbc8a194065219b147e502387e2b9637cfd4c902194296cd5"
+  "README.md": "ec573f156e6c93d4e70d65c9978360af475445925074306dd95183b03d6e6c60"
  },
  "patches": [
   {
