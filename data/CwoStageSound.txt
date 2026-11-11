@@ -1,0 +1,3 @@
+# pack bank: 1 IsekiIn(st01) 3 ShoppingMall(st03); see loader 5.148.2
+mx330 3
+mx401 1

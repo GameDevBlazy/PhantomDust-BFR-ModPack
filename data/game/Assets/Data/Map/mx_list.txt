@@ -1,2 +1,9 @@
 mx401	Edgar's Dream: Summit	1	4
 mx402	Preview Stage	1	4
+mx330	Palace Ascended	3	12	-150.1
+mx331	Sky Ring Highway	3	6	200.0
+mx332	Highway to the Alley	3	6	150.0
+mx333	Jungle Cave	2	6
+mx334	Five-Story Building	5	6
+mx335	Ruins	3	6
+mx336	Antarctic Outpost	2	6	-50.0

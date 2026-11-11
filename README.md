@@ -1,4 +1,4 @@
-# BFR mod pack 1.47.9
+# BFR mod pack 1.48.0
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -94,6 +94,16 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.48.0**: loader 5.149.1 - the mods of 2026-11-10:
+  - seven new stages in the stage list: Palace Ascended, Sky Ring Highway, Highway to the Alley, Jungle Cave (Noble Palace
+    sky, rain), Five-Story Building, Ruins (roaming tornado, sandstorm) and Antarctic Outpost (ice floor, frost mines, ice
+    storm cells, breaking ice and bridges);
+  - new skills: Revive Mend, Body Pull, Mirror, Hologram, Spiritual Projection, Thunder Punch, Ice Punch, Fiery Tornado,
+    Mega Photon Burst (drawn at 280 %), Giant Meteor;
+  - Lab > View Skill Vault (and Back + Y on View Stock): swap a skill you don't have into your stock;
+  - map rating at the end of a match on a pack stage (offline), shown in the lobby's Level line;
+  - 60 FPS display for fighters, effects and projectiles (CwoFps.txt: 60 / off); pause-menu lock-on toggle;
+  - fixes: the stage-effect crash, the match-end fault, the start-up race, the repeated "new skill" log lines.
 - **1.47.9**: loader 5.107.0: split screen shows every fighter's own panel (the game's life bar, hand, deck and aura, with
   their face) stacked under each player's panel.
 
