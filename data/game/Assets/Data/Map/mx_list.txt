@@ -20,7 +20,3 @@ pc08	Sein pieces	1	4
 pc06	Refinery pieces	1	4
 pc07a	Twilight Lane pieces A	1	4
 pc07b	Twilight Lane pieces B	1	4
-mx309	Palace (UE Bridge test)	1	4
-mx306	Highway Pieces Test	1	4
-mx327	Hard Pieces Plaza	1	4
-mx328	UE Pieces Demo	1	4

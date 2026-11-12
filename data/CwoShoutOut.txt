@@ -2,3 +2,8 @@
 # Lines starting with # are notes and are not shown. Delete the # in front of a line to use it.
 # Phantom Dust LFG Messenger group|Thank you to every active player in the Facebook LFG Messenger group.
 # PlayerName|Asked for the 3 vs 3 lobbies.
+Murder|First to 5 KOs and Most KOs, downed partners kept marked, revives per round.
+Sharky|Teammate lock-on you can switch on and off in the lobby.
+Kanye|Helped test the mods before the official launch; Revive Mend and Body Pull, the revive support skills.
+Gamegod1985|The Forge idea: move spawns and add cover.
+Phantom Dust LFG VET|Thank you to the Facebook Messenger group for testing the mods.

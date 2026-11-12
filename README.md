@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.1
+# BFR mod pack 1.50.2
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -95,6 +95,14 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.2**: fixes from the pack author's test of 1.50.1 (loader 5.151.1):
+  - the stage files were not built on players' games (their patches were made from files the game does not ship): Grand
+    Panorama, the new stages, the piece rooms and the NPC models now build from your own game's files;
+  - the level list no longer crashes when it shows one added stage after another (Highway Pieces Test, Grand Panorama);
+    a stage whose files are missing is left out of the lists instead of loading the previous one;
+  - the music is at 70 % from start-up until you leave the title screen (your own music level after that);
+  - the Skill Fuser's test skills 693-699 and the test stages (UE Pieces Demo, Hard Pieces Plaza, Highway Pieces Test,
+    Palace UE Bridge test) are gone.
 - **1.50.1**: automatic updates - the launcher checks this pack's GitHub page each time it starts and installs a newer
   version by itself (only when it is signed by the pack's author; your own changed settings and saves are kept). The main
   menu shows the pack's version (BFR MOD PACK 1.50.1).
