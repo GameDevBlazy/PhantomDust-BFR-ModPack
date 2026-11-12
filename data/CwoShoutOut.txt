@@ -1,0 +1,4 @@
+# COMMUNITY SHOUT-OUT (shown in MOD LIST on the main menu). One line per entry:  Name|why
+# Lines starting with # are notes and are not shown. Delete the # in front of a line to use it.
+# Phantom Dust LFG Messenger group|Thank you to every active player in the Facebook LFG Messenger group.
+# PlayerName|Asked for the 3 vs 3 lobbies.

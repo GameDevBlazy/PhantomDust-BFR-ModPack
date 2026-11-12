@@ -1,0 +1,2 @@
+40
+# title-screen music, percent of your normal music volume (100 = the game's own)

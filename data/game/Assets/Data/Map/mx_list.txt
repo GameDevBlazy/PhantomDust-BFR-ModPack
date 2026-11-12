@@ -1,8 +1,6 @@
 mx401	Edgar's Dream: Summit	1	4
 mx402	Preview Stage	1	4
 mx300	The Bunker	3	6
-mx301	Grand Panorama	3	6
-mx302	Grand Panorama (Sunset)	3	6
 mx330	Palace Ascended	3	12	-150.1
 mx331	Sky Ring Highway	3	6	200.0
 mx332	Highway to the Alley	3	6	150.0
@@ -10,3 +8,19 @@ mx333	Jungle Cave	2	6
 mx334	Five-Story Building	5	6
 mx335	Ruins	3	6
 mx336	Antarctic Outpost	2	6	-50.0
+mx301	Grand Panorama	3	8	90.0
+mx302	Grand Panorama (Sunset)	3	8	90.0
+pcblank	Skill Test Stage	1	4
+pc01	Edgar's Lab pieces	1	4
+pc02	Highway pieces	1	4
+pc03	Lost Palace pieces	1	4
+pc04	Panorama pieces	1	4
+pc05	Dawn City pieces	1	4
+pc08	Sein pieces	1	4
+pc06	Refinery pieces	1	4
+pc07a	Twilight Lane pieces A	1	4
+pc07b	Twilight Lane pieces B	1	4
+mx309	Palace (UE Bridge test)	1	4
+mx306	Highway Pieces Test	1	4
+mx327	Hard Pieces Plaza	1	4
+mx328	UE Pieces Demo	1	4

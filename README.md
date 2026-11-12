@@ -1,4 +1,4 @@
-# BFR mod pack 1.49.1
+# BFR mod pack 1.50.0
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -38,8 +38,9 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **15 outfits** for every playable and enemy fighter: the 5th is the OG outfit (alpha animations), then designer
   outfits - Neon Circuit, Royal Gold, Angelic, Street, Field Ops, Inferno, Frostbite, Hazard, Galaxy, Two-Tone Tide,
   Crimson Shadow (built from your own game files the first time one is picked).
-- **Edgar's Dream** (offline): Create a Stage, Create a Mode, Spectator, Create an Outfit (skin tone, head accessory,
-  jacket and pants colours, with a turning preview).
+- **Edgar's Dream** (offline): every page (1.50) - Create a Stage (Forge), Create a Skill, Create a School, Create a
+  Character, Create a Quest, Create a Mode, Spectator, Skill Fuser, Records, Stage Music, Draft Arsenal, Boss Raid, Create an
+  Outfit (skin tone, head accessory, jacket and pants colours, with a turning preview) and Visions.
 - **1.43 - Outfit effects** (Create an Outfit, offline matches): a skill's flames, ice, thunder, psychic or vibration on the
   body - around the whole outline or in one spot; move it left / right, up / down, front / back from the middle of the body,
   size 25-300%, speed 0-300% (0 = paused), and show it always, as a reward at aura level 10, or growing with the aura.
@@ -94,6 +95,20 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.0**: loader 5.151.0 - the pack author's picks from the MODS edition:
+  - Grand Panorama and Grand Panorama (Sunset) remade: one designed map (office-roof plaza, refinery roof, broken highway,
+    4 lifts, 8 spawns); the Sunset one mirrored under Sunset Refinery's sky;
+  - the test and piece stages in the stage list: Skill Test Stage, the piece rooms (Edgar's Lab, Highway, Lost Palace,
+    Panorama, Dawn City, Sein, Refinery, Twilight Lane A / B) with their Forge layouts, Palace (UE Bridge test), Highway
+    Pieces Test, Hard Pieces Plaza, UE Pieces Demo;
+  - new skills: Mirror, Hologram, Spiritual Projection (their doubles fight in offline matches only), Thunder Punch, Ice
+    Punch, Fiery Tornado, Mega Photon Burst, Giant Meteor;
+  - the full Edgar's Dream (every page), the NPC page on the character selects (the ten NPCs), CPU levels (Tough and Brutal
+    rows, the Brutal program), Boss Raid (off until you switch it on), the six-fighter switch, the minimalistic white menu
+    theme (CwoUiTheme.txt: white / off), the title-screen music volume (CwoTitleVolume.txt), the community shout-out list
+    (CwoShoutOut.txt), the Skill Fuser's fusions;
+  - modes: Standard, 3 vs 3, Long fight, Quick KO, My Mode 5;
+  - fix: no map sound bank for Edgar's Dream: Summit (the bank that crashed The Bunker in the test edition).
 - **1.49.1**: the rest of the pack author's BFR edition:
   - three more stages in the stage list: The Bunker, Grand Panorama and Grand Panorama (Sunset) (built on your PC from
     your own game files at the first start);
@@ -142,8 +157,8 @@ Close the game and run `UNINSTALL BFR.bat`. The shortcut is removed and the pack
 The loader's log is `%LOCALAPPDATA%\Packages\Microsoft.MSEsper_8wekyb3d8bbwe\AC\Temp\CwoLoaderBFR\cwo_loader.log`.
 
 ## Online
-Play online only with players who run this same pack. Offline-only parts (Create a Stage, Spectator, Create a Mode's
-own modes) stay offline.
+Play online only with players who run this same pack. Offline-only parts (Edgar's Dream's pages, Spectator, Create a
+Mode's own modes, Boss Raid, the six-fighter switch, the Mirror / Hologram / Spiritual Projection doubles) stay offline.
 
 ## Credits
 - Battle for Reality skill data: the pack's author.

@@ -1,0 +1,5 @@
+# Boss Raid (loader)
+on 0
+allies 0
+boss 1
+slayer 0

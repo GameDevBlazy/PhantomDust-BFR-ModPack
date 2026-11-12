@@ -1,0 +1,12 @@
+# Skill Test Stage (build_pieces_canvas.py): every piece starts in storage under the floor
+storage_below 185.0
+floor_y 200.0
+category Skies
+object pcblank_sky05|Sky: Dawn City|box -12000.0 -4000.0 -12000.0 12000.0 5000.0 12000.0
+object pcblank_sky01|Sky: Edgar's Lab|box -12000.0 -4000.0 -12000.0 12000.0 5000.0 12000.0
+object pcblank_sky02|Sky: Highway|box -12000.0 -4000.0 -12000.0 12000.0 5000.0 12000.0
+object pcblank_sky03|Sky: Lost Palace|box -12000.0 -4000.0 -12000.0 12000.0 5000.0 12000.0
+object pcblank_sky04|Sky: Panorama|box -12000.0 -4000.0 -12000.0 12000.0 5000.0 12000.0
+object pcblank_sky06|Sky: Refinery|box -12000.0 -4000.0 -12000.0 12000.0 5000.0 12000.0
+object pcblank_sky07|Sky: Twilight Lane|box -12000.0 -4000.0 -12000.0 12000.0 5000.0 12000.0
+object pcblank_sky08|Sky: Sein|box -12000.0 -4000.0 -12000.0 12000.0 5000.0 12000.0

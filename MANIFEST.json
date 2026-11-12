@@ -1,16 +1,16 @@
 {
  "name": "BFR mod pack",
- "version": "1.49.1",
+ "version": "1.50.0",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "3c34b5bbf27176af311e7b37e3138d56dc81f431cdcef211ddfba3d72959599f",
-  "launcher/CwoLoader.dll": "3a9dba7da78858f7d0458f5f6693ef69542e11af4084bbdd9bd92c1ba52fd8af",
+  "launcher/CwoLaunch.exe": "f91c9813bcec8df88db01ca5e817047b45c15db3d6b0894257a786e5a47ba7c3",
+  "launcher/CwoLoader.dll": "654a3a82c1858e9956dd41a013fafbd9dc69853ff986035f608bf4ddb56b63b5",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
-  "data/CwoNewSkills.txt": "be97286fcec42b5ccf8db8c7615834659216f7c7d2d14afdc073b7bf1ab8ad81",
+  "data/CwoNewSkills.txt": "16f8875752d2b4b358ecbd56a3dd5e3a5b2d692f0b46c45610af0a4c042b84ab",
   "data/CwoStageFx.txt": "06d1f3c62882259c3e396b6a73f82ca2183c481ce5f811081881dd36fef669a1",
-  "data/CwoStageSound.txt": "e55ee9880f39502e7ff6affed386ffbc22862cd41d18062c109ebc830ea909e3",
+  "data/CwoStageSound.txt": "9a84f19b49736458d16250426b9561c374423a102e3b7bdebc4733d1a36df15b",
   "data/CwoFps.txt": "a7b785fcacb4beb3fa3061e79befd2eb06605e1a407e42dd565709459f4304eb",
-  "data/CwoFxSize.txt": "0f4229aedc687e86a1b99c05e7299f0b50408c6044fee885afbf7d64537ec474",
+  "data/CwoFxSize.txt": "b4ea0f849864bd9b82a2b2e2835fedfa06271455ab16f1c31bd38c596453e07a",
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoTheme.txt": "6d1dbb9c582de44ad1dbc0d24eca4d831d8172bef0593680ecd24f6d0ce9def5",
@@ -29,7 +29,6 @@
   "data/patches/Assets/Data/Menu/Mission.alr.cwopatch": "4710eda5d2dae41deef5c37fcdcab1d39938390a7f76d285fd8dfb6e912d92ad",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
   "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "1731eabfbe0566e3578dbc6ea9d81c57827c9d5dfdf1bb449ed9781a3bc9212a",
-  "data/patches/Assets/Data/setup/charaset/charaset_en.dat.cwopatch": "c53584781abe45f53f8984c2e8df67925b67dccca5baa5ec312c2bf5b1a868f4",
   "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "36ca20eae6d36c9963f06d64977fba82054c888288ebc4d931b8bc53c3143a89",
   "data/patches/Assets/Data/Map/mx401.dat.cwofrom": "1e42613a1bd8bab30f5ebe3c21ff3ee24e0a17a277073d019e3adc77714e5ebd",
   "data/patches/Assets/Data/Map/mx401.alr.cwopatch": "55b5f798a32380ec420195e89a4de70f3dbe8c8fa06eb2f38328f755565dfe09",
@@ -80,17 +79,9 @@
   "data/patches/Assets/Data/Map/mx300.alr.cwofrom": "fe56095024c1525fd126ccafb1fae2afe218d396bae5f3190c6cae598e9288ae",
   "data/patches/Assets/Data/Map/mx300.dat.cwopatch": "14b0919abd7cbec566b0b9d0f6e56b8b2068dcadff1436c9664712f9a3f7bb2b",
   "data/patches/Assets/Data/Map/mx300.dat.cwofrom": "494df8b8227ca6d9825eadf9b16cae6be33e40a5132f0c8cf208beaae6229118",
-  "data/patches/Assets/Data/Map/mx301.alr.cwopatch": "e312f2e6330306d949e458b09111420f8157ef94e70e807db40d5b0c039fc458",
-  "data/patches/Assets/Data/Map/mx301.alr.cwofrom": "aed495801668b2c69d1b4d609c15aa3ab9c96d66b2174766f982481a77f82812",
-  "data/patches/Assets/Data/Map/mx301.dat.cwopatch": "07aaacdb345e18f88cba9cffdff5d39be1a7f6442c033d0d96a348f32709bf53",
-  "data/patches/Assets/Data/Map/mx301.dat.cwofrom": "667fdd4cfee4077ed9b57e2eb6eac675a0c017ae242f643733607872dcacbe16",
-  "data/patches/Assets/Data/Map/mx302.alr.cwopatch": "85afcfb0dd0907e8fda9e36eb8ad6d413a4133605e91ef755e0d49bbb6d157a0",
-  "data/patches/Assets/Data/Map/mx302.alr.cwofrom": "29ddbcaa771e718b7cfdbdb419ecffa770934a6ac1fa0b65ee1eae270e3aa0c7",
-  "data/patches/Assets/Data/Map/mx302.dat.cwopatch": "15ee274c8558e4b338405beb1cd9a6c0881401705b7bde5f86c39f6014653d66",
-  "data/patches/Assets/Data/Map/mx302.dat.cwofrom": "50ae5466e7428c622cddbf8fc12ad1d81bf2d467f12568bfaac3dd03592d84e5",
   "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwopatch": "aa97ef18c8761393f1f4b9b8d5f8a0e8ed499ff24f2c3fae1190eb6b89559382",
   "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
-  "data/game/Assets/Data/Map/mx_list.txt": "4ae7db0c6ed05d6221c5681d5bfb477f137dccb8438f06db3a8b46e06ef89b55",
+  "data/game/Assets/Data/Map/mx_list.txt": "9f52130641807d60810e843fbedd4871471557d6964483b2016584eb65e6a8b1",
   "data/game/Assets/Data/Menu/cwo_faces.dxt": "368d2c49887c5e3c1df34e7590436ca0b8e964067134d91baa9d75ea7e288df7",
   "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
   "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "e97bfbade7c874d7a9726f6c659b1adac4d3406c6e2cb6f2947d2617b71396ae",
@@ -103,7 +94,7 @@
   "data/CwoEdgar.txt": "f85ab422232afaf407eae7f7d46e44fae6403224825f75ddd8229e213e946c3a",
   "data/CwoGameType.txt": "dfb11bde5c3250f6c2caeb7e707ce43b87aba43b3a8a3513045348f3e504edb3",
   "data/CwoHud.txt": "48703eec446bb80592f344486bd41261abe154f6e48a5484568f838299f0a911",
-  "data/CwoModes.txt": "b78c1eb14cd5edef1f689f15a4d15274c1394f1dac3968a83161cfae584fb775",
+  "data/CwoModes.txt": "a05a4e4018ab5289048aeed795b008aa60f9001aa3dc3f34be75d9519b1c5bb0",
   "data/CwoOutfitFx.txt": "d19563a49212ed11a2794fe61d08a6eb469a6920372da32e9dba941981cc6c2b",
   "data/CwoOutfits.txt": "1a0c5fa6f696b783b8d8dbc94141d49871a9f71f9aeb47998fae366aea7d11e6",
   "data/CwoRecords.txt": "c855cdbeea557020cd9fa9a9463b3c91ac9d853facc662bf8da7b0f042e4e3fc",
@@ -178,11 +169,321 @@
   "data/patches/_data/OutfitStock/pc01a/17 Air Element.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
   "data/patches/_data/outfit_base/pc01a5.alr.cwopatch": "211782f312d7a278d6f5ab1bdcad215d7611614be29dfce8cf16391e122b1c44",
   "data/patches/_data/outfit_base/pc01a5.alr.cwofrom": "7aaba0637546e464824034ac5aa0bb80afc3edd5116b464af57d0a37844b175d",
+  "data/game/Assets/Data/Map/pcblank.forge": "209b13da3c04dcf2c5cd3171a40b44af244f72ff29ea82cc0bbbba9f46468d50",
+  "data/game/Assets/Data/Map/pc01.forge": "4da992863e7737a45da2bbd443b9c81a9a133a207d04f02dc631976658a6bba3",
+  "data/game/Assets/Data/Map/pc02.forge": "77974d5284988e56eb086128494e77a9c04dc46e4aca0ce68acff098ee53b09e",
+  "data/game/Assets/Data/Map/pc03.forge": "1614fd4ba0e554a9bab23938e8c02e046182a98c11393e92152eea6b2b1bae87",
+  "data/game/Assets/Data/Map/pc04.forge": "8cb5497d5c39dd1e5294cf5328eb0c983d0b2ac9381a66e01b78acf1ac338ec4",
+  "data/game/Assets/Data/Map/pc05.forge": "e5580872a400ba4b492b30fcb9a1285f1049e185c41290988abf48e5fe53014b",
+  "data/game/Assets/Data/Map/pc06.forge": "aee40332e71f4b2d11999a1649898fbb30c8474032165979e8e64743c9c57b88",
+  "data/game/Assets/Data/Map/pc07a.forge": "b0c176edb4b95adfb215acf038cca79baf057888b3d712387280a5a991378928",
+  "data/game/Assets/Data/Map/pc07b.forge": "8b3e6418f233bea15da1fb757830ae15b4878a502a02eb5a1161bbd646f684ba",
+  "data/game/Assets/Data/Map/pc08.forge": "fd5c1e212a8014798d3a75480ab4708423a1325038b9e58e71a395d9f1698b24",
+  "data/game/Assets/Data/Menu/cwo_npc_page.txt": "485f583c2e544b8d71b4aaa3639633b85197b2e07d9524f7c61e928bb5d6e87f",
+  "data/CwoBossRaid.txt": "fc08d6eb36ad731b2402591f5106000dd87021f1405bf59071d48b5d5839609e",
+  "data/CwoSixFighters.txt": "5f83d28513d145eecfc18170706d6e6de8644c8b20d23ad237ca079e99003648",
+  "data/CwoUiTheme.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
+  "data/CwoTitleVolume.txt": "f7fa0046012414ae2ea2787b63428b7260b164fcf8b623aefce9cb18b5e54ad1",
+  "data/CwoShoutOut.txt": "3f58b24a590423d91a35025e1f1b7c84340d4915d16432d7cd025cba922f8bc3",
+  "data/CwoFusions.txt": "d92a66b5ca6439d68ebc7adbfe9ef2afb059bb90fbac193a1ca97ddb7baa706c",
+  "data/patches/Assets/Data/Map/mx301.alr.cwopatch": "e736e225eaa5c962aea0510856f2fba6f7ee24d294a2ec9b83283d23a7753f82",
+  "data/patches/Assets/Data/Map/mx301.alr.cwofrom": "ce67e8f9b0a8467ce572293acc20b9b99e2f0ed3188e234d6727998beab65009",
+  "data/patches/Assets/Data/Map/mx301.dat.cwopatch": "0376479598c3152d06de509c4500a38646651bcbd6625e0f42c865abe2df5a98",
+  "data/patches/Assets/Data/Map/mx301.dat.cwofrom": "b11d90fe6e1949b719f9c6e8368c61f7e808188dc4b02f7951d23f09082207f3",
+  "data/patches/Assets/Data/Map/mx302.alr.cwopatch": "f8fb812062f366a6450a086730d8e6c332f40a8c64fcbd5a8b4d48008cbf7f76",
+  "data/patches/Assets/Data/Map/mx302.alr.cwofrom": "5336b10f7bd1a7d42eb376b148f7633c0ac7d0e395eb8368011adc8a45427886",
+  "data/patches/Assets/Data/Map/mx302.dat.cwopatch": "58c9e6aaeab857c43e4465746517c4069d1ae5a27c499d10d67e58a520cdfb53",
+  "data/patches/Assets/Data/Map/mx302.dat.cwofrom": "83a963f5901266bdb4481a42f95c700604a091f2b1546ada0cca12566104ebe4",
+  "data/patches/Assets/Data/Map/mx309.alr.cwopatch": "6c74ee0fb7f42c3c50269105db1009d87dd76355a660d4191b2bbca2abba556a",
+  "data/patches/Assets/Data/Map/mx309.alr.cwofrom": "f4dfd39dc26deeaef522dc896116d337ea344838888ff7caabb8a12e63dd79a4",
+  "data/patches/Assets/Data/Map/mx309.dat.cwopatch": "09b86826cea1ac7fb1d1f509b38ed70b0dd3ee1ad1d9d643b7f91a7b6dfa1ec0",
+  "data/patches/Assets/Data/Map/mx309.dat.cwofrom": "469b25c6aa24251eb987380eba9d4e38ae0a36e9130113349a9532692365cf11",
+  "data/patches/Assets/Data/Map/pcblank.alr.cwopatch": "1e8628e3d7286fd971022b5851f8f61cb961a8fe43815955067425f1fd2170a1",
+  "data/patches/Assets/Data/Map/pcblank.alr.cwofrom": "264f5d6b25b137199b842247f94de75384bd13a93af523f52883bac54daeb1c7",
+  "data/patches/Assets/Data/Map/pcblank.dat.cwopatch": "0ffc477dcf1bf2a1901cf924be25e1240f4a655a9ca096da14d1a7a066e392d2",
+  "data/patches/Assets/Data/Map/pcblank.dat.cwofrom": "03d8d21818ac4167419973819a5fa58c0bb5e5fdc046979896a9c07baef1927e",
+  "data/patches/Assets/Data/Map/pc01.alr.cwopatch": "a5fb95bd3f803e597434ba0795dd4e354ac8f7563ce9de2cd8205051581841c3",
+  "data/patches/Assets/Data/Map/pc01.alr.cwofrom": "7f7253600252910af92369625a30a88bab816d1694b121e76d0f4937d42ad26e",
+  "data/patches/Assets/Data/Map/pc01.dat.cwopatch": "199bf774bc6b7eb96969c851b98100bd4a3fab16cef529c8ab23dfb5260d69d2",
+  "data/patches/Assets/Data/Map/pc01.dat.cwofrom": "4d44262e405625d24d6bbd029f43f2d4bdc56d8af0166f4cc51849140b28c7b9",
+  "data/patches/Assets/Data/Map/pc02.alr.cwopatch": "3e88034a2ef5ef21d4c3b7be5c166b3d20940669bea7a73421c21b3bef733d2e",
+  "data/patches/Assets/Data/Map/pc02.alr.cwofrom": "a3d902e3823b0ec14ded385aba43d2c492051b77758796b8d4e08b00de85c0cd",
+  "data/patches/Assets/Data/Map/pc02.dat.cwopatch": "a6b8faa32a53684749e053e4888a1700a201a42d288a8b3b922f31dcf4abe5f1",
+  "data/patches/Assets/Data/Map/pc02.dat.cwofrom": "875ca7541dde4e714685d4505be2adfb8a514086e3619280a5c04e5af4bec652",
+  "data/patches/Assets/Data/Map/pc03.alr.cwopatch": "3de2607571ea39a457a7110af7bc2e688befd9f97a4da42347e30d8109e557c7",
+  "data/patches/Assets/Data/Map/pc03.alr.cwofrom": "fadc2af8655db6698d1dc1dcfdac46af4afb03e4065d514fb550dd35424bf06b",
+  "data/patches/Assets/Data/Map/pc03.dat.cwopatch": "948955592e6dc5cd1174fd2e6be48155998c7fb0952594589f263fc1efddeeaf",
+  "data/patches/Assets/Data/Map/pc03.dat.cwofrom": "2418161740ab8f755049e3cdfb887a660a48eb565504dc9117a9aa64a57fb8d9",
+  "data/patches/Assets/Data/Map/pc04.alr.cwopatch": "160f12d78d27334b346af81c23f974b562205b84e1b89e244ae42ff13ffbb9da",
+  "data/patches/Assets/Data/Map/pc04.alr.cwofrom": "38076b62d40156379ed20cf2010b0a7a06188cf73d100dce1ce1f355b3dd0807",
+  "data/patches/Assets/Data/Map/pc04.dat.cwopatch": "9c55c4195990238c476d5cb30556586e4e91bb72c341b37c0f804882ef520c19",
+  "data/patches/Assets/Data/Map/pc04.dat.cwofrom": "178f6affe79682a86c3ceafe1dcbe45ea93f7534270b0a6907403b428ba93c46",
+  "data/patches/Assets/Data/Map/pc05.alr.cwopatch": "95d0f108867a8f4eaaa93509bd5dfa8a7077477ed302dfc4ec510768a01145a6",
+  "data/patches/Assets/Data/Map/pc05.alr.cwofrom": "748646daefc4da5dfddb37edc8244648fad8dbbdccfab9f71045b90ab79e2ce9",
+  "data/patches/Assets/Data/Map/pc05.dat.cwopatch": "6f062ad7eae420c47c1c2f1cc8357edfadb68c8a2702c7af8b986873a23fb089",
+  "data/patches/Assets/Data/Map/pc05.dat.cwofrom": "f1c42dd82ffeeb7b5f740c84424641ba64a293f593430632cc836a8e0d23e623",
+  "data/patches/Assets/Data/Map/pc06.alr.cwopatch": "6cf3fa56bea3e6dfe737d1e78a340a73c743ec519b3b0ae321d7c0f1ba253954",
+  "data/patches/Assets/Data/Map/pc06.alr.cwofrom": "640c85cef50d18b8467653e886af326b56ec4be769d7caf7edd267a6663f6b28",
+  "data/patches/Assets/Data/Map/pc06.dat.cwopatch": "7b30fda15c842b616969b3c261869ef3c9f4330c3d964c43c31d747b2a44c348",
+  "data/patches/Assets/Data/Map/pc06.dat.cwofrom": "ae8f93dab79466daa98679f35d99208e3c5fd1805365ef0694abcec8acc879e5",
+  "data/patches/Assets/Data/Map/pc07a.alr.cwopatch": "dec55af99ad599dad8bf7f92fdebec46c420060c44843734483fde97c68988de",
+  "data/patches/Assets/Data/Map/pc07a.alr.cwofrom": "21dd2191283eec9a95687a7a364e7c03cbe2af40cda19c2bb8bc33df983202df",
+  "data/patches/Assets/Data/Map/pc07a.dat.cwopatch": "e26ba616d94f28c603798bedc5f3f765469b5bcbe8f5722d5ac3a8102095cf37",
+  "data/patches/Assets/Data/Map/pc07a.dat.cwofrom": "f8f749bd111c5f9b581b6c43dd949bb68e7c2d0695abbb4ee2243bc576d0b53b",
+  "data/patches/Assets/Data/Map/pc07b.alr.cwopatch": "db7ccd1a2373682cef67d6d61dd619a974a9769047b1833fd6ffe94decfbe1f0",
+  "data/patches/Assets/Data/Map/pc07b.alr.cwofrom": "519c103621daa99b9d7850fe0e54f5a33366d2050b2b38da70cc31ce465aadc0",
+  "data/patches/Assets/Data/Map/pc07b.dat.cwopatch": "6bff00b6cb5f29e5221eba951f9e3b9a7db31265ba5cc35bf9744cf572361278",
+  "data/patches/Assets/Data/Map/pc07b.dat.cwofrom": "dea7f573a259bd553afa6601ef06a601fb510be1ebd7931b4823b45b189b2562",
+  "data/patches/Assets/Data/Map/pc08.alr.cwopatch": "b7abc56f14eace11a36bd6a9190c8a9c61243c2679f8cc69750366a7e9c99869",
+  "data/patches/Assets/Data/Map/pc08.alr.cwofrom": "1e68bff0974e7a50cad84cedd99790b4bea113c819bd51493ab9d7a3a1240b1e",
+  "data/patches/Assets/Data/Map/pc08.dat.cwopatch": "a4b079858e5d9022d51fc6ff09028d758b726bf7f0ac0de357bdbf77acc651c7",
+  "data/patches/Assets/Data/Map/pc08.dat.cwofrom": "63f410222e720177041783692e4b026bda449a8012045050c4fc61b77173232b",
+  "data/patches/Assets/Data/Map/mx306.alr.cwopatch": "9414c3a1a9b0b0749ffce9603a8b167296d82681427459b16192c55d812fc64b",
+  "data/patches/Assets/Data/Map/mx306.alr.cwofrom": "a49695bd661739aa529c7fa222ae655c5600e587ff01bffc77d848173759db21",
+  "data/patches/Assets/Data/Map/mx306.dat.cwopatch": "2ba2ab850fa3b7629050f2a11b8f2b8f9df6fb79df3b360776d9084efce2211e",
+  "data/patches/Assets/Data/Map/mx306.dat.cwofrom": "62da5f69078d0e281ea372b07e53e120429381ba33b26d882eec15add30035a9",
+  "data/patches/Assets/Data/Map/mx327.alr.cwopatch": "16cde81e78d6e02e70ca531353335cc8cbdab907674e35218fd86a191fdfb3e1",
+  "data/patches/Assets/Data/Map/mx327.alr.cwofrom": "c121c6c64abfb98172cd41b5335e78b0f8607b387aa9bd3cb71918ffefa2ade0",
+  "data/patches/Assets/Data/Map/mx327.dat.cwopatch": "90979f0c86586072006c02524754c9076832038378a4457b95ad8cc73be62b5d",
+  "data/patches/Assets/Data/Map/mx327.dat.cwofrom": "d13d15da5a774efb675adb93b69b5d5dd6bc2caaa66beecf7915bdc7c49a4d2f",
+  "data/patches/Assets/Data/Map/mx328.alr.cwopatch": "16cde81e78d6e02e70ca531353335cc8cbdab907674e35218fd86a191fdfb3e1",
+  "data/patches/Assets/Data/Map/mx328.alr.cwofrom": "c121c6c64abfb98172cd41b5335e78b0f8607b387aa9bd3cb71918ffefa2ade0",
+  "data/patches/Assets/Data/Map/mx328.dat.cwopatch": "4073ac3b00694b6670172f3477417235e73481f2ca2a04c09189246b33a195d1",
+  "data/patches/Assets/Data/Map/mx328.dat.cwofrom": "d13d15da5a774efb675adb93b69b5d5dd6bc2caaa66beecf7915bdc7c49a4d2f",
+  "data/patches/Assets/Data/Player/Npc00a/exmot3.ala.cwopatch": "7cd9353e70c780b83256d5617ee5f39f4d31559c8d0cd19d3464e5ec39a15a03",
+  "data/patches/Assets/Data/Player/Npc00a/exmot3.ala.cwofrom": "1f1cda1f27d48aefbdd1defa5394834c65892f4cd395793ad31d8a95042bcc93",
+  "data/patches/Assets/Data/Player/Npc00a/exmot4.ala.cwopatch": "b9edea92cd957389b9ee05c0f0e261b6362aacdc29fcfc5ea31146ef74fea000",
+  "data/patches/Assets/Data/Player/Npc00a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/Npc00a/exmot2.ala.cwopatch": "1c730cf10e15fd71991e6638b448123bd7641950208946767b62d67c6c6a5f98",
+  "data/patches/Assets/Data/Player/Npc00a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/Npc00a/exmot5.ala.cwopatch": "b18b50ad0340eb6c7b82163e6dfca9d2f74eb6997c1270ed66480365ea04bc72",
+  "data/patches/Assets/Data/Player/Npc00a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/Npc00a/exmot1.ala.cwopatch": "1e711fa0d8527366ba86a88d13aec9acd2dc2a34eba1592f42aeec6e9edb0686",
+  "data/patches/Assets/Data/Player/Npc00a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/Npc00a/exmot0.ala.cwopatch": "83a14bea1b653a3490f26df83489ed218804c0d54cf1a9a1590e3b9da4f333f1",
+  "data/patches/Assets/Data/Player/Npc00a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a4.alr.cwopatch": "3805104ffc6a4926bf7495884f8f54dba58bad45c03cc0353f364ee46ee47e17",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a4.alr.cwofrom": "0ad43b7f3673229e78f0d33242dc70a0d96877da6fcd50b619e172dc086a47a7",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a5.alr.cwopatch": "8814a410ae423fcb08910644a9f193deeccf7a95f3730ef1ae4e0de3412cf991",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a5.alr.cwofrom": "4b326683446146b0c437752cbec6b6d1cc3930d9343e853a0a0252a394b5913b",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a6.alr.cwopatch": "626c53ebb354eed8852a588b4b609d6b31b7b7f69ea786dce9eb920100ca05cb",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a6.alr.cwofrom": "6148259dd25de2ffbc8a5e78f12d9eb8b37c65596dc53a352326b5033ed39005",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a3.alr.cwopatch": "025fd8ac816440688f2b098608e4a17875fdb210862e46e8446e586a7fca9860",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a3.alr.cwofrom": "f878cb1107103354453652d234c5313dd8990ef995bbeae8d56a7e939520e252",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a8.alr.cwopatch": "1e1b6169c8eceaec4cb6b18b72adf6920a6539fb8adce29c8025eb17407438ad",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a8.alr.cwofrom": "9b0c720a25d82a45690ff8edb6a5ee4d355c5f3f9a4735a4ebaefdd0efa27603",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a0.alr.cwopatch": "875eb89e9b3ba09c3264f74f27b964936c7bc51379d40f0571c3ae0316713c86",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a0.alr.cwofrom": "5f12f1d7fddd43636e770b343e38f223d03c3fcde59101cdd36d1bbdf86215fd",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a2.alr.cwopatch": "d99a06c344d910a845d637c719401d1ec2d1b99ed197bdb9823377b9583d4815",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a2.alr.cwofrom": "1c9fcdcc7ea1ace9fd30a5a6e58843b674ed89816aab8e74c29da185dc574efc",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a1.alr.cwopatch": "041f90be5da0457badca047e74de701b7b2400b6e1c8716394091fdc3b607aaf",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a1.alr.cwofrom": "77fa7f1f445e2b1ab684e6756311377ec252a7e99fc86b7e7b34ebde04d5ac23",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a7.alr.cwopatch": "eb6fc15fe6243b9d83e64917341ecf8eca46433a6f59077d5ff60be97d405735",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a7.alr.cwofrom": "25c0b9cf666487dbc0248894d4d6eed4501eb7a2698d722f0b7f6b0648f74718",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a10.alr.cwopatch": "6993a5f5798838ce2a4efca52b7e18946a9817e18f9b94ac95318ebdc039733d",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a10.alr.cwofrom": "26d50d957747b2d73cc12a26d07bef28b017ef6bf3f54eaaf07bddcbba40c0bc",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a11.alr.cwopatch": "7b447d1b3eb0ccbe9555dc167b1ba4e345f4154f6a6e093ad2ae3a4c6d0c79ca",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a11.alr.cwofrom": "705d6a7b6736314eb94cf3977d0758051f68f7d4b2a5766958d271fcd397119b",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a12.alr.cwopatch": "4e7379d7a8c4e18e0ef83038e64188b045122a3839b37a7a82d6453f19ea645d",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a12.alr.cwofrom": "26d50d957747b2d73cc12a26d07bef28b017ef6bf3f54eaaf07bddcbba40c0bc",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a13.alr.cwopatch": "c7d78be334b5c6fb34292c4819e181594a7ab8824369898771c12422d50ef2b5",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a13.alr.cwofrom": "705d6a7b6736314eb94cf3977d0758051f68f7d4b2a5766958d271fcd397119b",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a14.alr.cwopatch": "568c1206712bf490df8e9dc85d516a28e2c5259bf86da4afb3be97d688399a7f",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a14.alr.cwofrom": "705d6a7b6736314eb94cf3977d0758051f68f7d4b2a5766958d271fcd397119b",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a9.alr.cwopatch": "003c24b3afcd5c7279fbf15f28a5e3c984dec48a9d6d165cffdd61abc72cf207",
+  "data/patches/Assets/Data/Player/Npc00a/npc00a9.alr.cwofrom": "705d6a7b6736314eb94cf3977d0758051f68f7d4b2a5766958d271fcd397119b",
+  "data/patches/Assets/Data/Player/npc01a/exmot3.ala.cwopatch": "c643b84d2cf9707ca33446a9d297a7348ac78e906d15c2b7abf4572c300a4185",
+  "data/patches/Assets/Data/Player/npc01a/exmot3.ala.cwofrom": "1f1cda1f27d48aefbdd1defa5394834c65892f4cd395793ad31d8a95042bcc93",
+  "data/patches/Assets/Data/Player/npc01a/exmot5.ala.cwopatch": "2a94db30e05d88f9ccffe7438d3e26f2327313ed99f94dad3c88543893ba70b6",
+  "data/patches/Assets/Data/Player/npc01a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc01a/exmot2.ala.cwopatch": "845b75c4bb284c95078d84856ffd7c73ad9763df5716103bac572a7eb7565eed",
+  "data/patches/Assets/Data/Player/npc01a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/npc01a/exmot4.ala.cwopatch": "e17b58760b1fb9d490d3384a2d22bf74e489fab1246885cbdc81d98210812ef6",
+  "data/patches/Assets/Data/Player/npc01a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/npc01a/exmot1.ala.cwopatch": "5892c987e94a44b6793af71dcabc8c5be83f1c5e329fe8b9fed25b78fbcb8626",
+  "data/patches/Assets/Data/Player/npc01a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc01a/exmot0.ala.cwopatch": "2880bdb023a35c8aa03145776e773b33bf31333aeb1d4914450001c6eac5d508",
+  "data/patches/Assets/Data/Player/npc01a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc01a/npc01a0.alr.cwopatch": "c008b7dc8fa03e08bc011a1cd3ab981ef831c93a75dd5c6368e3348bac1803c0",
+  "data/patches/Assets/Data/Player/npc01a/npc01a0.alr.cwofrom": "a6ce039336f6dd60b28a0f756e4a1a694f32f4015a3c300df41cc317a0aab39f",
+  "data/patches/Assets/Data/Player/npc02a/exmot3.ala.cwopatch": "2501696df9cb511f62b6d8e527d104c48cacf13fb9cbac85cae219ea41ec5a82",
+  "data/patches/Assets/Data/Player/npc02a/exmot3.ala.cwofrom": "c2c15d30e40eccceb7603489adb6a5da7ccebc09d1789c35372a1af3019d584d",
+  "data/patches/Assets/Data/Player/npc02a/exmot4.ala.cwopatch": "fbc17f9abae8c0a271ce98a95d96d43a00f62d26c775e0d0fef9a30a8c928f2b",
+  "data/patches/Assets/Data/Player/npc02a/exmot4.ala.cwofrom": "dfa4d1c2b2abbf8f13f598313f890bffc884e31cc72bc0662e8417f0849fe0a9",
+  "data/patches/Assets/Data/Player/npc02a/exmot2.ala.cwopatch": "ab9465b82da52919b932d3d05bfa8293152fa7b752d3805fe8223ae0d20b61c5",
+  "data/patches/Assets/Data/Player/npc02a/exmot2.ala.cwofrom": "3d1cb78bae94d7c246dfe8fe797131f6cee6e5713197e57d1b097ea038051f07",
+  "data/patches/Assets/Data/Player/npc02a/exmot5.ala.cwopatch": "a5967b19b8ad832de0eb91da15aad98bd70915634816cf73c1788fd0ed09a70f",
+  "data/patches/Assets/Data/Player/npc02a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc02a/exmot1.ala.cwopatch": "a9e4b494c535a250bbe771f89adaf2ce158af29ec09978a837c4f6ffcf3e4c1f",
+  "data/patches/Assets/Data/Player/npc02a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc02a/exmot0.ala.cwopatch": "aeb55b1a1fa2636f658f768531b0d3c3a7b787bd5b746fe17db2d34a0f71084c",
+  "data/patches/Assets/Data/Player/npc02a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc02a/npc02a0.alr.cwopatch": "875eb89e9b3ba09c3264f74f27b964936c7bc51379d40f0571c3ae0316713c86",
+  "data/patches/Assets/Data/Player/npc02a/npc02a0.alr.cwofrom": "5f12f1d7fddd43636e770b343e38f223d03c3fcde59101cdd36d1bbdf86215fd",
+  "data/patches/Assets/Data/Player/npc03a/exmot3.ala.cwopatch": "9697b30afe228fe87ab4f850a1553796e814d3bdb5414c7136ea6b4ccfdabc90",
+  "data/patches/Assets/Data/Player/npc03a/exmot3.ala.cwofrom": "c2c15d30e40eccceb7603489adb6a5da7ccebc09d1789c35372a1af3019d584d",
+  "data/patches/Assets/Data/Player/npc03a/exmot2.ala.cwopatch": "9e5f7ebecf0f6f68dec2d067b894484b2168ead80d2d7174d4685e8022bd0afe",
+  "data/patches/Assets/Data/Player/npc03a/exmot2.ala.cwofrom": "3d1cb78bae94d7c246dfe8fe797131f6cee6e5713197e57d1b097ea038051f07",
+  "data/patches/Assets/Data/Player/npc03a/exmot5.ala.cwopatch": "4e73c9548d23cc7d8a815c9ee9af7af01a338c43cd0ee0e6740d10a8a3171340",
+  "data/patches/Assets/Data/Player/npc03a/exmot5.ala.cwofrom": "fd2adcd5e5cf10518e0c566e0fd7464e7e6dd4e1ea86f42218d87893fed84595",
+  "data/patches/Assets/Data/Player/npc03a/exmot4.ala.cwopatch": "35e0aeea8146092e8fa08c04e02ea0c571f78466d8bae64fe28727d4c2e59d8b",
+  "data/patches/Assets/Data/Player/npc03a/exmot4.ala.cwofrom": "dfa4d1c2b2abbf8f13f598313f890bffc884e31cc72bc0662e8417f0849fe0a9",
+  "data/patches/Assets/Data/Player/npc03a/exmot1.ala.cwopatch": "bd3bfe46a723aefd66394de7a4a883291c536e3c73f2430a01122c9ce002326b",
+  "data/patches/Assets/Data/Player/npc03a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc03a/exmot0.ala.cwopatch": "f3d0fe875bebe996d534030eb205368d305b7a3c9805da915abf20a497ff98f6",
+  "data/patches/Assets/Data/Player/npc03a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc03a/npc03a0.alr.cwopatch": "041f90be5da0457badca047e74de701b7b2400b6e1c8716394091fdc3b607aaf",
+  "data/patches/Assets/Data/Player/npc03a/npc03a0.alr.cwofrom": "77fa7f1f445e2b1ab684e6756311377ec252a7e99fc86b7e7b34ebde04d5ac23",
+  "data/patches/Assets/Data/Player/npc04a/exmot3.ala.cwopatch": "490087d89a05ea737d794fb3230a51a436d281f6d04e3337dacb93405da67d19",
+  "data/patches/Assets/Data/Player/npc04a/exmot3.ala.cwofrom": "c2c15d30e40eccceb7603489adb6a5da7ccebc09d1789c35372a1af3019d584d",
+  "data/patches/Assets/Data/Player/npc04a/exmot2.ala.cwopatch": "d6b3c17daaa36254edc147722aa73f0aa916978b9b44575676834e4b31e45e95",
+  "data/patches/Assets/Data/Player/npc04a/exmot2.ala.cwofrom": "3d1cb78bae94d7c246dfe8fe797131f6cee6e5713197e57d1b097ea038051f07",
+  "data/patches/Assets/Data/Player/npc04a/exmot5.ala.cwopatch": "aa6f5ef317a9a5b150b0159bd0a8b4bc9ac6f539f1dc965173bd49f2a9eb3c93",
+  "data/patches/Assets/Data/Player/npc04a/exmot5.ala.cwofrom": "fd2adcd5e5cf10518e0c566e0fd7464e7e6dd4e1ea86f42218d87893fed84595",
+  "data/patches/Assets/Data/Player/npc04a/exmot4.ala.cwopatch": "d5e8f8f903bb5757d72cc59cc0b13f9e0d77f1e4e8a76f13ffec6b2650a545a9",
+  "data/patches/Assets/Data/Player/npc04a/exmot4.ala.cwofrom": "dfa4d1c2b2abbf8f13f598313f890bffc884e31cc72bc0662e8417f0849fe0a9",
+  "data/patches/Assets/Data/Player/npc04a/exmot1.ala.cwopatch": "efca5c94a68b8e12c2da17ab857f8c8c1870996424758cf71d872ee4fc5bef75",
+  "data/patches/Assets/Data/Player/npc04a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc04a/exmot0.ala.cwopatch": "a22b8204286bd71bb36d17cb573a64e89e79a4e348489c12d2b5b99890707947",
+  "data/patches/Assets/Data/Player/npc04a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc04a/npc04a0.alr.cwopatch": "d99a06c344d910a845d637c719401d1ec2d1b99ed197bdb9823377b9583d4815",
+  "data/patches/Assets/Data/Player/npc04a/npc04a0.alr.cwofrom": "1c9fcdcc7ea1ace9fd30a5a6e58843b674ed89816aab8e74c29da185dc574efc",
+  "data/patches/Assets/Data/Player/npc05a/exmot3.ala.cwopatch": "ed34382fc53a4103a1e099187950ff7f8f83c2fa0d3208b5364fb14ea6291645",
+  "data/patches/Assets/Data/Player/npc05a/exmot3.ala.cwofrom": "c2c15d30e40eccceb7603489adb6a5da7ccebc09d1789c35372a1af3019d584d",
+  "data/patches/Assets/Data/Player/npc05a/exmot2.ala.cwopatch": "2b293eff93745302d0e02c9bd3d9effef27d65e8678bac1beeb0b92bc3def602",
+  "data/patches/Assets/Data/Player/npc05a/exmot2.ala.cwofrom": "3d1cb78bae94d7c246dfe8fe797131f6cee6e5713197e57d1b097ea038051f07",
+  "data/patches/Assets/Data/Player/npc05a/exmot5.ala.cwopatch": "fd73c078c60fb170bf3b25bbd70dfc8aeddcd8d2f2b9d83b21a8d1eb2fc4fa52",
+  "data/patches/Assets/Data/Player/npc05a/exmot5.ala.cwofrom": "fd2adcd5e5cf10518e0c566e0fd7464e7e6dd4e1ea86f42218d87893fed84595",
+  "data/patches/Assets/Data/Player/npc05a/exmot4.ala.cwopatch": "90171e557a2aee46bf6b51b6a6659b0e8b86ffacef6a2b2f08d1843313b0e980",
+  "data/patches/Assets/Data/Player/npc05a/exmot4.ala.cwofrom": "dfa4d1c2b2abbf8f13f598313f890bffc884e31cc72bc0662e8417f0849fe0a9",
+  "data/patches/Assets/Data/Player/npc05a/exmot1.ala.cwopatch": "14868cf437870e5fe48e48fbbedf9ea9fb8e3d7b1cf9441262bf456e2207722c",
+  "data/patches/Assets/Data/Player/npc05a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc05a/exmot0.ala.cwopatch": "591164521fcd0dfdfc590aa0829cc1010e8d8afb8b262005ce7c1931a2afb754",
+  "data/patches/Assets/Data/Player/npc05a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc05a/npc05a0.alr.cwopatch": "025fd8ac816440688f2b098608e4a17875fdb210862e46e8446e586a7fca9860",
+  "data/patches/Assets/Data/Player/npc05a/npc05a0.alr.cwofrom": "f878cb1107103354453652d234c5313dd8990ef995bbeae8d56a7e939520e252",
+  "data/patches/Assets/Data/Player/npc06a/exmot3.ala.cwopatch": "4195b2993c6cdc299b8a9a4d89fe645e06c6a552d6a62ca8de1a53c79f73a269",
+  "data/patches/Assets/Data/Player/npc06a/exmot3.ala.cwofrom": "c2c15d30e40eccceb7603489adb6a5da7ccebc09d1789c35372a1af3019d584d",
+  "data/patches/Assets/Data/Player/npc06a/exmot5.ala.cwopatch": "fc687bba699c21e04f3518096200c1d6b81323624703c50b0d345e42a59d937b",
+  "data/patches/Assets/Data/Player/npc06a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc06a/exmot2.ala.cwopatch": "b547c16ead789e3b804f8bcda99c03bed57008a281001875408bff1dfb030af9",
+  "data/patches/Assets/Data/Player/npc06a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/npc06a/exmot4.ala.cwopatch": "671497938fd0dfa474e47ada4d0af6c6b2592682ec080c1496bb481495d2eb67",
+  "data/patches/Assets/Data/Player/npc06a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/npc06a/exmot1.ala.cwopatch": "ea8c4bd5fecbf795e644c77245c137d590799e195a12f3f35f5c4ab085d084aa",
+  "data/patches/Assets/Data/Player/npc06a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc06a/exmot0.ala.cwopatch": "48316e030a5ae99607fc5b5106599aeb46f6ff78424d372951d081614fdb1a88",
+  "data/patches/Assets/Data/Player/npc06a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc06a/npc06a0.alr.cwopatch": "115f8e09074b5aaa96c962f3bf333089dda6f45095b482ba049de2c2f0bcdbda",
+  "data/patches/Assets/Data/Player/npc06a/npc06a0.alr.cwofrom": "71344fa1ad8de05e0cd44715438d2f69b33000885896a774d9c9bf77b762eb1a",
+  "data/patches/Assets/Data/Player/npc07a/exmot3.ala.cwopatch": "7941b1c250115f3d403396f9b9e05838b55b53107f9c6da0e712bffa54ad32eb",
+  "data/patches/Assets/Data/Player/npc07a/exmot3.ala.cwofrom": "1f1cda1f27d48aefbdd1defa5394834c65892f4cd395793ad31d8a95042bcc93",
+  "data/patches/Assets/Data/Player/npc07a/exmot4.ala.cwopatch": "3c05b3969656bfc774ac5a642672050dd2a26584049161fa544f3e771a533915",
+  "data/patches/Assets/Data/Player/npc07a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/npc07a/exmot2.ala.cwopatch": "fe1e0dc995d4abb2c6391175afb0ad585e34c73ac1453245ab1367ab26f5987a",
+  "data/patches/Assets/Data/Player/npc07a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/npc07a/exmot5.ala.cwopatch": "65d97521feefe12e5d1d4a79fa8b8f3188961c270f40959fcf74c33695a7d432",
+  "data/patches/Assets/Data/Player/npc07a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc07a/exmot1.ala.cwopatch": "2847edb87866e460f0c2fed7eab25d9d6f01cd3e74d998183460e7069bfd9325",
+  "data/patches/Assets/Data/Player/npc07a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc07a/exmot0.ala.cwopatch": "153208d592da026b9a104dbfea2b2ac6d7b825e1d71df8e6afe8bfe97c7a0955",
+  "data/patches/Assets/Data/Player/npc07a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc07a/npc07a0.alr.cwopatch": "4f6b0061ca4a209417df3462605a51bb22f779a6d0be8fea618218a69988cf64",
+  "data/patches/Assets/Data/Player/npc07a/npc07a0.alr.cwofrom": "a9edc7099b805143220f675e81553f8277a66e10983eec949284d1641740f291",
+  "data/patches/Assets/Data/Player/npc08a/exmot3.ala.cwopatch": "637752dc4be8ada399cfb7f85c35b855190c9c1d25329c36ab275feb2e05199d",
+  "data/patches/Assets/Data/Player/npc08a/exmot3.ala.cwofrom": "1f1cda1f27d48aefbdd1defa5394834c65892f4cd395793ad31d8a95042bcc93",
+  "data/patches/Assets/Data/Player/npc08a/exmot5.ala.cwopatch": "092117245a4203350684316a2437a54279ae20ebe938e0909b6102a7a9693717",
+  "data/patches/Assets/Data/Player/npc08a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc08a/exmot2.ala.cwopatch": "975ae7df31c05ef8bd2868b3d109411a8cb13a29d2ae0c5ba07e8f6afb3bb761",
+  "data/patches/Assets/Data/Player/npc08a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/npc08a/exmot4.ala.cwopatch": "9b9e3841447d90be48a901a094df55a4dbbc3098b3c91ebd00d86a7d0de4d186",
+  "data/patches/Assets/Data/Player/npc08a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/npc08a/exmot1.ala.cwopatch": "836d4fec57db52a6cdf9369e0bf4ae8f77e6b665b791e3ca6e6e71d9d45011e4",
+  "data/patches/Assets/Data/Player/npc08a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc08a/exmot0.ala.cwopatch": "5e122e0fb8501852671f4ca6582263fc3c860f35daaa500198ca37988e7d8bfd",
+  "data/patches/Assets/Data/Player/npc08a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc08a/npc08a0.alr.cwopatch": "3805104ffc6a4926bf7495884f8f54dba58bad45c03cc0353f364ee46ee47e17",
+  "data/patches/Assets/Data/Player/npc08a/npc08a0.alr.cwofrom": "0ad43b7f3673229e78f0d33242dc70a0d96877da6fcd50b619e172dc086a47a7",
+  "data/patches/Assets/Data/Player/npc09a/exmot3.ala.cwopatch": "98d47d49968bdc43090d659686c5b06a94804993052de6bad709bbdae8e462f1",
+  "data/patches/Assets/Data/Player/npc09a/exmot3.ala.cwofrom": "1f1cda1f27d48aefbdd1defa5394834c65892f4cd395793ad31d8a95042bcc93",
+  "data/patches/Assets/Data/Player/npc09a/exmot5.ala.cwopatch": "8c4f5aa8dba9014136a5de23e2a3bccba400da20e79c72a3f88d8d6360b76e24",
+  "data/patches/Assets/Data/Player/npc09a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc09a/exmot2.ala.cwopatch": "efb712f3d4a4fbc41d98d9f54e3ac4094e9ac43bdfb533a1b65024f40f258399",
+  "data/patches/Assets/Data/Player/npc09a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/npc09a/exmot4.ala.cwopatch": "daf8ac6ae01dd5aaf4c8158196ed50bf41c14107e60e25dc99707e8ab91dab14",
+  "data/patches/Assets/Data/Player/npc09a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/npc09a/exmot1.ala.cwopatch": "82a0618b22c6a38afb8537b31f67408fd8f9e72100b007334d7308e2a9f62aa9",
+  "data/patches/Assets/Data/Player/npc09a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc09a/exmot0.ala.cwopatch": "4370bee12e7af8a72df2c241c6f439a4a00f6117cd5298a6e51ed9599788cde1",
+  "data/patches/Assets/Data/Player/npc09a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc09a/npc09a0.alr.cwopatch": "8814a410ae423fcb08910644a9f193deeccf7a95f3730ef1ae4e0de3412cf991",
+  "data/patches/Assets/Data/Player/npc09a/npc09a0.alr.cwofrom": "4b326683446146b0c437752cbec6b6d1cc3930d9343e853a0a0252a394b5913b",
+  "data/patches/Assets/Data/Player/npc10a/exmot2.ala.cwopatch": "918a2d75d1a4860afd1fb4cf76f9314010e70a45a42d0b6789e79c9b2c0f2b0b",
+  "data/patches/Assets/Data/Player/npc10a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/npc10a/exmot3.ala.cwopatch": "2709eeff4352447ce44171b83cf47d09969d52e662c9c19fb70760ebcf2c4a58",
+  "data/patches/Assets/Data/Player/npc10a/exmot3.ala.cwofrom": "1f1cda1f27d48aefbdd1defa5394834c65892f4cd395793ad31d8a95042bcc93",
+  "data/patches/Assets/Data/Player/npc10a/exmot4.ala.cwopatch": "0db02d3c5dda8fdc0e4c6c64a2ebb0fb38370c032b176c1f22a70d2e062d1220",
+  "data/patches/Assets/Data/Player/npc10a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/npc10a/exmot1.ala.cwopatch": "cff9443c76972122d59006568ffd2f8ee78a915f8fb9bb99e828d374acddbd57",
+  "data/patches/Assets/Data/Player/npc10a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc10a/exmot5.ala.cwopatch": "8dd1a15f5abf98e2dcb119c6bd7494007c97435a22a27d58bcf9f2adecb162c8",
+  "data/patches/Assets/Data/Player/npc10a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc10a/exmot0.ala.cwopatch": "69eed00f3594a929f8f25e8ce70743d6d4867ac86e5371fd805643a06e8abe72",
+  "data/patches/Assets/Data/Player/npc10a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc10a/npc10a0.alr.cwopatch": "626c53ebb354eed8852a588b4b609d6b31b7b7f69ea786dce9eb920100ca05cb",
+  "data/patches/Assets/Data/Player/npc10a/npc10a0.alr.cwofrom": "6148259dd25de2ffbc8a5e78f12d9eb8b37c65596dc53a352326b5033ed39005",
+  "data/patches/Assets/Data/Player/npc11a/exmot3.ala.cwopatch": "9bd22b888be5a2fe4eaa3c18daee3afe0977bf3ff5c90358f540f6a13d9e05d6",
+  "data/patches/Assets/Data/Player/npc11a/exmot3.ala.cwofrom": "1f1cda1f27d48aefbdd1defa5394834c65892f4cd395793ad31d8a95042bcc93",
+  "data/patches/Assets/Data/Player/npc11a/exmot4.ala.cwopatch": "72bdf15103a97e50c4db8c983d8360de8e0b29361c7a1f62728a3e0a2ff1253f",
+  "data/patches/Assets/Data/Player/npc11a/exmot4.ala.cwofrom": "dfa4d1c2b2abbf8f13f598313f890bffc884e31cc72bc0662e8417f0849fe0a9",
+  "data/patches/Assets/Data/Player/npc11a/exmot2.ala.cwopatch": "c6c1bb3422076178268aa553f3b9c49b213bc7910b9e13ff98297f9e7f3dff06",
+  "data/patches/Assets/Data/Player/npc11a/exmot2.ala.cwofrom": "3d1cb78bae94d7c246dfe8fe797131f6cee6e5713197e57d1b097ea038051f07",
+  "data/patches/Assets/Data/Player/npc11a/exmot5.ala.cwopatch": "79d015fadafa678fabddce4df513efca3e02315fabd39b370f65dd031aa0b074",
+  "data/patches/Assets/Data/Player/npc11a/exmot5.ala.cwofrom": "fd2adcd5e5cf10518e0c566e0fd7464e7e6dd4e1ea86f42218d87893fed84595",
+  "data/patches/Assets/Data/Player/npc11a/exmot1.ala.cwopatch": "70cad40dd03e2d850ee133e64b5b7f5422386bc5f576537f050412db9eec4dde",
+  "data/patches/Assets/Data/Player/npc11a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc11a/exmot0.ala.cwopatch": "98bf417c4d44e274d8e958f53f314166632a061201a2558d5e8ee40421c47227",
+  "data/patches/Assets/Data/Player/npc11a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc11a/npc11a0.alr.cwopatch": "d62cab73360779c97273a423f26382f624aaa65c92e468ea68b0589bd1805d8d",
+  "data/patches/Assets/Data/Player/npc11a/npc11a0.alr.cwofrom": "d6c69009c956abdedc0b23134cba6d050cc442b5f8a967fd34dd02581f6b2f3b",
+  "data/patches/Assets/Data/Player/npc12a/exmot3.ala.cwopatch": "dd7fc516a6e16566d8102a555f4579d686534b4ac38f8390196d3e7821cc57a3",
+  "data/patches/Assets/Data/Player/npc12a/exmot3.ala.cwofrom": "c2c15d30e40eccceb7603489adb6a5da7ccebc09d1789c35372a1af3019d584d",
+  "data/patches/Assets/Data/Player/npc12a/exmot5.ala.cwopatch": "9e3cd53ee288d8d434c03ef7e8248285978773094805b7427ef9f08d5a7561f7",
+  "data/patches/Assets/Data/Player/npc12a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc12a/exmot2.ala.cwopatch": "568ae1bdfd2c4b3479f210795ca7bc6527301db0692898aa0d8a20faca507977",
+  "data/patches/Assets/Data/Player/npc12a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/npc12a/exmot4.ala.cwopatch": "0b203266a67a0e20496c49a07b32fc755ca813c20c8126887162d7b5f13d382e",
+  "data/patches/Assets/Data/Player/npc12a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/npc12a/exmot1.ala.cwopatch": "3b8077151c92af83303484000c840674a301050d09d81983b32e82727fb8bbde",
+  "data/patches/Assets/Data/Player/npc12a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc12a/exmot0.ala.cwopatch": "0748c9940379f9e756976610ae65c5ac375ca0c449994445187c48c98e0018f1",
+  "data/patches/Assets/Data/Player/npc12a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc12a/npc12a0.alr.cwopatch": "eb6fc15fe6243b9d83e64917341ecf8eca46433a6f59077d5ff60be97d405735",
+  "data/patches/Assets/Data/Player/npc12a/npc12a0.alr.cwofrom": "25c0b9cf666487dbc0248894d4d6eed4501eb7a2698d722f0b7f6b0648f74718",
+  "data/patches/Assets/Data/Player/npc13a/exmot3.ala.cwopatch": "815d3c60b679dcaf3c2f35ce7488d9938f75e7088c8889b4b7e703bbb1f71cd8",
+  "data/patches/Assets/Data/Player/npc13a/exmot3.ala.cwofrom": "c2c15d30e40eccceb7603489adb6a5da7ccebc09d1789c35372a1af3019d584d",
+  "data/patches/Assets/Data/Player/npc13a/exmot5.ala.cwopatch": "5c30bf43bc9331562d4e34444a9a8543cb068c4dbef82e1acdd8b7cfe1b78606",
+  "data/patches/Assets/Data/Player/npc13a/exmot5.ala.cwofrom": "7658303285a9164f60b3acb9ff20575cfe2a6a0084bbb9768d0c4a0e4860b8de",
+  "data/patches/Assets/Data/Player/npc13a/exmot2.ala.cwopatch": "469b87970d066b9bd91494643e1c23a116e55cdd8cc2385cb80fbe9cb436c4fb",
+  "data/patches/Assets/Data/Player/npc13a/exmot2.ala.cwofrom": "1cc357a077f94df665626783a0851774fc69cb70e30127066c9f86a4088fcf79",
+  "data/patches/Assets/Data/Player/npc13a/exmot4.ala.cwopatch": "e6bbf76ecf563a02c7c16774ee559dbfe09271a60db423fa0060c0b0993d2f58",
+  "data/patches/Assets/Data/Player/npc13a/exmot4.ala.cwofrom": "477dafee364c1f74265adaf177e8a606e7d4e2a0d3a37f339aa9202d4f31653b",
+  "data/patches/Assets/Data/Player/npc13a/exmot1.ala.cwopatch": "08ff32ba6c2fa0ab2b5a3c9a042d13d2151cff5a53033d84b97b9e7749d3e53d",
+  "data/patches/Assets/Data/Player/npc13a/exmot1.ala.cwofrom": "8bd8b0bf36ec0f39ed840bc16fb586c825893b924cf5208602eb5c960d22b31e",
+  "data/patches/Assets/Data/Player/npc13a/exmot0.ala.cwopatch": "9c57572ecfb766abc825e883e18572115cca6da869a96b17571741ae16d27a83",
+  "data/patches/Assets/Data/Player/npc13a/exmot0.ala.cwofrom": "67efd49156bf613a6e6e25fa426fe983fb1ed86be3fbf15eb46de985c6e12156",
+  "data/patches/Assets/Data/Player/npc13a/npc13a0.alr.cwopatch": "1e1b6169c8eceaec4cb6b18b72adf6920a6539fb8adce29c8025eb17407438ad",
+  "data/patches/Assets/Data/Player/npc13a/npc13a0.alr.cwofrom": "9b0c720a25d82a45690ff8edb6a5ee4d355c5f3f9a4735a4ebaefdd0efa27603",
+  "data/patches/Assets/Data/setup/charaset/charaset_en.dat.cwopatch": "6ea51cd2fb93369e8519ab65120b428327c5cedfa2c65c0c18ad56200ce840a0",
+  "data/patches/Assets/Data/setup/charaset/charaset.dat.cwopatch": "602c5ab52d954edc34eccab4b016d895dd90607ca9347747c976f38a71f1a5a5",
+  "data/patches/Assets/Data/com/param/enemyparam.epa.cwopatch": "e08a06520cbcc1c57bfcd9593c80dad6efa635934c2df0a331ac227ec4bfe952",
+  "data/patches/Assets/Data/com/ai/cwoprog006.ssb.cwopatch": "fd8bfa59847ef4ed37bbc014c2abb4e27c2520cf73872291dac4f7214d460a6d",
+  "data/patches/Assets/Data/com/ai/cwoprog006.ssb.cwofrom": "892d44f442fd4faa0d8dbe7e4f370381de51360f4d83b83e3af2efe974251ee5",
   "install_bfr.ps1": "47334a762b8ab7b2e918214135a57d68998b873a497ce2396c3e5634fd639477",
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "1c4d2d457c17881b44f593822655c83d80576884e6e170fdc80a3b94b99811d6"
+  "README.md": "731a09c4c80bbef01707ba8961cdff821def65b903fc36ff27d6f1d621f15dd7"
  },
  "patches": [
   {
@@ -304,14 +605,6 @@
    "our_bytes": 4551,
    "copied_from_your_file": 423804,
    "carries": "battle HUD: 4 face spots (the free strip of its own page 2) for each fighter's face beside its name"
-  },
-  {
-   "file": "Assets/Data/setup/charaset/charaset_en.dat",
-   "clean_sha256": "eed6db87e64e054c23c807c90bf7e5899d99156a07d3dcdc763891a8505fb82b",
-   "result_sha256": "eea72c8d6b926515f3c87b00c950c7ecc136bdb65c81fc5b080c213ca98ecc4a",
-   "our_bytes": 27,
-   "copied_from_your_file": 0,
-   "carries": "character table: 15 outfits for every playable and enemy fighter (the loader builds outfits 5-15 from your own files)"
   },
   {
    "file": "Assets/Data/Map/mx401.dat",
@@ -653,65 +946,6 @@
    "our_bytes": 6067848,
    "copied_from_your_file": 860632,
    "carries": "The Bunker (owner-installed 2026-11-05) (1.49.1, patch format 2)"
-  },
-  {
-   "file": "Assets/Data/Map/mx301.alr",
-   "made_from": [
-    "Assets/Data/Map/st06.alr",
-    "Assets/Data/Map/st04.alr",
-    "Assets/Data/Map/st02.alr",
-    "Assets/Data/Map/st12.alr",
-    "Assets/Data/Map/st14.alr",
-    "Assets/Data/Map/st22.alr",
-    "Assets/Data/Map/st24.alr",
-    "Assets/Data/Map/st09_06.alr"
-   ],
-   "result_sha256": "e60eeeaeeb6816f18cfdd5f036688bd5913a106a12a1359be41e0a0e579eff03",
-   "our_bytes": 2972910,
-   "copied_from_your_file": 20769618,
-   "carries": "Grand Panorama (owner-installed 2026-11-06) (1.49.1, patch format 2)"
-  },
-  {
-   "file": "Assets/Data/Map/mx301.dat",
-   "made_from": [
-    "Assets/Data/Map/st06.dat",
-    "Assets/Data/Map/st16.dat",
-    "Assets/Data/Map/st26.dat"
-   ],
-   "result_sha256": "0c98cfa616937920cf994d7b201cc2d35fa03300ef06582261b4ef9498bdebc1",
-   "our_bytes": 297556,
-   "copied_from_your_file": 451008,
-   "carries": "Grand Panorama (owner-installed 2026-11-06) (1.49.1, patch format 2)"
-  },
-  {
-   "file": "Assets/Data/Map/mx302.alr",
-   "made_from": [
-    "Assets/Data/Map/st16.alr",
-    "Assets/Data/Map/st04.alr",
-    "Assets/Data/Map/st02.alr",
-    "Assets/Data/Map/st06.alr",
-    "Assets/Data/Map/st14.alr",
-    "Assets/Data/Map/st22.alr",
-    "Assets/Data/Map/st24.alr",
-    "Assets/Data/Map/st03.alr"
-   ],
-   "result_sha256": "ab5a1f9da2945a8bda32fdb7b30acaccea3851e6883780000ec2e412360d59a6",
-   "our_bytes": 2972658,
-   "copied_from_your_file": 21576014,
-   "carries": "Grand Panorama (Sunset) (owner-installed 2026-11-06) (1.49.1, patch format 2)"
-  },
-  {
-   "file": "Assets/Data/Map/mx302.dat",
-   "made_from": [
-    "Assets/Data/Map/st16.dat",
-    "Assets/Data/Map/st06.dat",
-    "Assets/Data/Map/st26.dat",
-    "Assets/Data/Map/st04.dat"
-   ],
-   "result_sha256": "818aca08411a45efc25192b1643ebff36c60b7e36e66da41bd2cc911dcd1343b",
-   "our_bytes": 296830,
-   "copied_from_your_file": 451374,
-   "carries": "Grand Panorama (Sunset) (owner-installed 2026-11-06) (1.49.1, patch format 2)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a5.alr",
@@ -1075,6 +1309,1733 @@
    "our_bytes": 159720,
    "copied_from_your_file": 1339912,
    "carries": "data folder model (1.49 pack parity)"
+  },
+  {
+   "file": "Assets/Data/Map/mx301.alr",
+   "made_from": [
+    "Assets/Data/Map/st06.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st14.alr"
+   ],
+   "result_sha256": "dcf49333a28fe6d1a42b79fd9c8f65bddf15db1dd387ff4332be495cdb5dce2b",
+   "our_bytes": 12059102,
+   "copied_from_your_file": 14820000,
+   "carries": "Grand Panorama (2026-11-12 remake) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx301.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st02 - Copy (2).dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st03.dat",
+    "Assets/Data/Map/st04.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st22.dat",
+    "Assets/Data/Map/st23.dat"
+   ],
+   "result_sha256": "ecea1a5ae7bed5d0a443761b42caf0e7ffa176bff8d8429481f9a2b69b3a32b2",
+   "our_bytes": 100294,
+   "copied_from_your_file": 76193,
+   "carries": "Grand Panorama (2026-11-12 remake) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx302.alr",
+   "made_from": [
+    "Assets/Data/Map/st06.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st22.alr"
+   ],
+   "result_sha256": "6dc10b8631731cf1e52611a32e9ca9f684016f74efa9acc70d2d2831225fa282",
+   "our_bytes": 11171274,
+   "copied_from_your_file": 15740788,
+   "carries": "Grand Panorama (Sunset) (2026-11-12 remake) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx302.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st02 - Copy (2).dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st03.dat",
+    "Assets/Data/Map/st16.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st04.dat",
+    "Assets/Data/Map/st22.dat"
+   ],
+   "result_sha256": "7512531c7c404991514c2874f5380ebba62eb0e554c0d4d85947575a85f1b617",
+   "our_bytes": 99974,
+   "copied_from_your_file": 76178,
+   "carries": "Grand Panorama (Sunset) (2026-11-12 remake) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx309.alr",
+   "made_from": [
+    "Assets/Data/Map/st03.alr"
+   ],
+   "result_sha256": "5ebf3786209301b4fe71cf80c558269c6c694199e02684d0d48d5d508cc8869a",
+   "our_bytes": 0,
+   "copied_from_your_file": 10680832,
+   "carries": "Palace (UE Bridge test) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx309.dat",
+   "made_from": [
+    "Assets/Data/Map/st03.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st01.dat"
+   ],
+   "result_sha256": "b70d654a812a4dbf1c1ce9114c499056e558f99b98deb32a34724ec0b0bc4098",
+   "our_bytes": 106,
+   "copied_from_your_file": 412689,
+   "carries": "Palace (UE Bridge test) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pcblank.alr",
+   "made_from": [
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st15.alr",
+    "Assets/Data/Map/st25.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st03.alr",
+    "Assets/Data/Map/st07.alr",
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st02.alr"
+   ],
+   "result_sha256": "28d6f56f1aec0c6a6e11b8432f1950c04dba5de0a75b9c8be0b82bc0bd397579",
+   "our_bytes": 887840,
+   "copied_from_your_file": 2629728,
+   "carries": "Skill Test Stage (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pcblank.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st01.dat"
+   ],
+   "result_sha256": "d390dbefd91026f397da9a713cfe6e696191421549601e8389bf8a7b7c585422",
+   "our_bytes": 81376,
+   "copied_from_your_file": 42464,
+   "carries": "Skill Test Stage (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc01.alr",
+   "made_from": [
+    "Assets/Data/Map/st01.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st25.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st08.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st07.alr"
+   ],
+   "result_sha256": "e08be9272dc4b7030113f6eefae3a8b39d0bf50cf99272107dfe01bdf6881d0c",
+   "our_bytes": 1715228,
+   "copied_from_your_file": 3297034,
+   "carries": "pc01 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc01.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st25.dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st23.dat"
+   ],
+   "result_sha256": "97f5f9c0bb9e4bb8964bbba887381116de4d9b61f82862c51889b8570c7bf242",
+   "our_bytes": 194101,
+   "copied_from_your_file": 42695,
+   "carries": "pc01 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc02.alr",
+   "made_from": [
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st25.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st03.alr",
+    "Assets/Data/Map/st05.alr"
+   ],
+   "result_sha256": "17599cb8426a52584ea613ae814725d320c2a5252336648836725c9c76291cda",
+   "our_bytes": 2455206,
+   "copied_from_your_file": 2716535,
+   "carries": "pc02 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc02.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st02 - Copy (2).dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st25.dat",
+    "Assets/Data/Map/st06.dat"
+   ],
+   "result_sha256": "76765deabfd562a2e38946c22ecd103664728994fa280b78d2a02741fb3e5f76",
+   "our_bytes": 210756,
+   "copied_from_your_file": 45336,
+   "carries": "pc02 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc03.alr",
+   "made_from": [
+    "Assets/Data/Map/st03.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st25.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st23.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st15.alr"
+   ],
+   "result_sha256": "5c6121e96c8168ea06ac4bee40a826847c773b79d614d6cebf482ef12eff5e8d",
+   "our_bytes": 3081635,
+   "copied_from_your_file": 4485512,
+   "carries": "pc03 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc03.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st03.dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st06.dat"
+   ],
+   "result_sha256": "9ff9073d774e137b68ca283ec14bac1d5d912c97213662b4767e1328db0ba10a",
+   "our_bytes": 180263,
+   "copied_from_your_file": 46721,
+   "carries": "pc03 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc04.alr",
+   "made_from": [
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st25.alr",
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st09_06.alr",
+    "Assets/Data/Map/st15.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st22.alr"
+   ],
+   "result_sha256": "855f55b40916786a7eb2e3b0015398286f00f88ce1cae50d48e835afa0c1c4db",
+   "our_bytes": 1987002,
+   "copied_from_your_file": 3106863,
+   "carries": "pc04 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc04.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st04.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st06.dat"
+   ],
+   "result_sha256": "55a46d938f7bf5f3b4f3e9f6d9676a407aa74ff5e7e568866d1fe354c1ac3ad8",
+   "our_bytes": 150009,
+   "copied_from_your_file": 42355,
+   "carries": "pc04 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc05.alr",
+   "made_from": [
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st15.alr",
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st25.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st24.alr"
+   ],
+   "result_sha256": "abcc1c4dc4085e7c846564847d7015f19b9ce24b481d9fc79bd5d848d0f52d1d",
+   "our_bytes": 2758396,
+   "copied_from_your_file": 3257318,
+   "carries": "pc05 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc05.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st06.dat"
+   ],
+   "result_sha256": "45f6a7786ae59ba6e091d59ab5b2801e00e15cd5388bec3359763f861c5b5c40",
+   "our_bytes": 140187,
+   "copied_from_your_file": 45969,
+   "carries": "pc05 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc06.alr",
+   "made_from": [
+    "Assets/Data/Map/st06.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st25.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st26.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st15.alr"
+   ],
+   "result_sha256": "4577d440f5607facd695899d2e0accd945ffd855414db9f37ca8791e778b71aa",
+   "our_bytes": 2202200,
+   "copied_from_your_file": 3771625,
+   "carries": "pc06 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc06.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st25.dat",
+    "Assets/Data/Map/st26.dat",
+    "Assets/Data/Map/st04.dat"
+   ],
+   "result_sha256": "22e9b0d3078fb743219663de5f45fc367eea7c5e4e77a27554706749db30c981",
+   "our_bytes": 224971,
+   "copied_from_your_file": 44561,
+   "carries": "pc06 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc07a.alr",
+   "made_from": [
+    "Assets/Data/Map/st07.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st23.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st17.alr",
+    "Assets/Data/Map/st04.alr"
+   ],
+   "result_sha256": "2e35661bbfcf337b286efebfb45b15c5033a600b515826caa6d35dd516bd6c01",
+   "our_bytes": 3984867,
+   "copied_from_your_file": 3207666,
+   "carries": "pc07a (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc07a.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st07 - Copy (2).dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st16.dat"
+   ],
+   "result_sha256": "c295cb1459b7d8a7897346c01e039bba804dad00c977dff2b45c48ec0462773f",
+   "our_bytes": 317162,
+   "copied_from_your_file": 46742,
+   "carries": "pc07a (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc07b.alr",
+   "made_from": [
+    "Assets/Data/Map/st07.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st17.alr",
+    "Assets/Data/Map/st23.alr",
+    "Assets/Data/Map/st04.alr"
+   ],
+   "result_sha256": "1342c85f7bdd33a30b57bdf6ca2ebe590fed96a30be7bf8335efc6483b53e7c5",
+   "our_bytes": 2537176,
+   "copied_from_your_file": 3300125,
+   "carries": "pc07b (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc07b.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st07 - Copy (2).dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st06.dat"
+   ],
+   "result_sha256": "a9c9334ec90b3913ff34fe1c4cfb5bb2d42aaa1232e6c6c048075f2ceaea7ba5",
+   "our_bytes": 167749,
+   "copied_from_your_file": 46615,
+   "carries": "pc07b (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc08.alr",
+   "made_from": [
+    "Assets/Data/Map/st08.alr",
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st15.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st05.alr"
+   ],
+   "result_sha256": "ba4271f1aa3d1f8e82ba2a489b83c8b382b1ba48b0978701fc5ecca0b8cfd302",
+   "our_bytes": 3693656,
+   "copied_from_your_file": 2985335,
+   "carries": "pc08 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/pc08.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st09.dat",
+    "Assets/Data/Map/st08 - Copy.dat",
+    "Assets/Data/Map/st05 - Copy.dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st25.dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st23.dat"
+   ],
+   "result_sha256": "3f6670883866a73001945c2e4e24d1de30238704001765758f697bd6c87a6657",
+   "our_bytes": 213322,
+   "copied_from_your_file": 43294,
+   "carries": "pc08 (piece stage) (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx306.alr",
+   "made_from": [
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st03.alr",
+    "Assets/Data/Map/st13.alr"
+   ],
+   "result_sha256": "97f882592c37fa01eb6760c2b9b75eff49d46e9b9287ae497102bde183f6e6f5",
+   "our_bytes": 7196,
+   "copied_from_your_file": 9814404,
+   "carries": "Highway Pieces Test (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx306.dat",
+   "made_from": [
+    "Assets/Data/Map/st02 - Copy (2).dat"
+   ],
+   "result_sha256": "00b12c4a41b21f9f52e65f6ba43e4c681b93f46ec0b5c25c6f2b92ec3bad3126",
+   "our_bytes": 126959,
+   "copied_from_your_file": 566125,
+   "carries": "Highway Pieces Test (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx327.alr",
+   "made_from": [
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st03.alr",
+    "Assets/Data/Map/st07.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st24.alr"
+   ],
+   "result_sha256": "cd78d6fd094f73ff2f7b0aaa467dd399d1a2f3e07d5e887712fd1540bbb01753",
+   "our_bytes": 265326,
+   "copied_from_your_file": 2154896,
+   "carries": "Hard Pieces Plaza (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx327.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st12.dat"
+   ],
+   "result_sha256": "e9637eec75792ae61c5050dcaae630ab4b9c15667023caa3419e1f7a70fa166c",
+   "our_bytes": 50694,
+   "copied_from_your_file": 42110,
+   "carries": "Hard Pieces Plaza (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx328.alr",
+   "made_from": [
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st03.alr",
+    "Assets/Data/Map/st07.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st24.alr"
+   ],
+   "result_sha256": "cd78d6fd094f73ff2f7b0aaa467dd399d1a2f3e07d5e887712fd1540bbb01753",
+   "our_bytes": 265326,
+   "copied_from_your_file": 2154896,
+   "carries": "UE Pieces Demo (1.50)"
+  },
+  {
+   "file": "Assets/Data/Map/mx328.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st12.dat"
+   ],
+   "result_sha256": "3a5ee7d5497d54eb38754e22ef4f4664ad9e5450c9e79a6477ec20b8974bc476",
+   "our_bytes": 109185,
+   "copied_from_your_file": 42659,
+   "carries": "UE Pieces Demo (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot3.ala"
+   ],
+   "result_sha256": "a257006768ca4d1f7d7daa0a783a4d43ea707f084aaeaf03c45d4f5a90b489c8",
+   "our_bytes": 6648,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "bc7133d0620146c518e2b774056567771e6e4ff5446684a2a8aab7f7dbcba35b",
+   "our_bytes": 20120,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "e51c7055c57021b1094e430bad59a75f4adb008ca1a2bd27ac9cd1f3ecc3871c",
+   "our_bytes": 20940,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "ac3467cf4b840d95392ac8706f4ba0f53ee8d04fb1a8b3d140a4d3b2fee94b3b",
+   "our_bytes": 20940,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "ba750d0c4aa074bcd3d37ce92b4777b83c5f10d021c4a442eb5bd312f6e52bec",
+   "our_bytes": 28052,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "beb37e7375f2c78bbcc9590053b57faf3131e8e234c1927b551b4f2406828749",
+   "our_bytes": 30172,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a4.alr",
+   "made_from": [
+    "Assets/Data/Player/pc05a/pc05a3.alr",
+    "Assets/Data/Player/pc09a/pc09a1.alr"
+   ],
+   "result_sha256": "835e3bedc7466819892cfdcc72b764691d9d24706a49110a4bab5cf464e1a76a",
+   "our_bytes": 540204,
+   "copied_from_your_file": 868820,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a5.alr",
+   "made_from": [
+    "Assets/Data/Player/pc05a/pc05a3.alr",
+    "Assets/Data/Player/pc09a/pc09a3.alr"
+   ],
+   "result_sha256": "151d848def5254f404014965ce90046c2b02cd3d77c378fc0bb2b8714d18058c",
+   "our_bytes": 536855,
+   "copied_from_your_file": 872169,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a6.alr",
+   "made_from": [
+    "Assets/Data/Player/pc11a/pc11a3.alr"
+   ],
+   "result_sha256": "511cb99feea70d9b4e799c085f26c159fd047ea0a7e9c33f78e0b28ab2d9617d",
+   "our_bytes": 1381640,
+   "copied_from_your_file": 31480,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a3.alr",
+   "made_from": [
+    "Assets/Data/Player/pc04a/pc04a0.alr",
+    "Assets/Data/Player/pc04a/pc04a.alr",
+    "Assets/Data/Player/pc06a/pc06a0.alr",
+    "Assets/Data/Player/pc01a/pc01a3.alr",
+    "Assets/Data/Player/pc11a/pc11a.alr",
+    "Assets/Data/Player/pc06a/pc06a.alr",
+    "Assets/Data/Player/pc11a/pc11a0.alr",
+    "Assets/Data/Player/pc02a/pc02a0 - Vrethagon AA BLK Freia w orange highlights Req .alr"
+   ],
+   "result_sha256": "ae632dc1bec7d85da4e7e3722e41dc2316e5c45d3be43fa37800dcedba1904c4",
+   "our_bytes": 698047,
+   "copied_from_your_file": 727348,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a8.alr",
+   "made_from": [
+    "Assets/Data/Player/pc04a/pc04a3.alr",
+    "Assets/Data/Player/pc01a/pc01a1.alr",
+    "Assets/Data/Player/pc02a/pc02a0 - Vrethagon AA BLK Freia w orange highlights Req .alr",
+    "Assets/Data/Player/pc08a/pc08a.alr"
+   ],
+   "result_sha256": "3206b7271ef493b45ab6723b0271151f39cce6e4d361e58724add4ef6f7517ca",
+   "our_bytes": 702642,
+   "copied_from_your_file": 726842,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc11a/pc11a3.alr",
+    "Assets/Data/Player/pc06a/pc06a3.alr",
+    "Assets/Data/Player/pc01a/pc01a0.alr"
+   ],
+   "result_sha256": "68a921b421cd716afada8e32444ee5ab7cc6e9e31fc566252d2f67290c205ed4",
+   "our_bytes": 574471,
+   "copied_from_your_file": 891897,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a2.alr",
+   "made_from": [
+    "Assets/Data/Player/enm03a/enm03a0.alr"
+   ],
+   "result_sha256": "e92c74aa66cb36c30c96b8b001a569fe7ee040004814d77ace4675d762780de6",
+   "our_bytes": 1430333,
+   "copied_from_your_file": 36034,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a1.alr",
+   "made_from": [
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr",
+    "Assets/Data/Player/pc08a/pc08a1.alr",
+    "Assets/Data/Player/pc05a/pc05a1.alr",
+    "Assets/Data/Player/pc00a/pc00a0 -CyberPunk Mecha.alr"
+   ],
+   "result_sha256": "78ca3d6c47610730c01c14c63b287ad56aeabccbad4a68d080d95900385f53ce",
+   "our_bytes": 665877,
+   "copied_from_your_file": 816872,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a7.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a1.alr",
+    "Assets/Data/Player/pc11a/pc11a3.alr"
+   ],
+   "result_sha256": "fff46b23f7575de267e0a70d092f9d6f57c16e76461113dd354ffb08e5f7e2cc",
+   "our_bytes": 620812,
+   "copied_from_your_file": 894678,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a10.alr",
+   "made_from": [
+    "Assets/Data/Player/pc06a/pc06a0.alr",
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr"
+   ],
+   "result_sha256": "032931ae95fa36961b544769e63e52d42a3af39f7ae54f28b0222462f33e6493",
+   "our_bytes": 1080668,
+   "copied_from_your_file": 1686948,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a11.alr",
+   "made_from": [
+    "Assets/Data/Player/pc06a/pc06a0.alr",
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/pc06a/pc06a.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr"
+   ],
+   "result_sha256": "a81490448105dd1e6e5d92b0caf171e4df27c8cd93df503b21357de48ddfc10a",
+   "our_bytes": 1052618,
+   "copied_from_your_file": 1714994,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a12.alr",
+   "made_from": [
+    "Assets/Data/Player/pc06a/pc06a0.alr",
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr"
+   ],
+   "result_sha256": "13c07e1526c827bbaa8abf419defdf5c3d887cbdf407269b9fc8d5486e7cb57e",
+   "our_bytes": 1080664,
+   "copied_from_your_file": 1686952,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a13.alr",
+   "made_from": [
+    "Assets/Data/Player/pc06a/pc06a0.alr",
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/pc06a/pc06a.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr"
+   ],
+   "result_sha256": "314020f4cd4ee7284a0abf246ada67ec53b40810acf3731495266b9ce444a348",
+   "our_bytes": 1052618,
+   "copied_from_your_file": 1714994,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a14.alr",
+   "made_from": [
+    "Assets/Data/Player/pc06a/pc06a0.alr",
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/pc06a/pc06a.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr"
+   ],
+   "result_sha256": "d167765cd2d64688f2a41013fb708ba1e000a2913d5f95ffa80229ab09d817cd",
+   "our_bytes": 1052619,
+   "copied_from_your_file": 1714993,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/Npc00a/npc00a9.alr",
+   "made_from": [
+    "Assets/Data/Player/pc06a/pc06a0.alr",
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/pc06a/pc06a.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr"
+   ],
+   "result_sha256": "f030d328dde17ba36a65949b2ac0d691aa3d66348d0cb1b311f1d762b719bc05",
+   "our_bytes": 1052595,
+   "copied_from_your_file": 1715017,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc01a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot3.ala"
+   ],
+   "result_sha256": "1e878633002c2991f269f18990f2d7dffeaf2d2a6840af3ee1dc998ae4030647",
+   "our_bytes": 7480,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc01a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "f6b841768f676f83ced21024285d5a90e664325324b8bdf6d311b95b08276e56",
+   "our_bytes": 15112,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc01a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "e7276412ee20330aec7c0dbb97361cc90ebde89d271751ccadea11faeceff823",
+   "our_bytes": 16692,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc01a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "037a3e3b6e3c173a974da98d6b507b4357e1d964c3dd4cdca5f32e21c1eba62e",
+   "our_bytes": 17736,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc01a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "4515d229b61f7c5964cb8b23b24f131e65829f986b81b74b6c87440df6fb6078",
+   "our_bytes": 30600,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc01a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "71537f659236a5b577fc6c48f88be7f17d526ecb5362410197ec74b236857df4",
+   "our_bytes": 32148,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc01a/npc01a0.alr",
+   "made_from": [
+    "Assets/Data/Player/enm08a/enm08a.alr",
+    "Assets/Data/Player/enm13a/enm13a1.alr",
+    "Assets/Data/Player/pc04a/pc04a.alr",
+    "Assets/Data/Player/pc03a/pc03a3.alr",
+    "Assets/Data/Player/pc04a/pc04a0.alr",
+    "Assets/Data/Player/pc06a/pc06a.alr",
+    "Assets/Data/Player/pc06a/pc06a0.alr"
+   ],
+   "result_sha256": "2020a3bcd7471d879df12a79792a757a2819dc301837d0e5449117f58f27c1de",
+   "our_bytes": 1286169,
+   "copied_from_your_file": 117734,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc02a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot3.ala"
+   ],
+   "result_sha256": "62b88cdbc30046b3b83ece87d645ad574c7c280680a1599c44f7445dc0aa485e",
+   "our_bytes": 3006,
+   "copied_from_your_file": 4162,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc02a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot4.ala"
+   ],
+   "result_sha256": "0bd73895127119603b408e1b3f1fc6cd55036128062310d53291faec0528aacb",
+   "our_bytes": 18884,
+   "copied_from_your_file": 36,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc02a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot2.ala"
+   ],
+   "result_sha256": "f460e45af52c323e83894e01e5c3dfef43dee54747b31f82dfd30e42d4f7f3bc",
+   "our_bytes": 18960,
+   "copied_from_your_file": 36,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc02a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "f95f554304a5697754f22c918b623a3d9fb304b4f394344df4bb13137902307f",
+   "our_bytes": 23924,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc02a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "1fab6f16d9ce106ab45902d45daeabc907c16565a8e019f525343f9535907b14",
+   "our_bytes": 28052,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc02a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "834ca7aab1b30d02f2b84f0895063cddf5152b60f518474a7895c3c852876ecd",
+   "our_bytes": 30136,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc02a/npc02a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc11a/pc11a3.alr",
+    "Assets/Data/Player/pc06a/pc06a3.alr",
+    "Assets/Data/Player/pc01a/pc01a0.alr"
+   ],
+   "result_sha256": "68a921b421cd716afada8e32444ee5ab7cc6e9e31fc566252d2f67290c205ed4",
+   "our_bytes": 574471,
+   "copied_from_your_file": 891897,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc03a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot3.ala"
+   ],
+   "result_sha256": "0a4a884a682978a0da42239245a018ee58f57aab67d4172da80fd03f36ae6def",
+   "our_bytes": 2932,
+   "copied_from_your_file": 4028,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc03a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot2.ala"
+   ],
+   "result_sha256": "3d4204d014ece52071bf88c8d4c5a0d0546c6fb82daf73e884a5612e289c5208",
+   "our_bytes": 7920,
+   "copied_from_your_file": 9768,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc03a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot5.ala"
+   ],
+   "result_sha256": "c5c168017ae4b95d973ff5ece843ad6260f6cb2a67a7c244756268601b09a08e",
+   "our_bytes": 8128,
+   "copied_from_your_file": 9760,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc03a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot4.ala"
+   ],
+   "result_sha256": "b0a84f7a8e2a3fe3f43b7eef0db42585774e79bc6514b5fdf09e023604b29b5d",
+   "our_bytes": 8720,
+   "copied_from_your_file": 9760,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc03a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "2f84bc3f9ae29ba7100f94987b03ea335d3008a3fe5f2162a2027e6d24e63f0e",
+   "our_bytes": 27392,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc03a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "1701bb3a7867d2c1417132315b7a6439903966c6161e4748655616a3eaacce86",
+   "our_bytes": 36860,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc03a/npc03a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr",
+    "Assets/Data/Player/pc08a/pc08a1.alr",
+    "Assets/Data/Player/pc05a/pc05a1.alr",
+    "Assets/Data/Player/pc00a/pc00a0 -CyberPunk Mecha.alr"
+   ],
+   "result_sha256": "78ca3d6c47610730c01c14c63b287ad56aeabccbad4a68d080d95900385f53ce",
+   "our_bytes": 665877,
+   "copied_from_your_file": 816872,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc04a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot3.ala"
+   ],
+   "result_sha256": "805050d74bc04ddf1fbdbebc136251ec609086f910e10dbd3286556e08351466",
+   "our_bytes": 3726,
+   "copied_from_your_file": 3410,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc04a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot2.ala"
+   ],
+   "result_sha256": "799bd7de05a19fbf10a4a4248318299e696db086019ad4595c30db9a3b4ad560",
+   "our_bytes": 7920,
+   "copied_from_your_file": 9768,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc04a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot5.ala"
+   ],
+   "result_sha256": "86cb04929c1cadad9362677cf06ce66769934d1cd478f751b825ef9f86516958",
+   "our_bytes": 8128,
+   "copied_from_your_file": 9760,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc04a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot4.ala"
+   ],
+   "result_sha256": "a1795fd1d1644c50c38a76c1a26a481da3ea448caae4347e0f764cc17a8f9bdd",
+   "our_bytes": 8720,
+   "copied_from_your_file": 9760,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc04a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "472d5851e2ebf8b76204b0bed5c8dc32ec9004070c4ded01a4716344adb6c38f",
+   "our_bytes": 27392,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc04a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "7ba5f512fa6ef56a266a6c8f345d2767d23f9eff2be633a7edb98f880cdd18fb",
+   "our_bytes": 36860,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc04a/npc04a0.alr",
+   "made_from": [
+    "Assets/Data/Player/enm03a/enm03a0.alr"
+   ],
+   "result_sha256": "e92c74aa66cb36c30c96b8b001a569fe7ee040004814d77ace4675d762780de6",
+   "our_bytes": 1430333,
+   "copied_from_your_file": 36034,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc05a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot3.ala"
+   ],
+   "result_sha256": "8123685c6a43dad3bb0e5e798f40fcab1aa2b9d26ecbdde9f3003a0ee0d0a8c5",
+   "our_bytes": 2931,
+   "copied_from_your_file": 4029,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc05a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot2.ala"
+   ],
+   "result_sha256": "3ac3f37cc24cee3e4ab952c91ef35cb81735eeb5fb0a37a8882b0ea3d61fe234",
+   "our_bytes": 7919,
+   "copied_from_your_file": 9769,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc05a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot5.ala"
+   ],
+   "result_sha256": "8527987e15f4d7490186befb0fd37b87f723be23c4da55958433e31fb4ad33c3",
+   "our_bytes": 8127,
+   "copied_from_your_file": 9761,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc05a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot4.ala"
+   ],
+   "result_sha256": "d84358da976a7d019891185e5384dcc096ead5b6807910cf994a6ab15f38619b",
+   "our_bytes": 8719,
+   "copied_from_your_file": 9761,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc05a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "eb8c4445d54414076663c5ed7367885888baf13d125008fc2eaa4ba4218c85ec",
+   "our_bytes": 27392,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc05a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "6b03a2abf6509c81a77c38697436fdc8e7debf166a957d1d90930e2b4d94f222",
+   "our_bytes": 36860,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc05a/npc05a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc04a/pc04a0.alr",
+    "Assets/Data/Player/pc04a/pc04a.alr",
+    "Assets/Data/Player/pc06a/pc06a0.alr",
+    "Assets/Data/Player/pc01a/pc01a3.alr",
+    "Assets/Data/Player/pc11a/pc11a.alr",
+    "Assets/Data/Player/pc06a/pc06a.alr",
+    "Assets/Data/Player/pc11a/pc11a0.alr",
+    "Assets/Data/Player/pc02a/pc02a0 - Vrethagon AA BLK Freia w orange highlights Req .alr"
+   ],
+   "result_sha256": "ae632dc1bec7d85da4e7e3722e41dc2316e5c45d3be43fa37800dcedba1904c4",
+   "our_bytes": 698047,
+   "copied_from_your_file": 727348,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc06a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot3.ala"
+   ],
+   "result_sha256": "d61303c57db9017db888ab4e1b770993996432a2b872d0a0d283aa5e3fd495f6",
+   "our_bytes": 3579,
+   "copied_from_your_file": 3437,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc06a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "771652c1db2d84d2beb2a272f8d14f6718537df24a11b09b954e3bb900af1a53",
+   "our_bytes": 15112,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc06a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "289d4527aae66d6f6a25a4014ebc8d5162ad641f78093186949b2c89d2f85f08",
+   "our_bytes": 16692,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc06a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "8b2a5b4be1aba353c89de009e23ddb3e511136391c2e9320adaecaaf5d07ed87",
+   "our_bytes": 17736,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc06a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "bfb7feefcb06d27556852039c619906dfcd64c320059158680823b99aaa74f1d",
+   "our_bytes": 30600,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc06a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "1e68d19b7a2ec05a114fcd66ac34100f6d7418784345b96b5d1326e95a66c7c8",
+   "our_bytes": 32148,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc06a/npc06a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc04a/pc04a3.alr",
+    "Assets/Data/Player/enm13a/enm13a1.alr",
+    "Assets/Data/Player/pc11a/pc11a.alr",
+    "Assets/Data/Player/pc10a/pc10a0.alr"
+   ],
+   "result_sha256": "5ddae03519edb7700617a8ce956454863732c5a5237c0ffccb8f2e4c0c2b590f",
+   "our_bytes": 1330398,
+   "copied_from_your_file": 73343,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc07a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot3.ala"
+   ],
+   "result_sha256": "20316132a4eda40a49cf0054b785cc244c4cc0c89006e42ee916eae1d6ee6fb9",
+   "our_bytes": 2420,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc07a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "330832f088fa68746cf234d293827f27bb77adc65d79c46f6db075b5e0fbd24c",
+   "our_bytes": 15296,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc07a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "3096c3cf1248a07beae626fcb3712b3f3c1c95b41be055129fdb02ccec841bf7",
+   "our_bytes": 20460,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc07a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "47d9218fba714d16d9e283faf3bb1159e342abb46359d7e4b8e97c38d9547816",
+   "our_bytes": 20680,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc07a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "d474d8d12ad967ea172e0c3f0142a8a19438c12ee9b8f3d907e1ad027ad37c0e",
+   "our_bytes": 25548,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc07a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "a418505a76ea52eeede125e147887dabaf7eb0badb83773251ec44de9d45c630",
+   "our_bytes": 33156,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc07a/npc07a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc05a/pc05a1.alr",
+    "Assets/Data/Player/pc00a/pc00atest.alr",
+    "Assets/Data/Player/pc04a/pc04a.alr",
+    "Assets/Data/Player/pc00a/pc00a3.alr",
+    "Assets/Data/Player/pc00a/pc00aOG.alr"
+   ],
+   "result_sha256": "9f422079c7ddd70bc896e057b9b3c05107ed99e0760c1b124e7e33df3e1fb5d6",
+   "our_bytes": 1438751,
+   "copied_from_your_file": 58337,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc08a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot3.ala"
+   ],
+   "result_sha256": "65f934d2ebd245ee1a349c9009d53a06eb033b04727388ad4adf247cf257f3e1",
+   "our_bytes": 7480,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc08a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "d44216a9e5d1dc70fd2f3b910ff7e9408181493ae3e46b3ca3c89083dacee26e",
+   "our_bytes": 15112,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc08a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "58fbf3da1e70ea6d17caebf9d885b6178559668cbb5274e8cfb8611de757ebd4",
+   "our_bytes": 16692,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc08a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "fbd007d8d1b5f8b7a03d6336bc88b9efa21c7917b9defb0da8f3d77cda9a6b65",
+   "our_bytes": 17736,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc08a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "98f6974a5f21fab58035da6b762d47ffd0f8b2feb734051323bb3a49f73909c8",
+   "our_bytes": 30600,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc08a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "5fd49d27f59a7b4971f36211f5cb0d24f4cc088ac5df5db0825a77a25706c106",
+   "our_bytes": 32148,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc08a/npc08a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc05a/pc05a3.alr",
+    "Assets/Data/Player/pc09a/pc09a1.alr"
+   ],
+   "result_sha256": "835e3bedc7466819892cfdcc72b764691d9d24706a49110a4bab5cf464e1a76a",
+   "our_bytes": 540204,
+   "copied_from_your_file": 868820,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc09a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot3.ala"
+   ],
+   "result_sha256": "837856b4743d81161e12c25418b9d793908d72ecb8d0fb42489ef2f8e284e705",
+   "our_bytes": 7480,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc09a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "e2d2b6040355ba543489d5a49a6857879633d0f7eb54032abd2ce86bcd495a29",
+   "our_bytes": 15112,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc09a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "f6a89e1fba9f376a92be03606a7b58bc09ba35442eeaa7a7dbf78d6c8c11888c",
+   "our_bytes": 16692,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc09a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "9f578d872ff25a5c0ff444432177bed7b22256b1939c5980f7052abe7301677e",
+   "our_bytes": 17736,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc09a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "07f83765030cec90c02a8bb9252338231931e38af5668ff058b87e41a3fc6693",
+   "our_bytes": 30600,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc09a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "555fb572e52e3ad71d31646a58d6c3dbdc765dd4cd8d61119c503c98a67636f4",
+   "our_bytes": 32148,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc09a/npc09a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc05a/pc05a3.alr",
+    "Assets/Data/Player/pc09a/pc09a3.alr"
+   ],
+   "result_sha256": "151d848def5254f404014965ce90046c2b02cd3d77c378fc0bb2b8714d18058c",
+   "our_bytes": 536855,
+   "copied_from_your_file": 872169,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc10a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "096334b69d6240ef5df07aab84aa55a03e13d2f39c5bb5a6f2f877f18be1869a",
+   "our_bytes": 15636,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc10a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot3.ala"
+   ],
+   "result_sha256": "bc3bf932bc6adb6789f5dc5cce67b5406ade835443c7597cf16a48f011ab2c3f",
+   "our_bytes": 18456,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc10a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "0a8f791346e95143cf721506ea1fd076d9594ffa5393ec326aeb51aed63cb0da",
+   "our_bytes": 19804,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc10a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "3892289420116c98942f13196a17ec130c8d8d2829c3d5aa80b87064ae023d1d",
+   "our_bytes": 25528,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc10a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "f3aa44f960018aad8e9c4678084c318e44c463aca50bcf2ad49cb0a8747eda41",
+   "our_bytes": 29016,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc10a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "4de8dfff519bbd5af01a086afad033c73224b9545d82971266a1d01feebd2236",
+   "our_bytes": 30144,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc10a/npc10a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc11a/pc11a3.alr"
+   ],
+   "result_sha256": "511cb99feea70d9b4e799c085f26c159fd047ea0a7e9c33f78e0b28ab2d9617d",
+   "our_bytes": 1381640,
+   "copied_from_your_file": 31480,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc11a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot3.ala"
+   ],
+   "result_sha256": "57e553dfcc32c414fa6d228afa325806e094cdaefc67407e3cede45c24ec8f88",
+   "our_bytes": 6648,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc11a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot4.ala"
+   ],
+   "result_sha256": "09be2b79ba8773b57b53b47ab783361538ca2ab035f887e282ec124f8c4c6b32",
+   "our_bytes": 20084,
+   "copied_from_your_file": 36,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc11a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot2.ala"
+   ],
+   "result_sha256": "ff5125c4deae96bf47638144c3eb3936196b3737836f9b7f15575ed29362d2b8",
+   "our_bytes": 20904,
+   "copied_from_your_file": 36,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc11a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot5.ala"
+   ],
+   "result_sha256": "b262b0065a12e6c19d277303bfc0846d223c9c710a58dbd4ec37c70a108de71f",
+   "our_bytes": 20904,
+   "copied_from_your_file": 36,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc11a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "f6090de5b0d82cf417feced769428cbcd7a364e2edd3a6d5eb20a41626241ab0",
+   "our_bytes": 28052,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc11a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "fb4fae41f600482ab85ea4bdacf04407ae4fe942430337b3da4fb4e96e7d07ee",
+   "our_bytes": 30172,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc11a/npc11a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a2.alr",
+    "Assets/Data/Player/pc00a/pc00a0.alr",
+    "Assets/Data/Player/evpc00a/evpc00a0.alr"
+   ],
+   "result_sha256": "0a21d6cb48480bf31f4d5456b1b500c190129f2d8edcd9237522fa5c11125ced",
+   "our_bytes": 606636,
+   "copied_from_your_file": 894918,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc12a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot3.ala"
+   ],
+   "result_sha256": "90f2aad5a148316c4c30c10cd9d21d25ebfbbf6c7c9b5def6154bdd337edbc8a",
+   "our_bytes": 3992,
+   "copied_from_your_file": 580,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc12a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "204615092f71b4fd55e24ba35c8b16d420f5eb1f2d43785f3671db2269536de3",
+   "our_bytes": 17224,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc12a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "945b2aa11cbce00ce9dce1a70c377f2ab33de2e689bc7f37c28a711154ba6456",
+   "our_bytes": 17852,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc12a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "6b5f3f7d9e95bb6c14ca94649314647b24c400fe24a3c982c0533fc5d9a2cd22",
+   "our_bytes": 19048,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc12a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "7709c6de8366fd38a032f4393999807905e5f0d08f62c00aeae69ffd2fdfe238",
+   "our_bytes": 26812,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc12a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "a9c0ffbdbef39b2a52bfae233a769d19af48561d1ff4eb418d11ffa0aa693612",
+   "our_bytes": 34708,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc12a/npc12a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc01a/pc01a1.alr",
+    "Assets/Data/Player/pc11a/pc11a3.alr"
+   ],
+   "result_sha256": "fff46b23f7575de267e0a70d092f9d6f57c16e76461113dd354ffb08e5f7e2cc",
+   "our_bytes": 620812,
+   "copied_from_your_file": 894678,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc13a/exmot3.ala",
+   "made_from": [
+    "Assets/Data/Player/enm05a/exmot3.ala"
+   ],
+   "result_sha256": "83c28b19add658b99fda9f6f8766665782f7023df1405dbe32e3edd5c8aefcdb",
+   "our_bytes": 3992,
+   "copied_from_your_file": 580,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc13a/exmot5.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot5.ala"
+   ],
+   "result_sha256": "0b5e53349a8cc60182c61c55b9a51be5fb2ccc43dbd571361a63d3c4aaf07884",
+   "our_bytes": 17224,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc13a/exmot2.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot2.ala"
+   ],
+   "result_sha256": "750f37c5c0af95440468b7dc3d89dafe1801a1d2088ea9352120a6204d4c6c66",
+   "our_bytes": 17852,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc13a/exmot4.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot4.ala"
+   ],
+   "result_sha256": "528bbc272e03fd4e00e367559d0585a72d8249652aef328998d27a44bd10e70a",
+   "our_bytes": 19048,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc13a/exmot1.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot1.ala"
+   ],
+   "result_sha256": "3257d7f65b8065cf8a2930079351c553d7d87e590a73aff7658bac5b62266ab5",
+   "our_bytes": 26812,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc13a/exmot0.ala",
+   "made_from": [
+    "Assets/Data/Player/enm00a/exmot0.ala"
+   ],
+   "result_sha256": "e6abe06132f14c0e1b8dde0097cc97a0b3e308b88e14c45b1054e22af77c65e7",
+   "our_bytes": 34708,
+   "copied_from_your_file": 0,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/Player/npc13a/npc13a0.alr",
+   "made_from": [
+    "Assets/Data/Player/pc04a/pc04a3.alr",
+    "Assets/Data/Player/pc01a/pc01a1.alr",
+    "Assets/Data/Player/pc02a/pc02a0 - Vrethagon AA BLK Freia w orange highlights Req .alr",
+    "Assets/Data/Player/pc08a/pc08a.alr"
+   ],
+   "result_sha256": "3206b7271ef493b45ab6723b0271151f39cce6e4d361e58724add4ef6f7517ca",
+   "our_bytes": 702642,
+   "copied_from_your_file": 726842,
+   "carries": "NPC page / NPC characters (1.50)"
+  },
+  {
+   "file": "Assets/Data/setup/charaset/charaset_en.dat",
+   "made_from": [
+    "Assets/Data/setup/charaset/charaset_en.dat"
+   ],
+   "result_sha256": "26910bd9021a3ca6d8af8f3430ce3e386a6e32fc691f930d78b0ea5b0f371bb0",
+   "our_bytes": 738,
+   "copied_from_your_file": 0,
+   "carries": "character table: 15 outfits (as BFR) + the NPC page rows (1.50)"
+  },
+  {
+   "file": "Assets/Data/setup/charaset/charaset.dat",
+   "made_from": [
+    "Assets/Data/setup/charaset/charaset.dat"
+   ],
+   "result_sha256": "d2b894fbbcb88580596cc314cccefec515c833f83bf191317cb27d4be097c595",
+   "our_bytes": 122,
+   "copied_from_your_file": 0,
+   "carries": "character table (other language): the NPC page rows (1.50)"
+  },
+  {
+   "file": "Assets/Data/com/param/enemyparam.epa",
+   "made_from": [
+    "Assets/Data/com/param/enemyparam.epa"
+   ],
+   "result_sha256": "e16aa6e94370f78938fb32536cf6bddcb80bd77d0a56a21815cbb58a811d9ca4",
+   "our_bytes": 40,
+   "copied_from_your_file": 0,
+   "carries": "CPU levels: personality rows 82-85 (Tough, Brutal ...) (1.50)"
+  },
+  {
+   "file": "Assets/Data/com/ai/cwoprog006.ssb",
+   "made_from": [
+    "Assets/Data/com/ai/eneprog006.ssb",
+    "Assets/Data/com/ai/eneprog_freya.ssb",
+    "Assets/Data/com/ai/eneprog003.ssb",
+    "Assets/Data/com/ai/eneprog005.ssb"
+   ],
+   "result_sha256": "a2bcd8b91e71613495cb38f8def4d860ad0454dde540eee05e1eb27d8a20a52e",
+   "our_bytes": 209,
+   "copied_from_your_file": 27931,
+   "carries": "CPU levels: the Brutal program (1.50)"
   }
  ]
 }

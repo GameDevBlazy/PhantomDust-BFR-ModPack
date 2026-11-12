@@ -1,0 +1,8 @@
+# fusion id	base	added	name	cost	damage (the Skill Fuser writes this file)
+699	116	456	Wall + Panoramic Laser beam	1	1
+698	207	454	Lift Up + Divine ParticleCage	1	2
+697	207	449	Lift Up + Ice Burr	4	3
+696	207	444	Lift Up + Rubble Orbit	4	2
+695	109	432	Photon Wave + Wound Mark	5	5
+694	109	398	Photon Wave + Geyser Palm	5	5
+693	51	398	Vibration Laser + Geyser Palm	4	5

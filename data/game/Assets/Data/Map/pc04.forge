@@ -1,0 +1,15 @@
+# Panorama pieces (build_pieces_canvas.py): every piece starts in storage under the floor
+storage_below 185.0
+floor_y 200.0
+category Panorama pieces
+object pc04_p001|Panorama 1|box -30.6 0.0 -8.6 30.6 29.7 8.6
+object pc04_p002|Panorama 2|box -30.6 0.0 -8.6 30.6 29.7 8.6
+object pc04_p003|Panorama 3|box -0.4 0.0 -0.5 0.4 61.5 0.5
+object pc04_p004|Panorama 4|box -0.4 0.0 -0.5 0.4 61.5 0.5
+object pc04_p005|Panorama 5|box -25.0 0.0 -22.8 25.0 190.0 22.8
+object pc04_p006|Panorama 6|box -25.0 0.0 -22.8 25.0 190.0 22.8
+object pc04_p007|Panorama 7|box -16.2 0.0 -73.5 16.2 240.8 73.5
+object pc04_p008|Panorama 8|box -140.0 0.0 -17.4 140.0 22.0 17.4
+object pc04_p009|Panorama 9|box -140.0 0.0 -20.0 140.0 13.0 20.0
+object pc04_p010|Panorama 10|box -206.2 0.0 -108.3 206.2 240.8 108.3
+object pc04_p011|Panorama 11|box -192.1 0.0 -216.3 192.1 217.8 216.3

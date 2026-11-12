@@ -1,0 +1,2 @@
+NPC page on: charaset row 28 = the ten NPCs (Player\Npc00a
+pc00a0..9.alr). Delete this file to give the cell back to the created character.
