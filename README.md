@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.0
+# BFR mod pack 1.50.1
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -95,6 +95,9 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.1**: automatic updates - the launcher checks this pack's GitHub page each time it starts and installs a newer
+  version by itself (only when it is signed by the pack's author; your own changed settings and saves are kept). The main
+  menu shows the pack's version (BFR MOD PACK 1.50.1).
 - **1.50.0**: loader 5.151.0 - the pack author's picks from the MODS edition:
   - Grand Panorama and Grand Panorama (Sunset) remade: one designed map (office-roof plaza, refinery roof, broken highway,
     4 lifts, 8 spawns); the Sunset one mirrored under Sunset Refinery's sky;
@@ -148,6 +151,15 @@ and the same skill choice; the pack gives the game its own skill update version 
 3. Start the game with that shortcut.
 
 Keep the pack folder where it is; the shortcut starts the launcher from it. If you move the folder, run the install again.
+
+## Updates
+Install once. Every time you start the game with the "Phantom Dust BFR" shortcut, the launcher checks this pack's GitHub
+page; when there is a newer version it downloads only the files that changed and installs them before the game starts.
+- Every update is signed by the pack's author. The launcher refuses anything that is not signed with that key, so nobody
+  else can push files to your PC through the pack's page.
+- Your own changed settings, arsenals and records are kept; the old pack files go to `_backup_<version>` in the pack folder.
+- Offline (or if anything goes wrong) the game simply starts with the version you have. The launcher window and the main
+  menu (BFR MOD PACK x.y.z) show which version you are on.
 
 ## Uninstall
 Close the game and run `UNINSTALL BFR.bat`. The shortcut is removed and the pack's data folder is renamed (kept) under
