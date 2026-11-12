@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.4
+# BFR mod pack 1.50.5
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -95,6 +95,9 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.5**: Palace Ascended and Jungle Cave as in the MODS edition; Sky Ring Highway, Highway to the Alley, Five-Story
+  Building, Ruins and Antarctic Outpost back to their earlier versions with the capsules raised; every added stage has its own
+  colour identity (its own texture colours); the stage effects as before, with Jungle Cave's storm as tall as the big tree.
 - **1.50.4**: the added stages as they are in the MODS edition now: Palace Ascended (third level on the third level, Lost
   Palace's own look), Sky Ring Highway, Highway to the Alley, Jungle Cave (tree house, bush border, tree limbs solid, the storm
   as tall as the big tree), Five-Story Building, Ruins (no fog), Antarctic Outpost; capsules raised; The Bunker's capsules;
