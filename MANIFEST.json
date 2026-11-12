@@ -1,6 +1,6 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.2",
+ "version": "1.50.3",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
   "launcher/CwoLaunch.exe": "2befed8fb1984c353eaaae8f12dc6c3648e36910aa4a03b26ca5b6b43e23b3f9",
@@ -19,7 +19,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "fd95a23ca09bf5f7ff098570978035fbcfe8fc00bdc237b730059c70b34d37e5",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "de1843713b29b33711978a9c25285956ff9abc7b0b18f4a64d546e9e930aef90",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "c6534d37bb2e50a03e1d1aa412f8a574b2dbd08834b31dfcd69e600d1b09b464",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "a5d6f54722a3818c4b0b8132d5497c55020a4d6e10d20ad0f86e7fc226705918",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "7c788eaf8ad3ba20f3b85bcd3638e1be89e3a8c986f791d97b5c0ab0578dc3a2",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
   "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "02afab9cdb245f3d8b7a78b799594a3d32f33a5aa9ebc69a7496d127812c6b07",
@@ -27,7 +27,7 @@
   "data/patches/Assets/Data/Menu/MNet.alr.cwopatch": "1929614779d4ad3189161bb4ddd6ab4c8c0f30732c7a3453939f3b4bcef3ef7b",
   "data/patches/Assets/Data/Menu/liverulesel_en.ssb.cwopatch": "7219c52f01bcfd3d3376ea276ec27505a464856b23c39bc47f0dbb878fd72273",
   "data/patches/Assets/Data/Menu/Mission.alr.cwopatch": "4710eda5d2dae41deef5c37fcdcab1d39938390a7f76d285fd8dfb6e912d92ad",
-  "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "e7494a8bf2d1a211b2afcec2406226169543a7e5f5394c979242b399123a8419",
+  "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "659ee1b3fb3de4d2371353f905cab8e83cf701d02a29daeb7289396e931ea791",
   "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "1731eabfbe0566e3578dbc6ea9d81c57827c9d5dfdf1bb449ed9781a3bc9212a",
   "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "36ca20eae6d36c9963f06d64977fba82054c888288ebc4d931b8bc53c3143a89",
   "data/patches/Assets/Data/Map/mx401.dat.cwofrom": "1e42613a1bd8bab30f5ebe3c21ff3ee24e0a17a277073d019e3adc77714e5ebd",
@@ -467,7 +467,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "81b62b6f990c8aed39b8e618f30db73e5e8cd1ce6d3b68c506b77df76761b4ee"
+  "README.md": "52cd5ad7b0ce14b021e7299a9666b2c27e251dcaaa881d2b876ade1a104dd81a"
  },
  "patches": [
   {
@@ -513,7 +513,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "4d6cdacf06a73ed011f10743dcd071ef02d257480af1bffa6fb1ea6297c195fd",
+   "result_sha256": "1c8d082510438401af8c15baf79246cb1555c6d87a6629071918813167fea66f",
    "our_bytes": 5675,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line"
@@ -577,10 +577,10 @@
   {
    "file": "Assets/Data/Menu/livestagesel_en.ssb",
    "clean_sha256": "349300953517a60cf43901a6e97381e1bebb8cb71541d7b53592075acb7a8e72",
-   "result_sha256": "a047bb09961e743a6547c8233583c146be59e0579562b4ef4db62537e16d3d1c",
-   "our_bytes": 145,
-   "copied_from_your_file": 1350,
-   "carries": "Xbox Live level list: the highlighted stage shown behind the list"
+   "result_sha256": "234699d45c15733ba16630e667384de01cb3082004a999cb0b3709db932b3a48",
+   "our_bytes": 347,
+   "copied_from_your_file": 1410,
+   "carries": "Xbox Live level list: the highlighted stage shown behind the list; 1.50.3 the added stages as rows (build_stage_rows.py on the 1.50 script, the same patch as MODS - AGENTS.md \"Pack rows in the Xbox Live LEVEL LIST\")"
   },
   {
    "file": "Assets/Data/Menu/BtMenuEn.alr",
