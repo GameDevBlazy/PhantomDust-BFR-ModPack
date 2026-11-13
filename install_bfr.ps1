@@ -38,6 +38,20 @@ foreach ($p in $man.patches) {
     $kept++
   }
 }
+# 1.50.9: a patch file an older pack version had and this one does not (a removed stage) goes to the backup too, so the
+# loader does not build that file again
+$srcp = Join-Path $src 'patches'; $dstp = Join-Path $data 'patches'
+if (Test-Path -LiteralPath $dstp) {
+  Get-ChildItem -LiteralPath $dstp -Recurse -File | ForEach-Object {
+    $rel = $_.FullName.Substring($dstp.Length + 1)
+    if (-not (Test-Path -LiteralPath (Join-Path $srcp $rel))) {
+      $b = Join-Path $bk ('patches\' + $rel)
+      New-Item -ItemType Directory -Force -Path (Split-Path -Parent $b) | Out-Null
+      Move-Item -LiteralPath $_.FullName -Destination $b -Force
+      $kept++
+    }
+  }
+}
 if ($kept) { Write-Host "$kept of your own files that the pack replaces were kept in $bk" }
 Get-ChildItem -LiteralPath $src | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $data -Recurse -Force }
 # the CREATE editor's font: made on this PC from Windows' own Segoe UI fonts (never shipped)
