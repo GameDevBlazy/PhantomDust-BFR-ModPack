@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.6
+# BFR mod pack 1.50.7
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -95,6 +95,12 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.7**: loader 5.179.4 (the MODS edition's loader, with its start-up and crash fixes): mines (Boost Mine, Sensor
+  Mine ...) go off on every added stage - they were seated under the floor; Ice Storm drops fall from the sky on Antarctic
+  Outpost; the HUD faces in Scoreboard and with six fighters show each fighter's own face; Ruins without fog and gusts, three
+  roaming tornadoes, ruined buildings at the edge and the desert beyond; Jungle Cave without the lightning storm; Sky Ring
+  Highway, Highway to the Alley, Five-Story Building, Ruins, Antarctic Outpost and both Grand Panoramas as in the MODS
+  edition; Palace Ascended and The Bunker removed.
 - **1.50.6**: the one-colour tint on the added stages is gone - every stage has its own textures again (Palace
   Ascended, Jungle Cave, Sky Ring Highway, Highway to the Alley, Five-Story Building, Ruins, Antarctic Outpost, both Grand Panoramas).
 - **1.50.5**: Palace Ascended and Jungle Cave as in the MODS edition; Sky Ring Highway, Highway to the Alley, Five-Story
@@ -178,6 +184,12 @@ page; when there is a newer version it downloads only the files that changed and
 - Your own changed settings, arsenals and records are kept; the old pack files go to `_backup_<version>` in the pack folder.
 - Offline (or if anything goes wrong) the game simply starts with the version you have. The launcher window and the main
   menu (BFR MOD PACK x.y.z) show which version you are on.
+
+## What the pack sends
+- **Pack check-in**: once per install and after each pack update, the pack sends your Xbox gamertag, the edition and the
+  pack version to the pack's author. Nothing else is sent with it.
+- **FEEDBACK** (main menu, next to MOD LIST): only when you send a message there - your message and its category, with your
+  gamertag, the pack version and the last stage and mode you played. The page shows this before you send.
 
 ## Uninstall
 Close the game and run `UNINSTALL BFR.bat`. The shortcut is removed and the pack's data folder is renamed (kept) under
