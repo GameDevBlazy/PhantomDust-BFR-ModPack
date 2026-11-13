@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.7
+# BFR mod pack 1.50.8
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -95,6 +95,7 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.8**: loader 5.179.5: no crash at the end of a match after a skill effect was pushed out of memory mid-match.
 - **1.50.7**: loader 5.179.4 (the MODS edition's loader, with its start-up and crash fixes): mines (Boost Mine, Sensor
   Mine ...) go off on every added stage - they were seated under the floor; Ice Storm drops fall from the sky on Antarctic
   Outpost; the HUD faces in Scoreboard and with six fighters show each fighter's own face; Ruins without fog and gusts, three
