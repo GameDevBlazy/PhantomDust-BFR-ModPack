@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.14",
+ "version": "1.50.15",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "0a05876479d7d0ada4c680b7b9b1bfeded21fe0449518f77c59be7a0145a3276",
-  "launcher/CwoLoader.dll": "84c718c7a3548d8b6cd17f73b5a07cc6427cc8909b3db10bf84319473edd2d10",
+  "launcher/CwoLaunch.exe": "c75cfaf7a3339db9391e91a5d19435d8e3f930da7781ab775ff2cb90c59d8386",
+  "launcher/CwoLoader.dll": "78748d3de9529a9771e41060adaecf1ad83dc5bc24424e6e54d589d87b904fc0",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
   "data/CwoNewSkills.txt": "16f8875752d2b4b358ecbd56a3dd5e3a5b2d692f0b46c45610af0a4c042b84ab",
   "data/CwoStageFx.txt": "b10000615c88c37ffdd9ac02e0dd763e37a45a37e55e7dd9292de42931ffb5fa",
@@ -19,7 +19,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "8041d5fcdb0ccc3b27f29fdcb97c1f00a88805f5595075ee603c8a72092cf65d",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "af8c4f87ca128ea5b3cbc37e732d20e5764a37de858176278639bad812a2a7bb",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6e6e609f784b7eb1d8f73dedf44ff1ae117ae865024f88d7d3bc9ea8f127e162",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "c680d0e729222eaa95301ce6ab66de2dbdf3d7d227ef5cbef4e43a47cb72fb1e",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -29,7 +29,7 @@
   "data/patches/Assets/Data/Menu/liverulesel_en.ssb.cwopatch": "7219c52f01bcfd3d3376ea276ec27505a464856b23c39bc47f0dbb878fd72273",
   "data/patches/Assets/Data/Menu/Mission.alr.cwopatch": "4710eda5d2dae41deef5c37fcdcab1d39938390a7f76d285fd8dfb6e912d92ad",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "659ee1b3fb3de4d2371353f905cab8e83cf701d02a29daeb7289396e931ea791",
-  "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "1731eabfbe0566e3578dbc6ea9d81c57827c9d5dfdf1bb449ed9781a3bc9212a",
+  "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "2b17875e40610c9fd21d2cc016e55d32ed6bc822f99b1b440beafc3fb08995be",
   "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "36ca20eae6d36c9963f06d64977fba82054c888288ebc4d931b8bc53c3143a89",
   "data/patches/Assets/Data/Map/mx401.dat.cwofrom": "1e42613a1bd8bab30f5ebe3c21ff3ee24e0a17a277073d019e3adc77714e5ebd",
   "data/patches/Assets/Data/Map/mx401.alr.cwopatch": "55b5f798a32380ec420195e89a4de70f3dbe8c8fa06eb2f38328f755565dfe09",
@@ -83,8 +83,8 @@
   "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwopatch": "566856ca8a60133484a4b0bb1fba4481f5e8be2c3be1132c110855c08d9938d4",
   "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
   "data/game/Assets/Data/Map/mx_list.txt": "cfed6f6b6fba3c72945f3f0fd4a504f52bf6dfcb0fcd6c229ae82c0519af0001",
-  "data/game/Assets/Data/Menu/cwo_faces.dxt": "368d2c49887c5e3c1df34e7590436ca0b8e964067134d91baa9d75ea7e288df7",
-  "data/game/Assets/Data/Menu/cwo_faces.txt": "a0a46f34c6d2edd12ff395e2fa56ea4933cd59dc82b53a08b09e4615a2d7000d",
+  "data/game/Assets/Data/Menu/cwo_faces.dxt": "b29396a7ebd113df26add2e9b2adfcc9a747e9f65227a1e4d0b6b65ab53fa4b9",
+  "data/game/Assets/Data/Menu/cwo_faces.txt": "3585a931af1e6d2084355f478b13a353da6eca4e61333ad9a334e756634bf47f",
   "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "e97bfbade7c874d7a9726f6c659b1adac4d3406c6e2cb6f2947d2617b71396ae",
   "data/game/Assets/Data/Menu/cwo_select_outfits.txt": "e447d8ad88ff399ebeb4ef4279e672a7a5c5e659168836e35c019176b6e0addd",
   "data/game/Assets/Data/Menu/cwo_lobby_rows.txt": "eff6f2694c226bdc657a4552b41ef313afbe98cdfd62232afabde9dec8fc0c58",
@@ -464,7 +464,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "8bfb869292a2100a432d9b8b6f1edd63381037a8666fd59e13a6168587f5acb7"
+  "README.md": "f3cfaf6d6f93eba445210d81f83c08e057261cc1fdccde6e2bd43923ae357e2d"
  },
  "patches": [
   {
@@ -510,7 +510,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "deac383a653ddb78c50d504c5015e1d90dbf08d4cd71f22a3ce7ddbb18f5b0d0",
+   "result_sha256": "3fffce17af680dc85f0347d6b5224a74b7780b77581522175ad6f4ee2c15fd26",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
@@ -590,10 +590,10 @@
   {
    "file": "Assets/Data/Menu/BtMenuEn.alr",
    "clean_sha256": "3a8d622f25a296615fc4deed8ae790e0f6d7eaadd3bdd612f3e7e4f4bb0efa46",
-   "result_sha256": "d5525f5b5639013a07eadad7d3e8dc9042241edd743d09e2ceb207c1bfaabcbd",
-   "our_bytes": 4551,
-   "copied_from_your_file": 423804,
-   "carries": "battle HUD: 4 face spots (the free strip of its own page 2) for each fighter's face beside its name"
+   "result_sha256": "5cae60671b70e0fe48dd29e985e48bf60cb7aeeabf3596f20602ce91f111994c",
+   "our_bytes": 418,
+   "copied_from_your_file": 536330,
+   "carries": "battle HUD: face spots for each fighter's face beside its name - 1.50.15: 6 (fighters 5 and 6 of a 3 vs 3 too; MODS build_hud_faces v3)"
   },
   {
    "file": "Assets/Data/Map/mx401.dat",
