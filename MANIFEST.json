@@ -1,6 +1,6 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.9",
+ "version": "1.50.10",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
   "launcher/CwoLaunch.exe": "6526dcffb355941d064341003f659d2f2b8fba3641c7acc6b600915235f593b3",
@@ -14,13 +14,13 @@
   "data/CwoNextMap.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoTheme.txt": "6d1dbb9c582de44ad1dbc0d24eca4d831d8172bef0593680ecd24f6d0ce9def5",
-  "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "83c86b1a3796ea1e10b7092b1e6634f668df66e06a6b667b19eed7ba1d6a11da",
+  "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "2bfa85d9e5ee5131b599543520a8d309f75d5f39f00d222d52a591c84f49e83a",
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "704c5a7af3874c51045b9ed978712292aabe02f1307f6aebb04c6e4f75eb0f21",
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
-  "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "fd95a23ca09bf5f7ff098570978035fbcfe8fc00bdc237b730059c70b34d37e5",
+  "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "de1843713b29b33711978a9c25285956ff9abc7b0b18f4a64d546e9e930aef90",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "26fe86501d36b2dad4fc59ebddb6d4c8b9c1f9544d4be6387aa64f5377b7af4d",
-  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "7c788eaf8ad3ba20f3b85bcd3638e1be89e3a8c986f791d97b5c0ab0578dc3a2",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "b862635fd8de1accb1c4a711db9c5406028c76b385e726e611898979bf1d0974",
+  "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "c680d0e729222eaa95301ce6ab66de2dbdf3d7d227ef5cbef4e43a47cb72fb1e",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
   "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "02afab9cdb245f3d8b7a78b799594a3d32f33a5aa9ebc69a7496d127812c6b07",
   "data/patches/Assets/Data/Menu/VsMode.alr.cwopatch": "baf66e557eb5f2943a9481b8885cc839c2d80abe541a742ebbc512d59a1bb81d",
@@ -459,15 +459,15 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "315fe20c1b22e9431606bc26db9ec0ce30b7ba4148c6abc0098713f2df75d6df"
+  "README.md": "9a63a5b7d922ba3e4a023be7514d2fdd441390d3eb762afb447ad5587b0bc353"
  },
  "patches": [
   {
    "file": "Assets/Data/Menu/livelobby_en.ssb",
    "clean_sha256": "9d425dd99edbf49b233e12dde9cfe43b68a439cbf2285dfcfd8562944cf4b751",
-   "result_sha256": "9e8f3defdbfb34a2fa076fdf61403a064d328c592e953b8faff2ce8a5946903b",
-   "our_bytes": 3057,
-   "copied_from_your_file": 5300,
+   "result_sha256": "8b988331c32e2a98a13d1e5e0c9394f15f6923aae81ba0983b82aba520b44c88",
+   "our_bytes": 3369,
+   "copied_from_your_file": 5428,
    "carries": "Xbox Live / system link lobby: 3v3 layout, Edit Arsenal and lists 1-3, Change Rule with Most KOs, First to 5 KOs and Survival (3 revives), Change Game Type, session wins and losses, BFR Options (Teammate Lock-on, Next Map, Tiebreaker Vote); 1.46 the members' face strips follow their outfits"
   },
   {
@@ -489,10 +489,10 @@
   {
    "file": "Assets/Data/Menu/livearsel_en.ssb",
    "clean_sha256": "01a05829c35b65f667f6d1309c5d8373c5470a4e2cba37a497e23aacc96250be",
-   "result_sha256": "e4ed5dceb3af7e3a63a3e2e695a37267b798044d128b16fecdc2179b4b264ade",
-   "our_bytes": 33,
-   "copied_from_your_file": 1897,
-   "carries": "Xbox Live arsenal list title with its number"
+   "result_sha256": "50b92aa620c593a49dbd38cf21147f0fda4ca9354001e6b0dde1da4d1f43fb4f",
+   "our_bytes": 68,
+   "copied_from_your_file": 1895,
+   "carries": "Xbox Live arsenal list title with its number; 1.50.10: an arsenal holding a created skill is refused online (the MODS file, same base)"
   },
   {
    "file": "Assets/Data/Menu/option_en.ssb",
@@ -505,15 +505,15 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "6e79c0d8d6fd82ee67050d028db5b252b8b90bd5f3500a8e3ac73a6c4d930224",
-   "our_bytes": 5675,
+   "result_sha256": "60bb9a6d63c962976e62716c0fbd9d3210da2b07508c5641ead5f7b480da137f",
+   "our_bytes": 5676,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line"
   },
   {
    "file": "Assets/Data/Menu/vsmenu_en.ssb",
    "clean_sha256": "4b4a803d441e4f087436e636f76e885d409b63971be31960d833aedfcafb7185",
-   "result_sha256": "89c51f5528062f74b7cf3a807253016f7489dc29c418398e90befa99cc8f0ceb",
+   "result_sha256": "2be08ee667fec9dfccc9caaf71d02af832e12f0ea4a3afed8737ed4b12771aab",
    "our_bytes": 5813,
    "copied_from_your_file": 8014,
    "carries": "split screen: 3 VS 3 LOBBY, Edit Arsenal and lists, Change Rule with the Create a Mode modes, game type, stage view, arsenal list title, the extra stage rows (Edgar's Dream: Summit); 1.43: monster portraits on X, COMING SOON, the portrait follows the highlighted COLORS outfit; 1.45.6: COLORS 140 wide, the loader moves it into the left black bar"

@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.9
+# BFR mod pack 1.50.10
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -95,6 +95,9 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.10**: the lobby's BFR OPTIONS list has its 8 rows again (HUD Faces and Downed Glow were cut off); the
+  split-screen COLORS list shows 11 rows and scrolls instead of covering the help line; online, an arsenal holding a skill made in
+  the Skill Creator or the Skill Fuser is refused with a message.
 - **1.50.9**: loader 5.179.6: Antarctic Outpost's Ice Storm drops are drawn with Ice Storm's own falling-ice effect, from
   the skill's own height and at its own speed.
 - **1.50.8**: loader 5.179.5: no crash at the end of a match after a skill effect was pushed out of memory mid-match.
