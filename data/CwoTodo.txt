@@ -1,0 +1,6 @@
+# TO-DO LIST (shown in the game: main menu > TO-DO LIST): status|what|asked by
+In progress|Feedback page, your feedback list and this To-Do List in the game|
+Planned|Revives per round as a setting for online Survival|Murder
+Planned|Maps you make in CREATE playable in split screen and Single Play|
+In progress|The Underground (stage 30) rebuilt with every campaign district|
+Planned|More stage remakes and new maps|

@@ -1,0 +1,8 @@
+# FEEDBACK page -> the pack author's Google Form (AGENTS.md "Feedback to the owner's Google Form"); field = entry number
+form 1FAIpQLSfPGBYsofRzEdr0HUGKUoFldewtbfrnQB3M9HM4RJgQwz9lfg
+gamertag 665103523
+category 1639953377
+message 1849702486
+version 1557587854
+stage 2038800377
+mode 1925897563
