@@ -3,8 +3,8 @@
  "version": "1.50.13",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "a48f1744a66184ba0cc5371eea3077e229e5e9a6107a7a6d162931a9698c8355",
-  "launcher/CwoLoader.dll": "273d399cac1a8f0f08f93665c0eca7284a542226b62e2a56df627307b4d4b6d8",
+  "launcher/CwoLaunch.exe": "8798aebad3a52244ccb2662e14c708a2d4c6b9966cc4ed6d550f4cfc16954cb0",
+  "launcher/CwoLoader.dll": "84c718c7a3548d8b6cd17f73b5a07cc6427cc8909b3db10bf84319473edd2d10",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
   "data/CwoNewSkills.txt": "16f8875752d2b4b358ecbd56a3dd5e3a5b2d692f0b46c45610af0a4c042b84ab",
   "data/CwoStageFx.txt": "b10000615c88c37ffdd9ac02e0dd763e37a45a37e55e7dd9292de42931ffb5fa",
@@ -464,7 +464,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "8bbedb860f27ad1f8eaff12549ccd73ac025199085844f3e15a8ba7b944641cd"
+  "README.md": "763ffacdbe1849d720154183ec653631b3f8b75bd3f2507a438a8ea212f66e5c"
  },
  "patches": [
   {

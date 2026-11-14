@@ -96,7 +96,7 @@ and the same skill choice; the pack gives the game its own skill update version 
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
 - **1.50.13**: main menu CREATE (was Edgar's Dream), MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST; the pause menu has
-  a Teammate Lock-on row; MOD LIST lists them; a 3 vs 3 on a stage with 4 start points no longer crashes (loader 5.180.2).
+  a Teammate Lock-on row; MOD LIST lists them; a 3 vs 3 on a stage with 4 start points no longer crashes (loader 5.180.3).
 - **1.50.12**: loader 5.180.0: Freia and Gyne have a slightly fuller bust on every outfit (made by the loader from your own
   game files; `CwoBodyShape.txt`); main menu OPTIONS has Records, Visions and Stage Music.
 - **1.50.11**: FEEDBACK messages and the pack check-in now reach the pack author (the form settings were missing from the pack);
