@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.11",
+ "version": "1.50.12",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "fc749a4d442d4b98f4a38f1bccb971a713f0742f0941ccc92d534bb9736ef5df",
-  "launcher/CwoLoader.dll": "aede58d357cd38665fb59e188b49f271b2bc341604f36de58dda8aa7b02a91fd",
+  "launcher/CwoLaunch.exe": "ee0496a01029e3cdaebd9fa49596f6c0036323ac28bc1894ea47c8c9d39f87c5",
+  "launcher/CwoLoader.dll": "76e5e51cdd837fac4ffc2a28b00e39579e6720acbdcc2f9a577de5542ed39123",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
   "data/CwoNewSkills.txt": "16f8875752d2b4b358ecbd56a3dd5e3a5b2d692f0b46c45610af0a4c042b84ab",
   "data/CwoStageFx.txt": "b10000615c88c37ffdd9ac02e0dd763e37a45a37e55e7dd9292de42931ffb5fa",
@@ -18,8 +18,8 @@
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "704c5a7af3874c51045b9ed978712292aabe02f1307f6aebb04c6e4f75eb0f21",
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
-  "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "de1843713b29b33711978a9c25285956ff9abc7b0b18f4a64d546e9e930aef90",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "5f45820d0c6ec6d275a485c66c0d0251deb17929432f4c147bc92175266982f1",
+  "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "b8cc00d33a1aaa3d8bad7e778ee3dca8af6639977407fb2d20231f256a84d1f2",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "c680d0e729222eaa95301ce6ab66de2dbdf3d7d227ef5cbef4e43a47cb72fb1e",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
   "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "02afab9cdb245f3d8b7a78b799594a3d32f33a5aa9ebc69a7496d127812c6b07",
@@ -455,6 +455,7 @@
   "data/patches/Assets/Data/com/param/enemyparam.epa.cwopatch": "e08a06520cbcc1c57bfcd9593c80dad6efa635934c2df0a331ac227ec4bfe952",
   "data/patches/Assets/Data/com/ai/cwoprog006.ssb.cwopatch": "fd8bfa59847ef4ed37bbc014c2abb4e27c2520cf73872291dac4f7214d460a6d",
   "data/patches/Assets/Data/com/ai/cwoprog006.ssb.cwofrom": "892d44f442fd4faa0d8dbe7e4f370381de51360f4d83b83e3af2efe974251ee5",
+  "data/CwoBodyShape.txt": "3e827306db480df6ba4b6cdc490da9c257579c0dfedeeadf1a637d84670ab76b",
   "data/CwoFaces.txt": "2fdb1e93f2b07442dddd02cda54cabc111c0c3a59b868e631d9c829937ea186b",
   "data/CwoFeedbackForm.txt": "7418dbfbbe2424cac2bcc7d4db9142b94316c52a950b5d53dcb3d0749dcdacf7",
   "data/CwoTodo.txt": "e3a4122e6b24707642d7c687516ba1aa7d96b7bc9ae48064451026b52b847983",
@@ -462,7 +463,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "dac72e1707417e74224c057030ad7c36cf00c3900dfce76c9a241bb10e3b1356"
+  "README.md": "d892f9606a6289d877c7b22a46173001851e6f2b1226ae12e65af90d27e84345"
  },
  "patches": [
   {
@@ -500,15 +501,15 @@
   {
    "file": "Assets/Data/Menu/option_en.ssb",
    "clean_sha256": "9d509e9fb683eadf874f37a133ed9978e199d95860d7783b925fab7fcbabed77",
-   "result_sha256": "ae5168de2f632e7995eabb614195282cedd88f6a2181ec222378b214f972d501",
-   "our_bytes": 974,
-   "copied_from_your_file": 5278,
-   "carries": "main menu OPTIONS: HUD Preset, the game's own sub-menu with a PREVIEW window (1.45.2, build_hud_option.py v2)"
+   "result_sha256": "b9a0b5ee8b7fb0b23f048fb545bf69257b32cc8716db8ae327f0253f58185ecc",
+   "our_bytes": 1392,
+   "copied_from_your_file": 5338,
+   "carries": "main menu OPTIONS: HUD Preset, the game's own sub-menu with a PREVIEW window (1.45.2, build_hud_option.py v2); 1.50.12 Records, Visions and Stage Music (build_option_more.py)"
   },
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "0c86fd60413253652622b469de521692f7e0a36c4cb6528219de81a66b141bea",
+   "result_sha256": "d273f74646670cb4dcd715040f2229ce2d0f2bae45d54b1b2b464962812fff4c",
    "our_bytes": 5676,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line"

@@ -1,0 +1,6 @@
+# Body shape: a slightly fuller bust on these models (display only, this machine).
+# The loader shapes every outfit file of the model in its own game folder, from your clean game files.
+# Delete a line (or this file) and the next start puts those files back as they were.
+# model  band  radius  amount  [cx]   (fractions of the body height)
+pc02a 0.80 0.070 0.034 0.026
+enm05a 0.68 0.068 0.024

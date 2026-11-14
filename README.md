@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.11
+# BFR mod pack 1.50.12
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -95,6 +95,8 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.12**: loader 5.180.0: Freia and Gyne have a slightly fuller bust on every outfit (made by the loader from your own
+  game files; `CwoBodyShape.txt`); main menu OPTIONS has Records, Visions and Stage Music.
 - **1.50.11**: FEEDBACK messages and the pack check-in now reach the pack author (the form settings were missing from the pack);
   the HUD faces sit clear of the life bar; the To-Do List is filled in; the Preview Stage's capsules sit above the floor.
 - **1.50.10**: the lobby's BFR OPTIONS list has its 8 rows again (HUD Faces and Downed Glow were cut off); the
