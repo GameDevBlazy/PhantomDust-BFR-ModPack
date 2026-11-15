@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.18
+# BFR mod pack 1.50.19
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -30,9 +30,15 @@ sessions (every player in the match needs this same pack); "offline" = split scr
 - **Battle for Reality skill pack**: revised skills 1-374 and new skills 375-465 (online). Switch it in the Lab: "Enable
   Battle for Reality skill pack (1-466)" or "Revert back to OG Phantom Dust skills (0-374)" (Revert also takes the new
   skills out of the stock).
-- **8 more new skills** (offline - online, an arsenal holding one is refused with a message): Mirror, Hologram, Spiritual
-  Projection (their doubles fight in offline matches only), Thunder Punch, Ice Punch, Fiery Tornado, Mega Photon Burst,
-  Giant Meteor.
+- **8 more new skills** (online too - every player of the pack has them): Mirror, Hologram, Spiritual Projection (their
+  doubles fight in offline matches only), Thunder Punch, Ice Punch, Fiery Tornado, Mega Photon Burst, Giant Meteor. They
+  cannot be changed in Create a Skill (a new skill can still be based on them).
+- **Skills you make** (Create a Skill, Skill Fuser) are for story, split screen and Single Play. Online, the Xbox Live
+  arsenal list refuses an arsenal holding one, and any that still reach a match (Edit Arsenal in the lobby, Download
+  Battle) play as Aura Particles for that match only - your saved arsenal is not changed. Saved Create a Stage maps are not
+  used online either.
+- **Community skills**: FEEDBACK > Category "Skill to share" sends one skill you made to the pack's author. Skills the
+  author adds come to every player in a pack update (numbers 600-639) and work online.
 - **Lab > View Skill Vault** (and Back + Y on View Stock): swap a skill you don't have into your stock (online too).
 - A bigger skill table and stage memory for the added skills and stages.
 
@@ -194,6 +200,9 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.19**: loader 5.186.0 - skills you make play as Aura Particles online, however they reach a match; saved Create a
+  Stage maps stay offline; FEEDBACK > Skill to share and community skills (600-639); the pack's own new skills cannot be
+  changed in Create a Skill. Correction: 1.50.17 / 1.50.18 said the 8 new skills were offline - they work online.
 - **1.50.18**: loader 5.185.2 - the in-game MOD LIST and What's New list what is in the pack now (What's New still said 1.47).
 - **1.50.17**: this README lists everything in the pack as it is now (What's in the pack, above).
 - **1.50.16**: the COMING SOON cell on the monster page can no longer be highlighted or chosen.
@@ -305,7 +314,8 @@ page; when there is a newer version it downloads only the files that changed and
 - **Pack check-in**: once per install and after each pack update, the pack sends your Xbox gamertag, the edition and the
   pack version to the pack's author. Nothing else is sent with it.
 - **FEEDBACK** (main menu, next to MOD LIST): only when you send a message there - your message and its category, with your
-  gamertag, the pack version and the last stage and mode you played. The page shows this before you send.
+  gamertag, the pack version and the last stage and mode you played. The page shows this before you send. With Category
+  "Skill to share" the message is one skill you made (its base skill, name, description and settings).
 
 ## Uninstall
 Close the game and run `UNINSTALL BFR.bat`. The shortcut is removed and the pack's data folder is renamed (kept) under
@@ -316,8 +326,8 @@ The loader's log is `%LOCALAPPDATA%\Packages\Microsoft.MSEsper_8wekyb3d8bbwe\AC\
 
 ## Online
 Play online only with players who run this same pack. Offline-only parts (CREATE's pages, Spectator, Create a Mode's own
-modes, Single Play, Boss Raid, the six-fighter switch, the 8 new skills Mirror, Hologram, Spiritual Projection, Thunder
-Punch, Ice Punch, Fiery Tornado, Mega Photon Burst and Giant Meteor) stay offline.
+modes, Single Play, Boss Raid, the six-fighter switch, the Mirror / Hologram / Spiritual Projection doubles, skills you make
+and saved Create a Stage maps) stay offline.
 
 ## Credits
 - Battle for Reality skill data: the pack's author.

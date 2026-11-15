@@ -1,0 +1,2 @@
+# Community skills (BFR / MODS packs): players' skills the pack's author approved. Numbers 600-639.
+# new id	source	name	description	options - written by tools/add_community_skill.py, read by the loader (5.186.0+)
