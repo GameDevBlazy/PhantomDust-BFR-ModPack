@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.23
+# BFR mod pack 1.50.24
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -202,6 +202,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.24**: MOD LIST > COMMUNITY SHOUT-OUT: Ebony Scarface, Murder Mastodon, Doomsday and Kanye, for helping test and
+  rebalance the BFR mod pack.
 - **1.50.23**: loader 5.186.8 - added-map rows in the STAGE LIST use the game's "(1/2)" style when every version's name
   fits (one style per row); a third crash-shield catch for a freed effect texture (no crash to desktop).
 - **1.50.22**: loader 5.186.3 - the sound guard also catches a bank slot holding a junk value (seen: a new character still

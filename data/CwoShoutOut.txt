@@ -6,4 +6,5 @@ Murder|First to 5 KOs and Most KOs, downed partners kept marked, revives per rou
 Sharky|Teammate lock-on you can switch on and off in the lobby.
 Kanye|Helped test the mods before the official launch; Revive Mend and Body Pull, the revive support skills.
 Gamegod1985|The Forge idea: move spawns and add cover.
+Ebony Scarface, Murder Mastodon, Doomsday, Kanye|Helped test and rebalance the BFR mod pack.
 Phantom Dust LFG VET|Thank you to the Facebook Messenger group for testing the mods.
