@@ -15,7 +15,7 @@
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoTheme.txt": "6d1dbb9c582de44ad1dbc0d24eca4d831d8172bef0593680ecd24f6d0ce9def5",
   "data/CwoCommunitySkills.txt": "071d5db2432c3363e99b8c55afc44e67594ec84125160ae19d7d9eeb40856df4",
-  "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "88307fa18ff5b96b4e6edc9730f7f3453cec26108e7762711ba39df6926bf58e",
+  "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "935516799f33275b1cd5fe2e68b6030eae24aea1f85fc59e714b1efb6cba5d54",
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "704c5a7af3874c51045b9ed978712292aabe02f1307f6aebb04c6e4f75eb0f21",
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
@@ -475,9 +475,9 @@
   {
    "file": "Assets/Data/Menu/livelobby_en.ssb",
    "clean_sha256": "9d425dd99edbf49b233e12dde9cfe43b68a439cbf2285dfcfd8562944cf4b751",
-   "result_sha256": "517c7cf10396143ec8f140e95f3c4c3f9c2b847a1f3f2a7bf95509a0aa9f4c8c",
-   "our_bytes": 3438,
-   "copied_from_your_file": 5359,
+   "result_sha256": "de9423cb593a90b59d38f847c572568115536df88eaaf968d6f993551b932016",
+   "our_bytes": 3370,
+   "copied_from_your_file": 5428,
    "carries": "Xbox Live / system link lobby: 3v3 layout, Edit Arsenal and lists 1-3, Change Rule with Most KOs, First to 5 KOs and Survival (3 revives), Change Game Type, session wins and losses, BFR Options (Teammate Lock-on, Next Map, Tiebreaker Vote); 1.46 the members' face strips follow their outfits"
   },
   {
