@@ -1,8 +1,26 @@
-# BFR mod pack 1.50.27
+# BFR mod pack 1.50.28
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
 1.43 with the original skills), so Xbox Live only puts BFR players together.
+
+## How to use it (where everything is)
+1. Install: close Phantom Dust, run `INSTALL BFR.bat`, start the game with the "Phantom Dust BFR" desktop shortcut (always
+   that shortcut - it checks for updates and starts the pack).
+2. Battle for Reality skills: MULTIPLAYER > Split Screen or Xbox Live > Lab > "Enable Battle for Reality skill pack (1-466)"
+   to switch them on, "Revert back to OG Phantom Dust skills (0-374)" to go back to the original skills. Everyone in a match
+   needs the same choice.
+3. Your skills: Lab > View Stock List (Y sorts). Lab > View Skill Vault (or Back + Y on View Stock): swap a skill you don't
+   own into your stock. Skills that are not playable yet are only shown in the vault.
+4. Stages: in the STAGE LIST (split screen) and the LEVEL LIST (Xbox Live > Create Match) each stage family is one row -
+   press Left / Right to pick the version (Lost / Light / Noble Palace, Sein / Edgar's Dream: Summit, Grand Panorama /
+   Sunset ...); the stage is shown behind the list.
+5. Online lobby (Xbox Live > Create Match): X = OPTIONS - Edit Arsenal, Change Rule (game rules + the BFR rules), Change Game
+   Type (host), BFR Options (Teammate Lock-on, Next Map, Tiebreaker, HUD Preset, Downed Glow, HUD Faces).
+6. Main menu: CREATE (the creators, offline), MOD LIST (every mod + What's New + the shout-outs), FEEDBACK (send a bug,
+   idea or a skill you made), TO-DO LIST; OPTIONS has HUD Preset, Records, Visions, Stage Music.
+7. Pause menu (offline match): Teammate Lock-on row.
+8. Uninstall: close the game, run `UNINSTALL BFR.bat` (your saves are never changed).
 
 ## What's in the pack
 Everything below is installed with the pack, as it is in this version. "Online" = it also runs in Xbox Live / system link
@@ -202,6 +220,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.28**: README "How to use it" (where every feature is); MOD LIST shout-out: Sharky also asked for the fuller bust
+  of Freia and Gyne.
 - **1.50.27**: an added map chosen in the Xbox Live LEVEL LIST is the session's stage (it gave Sein).
 - **1.50.26**: the Xbox Live LEVEL LIST has one row per stage family too - D-pad Left / Right picks the version (Lost /
   Light / Noble Palace and so on), as in split screen.
