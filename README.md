@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.25
+# BFR mod pack 1.50.26
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -22,7 +22,7 @@ sessions (every player in the match needs this same pack); "offline" = split scr
   - **Edgar's Dream: Summit**: the top of Edgar's Dream's stairs (the Demented Freia arena), 4 players;
   - **Preview Stage**: a plain grid room to show characters.
 - Split-screen STAGE LIST: one row per stage family - D-pad Left / Right picks the version (Palace: Lost / Light / Noble,
-  and so on; Sein's row holds Edgar's Dream: Summit). The Xbox Live LEVEL LIST keeps one row per stage.
+  and so on; Sein's row holds Edgar's Dream: Summit). The Xbox Live LEVEL LIST works the same way (1.50.26).
 - The highlighted stage is shown live behind both lists.
 - Map rating at the end of an offline match on an added map, shown in the lobby's Level line.
 - Not in the lists: the Skill Test Stage and the piece rooms (Edgar's Lab, Highway, Lost Palace, Panorama, Dawn City, Sein,
@@ -202,6 +202,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.26**: the Xbox Live LEVEL LIST has one row per stage family too - D-pad Left / Right picks the version (Lost /
+  Light / Noble Palace and so on), as in split screen.
 - **1.50.25**: View Stock no longer shows the blank rows of skills that are not playable (boss and unfinished skills, 701+);
   they are in the Skill Vault only and cannot be swapped in. The 8 new skills (Mirror ... Giant Meteor) say WORK IN PROGRESS on
   their card: test them, but do not rely on them in competitive play.
