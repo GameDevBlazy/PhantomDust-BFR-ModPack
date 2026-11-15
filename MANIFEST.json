@@ -1,6 +1,6 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.28",
+ "version": "1.50.29",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
   "launcher/CwoLaunch.exe": "58a4ea41dd4e9057739c613657cbd2ecf6ed1ec5a2cc0afeca6e298381ed892b",
@@ -20,7 +20,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "1e35bb8a89ef53b1eb0d0762a722980bb81aeea8ec6fd7fea7e22f755196de02",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "2a5223332c54a1123b96a683eaa3de7fed99345c098edd279254b8a4c2dffe96",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6e6e609f784b7eb1d8f73dedf44ff1ae117ae865024f88d7d3bc9ea8f127e162",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "dbfab6e813ab33b60f21dffece485d140aac058f541393f6d3283bc7b8ffa182",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -31,7 +31,7 @@
   "data/patches/Assets/Data/Menu/Mission.alr.cwopatch": "4710eda5d2dae41deef5c37fcdcab1d39938390a7f76d285fd8dfb6e912d92ad",
   "data/patches/Assets/Data/Menu/livestagesel_en.ssb.cwopatch": "914a3be220906a718cc454574839c11599b9c4daa001a5bac292a126dbace263",
   "data/patches/Assets/Data/Menu/BtMenuEn.alr.cwopatch": "2b17875e40610c9fd21d2cc016e55d32ed6bc822f99b1b440beafc3fb08995be",
-  "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "36ca20eae6d36c9963f06d64977fba82054c888288ebc4d931b8bc53c3143a89",
+  "data/patches/Assets/Data/Map/mx401.dat.cwopatch": "c615e623118fe680c5fc36c2acad58305f5ac625a5c627b82537d3d61deabc69",
   "data/patches/Assets/Data/Map/mx401.dat.cwofrom": "1e42613a1bd8bab30f5ebe3c21ff3ee24e0a17a277073d019e3adc77714e5ebd",
   "data/patches/Assets/Data/Map/mx401.alr.cwopatch": "55b5f798a32380ec420195e89a4de70f3dbe8c8fa06eb2f38328f755565dfe09",
   "data/patches/Assets/Data/Map/mx401.alr.cwofrom": "3f0a977c19f5699df2985541b36a40c5baa53e03b8239718b52c9711b835853b",
@@ -469,7 +469,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "381ade46c190062d4e3b29ea540b1becfcee171a05e89f84db9e18d7b7e18a0e"
+  "README.md": "b15e6c45dd8c462b70a03ae7b9e9513251a8ebdc94c3434598d7afe943411b97"
  },
  "patches": [
   {
@@ -515,7 +515,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "98d7ce9a15dbe873377730f1664ba33be4d9b5b396737ad316d0de671807ae29",
+   "result_sha256": "650899074981fcb2749fa1027f3d6044edc70ac2f692d22124f11e9fbf46813b",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
@@ -604,10 +604,10 @@
    "file": "Assets/Data/Map/mx401.dat",
    "made_from": "Assets/Data/Map/st01.dat",
    "clean_sha256": "25625bfce6d1a300899d087c604fda58c8b357f9bb8183d0d609a05e19b9a82c",
-   "result_sha256": "0bad81b97cf460e9e97150541fbc3d0900e1ea3f019e9332e6582f20fd919402",
-   "our_bytes": 262,
-   "copied_from_your_file": 672,
-   "carries": "Edgar's Dream: Summit - the top of the stairs (ruin pieces out, 4 starts on the summit ring)"
+   "result_sha256": "7d60f667ea566dd4c5196f8b8c04696bad48d1f330c4fa871c23c59a5901af16",
+   "our_bytes": 488,
+   "copied_from_your_file": 774,
+   "carries": "Edgar's Dream: Summit - the top of the stairs (ruin pieces out, 8 starts on the summit ring, each with its own 3 capsule spots)"
   },
   {
    "file": "Assets/Data/Map/mx401.alr",

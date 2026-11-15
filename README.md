@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.28
+# BFR mod pack 1.50.29
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -220,6 +220,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.29**: Edgar's Dream: Summit (Sein row, Right) - every start has its own three capsule spots 5 / 10 / 15 m away
+  (they were shared by all players, up to 27 m away), and 8 starts on the summit ring for 6-8 fighters.
 - **1.50.28**: README "How to use it" (where every feature is); MOD LIST shout-out: Sharky also asked for the fuller bust
   of Freia and Gyne.
 - **1.50.27**: an added map chosen in the Xbox Live LEVEL LIST is the session's stage (it gave Sein).
