@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.19
+# BFR mod pack 1.50.20
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -12,15 +12,17 @@ sessions (every player in the match needs this same pack); "offline" = split scr
 - **The stage lists** (Xbox Live LEVEL LIST and split-screen STAGE LIST, online and offline): the game's 17 stages - Lost
   Palace, Light Palace, Noble Palace, Spiral Highway, Lightning Highway, Sunlight Highway, Panorama Earthquake, Panorama
   Building, Dawn City, Dusk City, Midnight City, Storm Refinery, Sunset Refinery, Acid Refinery, Twilight Lane, Silent Lane,
-  Sein - and after them 10 added maps, each its own row (built on your PC from your own game files at the first start):
+  Sein - and after them 11 added maps (built on your PC from your own game files at the first start):
   - **Grand Panorama** and **Grand Panorama (Sunset)**: one designed map (office-roof plaza, refinery roof, broken highway),
     4 lifts, 8 spawns; the Sunset one under Sunset Refinery's sky;
-  - **Sky Ring Highway**, **Highway to the Alley**, **Five-Story Building**;
+  - **Sky Ring Highway**, **Highway to the Alley**, **Five-Story Building**, **RoofTop Day** (6 levels of rooftops);
   - **Jungle Cave**: tree house, bush border, solid tree limbs;
   - **Ruins**: three roaming tornadoes, ruined buildings at the edge and the desert beyond, no fog;
   - **Antarctic Outpost**: ice floor, frost mines, Ice Storm drops from the sky, breaking ice and bridges;
   - **Edgar's Dream: Summit**: the top of Edgar's Dream's stairs (the Demented Freia arena), 4 players;
   - **Preview Stage**: a plain grid room to show characters.
+- Split-screen STAGE LIST: one row per stage family - D-pad Left / Right picks the version (Palace: Lost / Light / Noble,
+  and so on; Sein's row holds Edgar's Dream: Summit). The Xbox Live LEVEL LIST keeps one row per stage.
 - The highlighted stage is shown live behind both lists.
 - Map rating at the end of an offline match on an added map, shown in the lobby's Level line.
 - Not in the lists: the Skill Test Stage and the piece rooms (Edgar's Lab, Highway, Lost Palace, Panorama, Dawn City, Sein,
@@ -88,8 +90,8 @@ sessions (every player in the match needs this same pack); "offline" = split scr
   effects (a skill's flames, ice, thunder, psychic or vibration on the body: place, size, speed, when it shows), Save into
   any of the 15 slots, an outfit stock of up to 50 per character.
 - **Character selects** (split screen and Xbox Live, display only): new faces for every player, monster portraits on X, the
-  NPC page (the ten NPCs), the portrait follows the outfit highlighted in COLORS (COLOR 1-15, opened in the left black bar);
-  COMING SOON on the monster page is decoration and cannot be highlighted.
+  portrait follows the outfit highlighted in COLORS (COLOR 1-15, opened in the left black bar). The NPC cell (split screen)
+  and COMING SOON on the monster page are decoration and cannot be highlighted.
 - Mission select: the new character portraits.
 - Freia and Gyne: a slightly fuller bust on every outfit (CwoBodyShape.txt).
 
@@ -200,6 +202,9 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.20**: RoofTop Day is in the stage lists; the split-screen STAGE LIST has one row per stage family again (D-pad Left /
+  Right picks the version, as in MODS); the NPC cell can no longer be chosen (an NPC crashed when it used a skill); Highway to
+  the Alley's start that stood inside a closed building is on the open alley floor.
 - **1.50.19**: loader 5.186.0 - skills you make play as Aura Particles online, however they reach a match; saved Create a
   Stage maps stay offline; FEEDBACK > Skill to share and community skills (600-639); the pack's own new skills cannot be
   changed in Create a Skill. Correction: 1.50.17 / 1.50.18 said the 8 new skills were offline - they work online.

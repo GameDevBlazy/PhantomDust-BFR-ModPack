@@ -6,6 +6,7 @@ mx333	Jungle Cave	2	6	20.0
 mx334	Five-Story Building	5	6
 mx335	Ruins	3	6
 mx336	Antarctic Outpost	2	6	-50.0
+mx337	RoofTop Day	6	8	140.0
 mx301	Grand Panorama	3	8	90.0
 mx302	Grand Panorama (Sunset)	3	8	90.0
 pcblank	Skill Test Stage	1	4
