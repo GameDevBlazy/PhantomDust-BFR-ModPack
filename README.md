@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.17
+# BFR mod pack 1.50.18
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -194,6 +194,7 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.18**: loader 5.185.2 - the in-game MOD LIST and What's New list what is in the pack now (What's New still said 1.47).
 - **1.50.17**: this README lists everything in the pack as it is now (What's in the pack, above).
 - **1.50.16**: the COMING SOON cell on the monster page can no longer be highlighted or chosen.
 - **1.50.15**: CPUs move and fight in Single Play; the stage list, character list and CPU levels no longer go back to the originals after a slow start; faces for fighters 5 and 6 in a 3 vs 3.
