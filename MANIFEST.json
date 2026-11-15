@@ -1,6 +1,6 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.31",
+ "version": "1.50.32",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
   "launcher/CwoLaunch.exe": "0bf69346413a053d477257dc64641a88f7eb4c8585f38da44bc5fa9d0199838f",
@@ -15,12 +15,12 @@
   "data/CwoVisions.txt": "b470b84cf0cd3189e10615bffea7d5cbd9f61134ba1c2cfd513ddd45b776a5f6",
   "data/CwoTheme.txt": "6d1dbb9c582de44ad1dbc0d24eca4d831d8172bef0593680ecd24f6d0ce9def5",
   "data/CwoCommunitySkills.txt": "071d5db2432c3363e99b8c55afc44e67594ec84125160ae19d7d9eeb40856df4",
-  "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "2bfa85d9e5ee5131b599543520a8d309f75d5f39f00d222d52a591c84f49e83a",
+  "data/patches/Assets/Data/Menu/livelobby_en.ssb.cwopatch": "88307fa18ff5b96b4e6edc9730f7f3453cec26108e7762711ba39df6926bf58e",
   "data/patches/Assets/Data/Menu/laboratory_en.ssb.cwopatch": "704c5a7af3874c51045b9ed978712292aabe02f1307f6aebb04c6e4f75eb0f21",
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "85c63b773f628cf7b19acf829ded40e5241ff5ce800a2b38277b49fd015a0d0a",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "6540b01bd059c0c901ae59c4baed8d56b7d0eabd827db834a51c744862cde3bc",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6e6e609f784b7eb1d8f73dedf44ff1ae117ae865024f88d7d3bc9ea8f127e162",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "dbfab6e813ab33b60f21dffece485d140aac058f541393f6d3283bc7b8ffa182",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -469,15 +469,15 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "d656f7956716fca3cf94c7e6fe64043be2756a346f4b4f59168eae2bca294d85"
+  "README.md": "4f590b36cc7118a9f1c3cb9f05fe7cb8b0b0f75aeaf179c9776578a3a0357757"
  },
  "patches": [
   {
    "file": "Assets/Data/Menu/livelobby_en.ssb",
    "clean_sha256": "9d425dd99edbf49b233e12dde9cfe43b68a439cbf2285dfcfd8562944cf4b751",
-   "result_sha256": "8b988331c32e2a98a13d1e5e0c9394f15f6923aae81ba0983b82aba520b44c88",
-   "our_bytes": 3369,
-   "copied_from_your_file": 5428,
+   "result_sha256": "517c7cf10396143ec8f140e95f3c4c3f9c2b847a1f3f2a7bf95509a0aa9f4c8c",
+   "our_bytes": 3438,
+   "copied_from_your_file": 5359,
    "carries": "Xbox Live / system link lobby: 3v3 layout, Edit Arsenal and lists 1-3, Change Rule with Most KOs, First to 5 KOs and Survival (3 revives), Change Game Type, session wins and losses, BFR Options (Teammate Lock-on, Next Map, Tiebreaker Vote); 1.46 the members' face strips follow their outfits"
   },
   {
@@ -515,7 +515,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "36a4b7c062ddede3bef8fa35f12af7ec740f25e11c33bff33753130c79dced8f",
+   "result_sha256": "db8650bf6194cc945a6affb29404cdbc006bdd1c27c4b6baf7bd3ea641f99da6",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
