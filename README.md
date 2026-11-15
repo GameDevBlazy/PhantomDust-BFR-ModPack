@@ -1,10 +1,109 @@
-# BFR mod pack 1.50.16
+# BFR mod pack 1.50.17
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
 1.43 with the original skills), so Xbox Live only puts BFR players together.
 
-## What it adds
+## What's in the pack
+Everything below is installed with the pack, as it is in this version. "Online" = it also runs in Xbox Live / system link
+sessions (every player in the match needs this same pack); "offline" = split screen, story and Single Play only.
+
+### Maps
+- **The stage lists** (Xbox Live LEVEL LIST and split-screen STAGE LIST, online and offline): the game's 17 stages - Lost
+  Palace, Light Palace, Noble Palace, Spiral Highway, Lightning Highway, Sunlight Highway, Panorama Earthquake, Panorama
+  Building, Dawn City, Dusk City, Midnight City, Storm Refinery, Sunset Refinery, Acid Refinery, Twilight Lane, Silent Lane,
+  Sein - and after them 10 added maps, each its own row (built on your PC from your own game files at the first start):
+  - **Grand Panorama** and **Grand Panorama (Sunset)**: one designed map (office-roof plaza, refinery roof, broken highway),
+    4 lifts, 8 spawns; the Sunset one under Sunset Refinery's sky;
+  - **Sky Ring Highway**, **Highway to the Alley**, **Five-Story Building**;
+  - **Jungle Cave**: tree house, bush border, solid tree limbs;
+  - **Ruins**: three roaming tornadoes, ruined buildings at the edge and the desert beyond, no fog;
+  - **Antarctic Outpost**: ice floor, frost mines, Ice Storm drops from the sky, breaking ice and bridges;
+  - **Edgar's Dream: Summit**: the top of Edgar's Dream's stairs (the Demented Freia arena), 4 players;
+  - **Preview Stage**: a plain grid room to show characters.
+- The highlighted stage is shown live behind both lists.
+- Map rating at the end of an offline match on an added map, shown in the lobby's Level line.
+- Not in the lists: the Skill Test Stage and the piece rooms (Edgar's Lab, Highway, Lost Palace, Panorama, Dawn City, Sein,
+  Refinery, Twilight Lane A / B) are Create a Stage's starting rooms.
+
+### Skills
+- **Battle for Reality skill pack**: revised skills 1-374 and new skills 375-465 (online). Switch it in the Lab: "Enable
+  Battle for Reality skill pack (1-466)" or "Revert back to OG Phantom Dust skills (0-374)" (Revert also takes the new
+  skills out of the stock).
+- **8 more new skills** (offline - online, an arsenal holding one is refused with a message): Mirror, Hologram, Spiritual
+  Projection (their doubles fight in offline matches only), Thunder Punch, Ice Punch, Fiery Tornado, Mega Photon Burst,
+  Giant Meteor.
+- **Lab > View Skill Vault** (and Back + Y on View Stock): swap a skill you don't have into your stock (online too).
+- A bigger skill table and stage memory for the added skills and stages.
+
+### Xbox Live / system link lobby (online)
+- Edit Arsenal and arsenal lists 1-3; this session's wins and losses; the members' portraits in colour.
+- For the host: Change Rule (the game's rules and the BFR rules below), Change Game Type (One-on-One, Tag Team, Battle
+  Royale); Create Game Session lists the BFR rules too.
+- **BFR Options**: Teammate Lock-on (each player's own), Next Map (host), Tiebreaker, HUD Preset, Downed Glow (the host
+  switches it for everyone), HUD Faces.
+
+### Rules and modes
+- **BFR rules** (online and offline; none of them changes your rating - Standard Battle stays rated): Most KOs (decided
+  when the clock runs out), First to 5 KOs (the last fighter who did damage scores), Survival (3 revives a fighter), King
+  of the Hill, Shrinking Arena, Aura Rush, Sudden Death, Realistic Collision (shots hit whoever is in the way).
+- The KO tally beside each name; a downed fighter's name plate keeps flashing until revived.
+- **Tiebreaker**: teams stay locked for two battles; after 1 win each with the same teams a vote opens (everyone YES = the
+  tiebreaker round, a NO = the teams are free).
+- **Next Map**: the host's session moves to the next stage after each match.
+- **3 vs 3** and six fighters: the 3 VS 3 LOBBY in split screen, the 3 vs 3 lobby layout online, HUD faces for fighters 5
+  and 6.
+- **MULTIPLAYER > Single Play** (offline): you and CPU fighters - 1 vs 1, Tag Team, 3 vs 3, Battle Royale, Boss Raid; CPU
+  levels with Tough and Brutal rows; CPUs move, fight and revive their downed teammates.
+- **Download Battle** (Scoreboard): your stage, character, opponent and arsenal; line-ups 1 vs 1, 1 vs 2, 1 vs 3 or 2 vs 2
+  with a CPU ally; the free camera. Download Battles send no rating or win count.
+- **Create a Mode** modes in split screen's Change Rule (offline): Standard, 3 vs 3, Long fight, Quick KO, My Mode 5.
+
+### HUD and look
+- **HUD faces** (online too): every fighter's face beside their name and life bar - hurt at life 10 / 5 / 3, a red pulse at
+  1, KO at 0, a flash on each hit, faces for poison, freeze, paralysis, reversed controls, invisible and power / speed /
+  recovery up (CwoFaces.txt moves it).
+- **HUD presets** (OPTIONS > HUD Preset with a preview, or the lobby's BFR Options; display only): 0 the game's own, 1 Split
+  Look, 2 Wide Bars, 3 Centre Stage, 4 Low Profile, 5 Mirror, 6 Minimal.
+- Split screen: every fighter's own panel (life bar, hand, deck, aura and face) under each player's panel.
+- **Downed Glow** on every downed fighter until revived (online too, the host's switch).
+- **Intro poses** at the 3-second countdown (online too); the winners' victory pose, and the losing pose for everyone
+  standing at a time-out draw (offline).
+- **Visions** graphics presets (OPTIONS > Visions, CwoVisions.txt); the 60 FPS display for fighters, effects and
+  projectiles (CwoFps.txt: 60 / off).
+- **Holiday themes** on the title screen and main menu (CwoTheme.txt); the white menu theme (CwoUiTheme.txt: white / off,
+  off as shipped); the title-screen music at 70 % until you leave the title screen.
+
+### Characters and outfits
+- **15 outfits** for every playable and enemy fighter: the 5th is the OG outfit, then Neon Circuit, Royal Gold, Angelic,
+  Street, Field Ops, Inferno, Frostbite, Hazard, Galaxy, Two-Tone Tide, Crimson Shadow (built from your own game files the
+  first time one is picked); Edgar's outfit 6 as the pack's author saved it.
+- **Create an Outfit** (CREATE, offline): a turning preview, color and skin sliders, an Aura color per outfit, outfit
+  effects (a skill's flames, ice, thunder, psychic or vibration on the body: place, size, speed, when it shows), Save into
+  any of the 15 slots, an outfit stock of up to 50 per character.
+- **Character selects** (split screen and Xbox Live, display only): new faces for every player, monster portraits on X, the
+  NPC page (the ten NPCs), the portrait follows the outfit highlighted in COLORS (COLOR 1-15, opened in the left black bar);
+  COMING SOON on the monster page is decoration and cannot be highlighted.
+- Mission select: the new character portraits.
+- Freia and Gyne: a slightly fuller bust on every outfit (CwoBodyShape.txt).
+
+### CREATE (main menu, offline)
+- Create a Stage (Forge), Create a Skill, Create a School, Create a Character, Create a Quest, Create a Mode, Create an
+  Outfit, Spectator, Skill Fuser, Records, Stage Music, Draft Arsenal, Boss Raid, Visions, and the full-screen CREATE editor
+  (keyboard and mouse).
+
+### Menus
+- **Main menu** (8 rows): SCENARIO MODE, MULTIPLAYER MODE (Xbox Live, Split Screen, Single Play), OPTIONS MODE, CREATE,
+  MOD LIST (every mod, What's New at the top), FEEDBACK, TO-DO LIST, HOW TO PLAY; the BFR MOD PACK version line.
+- **OPTIONS**: HUD Preset, Records, Visions, Stage Music.
+- **Pause menu** (offline match / 2P VS): Teammate Lock-on row.
+- **Arsenal lists**: the title shows its number; Y > ARSENAL OPTIONS: Add Arsenal (a full list of 16 sends it to the next
+  list), Erase Arsenal, Reset All Arsenals, Acquire All Skills.
+- **Arsenal Data**: Y switches the Xbox Live results between All and each stage.
+
+Automatic updates, what the pack sends and what stays offline: see the sections after the version history.
+
+## Version history
 - **Battle for Reality skill pack**: revised skills 1-374 and new skills 375-465. Switch it in the Lab: "Enable Battle for
   Reality skill pack (1-466)" or "Revert back to OG Phantom Dust skills (0-374)".
 - **Xbox Live / system link lobby**: Edit Arsenal and arsenal lists 1-3; for the host, Change Rule (the game's rules plus
@@ -95,6 +194,7 @@ and the same skill choice; the pack gives the game its own skill update version 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.17**: this README lists everything in the pack as it is now (What's in the pack, above).
 - **1.50.16**: the COMING SOON cell on the monster page can no longer be highlighted or chosen.
 - **1.50.15**: CPUs move and fight in Single Play; the stage list, character list and CPU levels no longer go back to the originals after a slow start; faces for fighters 5 and 6 in a 3 vs 3.
 - **1.50.14**: the main menu shows all 8 rows (TO-DO LIST and HOW TO PLAY were selectable but not drawn).
@@ -214,8 +314,9 @@ Close the game and run `UNINSTALL BFR.bat`. The shortcut is removed and the pack
 The loader's log is `%LOCALAPPDATA%\Packages\Microsoft.MSEsper_8wekyb3d8bbwe\AC\Temp\CwoLoaderBFR\cwo_loader.log`.
 
 ## Online
-Play online only with players who run this same pack. Offline-only parts (Edgar's Dream's pages, Spectator, Create a
-Mode's own modes, Boss Raid, the six-fighter switch, the Mirror / Hologram / Spiritual Projection doubles) stay offline.
+Play online only with players who run this same pack. Offline-only parts (CREATE's pages, Spectator, Create a Mode's own
+modes, Single Play, Boss Raid, the six-fighter switch, the 8 new skills Mirror, Hologram, Spiritual Projection, Thunder
+Punch, Ice Punch, Fiery Tornado, Mega Photon Burst and Giant Meteor) stay offline.
 
 ## Credits
 - Battle for Reality skill data: the pack's author.
