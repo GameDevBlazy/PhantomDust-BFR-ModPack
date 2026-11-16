@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.32
+# BFR mod pack 1.50.33
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -159,6 +159,9 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   Save and apply into any of the 15 slots, and an outfit stock of up to 50 per character (OutfitStock folder).
 - **Edgar's Dream: Summit** (split screen STAGE LIST, after the stock stages): the top of Edgar's Dream's stairs - the
   arena of the Demented Freia fight - as a stage of its own, 4 players (built from your own Edgar's Dream files).
+- **The Summit** (STAGE LIST: Sein row, press Right twice): Sein's ground and the Summit as one stage - doorways into the
+  middle pillar on the first floor, a spiral stair up two turns to the Summit, balconies, bridges, rock platforms and floating
+  rocks you can stand on, edges you cannot walk off, 8 starts, bright light.
 - **Bigger skill table and stage memory**, Download Battle choices (stage, characters, arsenal).
 - **15 outfits** for every playable and enemy fighter: the 5th is the OG outfit (alpha animations), then designer
   outfits - Neon Circuit, Royal Gold, Angelic, Street, Field Ops, Inferno, Frostbite, Hazard, Galaxy, Two-Tone Tide,
@@ -220,6 +223,9 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.33**: NEW STAGE The Summit - Sein's ground and the Summit as one stage: walk into the middle pillar on the first
+  floor and climb the spiral stair all the way up to the Summit; balconies, bridges, rock platforms, floating rocks you can
+  stand on, no walking off the edges, brighter light. In the stage list: Sein row, press Right twice.
 - **1.50.32**: Xbox Live lobby OPTIONS - the list sits higher, so its last row (BFR Options) no longer runs into the button bar.
 - **1.50.31**: the View Stock counter's first number no longer counts the empty cells after your last skill.
 - **1.50.30**: View Stock ends at your last skill - no more pages of "000 Aura Particle" rows, and the counter shows your real

@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.32",
+ "version": "1.50.33",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "0bf69346413a053d477257dc64641a88f7eb4c8585f38da44bc5fa9d0199838f",
-  "launcher/CwoLoader.dll": "94a696da5f2f6ee934a2aacd7719633c8496a4e09fcf4c31a1d190c2247a6c16",
+  "launcher/CwoLaunch.exe": "b51cdf5a537b9f0443e7f2574838e9f180a9b4c50e8d4977643c6c8e13bfc12c",
+  "launcher/CwoLoader.dll": "06de309514f7890e5b2590cb5fd0604bb0a9958d62576cf55f611cc39b472c30",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
   "data/CwoNewSkills.txt": "d833cb037b1c3d881574585b088b7ec1cbcfefe4afe59b4800e4bef535ad7e6e",
   "data/CwoStageFx.txt": "b10000615c88c37ffdd9ac02e0dd763e37a45a37e55e7dd9292de42931ffb5fa",
@@ -20,7 +20,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "6540b01bd059c0c901ae59c4baed8d56b7d0eabd827db834a51c744862cde3bc",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "d52adf97757d001687f1caa29d293f1267529cf80fd3c9fc07f4a585776ff611",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6e6e609f784b7eb1d8f73dedf44ff1ae117ae865024f88d7d3bc9ea8f127e162",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "dbfab6e813ab33b60f21dffece485d140aac058f541393f6d3283bc7b8ffa182",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -85,9 +85,13 @@
   "data/patches/Assets/Data/Map/mx337.alr.cwofrom": "c81bbf209bac8b05e6ef79b62f3785791e347225c29bc3532db08b660b9018ef",
   "data/patches/Assets/Data/Map/mx337.dat.cwopatch": "f5fd8fb4a56110d59ad8a24ee0c191763578bfc674b427dba35d50f07d3f29d6",
   "data/patches/Assets/Data/Map/mx337.dat.cwofrom": "bf475fca0d788899f1017fb3c9b05fc0eced12836f7b6091706c9050cab1e24e",
+  "data/patches/Assets/Data/Map/mx403.alr.cwopatch": "4eb5bbf05ecca20d4b41817d494b0c758e6e6c991c192a09a1a69b261e97d1f3",
+  "data/patches/Assets/Data/Map/mx403.alr.cwofrom": "148683b9049eae085b9c12efa47e35067728685cb39c4cc568c078fd480375db",
+  "data/patches/Assets/Data/Map/mx403.dat.cwopatch": "472955e44db3475fe16a0ea307c8ec2bcca407035206981753b0ea581fd1866e",
+  "data/patches/Assets/Data/Map/mx403.dat.cwofrom": "335d522860c931099e9fb1d59ac321b171fdadca9dbfac1801b2b6000d008492",
   "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwopatch": "566856ca8a60133484a4b0bb1fba4481f5e8be2c3be1132c110855c08d9938d4",
   "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/game/Assets/Data/Map/mx_list.txt": "4529af0d9dd94d47072abd05b0dcd93312996f3e950b746d061ffcffaa736c2e",
+  "data/game/Assets/Data/Map/mx_list.txt": "c4023cd211296440e3e6ecf865d8c521f1bbffa9ef2b5493614fae7c512dbf94",
   "data/game/Assets/Data/Menu/cwo_faces.dxt": "b29396a7ebd113df26add2e9b2adfcc9a747e9f65227a1e4d0b6b65ab53fa4b9",
   "data/game/Assets/Data/Menu/cwo_faces.txt": "3585a931af1e6d2084355f478b13a353da6eca4e61333ad9a334e756634bf47f",
   "data/game/Assets/Data/Menu/cwo_select_outfits.dxt": "e97bfbade7c874d7a9726f6c659b1adac4d3406c6e2cb6f2947d2617b71396ae",
@@ -469,7 +473,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "4f590b36cc7118a9f1c3cb9f05fe7cb8b0b0f75aeaf179c9776578a3a0357757"
+  "README.md": "c5b3670e6263737cee5289584722b62ee1a80375e8d906f516632c5add50b17b"
  },
  "patches": [
   {
@@ -515,7 +519,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "db8650bf6194cc945a6affb29404cdbc006bdd1c27c4b6baf7bd3ea641f99da6",
+   "result_sha256": "c54bdc1966c385e85d7baaf44f90cef339164c1943dbb4bd031b86796a40c9db",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
@@ -984,6 +988,36 @@
    "result_sha256": "f23615888e379e1c3d3288e991205a0a19757740a2bba13b280adb9e6d2386d6",
    "our_bytes": 379236,
    "copied_from_your_file": 77869,
+   "carries": "new stage (1.48, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx403.alr",
+   "made_from": [
+    "Assets/Data/Map/st32.alr",
+    "Assets/Data/Map/st01.alr",
+    "Assets/Data/Map/st13.alr",
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st08.alr",
+    "Assets/Data/Map/st22.alr",
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st02.alr"
+   ],
+   "result_sha256": "35b2a5861e32d92161a656631b41b6ae72cbdeeb70add73d7747e87cd61c279d",
+   "our_bytes": 11849223,
+   "copied_from_your_file": 1590385,
+   "carries": "new stage (1.48, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx403.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st01.dat",
+    "Assets/Data/Map/st07.dat",
+    "Assets/Data/Map/st05.dat"
+   ],
+   "result_sha256": "1f68ce7ff88dc8eb43f030298a07003c3b7074d9ffb0c934ceaf166cfd2e7d36",
+   "our_bytes": 771850,
+   "copied_from_your_file": 42002,
    "carries": "new stage (1.48, patch format 2)"
   },
   {
