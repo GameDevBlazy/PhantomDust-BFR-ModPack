@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.43
+# BFR mod pack 1.50.44
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.44**: The pack's files are checked at every start: anything changed is put back (or downloaded again, signed),
+  and files that are not part of the pack are moved out before the game starts (see "Only the pack's files").
 - **1.50.43**: BACKUP MY SAVE.bat: copies your own saved game (arsenals, ratings, story progress, wins and losses) to
   your desktop, every file checked, with a RESTORE THIS SAVE.bat inside; INSTALL BFR.bat makes one before installing.
 - **1.50.42**: Create a Mode: the arsenal refill row (it did nothing) is marked not built yet; one way into the 3 vs 3
@@ -407,6 +409,16 @@ is then is kept first). The mods never change your saved game; this is only for 
 3. Start the game with that shortcut.
 
 Keep the pack folder where it is; the shortcut starts the launcher from it. If you move the folder, run the install again.
+
+## Only the pack's files (checked at every start)
+Everyone in a match must play the same pack, so the launcher checks the files every time you start with the shortcut:
+- the pack folder against the author's signed `MANIFEST.json` - a changed or missing file is downloaded again from this
+  page (signed and checked); offline, the game does not start with changed pack files;
+- the files the game loads (the pack's patches, skill pack, stage and effect files, and everything in the data folder's
+  `game` folder) - a changed one is put back; a file that is not part of the pack (a mod from another program, an old stage)
+  is moved to `CwoLoaderBFR_not_in_pack_<date>` next to the data folder. Nothing is deleted.
+The launcher window then says "Resynchronized" and starts the game with the pack's files. Your own settings, records,
+arsenals, saved outfits, modes, created skills and your saved game are never touched.
 
 ## Updates
 Install once. Every time you start the game with the "Phantom Dust BFR" shortcut, the launcher checks this pack's GitHub

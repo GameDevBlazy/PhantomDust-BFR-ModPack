@@ -28,3 +28,5 @@
 2026-11-16 17:14:18 load: wait 0, LoadLibrary result e3100000, game running, CwoLoader.dll in the module list
 2026-11-16 17:14:21 done: the game is running with the loader (3 s check)
 2026-11-16 17:18:42 UI font: CwoUiFont.bin made from this PC's Segoe UI fonts
+2026-11-16 17:36:22 UI font: CwoUiFont.bin made from this PC's Segoe UI fonts
+2026-11-16 17:36:40 BFR files checked: they match the pack
