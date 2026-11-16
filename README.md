@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.39
+# BFR mod pack 1.50.40
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -7,7 +7,7 @@ and the same skill choice; the pack gives the game its own skill update version 
 ## How to use it (where everything is)
 1. Install: close Phantom Dust, run `INSTALL BFR.bat`, start the game with the "Phantom Dust BFR" desktop shortcut (always
    that shortcut - it checks for updates and starts the pack).
-2. Battle for Reality skills: MULTIPLAYER > Split Screen or Xbox Live > Lab > "Enable Battle for Reality skill pack (1-466)"
+2. Battle for Reality skills: MULTIPLAYER > Split Screen or Xbox Live > Lab > "Enable Battle for Reality skill pack (375+)"
    to switch them on, "Revert back to OG Phantom Dust skills (0-374)" to go back to the original skills. Everyone in a match
    needs the same choice.
 3. Your skills: Lab > View Stock List (Y sorts). Lab > View Skill Vault (or Back + Y on View Stock): swap a skill you don't
@@ -47,8 +47,9 @@ sessions (every player in the match needs this same pack); "offline" = split scr
   Refinery, Twilight Lane A / B) are Create a Stage's starting rooms.
 
 ### Skills
-- **Battle for Reality skill pack**: revised skills 1-374 and new skills 375-465 (online). Switch it in the Lab: "Enable
-  Battle for Reality skill pack (1-466)" or "Revert back to OG Phantom Dust skills (0-374)" (Revert also takes the new
+- **Battle for Reality skill pack** (from 1.50.40): the original Phantom Dust skills 1-374 exactly as the game has them,
+  except that every environment skill lasts 2 minutes, plus the pack's own skills 375-465 (online). Switch it in the Lab:
+  "Enable Battle for Reality skill pack (375+)" or "Revert back to OG Phantom Dust skills (0-374)" (Revert also takes the new
   skills out of the stock).
 - **8 more new skills** (online too - every player of the pack has them): Mirror, Hologram, Spiritual Projection (their
   doubles fight in offline matches only), Thunder Punch, Ice Punch, Fiery Tornado, Mega Photon Burst, Giant Meteor. They
@@ -223,6 +224,9 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.40**: Battle for Reality skill pack: the original Phantom Dust skills 1-374 are back exactly as the game has them -
+  only every environment skill now lasts 2 minutes; the pack adds its own skills 375-466. Everyone needs 1.50.40 to play
+  together online (new skill update version).
 - **1.50.39**: New outfits 6-15 for every character and every enemy / monster: colour themes - Crimson, Ember Orange, Goldenrod,
   Forest Green, Turquoise, Cyan, Royal Blue, Violet, Magenta and Midnight with LED seams - each character in its own shades,
   accent colours and LED outfits; leather keeps its folds and grain, buckles / studs / zippers are polished silver, faces, skin
@@ -371,6 +375,20 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   checks them and builds the changed menus in the pack's data folder. If your game files are not the expected ones,
   the loader refuses that file and the log says so.
 
+## About the loader (CwoLoader) - is it safe?
+The pack runs with its own loader: `CwoLaunch.exe` (the launcher behind the desktop shortcut) and `CwoLoader.dll` (the part
+that runs inside Phantom Dust and adds the pack's menus, modes, stages, skills and outfits).
+- **What "CWO" means:** Codex Work Order. The project numbered its jobs CWO-001, CWO-002 and so on; the loader was job
+  CWO-LOADER-01, and the name stuck. The early work orders were done with Codex (see Credits).
+- **It is not a virus.** It is this pack's own program, written for this project. It does not change the game's installed
+  files, it does not collect anything beyond what "What the pack sends" lists, and it does not run anything else.
+- **Windows may warn you.** The loader is not signed by Microsoft or a big publisher, so Windows SmartScreen or your
+  antivirus may flag it as unknown the first time ("Windows protected your PC" -> More info -> Run anyway). That warning
+  only means Windows does not know the publisher. Do not switch off your antivirus; if you want, scan the pack folder with
+  Windows Security first. Every pack file's SHA-256 is listed in `MANIFEST.json`, which is signed by the pack's author.
+- **Open source, free to use.** Anyone interested in Phantom Dust modding is welcome to read the loader's source and use any
+  of it in their own projects. The source is published with the public release of this pack.
+
 ## Install
 1. Close Phantom Dust.
 2. Run `INSTALL BFR.bat`. It checks every pack file and puts a "Phantom Dust BFR" shortcut on your desktop.
@@ -409,4 +427,6 @@ and saved Create a Stage maps) stay offline.
 ## Credits
 - Battle for Reality skill data: the pack's author.
 - Loader, launcher, menu patches and tools: written for this project by Claude (Anthropic), working with the pack owner.
+- Codex (OpenAI): the project's first work orders (the CWO jobs the loader is named after), early file-format readers, and
+  the independent-loader rules the loader is built under.
 - Phantom Dust belongs to Microsoft. This pack contains none of the game's files; you need your own copy of the game.
