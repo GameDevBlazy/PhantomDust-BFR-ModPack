@@ -1,0 +1,3 @@
+# Low gravity stages (loader 5.121+): mxNNN  percent-of-gravity-while-falling  [max fall speed per step, stock 7.5]
+# Offline matches only. Rising keeps the game's own gravity, so jumps reach their normal height and float down.
+mx329 15 1.5

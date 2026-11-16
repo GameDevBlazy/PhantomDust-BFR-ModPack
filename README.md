@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.34
+# BFR mod pack 1.50.35
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -223,6 +223,9 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.35**: NEW STAGE Driftstone Sanctum - floating islands with low gravity (you fall slowly; offline matches - online it
+  plays with normal gravity). Every match starts with 3 capsules again: the 2-capsule start is gone from Create a Mode (the
+  3 vs 3 mode had it).
 - **1.50.34**: OPTIONS > RECORDS shows your own profile's records (the pack no longer carries anyone else's); B on RECORDS,
   VISIONS and STAGE MUSIC goes back to OPTIONS (it opened the CREATE list).
 - **1.50.34**: Edgar has new outfits - outfit 4 (Royal Navy) and outfits 6-15 (Inferno, Glacier, Jungle, Urban Digital, Tiger,
