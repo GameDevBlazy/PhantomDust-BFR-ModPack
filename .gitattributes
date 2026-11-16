@@ -1,2 +1,2 @@
-# byte-exact: the install checks every file against MANIFEST.json
-* -text
+# GitHub language bar: MANIFEST.sig is the pack signature, not Standard ML code
+*.sig linguist-detectable=false
