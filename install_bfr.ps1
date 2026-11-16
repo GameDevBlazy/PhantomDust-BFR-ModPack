@@ -4,8 +4,8 @@ if (Get-Process PDUWP -ErrorAction SilentlyContinue) { throw 'Close Phantom Dust
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $pkg = Join-Path $env:LOCALAPPDATA 'Packages\Microsoft.MSEsper_8wekyb3d8bbwe'
 if (-not (Test-Path -LiteralPath $pkg)) { throw 'Phantom Dust (Microsoft Store) is not installed for this Windows user.' }
-# 1.50.43 your own saved game (arsenals, ratings, story progress, wins and losses) is copied to your desktop first
-& (Join-Path $here 'backup_save.ps1') -Why 'made by INSTALL BFR before installing'
+# 1.50.43 your own saved game (arsenals, ratings, story progress, wins and losses) is copied to your desktop first (1.50.46: the first install only)
+& (Join-Path $here 'backup_save.ps1') -Why 'made by INSTALL BFR before installing' -Auto
 $man = Get-Content -LiteralPath (Join-Path $here 'MANIFEST.json') -Raw | ConvertFrom-Json
 foreach ($p in $man.files.PSObject.Properties) {
   $f = Join-Path $here $p.Name
