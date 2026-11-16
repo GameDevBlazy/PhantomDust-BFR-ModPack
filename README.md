@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.38
+# BFR mod pack 1.50.39
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -223,6 +223,10 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.39**: New outfits 6-15 for every character and every enemy / monster: colour themes - Crimson, Ember Orange, Goldenrod,
+  Forest Green, Turquoise, Cyan, Royal Blue, Violet, Magenta and Midnight with LED seams - each character in its own shades,
+  accent colours and LED outfits; leather keeps its folds and grain, buckles / studs / zippers are polished silver, faces, skin
+  and hair stay as they are (replaces 1.50.38's map looks).
 - **1.50.38**: Every playable character's outfits 6-15 take their look from the maps (The Summit, Grand Panorama Sunset, Sky
   Ring Highway, Highway to the Alley, Jungle Cave, Five-Story Building, Ruins, Antarctic Outpost, RoofTop Day, Driftstone
   Sanctum); faces, skin and hair stay as they are.
