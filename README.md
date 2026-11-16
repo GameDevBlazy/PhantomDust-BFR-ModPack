@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.33
+# BFR mod pack 1.50.34
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -223,6 +223,14 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.34**: OPTIONS > RECORDS shows your own profile's records (the pack no longer carries anyone else's); B on RECORDS,
+  VISIONS and STAGE MUSIC goes back to OPTIONS (it opened the CREATE list).
+- **1.50.34**: Edgar has new outfits - outfit 4 (Royal Navy) and outfits 6-15 (Inferno, Glacier, Jungle, Urban Digital, Tiger,
+  Neon Circuit, Tartan, Serpent, Desert, Void), each its own look. King of the Hill is quieter (4 zone markers instead of 12).
+- **1.50.34**: CPU fighters move on every added map - each stage now has its own CPU route map (before, every added map used
+  Highway's, so CPUs stood still or barely moved); loader 5.188.
+- **1.50.34**: The Summit - the ruined towers' stepped stone bases, buttresses and the rock blocks at their feet are solid
+  now (fighters stood inside them).
 - **1.50.33**: NEW STAGE The Summit - Sein's ground and the Summit as one stage: walk into the middle pillar on the first
   floor and climb the spiral stair all the way up to the Summit; balconies, bridges, rock platforms, floating rocks you can
   stand on, no walking off the edges, brighter light. In the stage list: Sein row, press Right twice.
