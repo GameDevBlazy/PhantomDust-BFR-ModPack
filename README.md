@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.44
+# BFR mod pack 1.50.45
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,7 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.45**: MOD LIST and this README say why the pack check-in is sent (so the pack's author can see who plays the pack).
 - **1.50.44**: The pack's files are checked at every start: anything changed is put back (or downloaded again, signed),
   and files that are not part of the pack are moved out before the game starts (see "Only the pack's files").
 - **1.50.43**: BACKUP MY SAVE.bat: copies your own saved game (arsenals, ratings, story progress, wins and losses) to
@@ -431,7 +432,7 @@ page; when there is a newer version it downloads only the files that changed and
 
 ## What the pack sends
 - **Pack check-in**: once per install and after each pack update, the pack sends your Xbox gamertag, the edition and the
-  pack version to the pack's author. Nothing else is sent with it.
+  pack version to the pack's author, so the pack's author can see who plays the pack. Nothing else is sent with it.
 - **FEEDBACK** (main menu, next to MOD LIST): only when you send a message there - your message and its category, with your
   gamertag, the pack version and the last stage and mode you played. The page shows this before you send. With Category
   "Skill to share" the message is one skill you made (its base skill, name, description and settings).
