@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.41
+# BFR mod pack 1.50.42
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.42**: Create a Mode: the arsenal refill row (it did nothing) is marked not built yet; one way into the 3 vs 3
+  lobby; the help card says which modes run online.
 - **1.50.41**: Loader 5.188.6: the pack check-in keeps its state in CwoCheckIn.txt (the old state file is renamed once).
 - **1.50.40**: Battle for Reality skill pack: the original Phantom Dust skills 1-374 are back exactly as the game has them -
   only every environment skill now lasts 2 minutes; the pack adds its own skills 375-466. Everyone needs 1.50.40 to play
