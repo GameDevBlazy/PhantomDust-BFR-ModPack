@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.37
+# BFR mod pack 1.50.38
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -223,6 +223,9 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.38**: Every playable character's outfits 6-15 take their look from the maps (The Summit, Grand Panorama Sunset, Sky
+  Ring Highway, Highway to the Alley, Jungle Cave, Five-Story Building, Ruins, Antarctic Outpost, RoofTop Day, Driftstone
+  Sanctum); faces, skin and hair stay as they are.
 - **1.50.37**: Driftstone Sanctum - no more falling through: every island top you can see is solid now; the capsules of the
   west-island start sit apart and away from the edge.
 - **1.50.36**: Five-Story Building - every wall on all five floors breaks (smash through to find the other players; the floors,
