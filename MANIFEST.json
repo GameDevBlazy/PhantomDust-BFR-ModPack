@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.35",
+ "version": "1.50.36",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "002a6b0fc3a24d17c0c9b28b00b7768b7ff2617e0b2f0a8a0874c2af7f6b2d9d",
-  "launcher/CwoLoader.dll": "f1cdca0bc57b3bb0b540ea305a69e4dfe1ecb5366c198c07e596ccb04711cc7a",
+  "launcher/CwoLaunch.exe": "e30df2dee96aecca6435da06550168c2b1cff0fec55cf77e3afa80de9640d402",
+  "launcher/CwoLoader.dll": "5c6ef656a5691f81919e785cda3d464783caafe30326d1b24c99042d14dd1f17",
   "data/CwoBFR.txt": "a32f654c20d6b3882d9031e6189af9f19b9843a1a49a5410a74706060845c00d",
   "data/CwoNewSkills.txt": "d833cb037b1c3d881574585b088b7ec1cbcfefe4afe59b4800e4bef535ad7e6e",
   "data/CwoStageFx.txt": "b10000615c88c37ffdd9ac02e0dd763e37a45a37e55e7dd9292de42931ffb5fa",
@@ -20,7 +20,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "4a88176bb235c3c5199b7e6b7df5cfd95192253c2ff6ee45f04ce4c0d8d2b856",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "2cbc1a25b0c6f01b698e32c5be8709cf72f72224db61371d1c57da893675ea58",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6e6e609f784b7eb1d8f73dedf44ff1ae117ae865024f88d7d3bc9ea8f127e162",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "dbfab6e813ab33b60f21dffece485d140aac058f541393f6d3283bc7b8ffa182",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -51,25 +51,25 @@
   "data/patches/Assets/Data/Map/mx402.alr.cwofrom": "3f4f9e85d59f81932f8480c0efce26cf47583b31ecd0c1568b18232f6afaa7ef",
   "data/patches/Assets/Data/Player/pc01a/pc01a3.alr.cwopatch": "85734b44296647069c86b433a5d7bcd8e76b1a223548f84d83ee989e4b661316",
   "data/patches/Assets/Data/Player/pc01a/pc01a3.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwopatch": "384cfb4e95e07c704fa60ff2845e3587bbc9a7cc4c163fbf6d73590620956ba3",
+  "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwopatch": "182241e0c2811cf84d4f33e006ca846b86d565f319b20cc081273b90bafe70b6",
   "data/patches/Assets/Data/Player/pc01a/pc01a5.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a6.alr.cwopatch": "75634d22120115caa4b172dedecc0088ab6b8d602486ecdf65294ef408f0dd32",
+  "data/patches/Assets/Data/Player/pc01a/pc01a6.alr.cwopatch": "7ecf6a6057f8e689033ec0fe8d7965b40baf19397881381e035554d39ae53153",
   "data/patches/Assets/Data/Player/pc01a/pc01a6.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a7.alr.cwopatch": "327c00ae8ff66e84a7906a5143b841ae8e8e7a144c66503f45ff5c16e12d1fbb",
+  "data/patches/Assets/Data/Player/pc01a/pc01a7.alr.cwopatch": "164ccbfe2f43e12d20d3dff7d2799d3e45e6a4c59740772de35f1ccce1b9def2",
   "data/patches/Assets/Data/Player/pc01a/pc01a7.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a8.alr.cwopatch": "77def07070672a893ab64c20f28ef939b41a86bed8924c1c21389cfc2ac90790",
+  "data/patches/Assets/Data/Player/pc01a/pc01a8.alr.cwopatch": "8ab92f68775ce8a46877650aea033615871a79c8a89376ff9d9a53aa91eecaf1",
   "data/patches/Assets/Data/Player/pc01a/pc01a8.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a9.alr.cwopatch": "830ed35f7222239202df8cb2664d369f58749c6a3ed91571809f1aa9ab51c2b1",
+  "data/patches/Assets/Data/Player/pc01a/pc01a9.alr.cwopatch": "d745e343e64cf8ffbe822b77f5467a1f2c569a1b1734e1806b67ddc5b43b800d",
   "data/patches/Assets/Data/Player/pc01a/pc01a9.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a10.alr.cwopatch": "154905afe5705f46eb35614536971de9dbfaa62fa5cd5517dc1a5426865ad2f1",
+  "data/patches/Assets/Data/Player/pc01a/pc01a10.alr.cwopatch": "7f99dfe10b51cd723698b1fc726128d08b2a61522120ff565d74513c4a77b0b3",
   "data/patches/Assets/Data/Player/pc01a/pc01a10.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a11.alr.cwopatch": "250b19413372976a787860e2efd5c2ed87ab71f405292e66fea5548db6df0e4f",
+  "data/patches/Assets/Data/Player/pc01a/pc01a11.alr.cwopatch": "8b21f8bf3ff2ef9f7bc2745c052ea87c87b21f2bcce0a5e9920fa4e7eb180a04",
   "data/patches/Assets/Data/Player/pc01a/pc01a11.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a12.alr.cwopatch": "3f7e6a64e5b8f7ed85b6528b9359de8a6d16deb2645d7f14a16df00b18de14f9",
+  "data/patches/Assets/Data/Player/pc01a/pc01a12.alr.cwopatch": "a544e92f69abc9d8af42e6b6d2d9dfb21c2d4a1b5e68dc58c37da30bf9d6346c",
   "data/patches/Assets/Data/Player/pc01a/pc01a12.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a13.alr.cwopatch": "6e4c59bda80c5e8d881b46391b4496144129e6e0174fe09bf98dc1549a99072b",
+  "data/patches/Assets/Data/Player/pc01a/pc01a13.alr.cwopatch": "4f8c738833b58b924d0b3db10d7ebcaa72c08011c1a082b5160845e12ac34ea3",
   "data/patches/Assets/Data/Player/pc01a/pc01a13.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
-  "data/patches/Assets/Data/Player/pc01a/pc01a14.alr.cwopatch": "00d7e9930d9b574c5036d796e2e9ef894f315e20b3bd8e23753d940fab5b8823",
+  "data/patches/Assets/Data/Player/pc01a/pc01a14.alr.cwopatch": "6ab54a9ee391a06355c9b98a9be2ea05160c6b4c3e219734d01bbd89b1dbaaa2",
   "data/patches/Assets/Data/Player/pc01a/pc01a14.alr.cwofrom": "938e32341212768a9f2276608f88945056ec23f7fbf8af331a86c38c9b6ecc11",
   "data/patches/Assets/Data/Map/mx301.alr.cwopatch": "e736e225eaa5c962aea0510856f2fba6f7ee24d294a2ec9b83283d23a7753f82",
   "data/patches/Assets/Data/Map/mx301.alr.cwofrom": "6c68005a4db50dcf1138d572c0e8743c5d69dff35f11efa12a3fbe01d9b26b0b",
@@ -91,10 +91,10 @@
   "data/patches/Assets/Data/Map/mx333.alr.cwofrom": "c46c8b07335f98a3ba7001e2ab8446f770f4188749c9d00f835963998a231ae4",
   "data/patches/Assets/Data/Map/mx333.dat.cwopatch": "3d585c214366babe95dfdc50e4b5b44072d7cd433e05860cc739d737e5378b4f",
   "data/patches/Assets/Data/Map/mx333.dat.cwofrom": "cfcb75d6a63d962ab5b6e82e01eeee537d6908bedcab1237b8f4aab0874d4686",
-  "data/patches/Assets/Data/Map/mx334.alr.cwopatch": "5991c9a4c9f35fe275a2018f924aa04434712fc61bdfb4e372daf0618cd7f4ac",
-  "data/patches/Assets/Data/Map/mx334.alr.cwofrom": "6255afcdafaf2d1a6f0112a049de69ec14436703c4735dcd21b3f9d5a1f5a4fe",
-  "data/patches/Assets/Data/Map/mx334.dat.cwopatch": "8d015722220bd4b2e0601e5259c06a5228214cab2d02259c08e5d4f96af8b299",
-  "data/patches/Assets/Data/Map/mx334.dat.cwofrom": "63539951eb8214654884b777c4572b22d0ba58db0354bd4ee4855d47ac29d1e0",
+  "data/patches/Assets/Data/Map/mx334.alr.cwopatch": "7c4c41bc8864a15728b6892dc3993772d1cab98b9125c174f2e79bf33a7ac655",
+  "data/patches/Assets/Data/Map/mx334.alr.cwofrom": "801c660a0024b98d456485272683c33a2705944bbbe73f09e7e59a85d0c2ea86",
+  "data/patches/Assets/Data/Map/mx334.dat.cwopatch": "933358320e0a30341bd53ed3709e845e5db55d730d8a3b37d3cacbfd9789f003",
+  "data/patches/Assets/Data/Map/mx334.dat.cwofrom": "e995b96569619b62e5393cf455e479b5cbe77f7acec1e0a54816586bd5148465",
   "data/patches/Assets/Data/Map/mx335.alr.cwopatch": "943ef9670579d05c4976e7f4d388f1de4defbe03cb66cdbf881cf878b49f2fea",
   "data/patches/Assets/Data/Map/mx335.alr.cwofrom": "b9b69b4fff9ccbb290fd1eff4cfae5146723872cbc0a2027da1b0ac87955cb15",
   "data/patches/Assets/Data/Map/mx335.dat.cwopatch": "59ea15d422514e46394966556b93593f649f5479bf6caf4c69c975b454c72469",
@@ -139,10 +139,10 @@
   "data/patches/Assets/Data/com/mx333/comdata0.cad.cwofrom": "e3646f162707fbdfd529b16644e638d9d14e1a94b28deb81a96ee401e7a87a6d",
   "data/patches/Assets/Data/com/mx333/comdata1.cad.cwopatch": "c18abcfabda05d8db409ff4ca4d4c8647e3ab2ebddaa0c67d8839399dd452455",
   "data/patches/Assets/Data/com/mx333/comdata1.cad.cwofrom": "9283d578481729a0d874df9201d62560c5985c1743014e228b274d759e89bea9",
-  "data/patches/Assets/Data/com/mx334/comdata0.cad.cwopatch": "b49de8719d69a0b19ebf8565ee52c13aa971dbbdfd3a2653060c125bda0ee7b0",
-  "data/patches/Assets/Data/com/mx334/comdata0.cad.cwofrom": "9cd8a808b7a07f99b5f1a0c3bc45590b741ba9c63b606804584c70cec67c6cd4",
-  "data/patches/Assets/Data/com/mx334/comdata1.cad.cwopatch": "b49de8719d69a0b19ebf8565ee52c13aa971dbbdfd3a2653060c125bda0ee7b0",
-  "data/patches/Assets/Data/com/mx334/comdata1.cad.cwofrom": "360281e615809f47c142910ddb5a2f916fd4bf9628fff9d9708b8d8408500505",
+  "data/patches/Assets/Data/com/mx334/comdata0.cad.cwopatch": "34e81f598ceb1f02f0866246ba16419672f2b3b4a12b6c397fdf3d11c7a2440b",
+  "data/patches/Assets/Data/com/mx334/comdata0.cad.cwofrom": "13abbac4399693a28f79c8ebf51a5d479946f2abd73f0e47a39ca57ac34df5a2",
+  "data/patches/Assets/Data/com/mx334/comdata1.cad.cwopatch": "34e81f598ceb1f02f0866246ba16419672f2b3b4a12b6c397fdf3d11c7a2440b",
+  "data/patches/Assets/Data/com/mx334/comdata1.cad.cwofrom": "586097feabfd891faafe023c66687b8a5a0aada653bdfcff408c07820928ff67",
   "data/patches/Assets/Data/com/mx335/comdata0.cad.cwopatch": "f3edf20dd697dde6b2389c8ba20938b1edfa51a12c2caa3e9898883a3b6fa33b",
   "data/patches/Assets/Data/com/mx335/comdata0.cad.cwofrom": "977165a4eb638bdf8b598855ab4f345eacbb3ae58db6f2095dcc89f8716165da",
   "data/patches/Assets/Data/com/mx335/comdata1.cad.cwopatch": "f3edf20dd697dde6b2389c8ba20938b1edfa51a12c2caa3e9898883a3b6fa33b",
@@ -549,7 +549,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "78f14eb9401d553d3f733b9513265500875de58e6d66a34196890804a208f94e"
+  "README.md": "1060002463e738b7a0d30e562ba9eda31db72a1460be0dc35702cf17cc956b18"
  },
  "patches": [
   {
@@ -595,7 +595,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "6a39da73c2b7cd53aad06001a60f2a3e94bba6c0997bd38f1006697242757ff4",
+   "result_sha256": "2f57fcff60ae030e184e92237434886c85280185760bcdb6ea74bdfa7734a274",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
@@ -774,91 +774,91 @@
    "file": "Assets/Data/Player/pc01a/pc01a5.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "4c013b264b3f229f04e168af6e7b165bf03671c2534718d55381fb9768201dd2",
-   "our_bytes": 146559,
-   "copied_from_your_file": 12169,
-   "carries": "Edgar outfit 6: Inferno (1.50.34, edgar_outfits.py)"
+   "result_sha256": "c1950a8b3f7ee58b7d7cbaf762d58c81afddee8a1642a62214123f4742eb7a8e",
+   "our_bytes": 146724,
+   "copied_from_your_file": 12124,
+   "carries": "Edgar outfit 6: The Summit map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a6.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "20369237461515f69c65b4a21145c3e7f2a9dfecf65c7b4d2c0266e4c088c79b",
-   "our_bytes": 146501,
-   "copied_from_your_file": 12350,
-   "carries": "Edgar outfit 7: Glacier (1.50.34, edgar_outfits.py)"
+   "result_sha256": "36785f773e396c9ffb66965701cc85443862976ec09b2ad8691824e687049451",
+   "our_bytes": 146643,
+   "copied_from_your_file": 12190,
+   "carries": "Edgar outfit 7: Grand Panorama Sunset map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a7.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "db756f5d3a0b8129f71f25dd158fe9838342756880844eb2f34293d66877a378",
-   "our_bytes": 146645,
-   "copied_from_your_file": 12200,
-   "carries": "Edgar outfit 8: Jungle (1.50.34, edgar_outfits.py)"
+   "result_sha256": "d58494761bd621e974e4a5bc6893d1e6a08cfe099bf2d3d013a6a9a6a202739d",
+   "our_bytes": 146777,
+   "copied_from_your_file": 12075,
+   "carries": "Edgar outfit 8: Sky Ring Highway map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a8.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "e9f16db8d1ae3c01f4e8449029e4fbfdac66e0032027db67408ef0855e65ff80",
-   "our_bytes": 146628,
-   "copied_from_your_file": 12217,
-   "carries": "Edgar outfit 9: Urban Digital (1.50.34, edgar_outfits.py)"
+   "result_sha256": "294f03d1da2d0b6c2356842f3a62d53d82e0c98ddb57c3f078e2cb5a182a242e",
+   "our_bytes": 146642,
+   "copied_from_your_file": 12189,
+   "carries": "Edgar outfit 9: Highway to the Alley map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a9.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "71e7c6f41edfbd359153bee8df5e4fec312064bd138ece8a10c393f6048f9ee3",
-   "our_bytes": 146698,
-   "copied_from_your_file": 12148,
-   "carries": "Edgar outfit 10: Tiger (1.50.34, edgar_outfits.py)"
+   "result_sha256": "7b95312fed6c3bf25a7f67e78f76ba1a2dd61672498dff993fb6b374cf407a7c",
+   "our_bytes": 146677,
+   "copied_from_your_file": 12158,
+   "carries": "Edgar outfit 10: Jungle Cave map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a10.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "baddc04fe342ff05a7a562396c582f98d44abebbf866b7828c2fd2cb446c5590",
-   "our_bytes": 146593,
-   "copied_from_your_file": 12229,
-   "carries": "Edgar outfit 11: Neon Circuit (1.50.34, edgar_outfits.py)"
+   "result_sha256": "7b86355a5a36fea218fc1797c2194225c3b39374020f896185c6bdbc0af7eca2",
+   "our_bytes": 146595,
+   "copied_from_your_file": 12242,
+   "carries": "Edgar outfit 11: Five-Story Building map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a11.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "d6b79a6b55825fa6dcdd0e13e41c14d3a3037f595742945ba463f7053ea3c18d",
-   "our_bytes": 146521,
-   "copied_from_your_file": 12321,
-   "carries": "Edgar outfit 12: Tartan (1.50.34, edgar_outfits.py)"
+   "result_sha256": "1c67bc9f1abfa0a36ce49620fcc826b062e83a2b1b9e1304b9dc3518a40f304b",
+   "our_bytes": 146665,
+   "copied_from_your_file": 12187,
+   "carries": "Edgar outfit 12: Ruins map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a12.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "f0f4569f3318d922ac32eb27450b2243c1c758a15f94c18e8874cac84eb0da80",
-   "our_bytes": 146785,
-   "copied_from_your_file": 12070,
-   "carries": "Edgar outfit 13: Serpent (1.50.34, edgar_outfits.py)"
+   "result_sha256": "d77fc41e0f69655b59d923d516cdc3da4d72a1c4924160c3186e954397199870",
+   "our_bytes": 146726,
+   "copied_from_your_file": 12122,
+   "carries": "Edgar outfit 13: Antarctic Outpost map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a13.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "53b725dee10a4fd8b75daa830fd7cb9a21cf4a5088e29ac41c64c45835708bbb",
-   "our_bytes": 146620,
-   "copied_from_your_file": 12228,
-   "carries": "Edgar outfit 14: Desert (1.50.34, edgar_outfits.py)"
+   "result_sha256": "5c580d6240ff3b3905b5bd7243f85c09ae0c62c0088f9dd45cab6513f3e0e49d",
+   "our_bytes": 146671,
+   "copied_from_your_file": 12179,
+   "carries": "Edgar outfit 14: RoofTop Day map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Player/pc01a/pc01a14.alr",
    "made_from": "Assets/Data/Player/pc01a/pc01a0.alr",
    "clean_sha256": "d2628a8ed036f6e36ebc0322dbb3e9d67d09eca40bf7dd4a7345bde9d79862c5",
-   "result_sha256": "20ae04b22c56479c994d7a57f89c69954368b5bc144c0a26acc473f4edd475fe",
-   "our_bytes": 146602,
-   "copied_from_your_file": 12198,
-   "carries": "Edgar outfit 15: Void (1.50.34, edgar_outfits.py)"
+   "result_sha256": "2b539ce033268e685b4d3e8ca5f16512ebbf7ddccbe9f8ffc48b5e37272d1e2c",
+   "our_bytes": 146713,
+   "copied_from_your_file": 12135,
+   "carries": "Edgar outfit 15: Driftstone Sanctum map look (1.50.36, map_outfits.py)"
   },
   {
    "file": "Assets/Data/Map/mx301.alr",
@@ -1038,12 +1038,12 @@
     "Assets/Data/Map/st05.alr",
     "Assets/Data/Map/st14.alr",
     "Assets/Data/Map/st12.alr",
-    "Assets/Data/Map/st09_07.alr",
-    "Assets/Data/Map/st24.alr"
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st09_07.alr"
    ],
-   "result_sha256": "7a09477ea5a2d91b24416976bdbb5ddea1208e2dae1bd166a02a8bff7b5975b3",
-   "our_bytes": 29419071,
-   "copied_from_your_file": 16149578,
+   "result_sha256": "c824dee201a2789d7f075297d397855683e1234c8ec1a784b4db5e9b4fca4bfb",
+   "our_bytes": 28376736,
+   "copied_from_your_file": 16181722,
    "carries": "new stage (1.48, patch format 2)"
   },
   {
@@ -1051,16 +1051,16 @@
    "made_from": [
     "Assets/Data/Map/st32.dat",
     "Assets/Data/Map/st04.dat",
+    "Assets/Data/Map/st23.dat",
     "Assets/Data/Map/st02.dat",
+    "Assets/Data/Map/st03.dat",
     "Assets/Data/Map/st06.dat",
     "Assets/Data/Map/st05.dat",
-    "Assets/Data/Map/st23.dat",
-    "Assets/Data/Map/st03.dat",
-    "Assets/Data/Map/st08.dat"
+    "Assets/Data/Map/st25.dat"
    ],
-   "result_sha256": "12b8bbc8941cd5a2b775e50a3934a956869b8cb1ae5054ee771a02b0e1712a5e",
-   "our_bytes": 747548,
-   "copied_from_your_file": 82788,
+   "result_sha256": "35c82d97e54c2df5b1d9627e096c0c39eb86841fc32091f697d6949c3f0fea6d",
+   "our_bytes": 686577,
+   "copied_from_your_file": 110647,
    "carries": "new stage (1.48, patch format 2)"
   },
   {
@@ -1399,28 +1399,24 @@
    "file": "Assets/Data/com/mx334/comdata0.cad",
    "made_from": [
     "Assets/Data/com/st02/comdata0.cad",
-    "Assets/Data/com/st08/comdata0.cad",
-    "Assets/Data/com/st07/comdata0.cad",
     "Assets/Data/com/st06/comdata0.cad",
-    "Assets/Data/com/st04/comdata0.cad"
+    "Assets/Data/com/st07/comdata0.cad"
    ],
-   "result_sha256": "4f54e5feab3fd179582daaf7e3c5787411ec78793f08a3cd312cbc9a602f182f",
-   "our_bytes": 288498,
-   "copied_from_your_file": 385814,
+   "result_sha256": "2f19616ccd957a701889731069163d630d79f91af42ca1d884b95aefc56c5cc3",
+   "our_bytes": 398350,
+   "copied_from_your_file": 275962,
    "carries": "new stage (1.48, patch format 2)"
   },
   {
    "file": "Assets/Data/com/mx334/comdata1.cad",
    "made_from": [
     "Assets/Data/com/st02/comdata1.cad",
-    "Assets/Data/com/st08/comdata1.cad",
-    "Assets/Data/com/st07/comdata1.cad",
     "Assets/Data/com/st06/comdata1.cad",
-    "Assets/Data/com/st04/comdata1.cad"
+    "Assets/Data/com/st07/comdata1.cad"
    ],
-   "result_sha256": "4f54e5feab3fd179582daaf7e3c5787411ec78793f08a3cd312cbc9a602f182f",
-   "our_bytes": 288498,
-   "copied_from_your_file": 385814,
+   "result_sha256": "2f19616ccd957a701889731069163d630d79f91af42ca1d884b95aefc56c5cc3",
+   "our_bytes": 398350,
+   "copied_from_your_file": 275962,
    "carries": "new stage (1.48, patch format 2)"
   },
   {

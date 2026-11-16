@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.35
+# BFR mod pack 1.50.36
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -223,6 +223,12 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.36**: Five-Story Building - every wall on all five floors breaks (smash through to find the other players; the floors,
+  stairs and the strips over doorways stay); a big jump lift on the plaza by the south-west face throws you up to the roof, which
+  now has air-conditioning units, a water tank and the stair hut. Edgar's outfits 6-15 take their look from the maps: The
+  Summit, Grand Panorama Sunset, Sky Ring Highway, Highway to the Alley, Jungle Cave, Five-Story Building, Ruins, Antarctic
+  Outpost, RoofTop Day and Driftstone Sanctum.
+  Online: players who join a lobby now get the host's added stage (its files and its name) - no more 'dummy' stage names.
 - **1.50.35**: NEW STAGE Driftstone Sanctum - floating islands with low gravity (you fall slowly; offline matches - online it
   plays with normal gravity). Every match starts with 3 capsules again: the 2-capsule start is gone from Create a Mode (the
   3 vs 3 mode had it).
