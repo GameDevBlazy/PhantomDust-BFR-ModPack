@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.56
+# BFR mod pack 1.50.57
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.57**: CREATE > Full-Screen Editor opens the editor straight away (on Dawn City) instead of a stage list and a
+  stuck deck screen; Fiery Tornado no longer hurts its caster; Toxic Air uses an environment cast.
 - **1.50.56**: Hologram: when its time is up it sinks through the floor and is out of the stage until it is used again; the
   Hologram's and the Mirror's double leave the stage at once when hit (no invisible double left standing).
 - **1.50.55**: The start-up message "some game files did not match the pack" is gone: 10 outfit patches were built for a
