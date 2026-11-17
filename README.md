@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.69
+# BFR mod pack 1.50.70
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.70**: README credits: a thank-you to the testers and bug reporters (the same names as MOD LIST > COMMUNITY
+  SHOUT-OUT); no change to the game.
 - **1.50.69**: With no controller, SINGLE PLAY's Start Game goes straight into the match (it stopped on the stage list);
   help cards read cleanly (a '>' sign was missing).
 - **1.50.68**: README: the source code is not in this repository yet (it is coming); no change to the game.
@@ -500,4 +502,11 @@ and saved Create a Stage maps) stay offline.
 - Loader, launcher, menu patches and tools: written for this project by Claude (Anthropic), working with the pack owner.
 - Codex (OpenAI): the project's first work orders (the CWO jobs the loader is named after), early file-format readers, and
   the independent-loader rules the loader is built under.
+- Testers and bug reporters - thank you (the same list as MOD LIST > COMMUNITY SHOUT-OUT in the game):
+  - **Murder**: First to 5 KOs and Most KOs, downed partners kept marked, revives per round.
+  - **Sharky**: Teammate lock-on you can switch on and off in the lobby; a fuller bust for the female characters Freia and Gyne.
+  - **Kanye**: Helped test the mods before the official launch; Revive Mend and Body Pull, the revive support skills.
+  - **Gamegod1985**: The Forge idea: move spawns and add cover.
+  - **Ebony Scarface, Murder Mastodon, Doomsday, Kanye**: Helped test and rebalance the BFR mod pack.
+  - **Phantom Dust LFG VET**: Thank you to the Facebook Messenger group for testing the mods.
 - Phantom Dust belongs to Microsoft. This pack contains none of the game's files; you need your own copy of the game.
