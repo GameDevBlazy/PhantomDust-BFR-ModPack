@@ -1,2 +1,4 @@
 # GitHub language bar: MANIFEST.sig is the pack signature, not Standard ML code
 *.sig linguist-detectable=false
+# every file exactly as signed in MANIFEST.json (no line-ending changes in GitHub zips or raw downloads)
+* -text
