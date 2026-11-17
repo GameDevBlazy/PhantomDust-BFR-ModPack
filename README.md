@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.59
+# BFR mod pack 1.50.60
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.60**: Fiery Tornado is a real tornado of fire now (a big burning body rides with it, no flicker); Charged Ray's STR is
+  its charge + 2, as its card says (was charge x 2).
 - **1.50.59**: CREATE > Create a Stage (3rd row) opens the stage list and builds straight away (no deck screens). Stage
   editor: flying (RT / LT) moves your fighter again, and flying down stops on the floor (no more falling through the map).
 - **1.50.57**: CREATE > Full-Screen Editor opens the editor straight away (on Dawn City) instead of a stage list and a
