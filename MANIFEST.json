@@ -1,6 +1,6 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.49",
+ "version": "1.50.50",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
   "launcher/CwoLaunch.exe": "6cc302378e74ac9599f2dab4c9817aca6939608ba9d611451d8ce1963e87050e",
@@ -20,7 +20,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "6cb7096b0dc41c6c15e254ca0dfa709ca134ec29018708248370afa7daaecf02",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "b960a8f1b27e3748682ea776ec0707fea09d53b2c98a4ea93e4224de69b324e3",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6e6e609f784b7eb1d8f73dedf44ff1ae117ae865024f88d7d3bc9ea8f127e162",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "dbfab6e813ab33b60f21dffece485d140aac058f541393f6d3283bc7b8ffa182",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -617,7 +617,7 @@
   "data/patches/Assets/Data/Map/mx301.dat.cwofrom": "ecb4ca9167378f15425abf477ee4cbed5b0e9a823f641477dcd3b617e555efb4",
   "data/patches/Assets/Data/Map/mx302.alr.cwopatch": "f8fb812062f366a6450a086730d8e6c332f40a8c64fcbd5a8b4d48008cbf7f76",
   "data/patches/Assets/Data/Map/mx302.alr.cwofrom": "082a586ced49fe9b8f59870c7f18b85e13ef97d19a8a1860d5b9d88b86355a66",
-  "data/patches/Assets/Data/Map/mx302.dat.cwopatch": "235e40acd233b3e27e491c86645c2ecdf5a7fb5c93c88d2513fcffa92adf2b89",
+  "data/patches/Assets/Data/Map/mx302.dat.cwopatch": "7076c27622724d27261b8e3ca0bf4524beb6fba5b8cffdcc4aef0dc43b1683df",
   "data/patches/Assets/Data/Map/mx302.dat.cwofrom": "4e3def22cf1993f5b46656c7d019459107ae4ca64a7a76579910f081d49a0d96",
   "data/patches/Assets/Data/Map/mx331.alr.cwopatch": "14595779ae410100fc14dfc37e1b979516ca54bb705e55bede5d5912c81d507a",
   "data/patches/Assets/Data/Map/mx331.alr.cwofrom": "a659b6f1ebf5539cbcea316acac744d04138fa85052d75bbfd3e528c62996fd5",
@@ -659,9 +659,9 @@
   "data/patches/Assets/Data/com/mx301/comdata0.cad.cwofrom": "87557db507cf689c2deb3fd9d583eec656f1098656dd87c7d7f594d3e825a24f",
   "data/patches/Assets/Data/com/mx301/comdata1.cad.cwopatch": "8f65e5d9af02167a77f7c51479371c319b46b342ef15904b827fb9f1f5dc091d",
   "data/patches/Assets/Data/com/mx301/comdata1.cad.cwofrom": "5eeade74c7702a33535f07f430d15fa64ae1fa1abc721e293dc111fd7bb30ed1",
-  "data/patches/Assets/Data/com/mx302/comdata0.cad.cwopatch": "ab107672b83c774ce6bac0f77fceaa696e9c77de88c1821330e013da1cb358f5",
+  "data/patches/Assets/Data/com/mx302/comdata0.cad.cwopatch": "75b9a78ce3e7e33d43ccbc263edda075eb08742f553292a3dbb7f27e741f5148",
   "data/patches/Assets/Data/com/mx302/comdata0.cad.cwofrom": "4a73f7011a7e83b09220cd5dca236406110041a4a96eee2579684378a18581d4",
-  "data/patches/Assets/Data/com/mx302/comdata1.cad.cwopatch": "ab107672b83c774ce6bac0f77fceaa696e9c77de88c1821330e013da1cb358f5",
+  "data/patches/Assets/Data/com/mx302/comdata1.cad.cwopatch": "75b9a78ce3e7e33d43ccbc263edda075eb08742f553292a3dbb7f27e741f5148",
   "data/patches/Assets/Data/com/mx302/comdata1.cad.cwofrom": "d98de4687b204d255d4b8663efb7c6e5fa78753c7f6ce0a9cf7ae3ba82ab9c68",
   "data/patches/Assets/Data/com/mx329/comdata0.cad.cwopatch": "c50a0bbe225e9468ae990188b82752178c402502644209f23c4c9c9d44354d80",
   "data/patches/Assets/Data/com/mx329/comdata0.cad.cwofrom": "54f19af6f520b8850bb7319e9a213d637907c63d68496f30b53446a8d06e0519",
@@ -1091,7 +1091,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "3487ae3d031be58786ba918f1be7a05d56ca0bd8f74e71f6af8dc2df67a300f0"
+  "README.md": "b1b8bad740b13f14fb87ec8eee7c21d4f44fad64afa562234160381180e4ad7c"
  },
  "patches": [
   {
@@ -1137,7 +1137,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "013a96264132a8d88c3d95d5a47b192ca2b4aefc146064a6d846d984f7fa6d2d",
+   "result_sha256": "0de0ce713e42a153ec1c5eca2fcd6a4533d19444a865564c0f9d0a182f712d87",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
@@ -3895,7 +3895,7 @@
     "Assets/Data/Map/st04.dat",
     "Assets/Data/Map/st22.dat"
    ],
-   "result_sha256": "45abef57b8b7c984bf6105eaa2c9d3b5373a00735808f483065bd7c0e568612a",
+   "result_sha256": "50bcd078897d2e82ca596cb3936a933c2c676eca97ad9a2569ad0836c0b28b19",
    "our_bytes": 99794,
    "copied_from_your_file": 76353,
    "carries": "new stage (1.48, patch format 2)"
@@ -4237,9 +4237,9 @@
     "Assets/Data/com/st04/comdata0.cad",
     "Assets/Data/com/st03/comdata0.cad"
    ],
-   "result_sha256": "982faf946d7038fb4fc5196290b4afe8ec3c90832708cde726936c2fa090f584",
-   "our_bytes": 114171,
-   "copied_from_your_file": 560141,
+   "result_sha256": "184406d00cecb3c0840bd9c555e87e279e4623b948cd610d8cbbfa1e330e1bef",
+   "our_bytes": 114405,
+   "copied_from_your_file": 559907,
    "carries": "new stage (1.48, patch format 2)"
   },
   {
@@ -4250,9 +4250,9 @@
     "Assets/Data/com/st04/comdata1.cad",
     "Assets/Data/com/st03/comdata1.cad"
    ],
-   "result_sha256": "982faf946d7038fb4fc5196290b4afe8ec3c90832708cde726936c2fa090f584",
-   "our_bytes": 114171,
-   "copied_from_your_file": 560141,
+   "result_sha256": "184406d00cecb3c0840bd9c555e87e279e4623b948cd610d8cbbfa1e330e1bef",
+   "our_bytes": 114405,
+   "copied_from_your_file": 559907,
    "carries": "new stage (1.48, patch format 2)"
   },
   {

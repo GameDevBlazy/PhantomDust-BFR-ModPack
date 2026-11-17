@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.49
+# BFR mod pack 1.50.50
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.50**: Grand Panorama (Sunset): three capsule spots sat next to a jump emitter (one only 1.7 m away) - moved
+  6 m or more clear of every lift.
 - **1.50.49**: The launcher keeps its window open when Phantom Dust does not start and says why (for example a game that
   froze in the background: Task Manager > Details > PDUWP.exe > End task).
 - **1.50.48**: 3 vs 3: fighters 5 and 6 showed 00 capsules left on the HUD while they still had skills; the number is right now.
