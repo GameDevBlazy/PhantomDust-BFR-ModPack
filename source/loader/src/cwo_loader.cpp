@@ -36,7 +36,7 @@ using ABI::Windows::Gaming::Input::IGamepad;
 using ABI::Windows::Gaming::Input::IGamepadStatics;
 using ABI::Windows::Gaming::Input::GamepadVibration;
 
-#define CWO_VERSION "5.188.41"
+#define CWO_VERSION "5.188.46"
 
 static const ULONG_PTR RVA_ACTORS = 0x4bc9d8;
 static const ULONG_PTR RVA_STAGE = 0x3e0304;
@@ -584,7 +584,8 @@ static volatile LONG g_mx_sel, g_mx_cur = -1;
 // picked up, the spot's own position and deck card are put back (deck count +0xC80 adjusted as the patch does).
 static const ULONG_PTR RVA_CAPSULES = 0x584f80;
 struct SkillRow { int id; char name[32]; char school[10]; char cost[4]; };
-static SkillRow g_sk[800];
+static const int SK_MAX = 1300;                         // v5.188.46 the live list (stock + BFR + Illusion + new + fusions)
+static SkillRow g_sk[SK_MAX];
 static int g_sk_count;
 static volatile LONG g_sk_sel, g_drop_request;
 static struct { int k; float pos[3]; int card, skill, phase; } g_drop = {-1};
@@ -1166,7 +1167,7 @@ static void sk_load_list() {
     g_sk_count = 0;
     if (cwo_wfopen(&f, path, L"r") != 0 || !f) { logf("skill list: no CwoSkills.txt"); return; }
     char line[160];
-    while (g_sk_count < 800 && fgets(line, sizeof(line), f)) {
+    while (g_sk_count < SK_MAX && fgets(line, sizeof(line), f)) {
         SkillRow &s = g_sk[g_sk_count];
         if (sscanf_s(line, "%d\t%31[^\t]\t%9[^\t]\t%3[^\t\r\n]", &s.id, s.name, (unsigned)sizeof(s.name), s.school,
                      (unsigned)sizeof(s.school), s.cost, (unsigned)sizeof(s.cost)) == 4)

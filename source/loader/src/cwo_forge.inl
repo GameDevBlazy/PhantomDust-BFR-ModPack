@@ -2205,6 +2205,26 @@ static void ed_six_step() {
         InterlockedExchange(&g_sp_boss_row, -1);
         return;
     }
+    // v5.188.45 (hourly pass 11, in game: after a SINGLE PLAY lobby match and its RESULTS the game went on to its own Single
+    // Play list - "debug: Basic / Decoy / Edgar-Dodge-Bot", the old debug screen the owner never wants to see): once the
+    // match is over, B on the game's lists (as the player would) back to its first list (state 0), then the SINGLE PLAY
+    // lobby again. The result screens (YOU WIN / LOSE, RESULTS) are left to the player.
+    {
+        static bool s_played;
+        static ULONGLONG s_tap, s_over;
+        if (st == SP_MATCH) { s_played = true; s_over = 0; }
+        else if (s_played && !g_in_match && !g_six_auto) {
+            if (!s_over) s_over = now;
+            if (st == 0) {
+                s_played = false; s_over = 0;
+                InterlockedExchange(&g_sp_entry, 1);
+                ed_reopen(EDP_LOBBY);
+                set_status("Back in the SINGLE PLAY lobby");
+                logf("SINGLE PLAY: the match is over - back in the lobby");
+            } else if (st != 1 && now - s_tap > 900) { b2m_press(0x8); s_tap = now; logf("SINGLE PLAY: after the match - B on the game's list (state %d)", st); }
+            if (s_played && now - s_over > 30000) { s_played = false; s_over = 0; logf("SINGLE PLAY: after the match - the lobby did not come back in 30 s"); }
+        }
+    }
     if (!g_six_auto) return;
     static ULONGLONG since, started;
     static int last = -2;

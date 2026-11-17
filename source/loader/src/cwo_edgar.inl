@@ -1290,6 +1290,7 @@ static void ed_school_step() {
 // own brain is set up once per match (a record the loader builds; the game copies the names out of it), then only
 // +0x30 changes: 0 = the brain drives, 1 = your pad. Never online, never in a Stage Creator match, never a boss.
 static volatile LONG g_ed_spec_req;                            // a switch asked for (View + LB)
+static int g_ed_spec_t_win = -1, g_ed_spec_t_code = 0;          // v5.188.42 / 44 self-test stand-ins: the winner, the result code
 static bool g_ed_spec_mine, g_ed_spec_auto;                    // the CPU is ours now; this match's automatic start done
 static ULONG_PTR g_ed_spec_brain;                              // the fighter whose brain we set up this match
 static char g_ed_spec_rec[0x60];
@@ -1378,6 +1379,25 @@ static void ed_spectator_step() {
             g_ed_spec_mine = false; g_ed_spec_auto = false; g_ed_spec_brain = 0;
         }
         if (g_ed_spec_mine && *(int *)(pl + 0x30) != 0) g_ed_spec_mine = false;   // the game took it back
+        // v5.188.42 (hourly pass 10, in game: the CPU playing player 1 won, the result screen said YOU LOSE; the game's result
+        // FUN_14012c8c0 had given player 1 rank 0 = won): the moment the match is decided (the winner *0x1404bbe04 is set; it
+        // is -1 all match long - player 1's result entry 0x1404bc5c0 is not: it read 0 thirty seconds in, 5.188.42 in game),
+        // player 1 goes back to the pad, so the result screen is player 1's own
+        if (g_ed_spec_mine) {
+            int win = g_ed_test_gs ? g_ed_spec_t_win : *(int *)(g_base + 0x4bbe04);   // v5.188.43 the winner only
+            if (win != -1) {
+                *(int *)(pl + 0x30) = 1;
+                g_ed_spec_mine = false;
+                InterlockedExchange(&g_ed_spec_cam, 2);
+                // v5.188.44 (capstone, clean exe 9ba7411b: FUN_14012c790 right after the winner FUN_14012c8c0, once): the result
+                // screen's code *0x1404bbec8 = 2 (lose), then 1 (win) if an actor of the winning team (+0x1c) has +0x30 != 0 -
+                // the CPU-played player 1 had 0, so a win showed YOU LOSE (5.188.43 in game: handed back one frame too late).
+                // Player 1's team won: the code is the win the game would have written for a pad player.
+                int *code = g_ed_test_gs ? &g_ed_spec_t_code : (int *)(g_base + 0x4bbec8);
+                if (*(int *)(pl + 0x1c) == win && *code == 2) { *code = 1; logf("spectator: player 1's team won - the result screen's code set to win (was lose: the CPU had player 1)"); }
+                logf("spectator: the match is decided (winner %d) - player 1 back to the pad for the result screen", win);
+            }
+        }
         if (g_ed_spec_brain == pl && *(int *)(pl + 0x142d0) && !*(int *)(pl + AI_SUB + AI_STARTED)) {   // v5.9 start its program
             PFN_AI_POLL poll = g_ed_ai_init_test ? g_ed_ai_poll_test : (PFN_AI_POLL)(g_base + RVA_AI_POLL);
             if (poll) poll(pl + AI_SUB);
@@ -2349,6 +2369,10 @@ static int ed_self_test() {
     bool sp_you = *(int *)(player + 0x30) == 1;
     g_ed_spec_req = 1; ed_spectator_step();
     bool sp_again = *(int *)(player + 0x30) == 0 && g_ed_ai_calls_test == 1;   // no second set-up
+    *(int *)(player + 0x1c) = 0; g_ed_spec_t_code = 2;
+    g_ed_spec_t_win = 0; ed_spectator_step();                  // v5.188.42 the match is decided: player 1 back for the result
+    sp_again = sp_again && *(int *)(player + 0x30) == 1 && !g_ed_spec_mine && g_ed_spec_t_code == 1;   // v5.188.44 + the win code
+    g_ed_spec_t_win = -1;
     g_in_match = 0; ed_spectator_step();                        // match over; a new one, "starts as a CPU" on
     memset(player + 0x142d0, 0, 4); *(int *)(player + 0x30) = 1;
     g_edc[EDP_SPECT].item[0].v[0] = 1;

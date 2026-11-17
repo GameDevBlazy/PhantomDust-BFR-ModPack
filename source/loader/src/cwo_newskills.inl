@@ -95,8 +95,8 @@ static void ns_load() {
         w++;
     }
     if (w != g_ns_n) { g_ns_n = w; ns_dedup_save = true; }
-    static const char *SCHOOL[6] = {"?", "Psycho", "Optical", "Nature", "Ki", "Faith"};
-    for (int k = 0; k < g_ns_n && g_sk_count < 800; k++) {
+    static const char *SCHOOL[7] = {"Aura Particle", "Psycho", "Optical", "Nature", "Ki", "Faith", "Illusion"};   // v5.188.46 no "?"
+    for (int k = 0; k < g_ns_n && g_sk_count < SK_MAX; k++) {
         SkillRow &r = g_sk[g_sk_count++];
         r.id = g_ns[k].id;
         sprintf_s(r.name, "%.31s", g_ns[k].name);
@@ -522,11 +522,38 @@ static const char *sc_live_name(int id) {
         return n ? out : NULL;
     } __except (EXCEPTION_EXECUTE_HANDLER) { return NULL; }
 }
+static const char *sk_list_name(int id);                          // v5.188.46 cwo_fusion.inl: the loader's own lists by number
+static const char *sc_image_name(int id) {                      // v5.188.46 the game's own image (stock 1-752), when the live table has none
+    static char buf[2][40];
+    static int k;
+    __try {
+        char *gs = *(char **)(g_base + RVA_GSDATA);
+        if (!gs || *(unsigned *)gs != 0x44004 || id <= 0 || id >= 753) return NULL;
+        short row = *(const short *)(gs + 0x18 + NS_REC * (ULONG_PTR)id);
+        if (row <= 0) return NULL;
+        const char *e = gs + NS_TEXT + 12 * (ULONG_PTR)row;
+        if (*(const int *)e != 9001) return NULL;
+        const char *nm = e + *(const int *)(e + 4);
+        char *out = buf[k++ & 1];
+        int n = 0;
+        while (n < 39 && nm[n] && (unsigned char)nm[n] >= 32) { out[n] = nm[n]; n++; }
+        out[n] = 0;
+        return n ? out : NULL;
+    } __except (EXCEPTION_EXECUTE_HANDLER) { return NULL; }
+}
 static const char *sc_skill_name(int id) {
+    // v5.188.46 (owner 2026-11-17): the
+    // game's live table, then its image, then the lists (CwoSkills.txt, BFR, Illusion, Skill Creator, fusions) - never "?"
     const char *live = sc_live_name(id);
     if (live) return live;
-    for (int i = 0; i < g_sk_count; i++) if (g_sk[i].id == id) return g_sk[i].name;
-    return "?";
+    if ((live = sc_image_name(id)) != NULL) return live;
+    for (int i = 0; i < g_sk_count; i++) if (g_sk[i].id == id && g_sk[i].name[0] && strcmp(g_sk[i].name, "?")) return g_sk[i].name;
+    if ((live = sk_list_name(id)) != NULL) return live;
+    static char buf[2][24];
+    static int k;
+    char *out = buf[k++ & 1];
+    sprintf_s(out, 24, "skill %d", id);
+    return out;
 }
 
 static void sc_draft_new(int src) {
@@ -574,7 +601,9 @@ static int sc_cycle(int id, int dir, bool allow_none) {         // v5.112 the fi
     }
     return id;                                                   // nothing matches: stays
 }
+static void sk_live_list();                                       // v5.188.46 cwo_fusion.inl
 static int sc_cycle_all(int id, int dir, bool allow_none) {      // next / previous skill in the list (stock and new)
+    sk_live_list();                                               // v5.188.46 every skill the game has, not only CwoSkills.txt
     int at = -1;
     for (int i = 0; i < g_sk_count; i++) if (g_sk[i].id == id) at = i;
     if (at < 0) return g_sk_count ? g_sk[dir > 0 ? 0 : g_sk_count - 1].id : -1;
@@ -1235,7 +1264,7 @@ static int sc_similar(char *out, size_t n) {               // 3 DUPLICATE, 2 NEA
 }
 
 static void sc_row(int r, char *val, size_t n, const char **desc) {
-    static const char *SCH[6] = {"?", "Psycho", "Optical", "Nature", "Ki", "Faith"};
+    static const char *SCH[7] = {"Aura Particle", "Psycho", "Optical", "Nature", "Ki", "Faith", "Illusion"};   // v5.188.46 no "?"
     val[0] = 0;
     r = sc_id(r);                                             // v4.4: row on screen -> its id
     ScFld fd;
@@ -1336,10 +1365,10 @@ static int ns_free_id() {
 }
 
 static void sc_list_update(const NewSkill &n) {             // the capsule / showcase list knows it
-    static const char *SCHOOL[6] = {"?", "Psycho", "Optical", "Nature", "Ki", "Faith"};
+    static const char *SCHOOL[7] = {"Aura Particle", "Psycho", "Optical", "Nature", "Ki", "Faith", "Illusion"};   // v5.188.46 no "?"
     int at = -1;
     for (int i = 0; i < g_sk_count; i++) if (g_sk[i].id == n.id) at = i;
-    if (at < 0 && g_sk_count < 800) at = g_sk_count++;
+    if (at < 0 && g_sk_count < SK_MAX) at = g_sk_count++;
     if (at < 0) return;
     g_sk[at].id = n.id;
     sprintf_s(g_sk[at].name, "%.31s", n.name);
@@ -1417,7 +1446,7 @@ static bool sc_self_test(char *gs) {
 // The card: record fields (+0x12 school, +0x28 aura cost, +0x58 damage) and the text row +0x00, whose entry holds the
 // name and description at entry + [entry+4] / [entry+8] (rebased at load, 0x14017dcb0).
 static int sc_card(char out[5][96]) {
-    static const char *SCH[6] = {"?", "Psycho", "Optical", "Nature", "Ki", "Faith"};
+    static const char *SCH[7] = {"Aura Particle", "Psycho", "Optical", "Nature", "Ki", "Faith", "Illusion"};   // v5.188.46 no "?"
     int id = g_sc_k >= 0 ? g_sc.id : g_sc.src;
     int n = 0;
     __try {
@@ -1426,10 +1455,10 @@ static int sc_card(char out[5][96]) {
         const char *r = gs + 0x18 + NS_REC * id;
         short row = *(const short *)r, sch = *(const short *)(r + 0x12);
         const char *entry = gs + NS_TEXT + 12 * (int)row;
-        const char *name = row > 0 ? entry + *(const int *)(entry + 4) : "?";
+        const char *name = row > 0 ? entry + *(const int *)(entry + 4) : sc_skill_name(id);   // v5.188.46 no "?"
         const char *desc = row > 0 ? entry + *(const int *)(entry + 8) : "";
         sprintf_s(out[n++], 96, "CARD  %.40s  (skill %d)", name, id);
-        sprintf_s(out[n++], 96, "%s   Aura %d   Damage %d", sch >= 1 && sch <= 5 ? SCH[sch] : "?", *(const short *)(r + 0x28),
+        sprintf_s(out[n++], 96, "%s   Aura %d   Damage %d", sch >= 0 && sch <= 6 ? SCH[sch] : "Aura Particle", *(const short *)(r + 0x28),
                   *(const short *)(r + 0x58));
         size_t L = strnlen(desc, 400), at = 0;
         while (at < L && n < 5) {                            // description in lines of up to 58 characters

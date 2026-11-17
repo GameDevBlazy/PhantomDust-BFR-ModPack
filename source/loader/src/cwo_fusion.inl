@@ -91,7 +91,7 @@ static void fu_load() {
     } else logf("fusions: %d in the Skill Fuser's list", n);
     fu_index();
     static const char *SCHOOL[7] = {"Aura Particle", "Psycho", "Optical", "Nature", "Ki", "Faith", "Illusion"};   // v5.168 school 0 = the Aura Particle school, 6 = Illusion
-    for (int k = 0; k < g_fu_n && g_sk_count < 800; k++) {     // the Stage Creator's capsule list knows them
+    for (int k = 0; k < g_fu_n && g_sk_count < SK_MAX; k++) {     // the Stage Creator's capsule list knows them
         SkillRow &r = g_sk[g_sk_count++];
         r.id = g_fu[k].id;
         sprintf_s(r.name, "%.31s", g_fu[k].name);
@@ -289,7 +289,7 @@ static void fu_close_list() {
         if (id < FU_RECS && g_fu_is[id]) continue;
         const char *r = fu_live_rec(gs, id);
         short no = *(const short *)(r + 2);
-        if (no <= 0 || no >= 700) continue;
+        if (no <= 0 || (no >= 700 && (id < 753 || no != id || !sc_live_name(id)))) continue;   // v5.188.46 + 753 and up (Illusion ...)
         int at = n;
         while (at > 0 && key[at - 1] > no) { g_fu_close[at] = g_fu_close[at - 1]; key[at] = key[at - 1]; at--; }
         g_fu_close[at] = id; key[at] = no; n++;
@@ -371,7 +371,7 @@ static void fu_fuse() {
     g_fu_sel = g_fu_n;
     g_fu[g_fu_n++] = u;
     fu_index();
-    if (g_sk_count < 800) { SkillRow &r = g_sk[g_sk_count++]; r.id = id; sprintf_s(r.name, "%.31s", u.name); strcpy_s(r.school, "fusion"); sprintf_s(r.cost, "%d", cost); }
+    if (g_sk_count < SK_MAX) { SkillRow &r = g_sk[g_sk_count++]; r.id = id; sprintf_s(r.name, "%.31s", u.name); strcpy_s(r.school, "fusion"); sprintf_s(r.cost, "%d", cost); }
     fu_save();
     g_fu_next = 0;                                              // written within the next frame
     sprintf_s(msg, "Fused: %.31s (skill %d) - 3 in your stock", u.name, id);
@@ -581,4 +581,60 @@ static int fu_self_test() {
          rec_ok ? "ok" : "FAILED", change_ok ? "ok" : "FAILED", stock_skipped ? "ok" : "FAILED", queued ? "ok" : "FAILED",
          started ? "ok" : "FAILED", follows ? "ok" : "FAILED", stops ? "ok" : "FAILED");
     return rec_ok && change_ok && stock_skipped && queued && started && follows && stops ? 1 : -60;
+}
+
+// v5.188.46 (owner 2026-11-17: Create a Skill and the Skill Fuser "not displaying all of the skills in the game ... question
+// marks"): the skill list came from CwoSkills.txt only - 374 stock skills in MODS, none at all in BFR (no such file). Now it
+// is the game's live table (*0x1404bdc50, count at *0x1404bdc40 + 4; ours while the big tables are on): every record with a
+// shown number 1-699, and 753+ that the loader's lists wrote (Illusion ...), named as the game names it; kept sorted by number.
+static const char *sk_list_name(int id) {
+    for (int i = 0; i < g_bfr_n; i++) if (g_bfr[i].id == id && g_bfr[i].name[0]) return g_bfr[i].name;
+    for (int i = 0; i < g_bs_n; i++) if (g_bs[i].id == id && g_bs[i].name[0]) return g_bs[i].name;
+    for (int i = 0; i < g_ns_n; i++) if (g_ns[i].id == id && g_ns[i].name[0]) return g_ns[i].name;
+    for (int i = 0; i < g_fu_n; i++) if (g_fu[i].id == id && g_fu[i].name[0]) return g_fu[i].name;
+    return NULL;
+}
+static void sk_live_list() {
+    static ULONGLONG t;
+    static int last_nrec = -1, last_count = -1;
+    ULONGLONG now = GetTickCount64();
+    if (now - t < 3000 && last_count == g_sk_count) return;
+    t = now;
+    static const char *SCH[7] = {"Aura Part", "Psycho", "Optical", "Nature", "Ki", "Faith", "Illusion"};
+    int nrec = 0;
+    const char *recs = NULL;
+    __try {
+        const char *hdr = *(const char **)(g_base + 0x4bdc40);
+        recs = *(const char **)(g_base + 0x4bdc50);
+        nrec = hdr ? *(const int *)(hdr + 4) : 0;
+    } __except (EXCEPTION_EXECUTE_HANDLER) { nrec = 0; }
+    if (!recs || nrec <= 1) return;
+    if (nrec > 1200) nrec = 1200;
+    int keep = g_sk_count > 0 && g_sk_sel >= 0 && g_sk_sel < g_sk_count ? g_sk[g_sk_sel].id : -1, added = 0;
+    for (int id = 1; id < nrec && g_sk_count < SK_MAX; id++) {
+        short no = 0, sch = 0, cost = 0;
+        __try { const char *r = recs + NS_REC * (ULONG_PTR)id; no = *(const short *)(r + 2); sch = *(const short *)(r + 0x12); cost = *(const short *)(r + 0x28); }
+        __except (EXCEPTION_EXECUTE_HANDLER) { break; }
+        if (no <= 0 || (no >= 700 && (id < 753 || no != id))) continue;
+        bool have = false;
+        for (int i = 0; i < g_sk_count && !have; i++) have = g_sk[i].id == id;
+        if (have) continue;
+        const char *nm = sc_live_name(id);
+        if (!nm) nm = sk_list_name(id);
+        if (!nm) continue;
+        SkillRow &r = g_sk[g_sk_count++];
+        r.id = id;
+        sprintf_s(r.name, "%.31s", nm);
+        strcpy_s(r.school, sch >= 0 && sch <= 6 ? SCH[sch] : "-");
+        sprintf_s(r.cost, "%d", cost >= 0 && cost <= 99 ? cost : 0);
+        added++;
+    }
+    for (int i = 0; i < g_sk_count; i++)                         // names the list file has as "?" / empty: the game's own
+        if (!g_sk[i].name[0] || !strcmp(g_sk[i].name, "?")) { const char *nm = sc_live_name(g_sk[i].id); if (nm) sprintf_s(g_sk[i].name, "%.31s", nm); }
+    if (added) {                                                 // sorted by number (insertion sort; the list is short)
+        for (int i = 1; i < g_sk_count; i++) { SkillRow x = g_sk[i]; int j = i - 1; while (j >= 0 && g_sk[j].id > x.id) { g_sk[j + 1] = g_sk[j]; j--; } g_sk[j + 1] = x; }
+        for (int i = 0; i < g_sk_count; i++) if (g_sk[i].id == keep) InterlockedExchange(&g_sk_sel, i);
+    }
+    if (added || nrec != last_nrec) logf("skill list: %d skills (%d added from the game's live table of %d records)", g_sk_count, added, nrec);
+    last_nrec = nrec; last_count = g_sk_count;
 }
