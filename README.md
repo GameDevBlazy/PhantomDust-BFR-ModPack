@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.68
+# BFR mod pack 1.50.69
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.69**: With no controller, SINGLE PLAY's Start Game goes straight into the match (it stopped on the stage list);
+  help cards read cleanly (a '>' sign was missing).
 - **1.50.68**: README: the source code is not in this repository yet (it is coming); no change to the game.
 - **1.50.67**: Keyboard players: SINGLE PLAY and the CREATE pages work with no controller (arrows, Enter / A, Esc / B, Space /
   X, Tab / Y, Q / E) - without a controller SINGLE PLAY used to show an old debug list; B goes back to the main menu either
