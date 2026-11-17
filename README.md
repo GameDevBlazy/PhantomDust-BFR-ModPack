@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.61
+# BFR mod pack 1.50.62
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,7 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.62**: Title intro - BATTLE FOR REALITY / MODS ENABLED fades in on black before PRESS START (the game's own font).
 - **1.50.61**: Red Moon - a red moon floats above the middle of the stage's starts; the first time each fighter steps into
   its light they get +2 attack STR for the match (once); Purify puts it out; it never takes health. Skill update version 146.
 - **1.50.60**: Fiery Tornado is a real tornado of fire now (a big burning body rides with it, no flicker); Charged Ray's STR is
