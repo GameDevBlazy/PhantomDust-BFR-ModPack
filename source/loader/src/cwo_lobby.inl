@@ -558,7 +558,7 @@ template <class PUT, class BOX> static void lob_draw(PUT &put, BOX &box, int x, 
     else strcpy_s(line, "Game Type:  3 vs 3  (Create a Mode is full)");
     put(x, y, line, TEAL);
     y += 16;
-    if (g_lob_pick[0] && m) sprintf_s(line, "Game Rule:  %s (%d min, life %d, %d lives)", g_lob_pick, m->v[0], m->v[1], m->v[2]);   // v5.188.39 the picked mode (said Standard Battle)
+    if (g_lob_pick[0] && m) sprintf_s(line, "Game Rule:  %s (%d min, life %d, %d %s)", g_lob_pick, m->v[0], m->v[1], m->v[2], m->v[2] == 1 ? "life" : "lives");   // v5.188.39 the picked mode (said Standard Battle)
     else sprintf_s(line, "Game Rule:  %s", m ? ED_RULES[ed_mode_rule(*m)] : "Standard Battle");
     put(x, y, line, TEAL);
     y += 16;

@@ -190,14 +190,15 @@ static void dp_frame() {                                          // render thre
     }
     // v5.161.7 (in game: keyboard keys moved the main menu under the FEEDBACK / thank-you page, which holds only the pad):
     // the game's key + mouse bindings are held back while that page is open too
-    if (g_fb_open && !g_dp_on && !ed_online()) dp_block_game_input(true);
-    else if (!g_dp_on || ed_online()) dp_block_game_input(false);      // v5.150.0 the game's own key + mouse bindings back
+    // v5.188.41 (hourly pass 10, in game: 3,345 'held back' / 'back' lines in 15 s on the SINGLE PLAY lobby): ONE decision per
+    // frame - 5.188.36 released the bindings here and held them again below every frame (tables rewritten, held keys cleared)
+    bool kb_pages = g_dp_win && ed_kb_pages();
+    if (!g_dp_on || ed_online()) dp_block_game_input(!g_dp_on && !ed_online() && (g_fb_open || kb_pages));   // v5.150.0 / v5.161.7 / v5.188.36
     if (g_fb_open) fb_page4_keys();                               // v5.161.7 the thank-you page by keyboard (cwo_feedback.inl)
     {   // v5.161.8 keyboard activity for the thank-you page's 'left alone' check (the game's key bits miss menu keys)
         static const int KEYS[] = {VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_RETURN, VK_ESCAPE, VK_SPACE, VK_BACK};
         for (int k : KEYS) if (dp_key(k)) { g_pad_last_ms = GetTickCount64(); break; }
     }
-    if (!g_dp_on) dp_block_game_input(g_dp_win && ed_kb_pages() && !ed_online());   // v5.188.36 the loader's menu pages (the probe is off there)
     if (!g_dp_on) {                                               // v5.127: off again (CREATE left) - the game's own cursor back
         if (g_dp_cursor_mode == 1 && g_dp_win) {
             HRESULT hr = g_dp_win->put_PointerCursor(g_dp_game_cursor);
