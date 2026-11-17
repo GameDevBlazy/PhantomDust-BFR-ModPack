@@ -1,12 +1,12 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.54",
+ "version": "1.50.55",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "2adbe5e2d02be2ad0d212c304f3ce3167c29e207a951d4a21ae16afdb5d3a7de",
+  "launcher/CwoLaunch.exe": "ffdbc9cf207db516fde13ed5908d24234b4922a5b2c131e49415586621d7edf6",
   "launcher/CwoLoader.dll": "ed725105ee949476772c5cfd915d347efb6b68669568f87d67d3c5e0456e82c9",
   "data/CwoBFR.txt": "556a8b0a7a946b6ab6e4b2fbde64cda2a29f9d10a4bbd74e5042ce3f967fbc2d",
-  "data/CwoNewSkills.txt": "2adff48b0ba000f52ef8c76196c22aa17993427cfbe610165d4520435a4b95b7",
+  "data/CwoNewSkills.txt": "faf325bfad1d69d69f1f2371dfaaa0ec670cb55c4bd64294d8aee6130d24148b",
   "data/CwoStageFx.txt": "b10000615c88c37ffdd9ac02e0dd763e37a45a37e55e7dd9292de42931ffb5fa",
   "data/CwoStageSound.txt": "eb7b917dfcfe6643be6b22366739a5d340b240466c9f2a1007306dbd0e280685",
   "data/CwoFps.txt": "a7b785fcacb4beb3fa3061e79befd2eb06605e1a407e42dd565709459f4304eb",
@@ -20,7 +20,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "4964f0ae5ea83907a6b2d6b3c3ecd343df681a6f565bf41a25fdd51a2f41c5ce",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "b7bd55fb40ebcdbe49ec2acc466398d447074348f9ad0f986d3b183a2ac3e770",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6e6e609f784b7eb1d8f73dedf44ff1ae117ae865024f88d7d3bc9ea8f127e162",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "ed22d0c22b62d69ec5ccaf2f97765630d94170688120660fd787f2de1cc84f4d",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -591,26 +591,6 @@
   "data/patches/Assets/Data/Player/pc10a/pc10a13.alr.cwofrom": "325e7a807ccdef01321c1e3286097d85031ce470340b4c085ab6371ae643b7b3",
   "data/patches/Assets/Data/Player/pc10a/pc10a14.alr.cwopatch": "d4bf37a60a4f8896fa6df6aa25c19c08265d70caa7adcbe9c47aa4821f2184ed",
   "data/patches/Assets/Data/Player/pc10a/pc10a14.alr.cwofrom": "325e7a807ccdef01321c1e3286097d85031ce470340b4c085ab6371ae643b7b3",
-  "data/patches/Assets/Data/Player/pc11a/pc11a5.alr.cwopatch": "ea6e229f6693b973fac46dce232957b047da0555a50238a4d5477d950cd44716",
-  "data/patches/Assets/Data/Player/pc11a/pc11a5.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a6.alr.cwopatch": "2a3ad51bff9359b09daa318622658aa3d5888076a7c05f66d3827c0e3db939c3",
-  "data/patches/Assets/Data/Player/pc11a/pc11a6.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a7.alr.cwopatch": "e7d296952742b272031af7a1a2365d309625da8716b30183d04fdb08b0d8f4bb",
-  "data/patches/Assets/Data/Player/pc11a/pc11a7.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a8.alr.cwopatch": "cecb5dc432160a28aa36e2ad56b82913902468aab710a1c205965ec34cbe8e54",
-  "data/patches/Assets/Data/Player/pc11a/pc11a8.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a9.alr.cwopatch": "60c21b1a7aa9c17b05a06e2fdfd1a457b9cef493d1020874b939ac72c73953a7",
-  "data/patches/Assets/Data/Player/pc11a/pc11a9.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a10.alr.cwopatch": "fefc31d5d92dfbeb4126c35b2de78e5f8e099ccb53d33a12a4cecda59a1260f1",
-  "data/patches/Assets/Data/Player/pc11a/pc11a10.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a11.alr.cwopatch": "28375b6c3993f5d82d22e035912bb875287a590949780ce610d6e1739c771873",
-  "data/patches/Assets/Data/Player/pc11a/pc11a11.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a12.alr.cwopatch": "566502b2ed5bcf93951370bb6a1c7820b3e320cb8cf2fc7bc69dff0873736dc1",
-  "data/patches/Assets/Data/Player/pc11a/pc11a12.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a13.alr.cwopatch": "bf65a074889c18b2e5448399c3fda135ee7b7d61c09a0de2b29a8234003ce0f9",
-  "data/patches/Assets/Data/Player/pc11a/pc11a13.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
-  "data/patches/Assets/Data/Player/pc11a/pc11a14.alr.cwopatch": "c961fe51488005d20fe8ccdbfe0448f9cfc3c66bf96f518eb175827561c2f194",
-  "data/patches/Assets/Data/Player/pc11a/pc11a14.alr.cwofrom": "ce80bb39a1a085fa10ca859417a11eba613aeecaaa21f26048b2096ca4698e89",
   "data/patches/Assets/Data/Map/mx301.alr.cwopatch": "e736e225eaa5c962aea0510856f2fba6f7ee24d294a2ec9b83283d23a7753f82",
   "data/patches/Assets/Data/Map/mx301.alr.cwofrom": "6c68005a4db50dcf1138d572c0e8743c5d69dff35f11efa12a3fbe01d9b26b0b",
   "data/patches/Assets/Data/Map/mx301.dat.cwopatch": "66e401595d88291e34f78393e53b3cfcac57cca052892b1c8052bbf170e084e5",
@@ -1091,7 +1071,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "c3fab61b80754cae91e98f8e1fd7b0405c34516dc67643b5e0c8c29883711391"
+  "README.md": "bc6646f35c3c6b9a24659cfaa8880424ac919013ff85ce21577d59acce261482"
  },
  "patches": [
   {
@@ -1137,7 +1117,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "a74bb67a3be08bbff9a7b9f7d287e10cb6fa0becce48cd7e49fa024df0eb9cd0",
+   "result_sha256": "ce427e17454222e57383a71624447df941685fdc056c9f3efc166b9f85ae2a23",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
@@ -3741,96 +3721,6 @@
    "our_bytes": 100174,
    "copied_from_your_file": 621,
    "carries": "pc10a outfit 15: Midnight LED (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a5.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "00b1b913ad5cba067f1474a127e6fa8a96bbcab8abfd8d89cf1f3b0b8ecc418b",
-   "our_bytes": 162356,
-   "copied_from_your_file": 4583,
-   "carries": "pc11a outfit 6: Crimson (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a6.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "ffc8a4fc806f723b796d6418d6424c84fa2bcc2c456e716de5836bcc1520a1f4",
-   "our_bytes": 162335,
-   "copied_from_your_file": 4582,
-   "carries": "pc11a outfit 7: Ember Orange (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a7.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "014921f7eb2a0bdf1ebce3f89d5e75dcdfbd8f09f238d116fcf6eb570101294c",
-   "our_bytes": 162209,
-   "copied_from_your_file": 4703,
-   "carries": "pc11a outfit 8: Goldenrod (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a8.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "25fc197017e8cc01e78c0c14dede93877ac39527bb9303530bde9b1f1208538c",
-   "our_bytes": 162336,
-   "copied_from_your_file": 4608,
-   "carries": "pc11a outfit 9: Forest Green (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a9.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "a5aae99e8d2745f897deeaed3bcf5d3e0f5a234dfefaaaa93898a2686ad288ed",
-   "our_bytes": 162339,
-   "copied_from_your_file": 4607,
-   "carries": "pc11a outfit 10: Turquoise (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a10.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "210833e49e6708b0e921a67efbfcfa60bba829a970b065875ae60c5796757283",
-   "our_bytes": 162304,
-   "copied_from_your_file": 4592,
-   "carries": "pc11a outfit 11: Cyan (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a11.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "00f8d4d33a150a8e47af7225f5fbb6e109cf2da9f04f00c445b305b50d71778e",
-   "our_bytes": 162366,
-   "copied_from_your_file": 4580,
-   "carries": "pc11a outfit 12: Royal Blue (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a12.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "60c1fe90db6bcd4aea5fd613190780e86b3c4406d34a68c31cce9092b95d7f64",
-   "our_bytes": 162345,
-   "copied_from_your_file": 4591,
-   "carries": "pc11a outfit 13: Violet (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a13.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "40a456fc4c24d296fe8007b8cbf719de6f26ee777afd71494e5fde7fa6791bdf",
-   "our_bytes": 162343,
-   "copied_from_your_file": 4601,
-   "carries": "pc11a outfit 14: Magenta (1.50.39 colour themes)"
-  },
-  {
-   "file": "Assets/Data/Player/pc11a/pc11a14.alr",
-   "made_from": "Assets/Data/Player/pc11a/pc11a0.alr",
-   "clean_sha256": "7953af889f9c1a2011efa841de8225bedb2a0aec22374164fc63829caf8729b3",
-   "result_sha256": "33c90aabd08583581ac8283d151cb4217278a6414bf2382a33dc36860dfd3b7f",
-   "our_bytes": 162298,
-   "copied_from_your_file": 4647,
-   "carries": "pc11a outfit 15: Midnight LED (1.50.39 colour themes)"
   },
   {
    "file": "Assets/Data/Map/mx301.alr",

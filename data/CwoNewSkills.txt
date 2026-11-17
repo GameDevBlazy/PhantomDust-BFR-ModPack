@@ -1,7 +1,7 @@
 # new id	source	name	description	options (OLD=NEW effect swaps, school=, cost=, damage=, fx=, snd=, anim=)
 467	226	Mirror	A double of you joins; gone on its first hit. WORK IN PROGRESS - test it, but do not rely on it in competitive play.	r54=0 r56=0 r58=0 r5a=0 r5c=0 
-473	14	Thunder Punch	Ki punch; erases 1 defense skill. WORK IN PROGRESS - test it, but do not rely on it in competitive play.	school=4 cost=3 damage=2 fx=8 r5c=2 r5e=0 r60=1 r30=3
-474	14	Ice Punch	Ki punch; freezes skill buttons. WORK IN PROGRESS - test it, but do not rely on it in competitive play.	school=4 cost=2 damage=2 r62=7 r64=900 r30=3
+473	14	Thunder Punch	Ki punch; erases 1 defense skill. WORK IN PROGRESS - test it, but do not rely on it in competitive play.	school=3 cost=3 damage=2 fx=8 r5c=2 r5e=0 r60=1 r30=3
+474	14	Ice Punch	Ki punch; freezes skill buttons. WORK IN PROGRESS - test it, but do not rely on it in competitive play.	school=3 cost=2 damage=2 r62=7 r64=900 r30=3
 475	311	Fiery Tornado	Burning tornado on the field. WORK IN PROGRESS - test it, but do not rely on it in competitive play.	school=3 cost=5 damage=4 trail=88 r7c=1350 r7e=150 r84=10 hue=18 sat=220 val=140 cm=2
 476	110	Mega Photon Burst	Huge explosion around self. WORK IN PROGRESS - test it, but do not rely on it in competitive play.	school=2 cost=9 damage=0 r7c=1500 
 477	92	Giant Meteor	One slow meteor from high up. WORK IN PROGRESS - test it, but do not rely on it in competitive play.	school=1 cost=0 damage=0 r7c=20 r80=25 r62=5 r64=500 
