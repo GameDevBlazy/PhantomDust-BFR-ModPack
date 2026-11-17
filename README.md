@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.71
+# BFR mod pack 1.50.72
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.72**: the source code is published in the `source/` folder (the loader, the launcher and the pack's tools); no
+  change to the game.
 - **1.50.71**: loader 5.188.40, built from the loader's own clean source (the one that will be published); SINGLE PLAY's
   SESSION INFO shows the rule you picked (it said Standard Battle); a lobby match at 00:00 ends as it should.
 - **1.50.70**: README credits: a thank-you to the testers and bug reporters (the same names as MOD LIST > COMMUNITY
@@ -442,8 +444,8 @@ that runs inside Phantom Dust and adds the pack's menus, modes, stages, skills a
   only means Windows does not know the publisher. Do not switch off your antivirus; if you want, scan the pack folder with
   Windows Security first. Every pack file's SHA-256 is listed in `MANIFEST.json`, which is signed by the pack's author.
 - **Open source, free to use.** Anyone interested in Phantom Dust modding is welcome to read the loader's source and use any
-  of it in their own projects. The source code (the loader, the launcher and the tools that build this pack) is not in
-  this repository yet; it is coming in a `source/` folder.
+  of it in their own projects. The source code (the loader, the launcher and the tools that build this pack) is in the
+  `source/` folder of this repository (see `source/README.md`); the pack's loader and launcher are built from exactly it.
 
 ## Back up your save (recommended)
 Worried about losing your arsenals, ratings, story progress or wins and losses? Your own saved game (the game's
