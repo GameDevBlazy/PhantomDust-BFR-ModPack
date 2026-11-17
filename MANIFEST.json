@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.63",
+ "version": "1.50.64",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "e44ff27430dfdd9ff8651519112daa5f17db0f4b0f1998eb42821b09ff80ce1e",
-  "launcher/CwoLoader.dll": "248715c4d8ebcf8007967757d89a3cccee65ebc352c7d8306987b0127729fad9",
+  "launcher/CwoLaunch.exe": "62b0f98a8a1575bba0225fb946bf1ccf15b41efd977009df11e78d82f2b1b972",
+  "launcher/CwoLoader.dll": "34076fb762967b8d1ea2e313b5402bffc77dd3c783598df6e4b91ed516819eb1",
   "data/CwoBFR.txt": "234510c13cb2e6ba0028caab1acf8376c7b37e3f9580156aa241e157db4ee3b0",
   "data/CwoNewSkills.txt": "269a0c4265a5271ef279e9e94d236ae7a4954ea90eb03c18bf5487a54af1f758",
   "data/CwoStageFx.txt": "b10000615c88c37ffdd9ac02e0dd763e37a45a37e55e7dd9292de42931ffb5fa",
@@ -20,7 +20,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "6370c470110e65bce2825566350efcd42ae3f8a77f733b4dd0ee21e0701018a7",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "47534b27e94af307f8f3ebf4cfe42758c33e91d336230248c1916bbc85a0f3fc",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6e6e609f784b7eb1d8f73dedf44ff1ae117ae865024f88d7d3bc9ea8f127e162",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "ed22d0c22b62d69ec5ccaf2f97765630d94170688120660fd787f2de1cc84f4d",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -1071,7 +1071,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "f456ab5553783447c7d1ca1cae2031ef14e02eda25e4d6b06f5038ccf6130408"
+  "README.md": "e830fb756fd95c9b136f61f506bb6d4681c0739510a55350af04f887b13f5c04"
  },
  "patches": [
   {
@@ -1117,7 +1117,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "f7e9e0468c884d44d2598f17c2a99403e8c1507f5333e4e2cd8e1833aa40b26a",
+   "result_sha256": "7478c1bb5424576afd12a1232ee783d27db03e727f7f2a1f36a60079a56e41c1",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
