@@ -1,2 +1,4 @@
 # effect size per skill (loader 5.148.1+): skill percent
 476 280
+475 160
+477 450
