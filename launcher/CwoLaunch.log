@@ -85,3 +85,20 @@
 2026-11-17 10:27:57 UI font: CwoUiFont.bin made from this PC's Segoe UI fonts
 2026-11-17 10:56:59 UI font: CwoUiFont.bin made from this PC's Segoe UI fonts
 2026-11-17 18:47:29 UI font: CwoUiFont.bin made from this PC's Segoe UI fonts
+2026-11-19 19:24:49 feedback: 1 sent, 0 waiting (no answer from the form)
+2026-11-19 19:24:49 BFR mod pack 1.50.74 - checking for updates ...
+2026-11-19 19:24:50 BFR mod pack 1.50.74 - up to date
+2026-11-19 19:25:12 BFR files checked: they match the pack
+2026-11-19 19:25:12 edition: BFR
+2026-11-19 19:25:12 CwoLoader.dll copied to C:\Users\Mr & Ms Elder\AppData\Local\Packages\Microsoft.MSEsper_8wekyb3d8bbwe\LocalState\CwoLoader\CwoLoader.dll
+2026-11-19 19:25:13 Phantom Dust started (pid 32332); initialised after 0 ms - loading C:\Users\Mr & Ms Elder\AppData\Local\Packages\Microsoft.MSEsper_8wekyb3d8bbwe\LocalState\CwoLoader\CwoLoader.dll
+2026-11-19 19:25:13 load: wait 0, LoadLibrary result 76b90000, game running, CwoLoader.dll in the module list
+2026-11-19 19:25:16 done: the game is running with the loader (3 s check)
+2026-11-19 19:25:28 BFR mod pack 1.50.74 - checking for updates ...
+2026-11-19 19:25:28 BFR mod pack 1.50.74 - up to date
+2026-11-19 19:25:29 BFR files checked: they match the pack
+2026-11-19 19:25:29 edition: BFR
+2026-11-19 19:25:30 Phantom Dust started (pid 31492); initialised after 0 ms - loading C:\Users\Mr & Ms Elder\AppData\Local\Packages\Microsoft.MSEsper_8wekyb3d8bbwe\LocalState\CwoLoader\CwoLoader.dll
+2026-11-19 19:25:30 load: wait 0, LoadLibrary result 76b90000, game running, CwoLoader.dll in the module list
+2026-11-19 19:25:33 done: the game is running with the loader (3 s check)
+2026-11-20 22:31:35 UI font: CwoUiFont.bin made from this PC's Segoe UI fonts

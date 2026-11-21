@@ -24,7 +24,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import pd_paths  # noqa: E402
 CLEAN = pd_paths.GAME
 MENUS = os.path.join(ROOT, 'packs', 'bfr_menus')
-VERSION = '1.50.74'
+VERSION = '1.50.75'
 PARITY = os.path.join(ROOT, 'packs', 'parity_BFR_2026-11-11')      # 1.49 build_data_parity.py output (the installed BFR data folder)
 # (game path, our result, its SHA-256 prefix, what it carries); since 1.42.8 every result is built on the clean game file
 # (livelobby, mainmenu and vsmenu moved off the older community versions with tools/rebase_ssb.py)
@@ -161,7 +161,7 @@ DATA_FILES = [('CwoBFR.txt', os.path.join(ROOT, 'packs', 'bfr_skillpack_og', 'Cw
 # 1.50.2: loader 5.151.1 = 5.151.0 + the owner's BFR test fixes only (level-list crash, packs without files, start-up volume)
 # 1.50.71 (owner 2026-11-17): the launcher and loader are built from the PUBLIC source (tools/export_public_loader.py ->
 # 26_Public_Release/BFR_source_staging/source/loader, its own build.bat), so the published source is exactly what players run
-PUBLIC_BUILD = os.path.join(ROOT, 'packs', 'bfr_loader', 'public_5.188.46')
+PUBLIC_BUILD = os.path.join(ROOT, 'packs', 'bfr_loader', 'public_5.188.47')
 LAUNCHER = [('CwoLaunch.exe', os.path.join(PUBLIC_BUILD, 'CwoLaunch.exe')),
             ('CwoLoader.dll', os.path.join(PUBLIC_BUILD, 'CwoLoader.dll'))]   # 1.50.40 skill update version 144   # 1.50.36 the host's stage pack goes to the players who join   # 1.50.35 always 3 starting capsules   # 1.50.34 records per profile, OPTIONS pages back to OPTIONS, CPU routes per stage, King of the Hill 4 markers   # 1.50.33 The Summit folded into the Sein row (mx401 + mx403)   # 1.50.26 Xbox Live LEVEL LIST variants   # 1.50.25 locked skills only in the Skill Vault   # 1.50.23 stage rows (i/n), crash shield site 3, late refill on the game thread   # 1.50.22 sound guard v2 (junk bank pointers too - Sammira crashed on 5.186.2)   # 1.50.21 sound guard (no crash for a fighter without a sound bank), Underground objects kept   # 1.50.19 made skills offline at the match, community skills   # 1.50.18: the MOD LIST / What's New say what is in the pack now   # 1.50.15: the MODS fixes (owner 2026-11-14 "Bring the fix over" / "Always do that")   # 1.50.13: the MODS loader (MOD LIST entries per edition, six fighters on 4-start stages)
 SIGNER = os.path.join(ROOT, 'build', 'CwoSign.exe')
@@ -602,6 +602,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.75**: loader 5.188.47: Create a Skill and the Skill Fuser show every skill - the original 1-374 too - by name, in the
+  order of the numbers the game shows.
 - **1.50.74**: loader 5.188.46: CREATE > Create a Skill and the Skill Fuser list every skill in the game (the Battle for Reality
   skills too) with their names - no more "?"; with the CPU playing your fighter, a win shows YOU WIN.
 - **1.50.73**: loader 5.188.41: on the loader's own pages (SINGLE PLAY lobby, CREATE) the game's key bindings were switched

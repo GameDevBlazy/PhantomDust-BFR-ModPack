@@ -513,8 +513,10 @@ static const char *sc_live_name(int id) {
         short row = *(const short *)(recs + 0x90 * (ULONG_PTR)id);
         if (row < 0) return NULL;
         const char *e = rows + 12 * (ULONG_PTR)row;
-        if (*(const int *)e != 9001) return NULL;
-        const char *nm = e + *(const int *)(e + 4);
+        int off = *(const int *)(e + 4);                         // v5.188.47 no 9001 check: the game's own rows have none
+        if (off == 0 || off < -0x200000 || off > 0x200000) return NULL;
+        const char *nm = e + off;
+        if ((unsigned char)nm[0] < 32 || (unsigned char)nm[0] > 126) return NULL;
         char *out = buf[k++ & 3];
         int n = 0;
         while (n < 39 && nm[n] && (unsigned char)nm[n] >= 32) { out[n] = nm[n]; n++; }
@@ -532,8 +534,10 @@ static const char *sc_image_name(int id) {                      // v5.188.46 the
         short row = *(const short *)(gs + 0x18 + NS_REC * (ULONG_PTR)id);
         if (row <= 0) return NULL;
         const char *e = gs + NS_TEXT + 12 * (ULONG_PTR)row;
-        if (*(const int *)e != 9001) return NULL;
-        const char *nm = e + *(const int *)(e + 4);
+        int off = *(const int *)(e + 4);                         // v5.188.47 no 9001 check: the game's own rows have none
+        if (off == 0 || off < -0x200000 || off > 0x200000) return NULL;
+        const char *nm = e + off;
+        if ((unsigned char)nm[0] < 32 || (unsigned char)nm[0] > 126) return NULL;
         char *out = buf[k++ & 1];
         int n = 0;
         while (n < 39 && nm[n] && (unsigned char)nm[n] >= 32) { out[n] = nm[n]; n++; }

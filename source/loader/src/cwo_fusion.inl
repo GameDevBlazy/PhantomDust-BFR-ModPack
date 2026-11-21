@@ -594,6 +594,11 @@ static const char *sk_list_name(int id) {
     for (int i = 0; i < g_fu_n; i++) if (g_fu[i].id == id && g_fu[i].name[0]) return g_fu[i].name;
     return NULL;
 }
+static short sk_shown(const char *recs, int nrec, int id) {    // v5.188.47 the number the game shows for a record
+    __try { if (recs && id > 0 && id < nrec) { short no = *(const short *)(recs + NS_REC * (ULONG_PTR)id + 2); if (no > 0) return no; } }
+    __except (EXCEPTION_EXECUTE_HANDLER) {}
+    return (short)(id < 32000 ? id : 32000);
+}
 static void sk_live_list() {
     static ULONGLONG t;
     static int last_nrec = -1, last_count = -1;
@@ -630,9 +635,13 @@ static void sk_live_list() {
         added++;
     }
     for (int i = 0; i < g_sk_count; i++)                         // names the list file has as "?" / empty: the game's own
-        if (!g_sk[i].name[0] || !strcmp(g_sk[i].name, "?")) { const char *nm = sc_live_name(g_sk[i].id); if (nm) sprintf_s(g_sk[i].name, "%.31s", nm); }
-    if (added) {                                                 // sorted by number (insertion sort; the list is short)
-        for (int i = 1; i < g_sk_count; i++) { SkillRow x = g_sk[i]; int j = i - 1; while (j >= 0 && g_sk[j].id > x.id) { g_sk[j + 1] = g_sk[j]; j--; } g_sk[j + 1] = x; }
+        { const char *nm = sc_live_name(g_sk[i].id); if (nm) sprintf_s(g_sk[i].name, "%.31s", nm); }   // v5.188.47 the game's own name always
+    if (added || last_count < 0) {                               // v5.188.47 sorted by the number the game shows (record +0x02), then record
+        static short key[SK_MAX];
+        for (int i = 0; i < g_sk_count; i++) key[i] = sk_shown(recs, nrec, g_sk[i].id);
+        for (int i = 1; i < g_sk_count; i++) { SkillRow x = g_sk[i]; short kx = key[i]; int j = i - 1;
+            while (j >= 0 && (key[j] > kx || (key[j] == kx && g_sk[j].id > x.id))) { g_sk[j + 1] = g_sk[j]; key[j + 1] = key[j]; j--; }
+            g_sk[j + 1] = x; key[j + 1] = kx; }
         for (int i = 0; i < g_sk_count; i++) if (g_sk[i].id == keep) InterlockedExchange(&g_sk_sel, i);
     }
     if (added || nrec != last_nrec) logf("skill list: %d skills (%d added from the game's live table of %d records)", g_sk_count, added, nrec);
