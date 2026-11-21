@@ -183,10 +183,23 @@ static bool cs_auto_step(LONG st, ULONGLONG now) {
         }
         f_press(0x4, 150); t = now; InterlockedExchange(&g_ed_auto, 33); return true;
     }
+    // v5.188.48 (owner 2026-11-17): one A per list, never again - a lost press left the black cover
+    // up for good. Now a list still showing 2.5 s after its press gets A again, and a list the game (or the player) already
+    // passed is picked up where the game is (state 0 stage list, 2 deck list, 3 battle list, SP_MATCH the match)
+    static ULONGLONG s_start;
+    if (au == 32 && !s_start) s_start = now;
+    if (au >= 32 && au <= 34 && st == 3) { if (au < 34) { t = now - 701; InterlockedExchange(&g_ed_auto, 34); au = 34; logf("Create a Stage: the battle list is up - on from there"); } }
+    else if (au == 32 && st == 2) { t = now - 701; InterlockedExchange(&g_ed_auto, 33); au = 33; logf("Create a Stage: the deck list is up - on from there"); }
+    static ULONGLONG s_retry;
+    if (au == 33 && st == 0 && now - t > 2500 && now - s_retry > 2500) { f_press(0x4, 150); s_retry = now; logf("Create a Stage: the stage list is still up - A again"); return true; }
+    if (au == 34 && st == 2 && now - t > 2500 && now - s_retry > 2500) { f_press(0x4, 150); s_retry = now; logf("Create a Stage: the deck list is still up - A again"); return true; }
+    if (au == 35 && st == 3 && now - t > 2500 && now - s_retry > 2500) { f_press(0x4, 150); s_retry = now; logf("Create a Stage: the battle list is still up - A again"); return true; }
     if (au == 33 && st == 2 && now - t > 700) { f_press(0x4, 150); t = now; InterlockedExchange(&g_ed_auto, 34); return true; }   // the first arsenal
     if (au == 34 && st == 3 && now - t > 700) { f_press(0x4, 150); t = now; InterlockedExchange(&g_ed_auto, 35); return true; }   // 'debug'
-    if (au == 35 && st == SP_MATCH) { InterlockedExchange(&g_ed_auto, 0); InterlockedExchange(&g_cs_hold_cover, 0); g_cs_go = -1; return true; }
+    if (st == SP_MATCH && au >= 33) { InterlockedExchange(&g_ed_auto, 0); InterlockedExchange(&g_cs_hold_cover, 0); g_cs_go = -1; s_start = 0; return true; }
+    if (s_start && now - s_start > 30000) s_start = 0, t = 0;          // the 30 s limit below counts from the start, not the last press
     if (now - t > 20000) {
+        s_start = 0;
         InterlockedExchange(&g_ed_auto, 0);
         InterlockedExchange(&g_cs_hold_cover, 0);
         InterlockedExchange(&g_cs_empty_pending, 0);
