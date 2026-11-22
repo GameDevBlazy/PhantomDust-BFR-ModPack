@@ -36,7 +36,7 @@ using ABI::Windows::Gaming::Input::IGamepad;
 using ABI::Windows::Gaming::Input::IGamepadStatics;
 using ABI::Windows::Gaming::Input::GamepadVibration;
 
-#define CWO_VERSION "5.199.0"
+#define CWO_VERSION "5.199.1"
 
 static const ULONG_PTR RVA_ACTORS = 0x4bc9d8;
 static const ULONG_PTR RVA_STAGE = 0x3e0304;
@@ -1858,7 +1858,7 @@ static DWORD WINAPI worker(LPVOID) {
         // and press the D-pad while standing - Up intro pose (EXMOT0, slot 130), Right second intro (EXMOT1, 131), Down victory
         // (EXMOT2, 132), Left third intro (EXMOT4, 134). RB is the game's lock-on switch (FUN_1402531d0, MODLOG 2026-10-2x): no
         // move, no jump. View is the quick panel only again.
-        if (in_match && !g_fc_on && !g_bfr_edition && !ed_online() && (b & BTN_RB) && !(b & BTN_BACK) && (pressed & (BTN_UP | BTN_DOWN | BTN_LEFT | BTN_RIGHT))) {
+        if (in_match && !g_fc_on && !ed_online() && (b & BTN_RB) && !(b & BTN_BACK) && (pressed & (BTN_UP | BTN_DOWN | BTN_LEFT | BTN_RIGHT))) {
             LONG req = (pressed & BTN_UP) ? 130 : (pressed & BTN_RIGHT) ? 131 : (pressed & BTN_DOWN) ? 132 : 134;
             InterlockedExchange(&g_em_req, req);
             rumble(1); continue;

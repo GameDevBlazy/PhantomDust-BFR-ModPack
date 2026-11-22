@@ -109,7 +109,8 @@ static void em_step() {                                          // CwoOverlayFr
     em_play_step();
     LONG slot = InterlockedExchange(&g_em_req, 0);
     if (!slot) return;
-    if (!g_in_match || ed_online() || g_bfr_edition) return;
+    if (!g_in_match || ed_online()) return;                     // v5.199.1 BFR too (owner 2026-11-22: the players' intros only)
+    if (slot == 1001 || slot == 1002 || slot == 1) return;      // v5.199.1 our own Wave / Bow / Look around: never (owner)
     __try {
         ULONG_PTR *acts = cwo_actors();
         ULONG_PTR a = 0;
