@@ -29,6 +29,24 @@ static void dn_tint(double f, float *t) {                         // f = 0..1 th
     for (int k = 0; k < 3; k++) t[k] = (float)(K[i][k] + (K[i + 1][k] - K[i][k]) * s);
 }
 
+// v5.200.0 (owner 2026-11-22): the pause menu's row (tools/build_pause_daynight.py):
+// native 2.8 op 128 = its text, op 129 = A on it - on / off at once (CwoDayNight.txt written or removed, the switch set now, so a
+// running match starts or ends the cycle on the next frame; off puts the stage's own light back)
+static INT64 dn_native(int op) {
+    static char txt[32];
+    if (op == 129) {
+        wchar_t p[MAX_PATH];
+        swprintf_s(p, MAX_PATH, L"%sCwoDayNight.txt", g_dir);
+        int on = g_dn_switch == 1 ? 0 : 1;
+        if (on && (ed_online() || g_bfr_edition)) on = 0;
+        if (on) { FILE *f = NULL; if (cwo_wfopen(&f, p, L"w") == 0 && f) { fprintf(f, "cycle %d\n", g_dn_cycle); fclose(f); } }
+        else DeleteFileW(p);
+        g_dn_switch = on; g_dn_check_t = GetTickCount64();
+        logf("day and night: %s (pause menu)", on ? "ON" : "off");
+    }
+    sprintf_s(txt, "Day and Night: %s", g_dn_switch == 1 ? "ON" : "OFF");
+    return (INT64)(ULONG_PTR)txt;
+}
 static void dn_step() {                                          // game thread, every drawn frame
     ULONGLONG now = GetTickCount64();
     if (now - g_dn_check_t > 3000 && g_dn_state < 1) {

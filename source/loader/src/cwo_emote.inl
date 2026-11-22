@@ -117,7 +117,7 @@ static void em_step() {                                          // CwoOverlayFr
         for (int p = 0; p < 4 && !a; p++)
             if (acts[p] && *(int *)(acts[p] + 0x20) && *(int *)(acts[p] + 0x30)) a = acts[p];   // the first local human
         if (!a) return;
-        if (*(int *)(a + 0x12f04) != 0) { set_status("Emotes play while you stand still"); return; }
+        if (*(int *)(a + 0x12f04) != 0) { set_status("Poses play while you stand still"); return; }
         PFN_IN_REQ req = (PFN_IN_REQ)(g_base + 0x252510);
         if (slot == 1001 || slot == 1002) {                     // v5.188.62 our own Wave / Bow
             const char *nm = slot == 1001 ? EM_WAVE : EM_BOW;
@@ -143,12 +143,20 @@ static void em_step() {                                          // CwoOverlayFr
         if (slot >= 130) {                                      // v5.192.4 only when this fighter has that EX motion file
             const char *folder = (const char *)(*(ULONG_PTR *)(a + 0x12f00 + 0xbd0) + 0x12cb8);
             char fd[132], fn[16]; strncpy_s(fd, folder, _TRUNCATE); sprintf_s(fn, "exmot%ld.ala", slot - 130);
-            if (*(int *)(a + 0x12f00 + 0xa68) != 0) { set_status("Emote: a motion is still loading - try again"); return; }
-            if (!em_own_file(fd, fn)) { set_status("Emote: this fighter has no such pose"); logf("emote: %s not found for '%s' - not asked for", fn, fd); return; }
+            // v5.200.1 (owner 2026-11-22): the hero (folder nasi) and
+            // every other folder without the game's exmot files gets no pose - only the playable characters (pc..) and enemies (enm..)
+            const char *leaf = strrchr(fd, '\\'); leaf = leaf ? leaf + 1 : fd;
+            bool kind_ok = !_strnicmp(leaf, "pc", 2) || !_strnicmp(leaf, "enm", 3);
+            if (*(int *)(a + 0x12f00 + 0xa68) != 0) { set_status("Pose: a motion is still loading - try again"); return; }
+            if (!kind_ok || !em_own_file(fd, fn)) {
+                set_status("Poses: playable characters and enemies only");
+                logf("pose: %s not there for '%s' (%s) - not asked for", fn, fd, kind_ok ? "file missing" : "not a playable character or enemy");
+                return;
+            }
         }
         g_em_watch_a = a; g_em_watch_until = GetTickCount64() + 4000; g_em_play_a = a; g_em_play_until = GetTickCount64() + 3000;
         req(a, (int)slot, 2, -1);
-        char m[64]; sprintf_s(m, "Emote: %s", nm); set_status(m);
+        char m[64]; sprintf_s(m, "Pose: %s", nm); set_status(m);
         logf("emote: motion %ld (%s) asked for player 1", slot, nm);
     } __except (EXCEPTION_EXECUTE_HANDLER) { logf("emote: the fighter could not be read - skipped"); }
 }

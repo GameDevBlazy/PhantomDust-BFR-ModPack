@@ -140,7 +140,8 @@ static INT64 lt_native(int op, INT64 *args);
 static INT64 mask6_native(int op, INT64 *args);                 // cwo_schoolcheck.inl (included later)
 static INT64 mask6_icon_native(INT64 *args);                   // cwo_schoolcheck.inl
 static INT64 st_native(int op);
-static INT64 el_native(int op);                                 // cwo_effectlab.inl (included later)                                 // cwo_stagetheme.inl (included later)
+static INT64 el_native(int op);
+static INT64 dn_native(int op);                                 // cwo_daynight.inl (included later)                                 // cwo_effectlab.inl (included later)                                 // cwo_stagetheme.inl (included later)
 static int st_next();
 static const char *st_name(int t);
 static INT64 __fastcall forge_native(INT64 *args) {
@@ -166,6 +167,7 @@ static INT64 __fastcall forge_native(INT64 *args) {
     if (op == 55 || op == 56) return lt_native(op, args);         // v5.29 the Xbox Live lobby's game type (build_live_gametype.py)
     if (op >= 80 && op <= 82) return bfr_native(op, args);        // v5.56 the Lab's Battle for Reality rows (build_lab_bfr.py)
     if (op == 116 || op == 117) return bn_pause_lock_native(op);
+    if (op == 128 || op == 129) return dn_native(op);   // v5.200.0 the pause menu's Day and Night row (build_pause_daynight.py)
     if (op == 126 || op == 127) return el_native(op);   // v5.193.0 the Lab's Effect Lab row / 127: its page hides while it shows                          // v5.193.0 the Lab's Effect Lab row (build_lab_effectlab.py)
     if (op == 124 || op == 125) return st_native(op);              // v5.192.0 the pause menu's Theme row (build_pause_theme.py)
     if (op == 119) return fb_native(args);                       // v5.154 main menu FEEDBACK / TO-DO LIST (build_mainmenu_feedback.py)
