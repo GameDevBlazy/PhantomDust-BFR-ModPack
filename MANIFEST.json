@@ -1,10 +1,10 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.79",
+ "version": "1.50.80",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
-  "launcher/CwoLaunch.exe": "ee1276b7c009e81e069027cad7c358e291f5e2c322e2e968d83095bd447a6450",
-  "launcher/CwoLoader.dll": "fa3a0c4f67f644b5915697ebb29d01e6d92ccdc652fcc4d47b34135abeb0afe1",
+  "launcher/CwoLaunch.exe": "09716fff38f1d458cd4e88232724534b0629384320a2b62fc8e6805d8c915e1a",
+  "launcher/CwoLoader.dll": "6521974407259be40004b03ab1f8244dd4b1b7c890f6f14b057b1ceb78e48c27",
   "data/CwoBFR.txt": "234510c13cb2e6ba0028caab1acf8376c7b37e3f9580156aa241e157db4ee3b0",
   "data/CwoNewSkills.txt": "269a0c4265a5271ef279e9e94d236ae7a4954ea90eb03c18bf5487a54af1f758",
   "data/CwoStageFx.txt": "b10000615c88c37ffdd9ac02e0dd763e37a45a37e55e7dd9292de42931ffb5fa",
@@ -20,8 +20,8 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "47be54a0cc3728bd91ded4367d7406d1ef759267c3f8d86727ec6dfa54790e0c",
-  "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "6c5895d48686e9aece26bf336e7bcc7f83d7e15fee20cb421ce0701b96754bab",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "96b420db3e50cdf9f05de1a5a121535879e0282947e419adcac85ec822a970f7",
+  "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "88bb8364cf4ead2916a9a7ad59fc4b2c7572ec4b579487a31613000f69289bf5",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "ed22d0c22b62d69ec5ccaf2f97765630d94170688120660fd787f2de1cc84f4d",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
   "data/patches/Assets/Data/Menu/livecharasel_en.ssb.cwopatch": "02afab9cdb245f3d8b7a78b799594a3d32f33a5aa9ebc69a7496d127812c6b07",
@@ -1341,7 +1341,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "cc44897f67ce8adcc773f9678ebe79066ee8c2d36498ac3278b9ebd679510830"
+  "README.md": "2895a90f1737f927ccd17f8851cdd7ec84c37fbb3a8c323bb96d802b0a427a7a"
  },
  "patches": [
   {
@@ -1387,7 +1387,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "346ee4f77bb16a327386122350566516387a063f9d411e54d486081a3e0db05e",
+   "result_sha256": "05d69f5e7852e11a0e4091411ab26b700379ed5d1f9fdc375317867ab52cc3b0",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
@@ -1395,10 +1395,10 @@
   {
    "file": "Assets/Data/Menu/pausemenu_en.ssb",
    "clean_sha256": "4386ea26b756b310da0ca86cb61337cfdcf2e6c6af7e5dd8518aa638ece02333",
-   "result_sha256": "99f911f3cf4d1320e64c9cebb56f3cae8efe77120c68da44b7b43b13d01dd060",
-   "our_bytes": 158,
-   "copied_from_your_file": 2859,
-   "carries": "pause menu (offline match / 2P VS): Teammate Lock-on row, A turns it on / off; 1.50.77 Theme row (A = the next visual theme, live)"
+   "result_sha256": "f99f932a9dc677c0eed0239b40693c598d0907bfe62dc8ffd6ae21a9b6a0e5a5",
+   "our_bytes": 230,
+   "copied_from_your_file": 2875,
+   "carries": "pause menu (offline match / 2P VS): Teammate Lock-on row, A turns it on / off; 1.50.77 Theme row (A = the next visual theme, live); 1.50.80 Day and Night row (A = on / off)"
   },
   {
    "file": "Assets/Data/Menu/vsmenu_en.ssb",

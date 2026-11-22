@@ -38,7 +38,7 @@ static INT64 dn_native(int op) {
         wchar_t p[MAX_PATH];
         swprintf_s(p, MAX_PATH, L"%sCwoDayNight.txt", g_dir);
         int on = g_dn_switch == 1 ? 0 : 1;
-        if (on && (ed_online() || g_bfr_edition)) on = 0;
+        if (on && ed_online()) on = 0;
         if (on) { FILE *f = NULL; if (cwo_wfopen(&f, p, L"w") == 0 && f) { fprintf(f, "cycle %d\n", g_dn_cycle); fclose(f); } }
         else DeleteFileW(p);
         g_dn_switch = on; g_dn_check_t = GetTickCount64();
@@ -61,7 +61,7 @@ static void dn_step() {                                          // game thread,
         }
         if (on != g_dn_switch) { logf("day and night: %s (CwoDayNight.txt, a day = %d s)", on ? "ON for offline matches" : "off", g_dn_cycle); g_dn_switch = on; }
     }
-    bool want = g_dn_switch == 1 && g_in_match && !ed_online() && !g_bfr_edition;
+    bool want = g_dn_switch == 1 && g_in_match && !ed_online();   // v5.201.0 BFR too (owner 2026-11-22)
     __try {
         float *L = (float *)(g_base + RVA_LIGHTS);
         if (!want) {

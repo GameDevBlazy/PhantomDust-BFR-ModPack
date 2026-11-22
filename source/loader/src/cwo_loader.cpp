@@ -36,7 +36,7 @@ using ABI::Windows::Gaming::Input::IGamepad;
 using ABI::Windows::Gaming::Input::IGamepadStatics;
 using ABI::Windows::Gaming::Input::GamepadVibration;
 
-#define CWO_VERSION "5.200.1"
+#define CWO_VERSION "5.201.0"
 
 static const ULONG_PTR RVA_ACTORS = 0x4bc9d8;
 static const ULONG_PTR RVA_STAGE = 0x3e0304;

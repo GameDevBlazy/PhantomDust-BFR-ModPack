@@ -45,7 +45,7 @@ static const MlMod ML_BUILTIN[] = {
     {"Compact stage list", "One row per stage family in the split-screen STAGE LIST; D-pad left / right for its versions.", 1},   // v5.186.1 BFR: in its Added maps row
     {"Train a CPU (new, test)", "LB here: record your offline matches (CwoTrain folder). RB here: a CPU replays your newest recording, then fights on its own once the match goes differently.", 0},   // v5.188.54
     {"Own idle (new, test)", "Every fighter's long idle is our own: breathing, a weight shift, a look around. Stand still to see it.", 1},   // v5.188.54
-    {"Day and night (new, test)", "PAUSE MENU row Day and Night (A = on / off, at once) or L3 here: in offline matches the stage's light runs from day to sunset, dusk and back (4 minutes a day); the sky picture stays as it is.", 1},   // v5.188.58
+    {"Day and night (new, test)", "PAUSE MENU row Day and Night (A = on / off, at once) or L3 here: in offline matches the stage's light runs from day to sunset, dusk and back (4 minutes a day); the sky picture stays as it is.", 0},   // v5.188.58
     {"Poses (new, test)", "In an offline match, hold RB and press the D-pad while you stand: Up your intro pose, Right your second intro, Left your third intro, Down your victory pose - the game's own poses of your fighter.", 0},   // v5.199.1 BFR too
     {"Ultrawide (new, test)", "On a screen wider than 16:9 (21:9, 32:9) the 3D view fills the whole screen in offline play; the HUD and menus stay in the middle. Put off in CwoUltrawide.txt to turn it off.", 0},   // v5.189.0
     {"Campaign rules (new, test)", "CwoCampaign.txt in the loader folder: after A B open Q, lock Q until A, open Q, phase P, chapter C - your own campaign order and jumps on your save. Offline; shows when an area loads.", 1},   // v5.190.0
@@ -179,7 +179,7 @@ static void ml_input(WORD pressed) {                              // pad thread 
         } else ml_said("The backup could not be asked for.");
     }
     if (pressed & BTN_Y) { dc_open_invite(); ml_said("Discord invite: discord.gg/hSAER5cNMu"); rumble(1); }   // v5.188.49 Join our Discord
-    if (!g_bfr_edition && (pressed & BTN_LTHUMB)) {               // v5.188.58 day and night switch (v5.200.0 also the pause menu row) (cwo_daynight.inl)
+    if ((pressed & BTN_LTHUMB)) {                                // v5.188.58 day and night switch (v5.200.0 also the pause menu row; v5.201.0 BFR too) (cwo_daynight.inl)
         wchar_t p[MAX_PATH];
         swprintf_s(p, MAX_PATH, L"%sCwoDayNight.txt", g_dir);
         if (GetFileAttributesW(p) != INVALID_FILE_ATTRIBUTES) { DeleteFileW(p); ml_said("Day and night: OFF."); }

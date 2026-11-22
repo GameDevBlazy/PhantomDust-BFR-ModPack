@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.79
+# BFR mod pack 1.50.80
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.80**: loader 5.201.0: DAY AND NIGHT - the pause menu's Day and Night row (A = on / off, at once) or MOD LIST L3: in
+  offline matches the stage's light runs from day to sunset, dusk and back (4 minutes a day).
 - **1.50.79**: loader 5.200.1: poses only for the playable characters and enemies (the campaign hero has no pose files: a
   line says so instead).
 - **1.50.78**: loader 5.199.1: POSES - in an offline match hold RB and press the D-pad while you stand: your fighter's own intro
