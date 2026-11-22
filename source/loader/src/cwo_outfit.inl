@@ -111,7 +111,10 @@ static bool co_tex(const Alr &m, int &ti, unsigned &toff, int &w, int &h, int &m
 }
 
 // each texel's section (RG_UPPER / RG_MIDDLE / RG_LOWER, 0 = none) from the nearest piece vertex
-static bool co_labels(const Alr &T, const Alr &R, int W, std::vector<char> &lab) {
+static const int RG_FOOT_CO = 6;                                 // v5.188.60 boots (outfit labels only)
+static const int RG_HAND_CO = 7;                                 // v5.188.61 gloves (outfit labels only)
+static bool co_labels(const Alr &T, const Alr &R, int W, std::vector<char> &lab, bool arms = false, bool feet = false,
+                      bool hands = false) {
     JMap jT;
     if (!ref_map(R, T, false, &T, jT)) return false;
     std::vector<int> tpar;
@@ -123,6 +126,13 @@ static bool co_labels(const Alr &T, const Alr &R, int W, std::vector<char> &lab)
     if (root(82) >= 0) { auto s = subtree(tpar, root(82)); lo.insert(s.begin(), s.end()); }
     if (root(113) >= 0) { auto s = subtree(tpar, root(113)); lo.insert(s.begin(), s.end()); }
     if (root(23) >= 0) { auto s = subtree(tpar, root(23)); for (int j : s) if (!up.count(j)) mid.insert(j); }
+    // v5.188.59 arms (reference pc00a0: the clavicle chains 25 and 47) - only when the Sleeves color is set
+    std::set<int> armj;
+    if (arms) for (int r0 : {25, 47}) if (root(r0) >= 0) { auto s = subtree(tpar, root(r0)); armj.insert(s.begin(), s.end()); }
+    std::set<int> footj;                                          // v5.188.60 feet (reference pc00a0: the ankles 87 and 101)
+    if (feet) for (int r0 : {87, 101}) if (root(r0) >= 0) { auto s = subtree(tpar, root(r0)); footj.insert(s.begin(), s.end()); }
+    std::set<int> handj;                                          // v5.188.61 hands (reference pc00a0: the wrists 31 and 52)
+    if (hands) for (int r0 : {31, 52}) if (root(r0) >= 0) { auto s = subtree(tpar, root(r0)); handj.insert(s.begin(), s.end()); }
     std::vector<int> treg(tpar.size(), RG_NONE);
     for (int j = 0; j < (int)tpar.size(); j++) treg[j] = up.count(j) ? RG_UPPER : lo.count(j) ? RG_LOWER : mid.count(j) ? RG_MIDDLE : RG_NONE;
     std::vector<std::pair<Piece, Shares>> sh;
@@ -148,7 +158,23 @@ static bool co_labels(const Alr &T, const Alr &R, int W, std::vector<char> &lab)
             int u = (unsigned short)rd16(&vb[o + 12]) & 0x7FFF, t = (unsigned short)rd16(&vb[o + 14]) & 0x7FFF;
             int x = (int)((long long)u * W / 32768), y = (int)((long long)t * W / 32768);
             size_t p = (size_t)y * W + x;
-            if (!lab[p]) { lab[p] = (char)sec; q.push_back((int)p); }
+            int vsec = sec;
+            if (!armj.empty() && sec == RG_MIDDLE) {               // v5.188.59 this vertex's strongest joint is an arm joint
+                int ca = vb[o + 20], wa = vb[o + 18], cbb = vb[o + 22], wb = vb[o + 17];
+                int slot = pyfloordiv((wa >= wb ? ca : cbb) - 120, 3);
+                if (slot >= 0 && slot < (int)pr.first.pal.size() && armj.count(pr.first.pal[slot])) vsec = RG_ARM;
+            }
+            if (!handj.empty() && sec == RG_MIDDLE) {              // v5.188.61 this vertex's strongest joint is a hand joint
+                int ca = vb[o + 20], wa = vb[o + 18], cbb = vb[o + 22], wb = vb[o + 17];
+                int slot = pyfloordiv((wa >= wb ? ca : cbb) - 120, 3);
+                if (slot >= 0 && slot < (int)pr.first.pal.size() && handj.count(pr.first.pal[slot])) vsec = RG_HAND_CO;
+            }
+            if (!footj.empty() && sec == RG_LOWER) {               // v5.188.60 this vertex's strongest joint is a foot joint
+                int ca = vb[o + 20], wa = vb[o + 18], cbb = vb[o + 22], wb = vb[o + 17];
+                int slot = pyfloordiv((wa >= wb ? ca : cbb) - 120, 3);
+                if (slot >= 0 && slot < (int)pr.first.pal.size() && footj.count(pr.first.pal[slot])) vsec = RG_FOOT_CO;
+            }
+            if (!lab[p]) { lab[p] = (char)vsec; q.push_back((int)p); }
         }
     }
     for (size_t h = 0; h < q.size(); h++) {                      // breadth-first: each texel the nearest seed's section
@@ -171,7 +197,8 @@ static void co_tint(const int *rgb, double L, int *c) {          // the chosen c
 }
 
 // recolours the colour texture of `file` (a whole .alr) by sections; false = no colour texture or the transparency rule
-static bool co_recolour(Bytes &file, const std::vector<char> &lab, int skin, int top, int bottom) {
+static bool co_recolour(Bytes &file, const std::vector<char> &lab, int skin, int top, int bottom, int arms = 0, int boots = 0,
+                        int gloves = 0) {
     Alr m;
     if (!alr_parse(file, m)) return false;
     int ti, w, h, mips; unsigned toff; size_t size;
@@ -190,9 +217,12 @@ static bool co_recolour(Bytes &file, const std::vector<char> &lab, int skin, int
         bool is_skin = 8 <= hu && hu <= 36 && 0.22 <= s && s <= 0.72 && 0.22 <= v && v <= 0.98;
         double L = th_lum(c[0], c[1], c[2]);
         int rgb[3];
-        if (is_skin && skin > 0 && lab[i] != RG_LOWER) { co_skin_rgb(skin, rgb); co_tint(rgb, L, c); }
-        else if (!is_skin && lab[i] == RG_MIDDLE && top > 0) { co_rgb(top, rgb); co_tint(rgb, L, c); }
-        else if (!is_skin && lab[i] == RG_LOWER && bottom > 0) { co_rgb(bottom, rgb); co_tint(rgb, L, c); }
+        if (is_skin && skin > 0 && lab[i] != RG_LOWER && lab[i] != RG_FOOT_CO) { co_skin_rgb(skin, rgb); co_tint(rgb, L, c); }
+        else if (!is_skin && lab[i] == RG_FOOT_CO && boots > 0) { co_rgb(boots, rgb); co_tint(rgb, L, c); }   // v5.188.60 boots
+        else if (!is_skin && lab[i] == RG_HAND_CO && gloves > 0) { co_rgb(gloves, rgb); co_tint(rgb, L, c); }   // v5.188.61 gloves
+        else if (!is_skin && (lab[i] == RG_ARM || lab[i] == RG_HAND_CO) && arms > 0) { co_rgb(arms, rgb); co_tint(rgb, L, c); }   // v5.188.59 sleeves
+        else if (!is_skin && (lab[i] == RG_MIDDLE || lab[i] == RG_ARM || lab[i] == RG_HAND_CO) && top > 0) { co_rgb(top, rgb); co_tint(rgb, L, c); }
+        else if (!is_skin && (lab[i] == RG_LOWER || lab[i] == RG_FOOT_CO) && bottom > 0) { co_rgb(bottom, rgb); co_tint(rgb, L, c); }
         img[i * 3] = c[0]; img[i * 3 + 1] = c[1]; img[i * 3 + 2] = c[2];
     }
     Bytes data;
@@ -240,7 +270,8 @@ static bool co_recolour(Bytes &file, const std::vector<char> &lab, int skin, int
     return true;
 }
 
-// the whole outfit: v[0] character, v[1] outfit 1-4, v[2] skin, v[3] head accessory (-1 none), v[4] jacket, v[5] pants
+// the whole outfit: v[0] character, v[1] outfit 1-4, v[2] skin, v[3] head accessory (-1 none), v[4] jacket, v[5] pants,
+// v[17] sleeves (v5.188.59), v[18] boots (v5.188.60), v[19] gloves (v5.188.61)
 static bool co_build(const int *v, Bytes &out, char *why, size_t nwhy) {
     int ch = v[0], k = v[1] - 1;
     if (ch < 0 || ch >= CO_NCHAR || k < 0 || k > 14) { sprintf_s(why, nwhy, "no such character / outfit"); return false; }   // v5.69 15 slots
@@ -262,10 +293,10 @@ static bool co_build(const int *v, Bytes &out, char *why, size_t nwhy) {
         out = alr_build(o);
         if (!alr_parse(out, T)) { sprintf_s(why, nwhy, "rebuild failed"); return false; }
     }
-    if (v[2] > 0 || v[4] > 0 || v[5] > 0) {
+    if (v[2] > 0 || v[4] > 0 || v[5] > 0 || v[17] > 0 || v[18] > 0 || v[19] > 0) {   // v5.188.61 v[19] Gloves   // v5.188.59 v[17] Sleeves, v5.188.60 v[18] Boots
         std::vector<char> lab;
-        if (!co_labels(T, R, 512, lab)) { sprintf_s(why, nwhy, "the outfit's pieces could not be sorted into jacket / pants"); return false; }
-        if (!co_recolour(out, lab, v[2], v[4], v[5])) { sprintf_s(why, nwhy, "the colors could not be written (texture or transparency rule)"); return false; }
+        if (!co_labels(T, R, 512, lab, v[17] > 0, v[18] > 0, v[19] > 0)) { sprintf_s(why, nwhy, "the outfit's pieces could not be sorted into jacket / pants"); return false; }
+        if (!co_recolour(out, lab, v[2], v[4], v[5], v[17], v[18], v[19])) { sprintf_s(why, nwhy, "the colors could not be written (texture or transparency rule)"); return false; }
     }
     return true;
 }
@@ -543,6 +574,7 @@ static void co_prev_step() {                                     // game thread 
             return;
         }
         ULONG_PTR v = cc_viewer();
+        pv_watch(g_co_pw, "Create an Outfit", st, g_co_t);
         if (st == 2) {
             if (!v) {
                 if (now - g_co_t > 10000) { logf("create an outfit: the viewer did not start"); InterlockedExchange(&g_co_prev, 3); }
@@ -599,7 +631,19 @@ extern "C" __declspec(dllexport) int CwoOutfitTest(const wchar_t *install, const
                                                    int headx, int top, int bottom, const wchar_t *out_path) {
     wcscpy_s(g_install, install);
     wcscpy_s(g_dir, data_dir);
-    int v[6] = {ch, outfit, skin, headx, top, bottom};
+    int v[40] = {ch, outfit, skin, headx, top, bottom};          // v5.188.59: 40 like an EdItem (co_build reads v[17])
+    Bytes b;
+    char why[128] = "";
+    if (!co_build(v, b, why, sizeof(why))) { logf("outfit test: %s", why); return -1; }
+    return pf_write(out_path, b.data(), (DWORD)b.size()) ? 1 : -2;
+}
+// v5.188.59 the same with a Sleeves color (offline check of the arm labels)
+extern "C" __declspec(dllexport) int CwoOutfitSleevesTest(const wchar_t *install, const wchar_t *data_dir, int ch, int outfit,
+                                                          int top, int bottom, int sleeves, const wchar_t *out_path) {
+    wcscpy_s(g_install, install);
+    wcscpy_s(g_dir, data_dir);
+    int v[40] = {ch, outfit, 0, -1, top, bottom};
+    v[17] = sleeves % 100; v[18] = sleeves / 100 % 100; v[19] = sleeves / 10000;   // v5.188.61 test: sleeves + 100 x boots + 10000 x gloves
     Bytes b;
     char why[128] = "";
     if (!co_build(v, b, why, sizeof(why))) { logf("outfit test: %s", why); return -1; }

@@ -43,6 +43,15 @@ static const MlMod ML_BUILTIN[] = {
     {"Pack check-in", "Once per install and after each pack update: your gamertag and the pack version go to the pack's author, so the pack's author can see who plays the pack."},   // v5.180.1 in BFR too
     {"Crash shield", "An effect drawn after its texture was freed no longer closes the game (offline)."},   // v5.180.1 in BFR too
     {"Compact stage list", "One row per stage family in the split-screen STAGE LIST; D-pad left / right for its versions.", 1},   // v5.186.1 BFR: in its Added maps row
+    {"Train a CPU (new, test)", "LB here: record your offline matches (CwoTrain folder). RB here: a CPU replays your newest recording, then fights on its own once the match goes differently.", 0},   // v5.188.54
+    {"Own idle (new, test)", "Every fighter's long idle is our own: breathing, a weight shift, a look around. Stand still to see it.", 1},   // v5.188.54
+    {"Day and night (new, test)", "L3 here: in offline matches the stage's light runs from day to sunset, dusk and back (4 minutes a day); the sky picture stays as it is.", 1},   // v5.188.58
+    {"Emotes (new, test)", "In an offline match, hold View and press the D-pad while you stand: Up our own Look around, Right our own Wave, Left our own Bow, Down the game's victory and intro poses in turn.", 1},   // v5.188.56
+    {"Ultrawide (new, test)", "On a screen wider than 16:9 (21:9, 32:9) the 3D view fills the whole screen in offline play; the HUD and menus stay in the middle. Put off in CwoUltrawide.txt to turn it off.", 0},   // v5.189.0
+    {"Campaign rules (new, test)", "CwoCampaign.txt in the loader folder: after A B open Q, lock Q until A, open Q, phase P, chapter C - your own campaign order and jumps on your save. Offline; shows when an area loads.", 1},   // v5.190.0
+    {"Visual themes (new, test)", "PAUSE MENU row Theme (A = next): HD Remaster, Anime / Cel, Neon Ruins, Overgrown, Frozen Earth or OFF - the stage on screen changes at once. R3 here picks it before a match. Edgar's outfit 1 from the next load. Textures only, offline.", 0},   // v5.191.0
+    {"Effect Lab (new)", "Lab > Effect Lab (Split Screen, Xbox Live menu or the mission terminal): pick a stage and play any skill or any of the game's effects on a target - parts and frames, motions, wind, slow motion and frame step, camera mode. Offline.", 0},   // v5.199.0
+    {"Texture Size Test (new, test)", "Stage list: three floors with the same picture at 512, 1024 and 2048 - do the bigger textures draw sharper?", 1},   // v5.188.54
 };
 static const int ML_ROWS = 11, ML_W = 470, ML_CHARS = 50;    // v5.170.4 11 rows: the legend sits above the game's own notice box ("Skill Update ... applied")
 // g_ml_open: cwo_loader.cpp
@@ -169,6 +178,33 @@ static void ml_input(WORD pressed) {                              // pad thread 
             ml_said("Your save is backed up at your next start."); logf("mod list: save backup asked for"); rumble(1);
         } else ml_said("The backup could not be asked for.");
     }
+    if (pressed & BTN_Y) { dc_open_invite(); ml_said("Discord invite: discord.gg/hSAER5cNMu"); rumble(1); }   // v5.188.49 Join our Discord
+    if (!g_bfr_edition && (pressed & BTN_LTHUMB)) {               // v5.188.58 day and night switch (cwo_daynight.inl)
+        wchar_t p[MAX_PATH];
+        swprintf_s(p, MAX_PATH, L"%sCwoDayNight.txt", g_dir);
+        if (GetFileAttributesW(p) != INVALID_FILE_ATTRIBUTES) { DeleteFileW(p); ml_said("Day and night: OFF."); }
+        else { FILE *f = NULL; if (cwo_wfopen(&f, p, L"w") == 0 && f) { fputs("cycle 240\n", f); fclose(f); } ml_said("Day and night: ON for offline matches."); }
+        rumble(1);
+    }
+    if ((pressed & BTN_RTHUMB)) {                                // v5.192.0 visual themes (v5.199.0 BFR too): R3 = the next theme (cwo_stagetheme.inl)
+        char m[80]; sprintf_s(m, "Theme: %s (from the next stage load)", st_name(st_next()));
+        ml_said(m); rumble(1);
+    }
+    if ((pressed & (BTN_LB | BTN_RB))) {                             // v5.188.54 Train a CPU switches (v5.199.0 BFR too): the files the
+        bool rec = (pressed & BTN_LB) != 0;                           // recorder / replay read (cwo_trainrec / cwo_trainplay)
+        wchar_t p[MAX_PATH];
+        swprintf_s(p, MAX_PATH, rec ? L"%sCwoTrainRecord.txt" : L"%sCwoTrainPlay.txt", g_dir);
+        if (GetFileAttributesW(p) != INVALID_FILE_ATTRIBUTES) {
+            DeleteFileW(p);
+            ml_said(rec ? "Train a CPU: recording OFF." : "Train a CPU: replay OFF - CPUs fight on their own.");
+        } else {
+            FILE *f = NULL;
+            if (cwo_wfopen(&f, p, L"w") == 0 && f) { fputs(rec ? "on\n" : "latest\n", f); fclose(f); }
+            ml_said(rec ? "Train a CPU: recording ON for offline matches." : "Train a CPU: replay ON - a CPU plays your newest recording.");
+        }
+        logf("mod list: Train a CPU %s switched", rec ? "recording" : "replay");
+        rumble(1);
+    }
     if (pressed & (BTN_A | BTN_B)) { InterlockedExchange(&g_ml_open, 0); InterlockedExchange(&g_ed_game_hold, 1); rumble(1); }   // v5.86 its A / B stay here
 }
 static void ml_draw() {
@@ -202,7 +238,7 @@ static void ml_draw() {
     box(X + ML_W - 14, Y + 28, 0xFF2A3A3A, 6, bar_h);
     box(X + ML_W - 14, Y + 28 + ky, accent, 6, knob);
     if (g_ml_said[0] && GetTickCount64() - g_ml_said_t < 9000) put(X, Y + 34 + LH * ML_ROWS, g_ml_said, 0xFFFFE070);
-    else put(X, Y + 34 + LH * ML_ROWS, "Up/Down scroll   X back up my save   A/B close", 0xFFC8C8C8);
+    else put(X, Y + 34 + LH * ML_ROWS, "Up/Down  X backup  Y Discord  LB/RB Train  A/B close", 0xFFC8C8C8);
     memcpy(rgba, s_rgba, sizeof(s_rgba));
     *space = s_space; *gap = s_gap; *fh = s_h; *fw = s_w; *x0 = s_x0;
 }

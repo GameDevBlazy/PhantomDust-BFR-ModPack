@@ -1550,6 +1550,10 @@ static void sc_tint_restore() {                              // every colour wor
 }
 
 static volatile LONG g_scp_fire_now;                         // below: the R3 loop uses the skill again at once
+// v5.188.49 (owner 2026-11-21): the test keys of Create a Skill's Keep testing (cwo_forge.inl) - B uses the skill once
+static volatile LONG g_sct_play;
+static const char *SCT_KEYS = "B play   Start pause   R3 loop   L3 HUD   X undo   Y redo";
+static bool sc_loop_here() { return g_fmenu == 5 || (g_ftesting && g_ed_mode == 1 && !g_fmenu); }   // the R3 loop: menu or test
 static void sc_preview() {                                  // v5.32: a colour change shows on the skill's next use
     if (g_sc_k < 0) { set_status("Color: change any value first (the skill goes live)"); return; }
     if (g_fx_state != 1) { set_status("Color: the effect load hook is off (see the log)"); return; }
@@ -1713,7 +1717,7 @@ static void sc_preview_step(FxGame &g, bool in_match) {
         sc_loop_end(in_match);
         set_status("Preview: the change applies when the last use has finished (a few seconds), then the loop goes on");
     }
-    if (g_scp_on && (req || !in_match || g_fmenu != 5)) {
+    if (g_scp_on && (req || !in_match || !sc_loop_here())) {   // v5.188.49 also in the test
         sc_loop_end(in_match);
         InterlockedExchange(&g_scp_resume, 0);
         if (req) set_status("Skill preview off");
@@ -1767,12 +1771,12 @@ static void sc_preview_step(FxGame &g, bool in_match) {
             }
         } __except (EXCEPTION_EXECUTE_HANDLER) { g_sc_keep_mask = 0; }
     }
-    if (!req && !g_scp_on && g_scp_resume && in_match && g_fmenu == 5 && !sc_skill_busy(g_sc_k >= 0 ? g_sc.id : g_sc.src)) {
+    if (!req && !g_scp_on && g_scp_resume && in_match && sc_loop_here() && !sc_skill_busy(g_sc_k >= 0 ? g_sc.id : g_sc.src)) {
         InterlockedExchange(&g_scp_resume, 0);                 // the held change is written: the loop again
         bool written = g_sc_k < 0 || g_sc_k >= g_ns_n || !g_ns[g_sc_k].dirty;
         if (written) req = true; else InterlockedExchange(&g_scp_resume, 1);
     }
-    if (req && in_match && !g_scp_on && actor && g_fmenu == 5) {   // R3: the loop starts
+    if (req && in_match && !g_scp_on && actor && sc_loop_here()) {   // R3: the loop starts (v5.188.49 also in the test)
         g_scp_skill = g_sc_k >= 0 ? g_sc.id : g_sc.src;
         __try {
             g_scp_cam_keep = *(int *)(g_base + RVA_SCP_CAM_ON);
@@ -1795,6 +1799,22 @@ static void sc_preview_step(FxGame &g, bool in_match) {
         set_status(msg);
         logf("Skill Creator: preview loop of skill %d in hand slot %d", g_scp_skill, g_scp_k + 1);
     }
+    // v5.188.49 B in Create a Skill's test: the skill once - into a free hand slot (the game's capture) if no slot holds it,
+    // then the game's queued use (fighter + 0x61f4), as the R3 loop does
+    if (g_sct_play && actor && !g_scp_on) {
+        int sk = g_sc_k >= 0 ? g_sc.id : g_sc.src, k = -1;
+        __try {
+            for (int i = 0; i < 4 && k < 0; i++) if (sc_slot_has(sc_hand_slot(actor, i), sk)) k = i;
+            for (int i = 0; i < 4 && k < 0; i++) if (sc_slot_free(sc_hand_slot(actor, i))) k = i;
+            if (k < 0) { InterlockedExchange(&g_sct_play, 0); set_status("B: all four hand slots hold cards - use one first"); }
+            else if (sc_fighter_free(actor) && sc_slot_free(sc_hand_slot(actor, k))) {
+                char *slot = sc_hand_slot(actor, k);
+                if (!sc_slot_has(slot, sk)) sc_capture(slot, sk);          // the use follows on the next frame
+                else { *(int *)(actor + SCP_USE_REQ) = k; InterlockedExchange(&g_sct_play, 0); set_status("Played once (B)"); }
+            }
+        } __except (EXCEPTION_EXECUTE_HANDLER) { InterlockedExchange(&g_sct_play, 0); }
+    }
+    if (!in_match || !g_ftesting) InterlockedExchange(&g_sct_play, 0);
     if (!g_scp_on || !actor) return;
     __try {
         // the camera: right stick turns, left stick up / down comes closer / goes back

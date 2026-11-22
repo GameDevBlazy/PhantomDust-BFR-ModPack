@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.76
+# BFR mod pack 1.50.77
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,15 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.77**: loader 5.199.0 (the MODS work of 21-22 Nov): EFFECT LAB - Lab > Effect Lab (Split Screen, the Xbox Live menu, the
+  mission terminal) loads a stage of your choice with a target: play any skill or any of the game's 614 effects, parts with their
+  frames, motions, wind, slow motion (RT), freeze (LT) and frame step, camera mode, map / grid / white background; VISUAL THEMES -
+  the pause menu's Theme row turns the stage HD Remaster, Anime / Cel, Neon Ruins, Overgrown or Frozen Earth at once, offline;
+  ULTRAWIDE - a 21:9 / 32:9 screen sees more of the stage (16:9 unchanged); Create an Outfit: Sleeves color and Boots color rows;
+  Train a CPU (MOD LIST LB records your matches, RB lets a CPU replay them); MOD LIST Y opens the Discord invite. FIXES: Create a
+  Skill's preview keys (B play, R3 loop, X / Y undo / redo only while testing); the Skill Fuser's added effect is loaded when the
+  skill is used (no invisible projectile); the 60 FPS mode no longer pulls jackets into the body (Nanashi's coat); the Single Play
+  lobby comes back after a match; Create an Outfit saves its new rows.
 - **1.50.76**: loader 5.188.48: CREATE > Create a Stage no longer stays on a black screen - if a list does not move on,
   the loader presses again, and it carries on from wherever the game is.
 - **1.50.75**: loader 5.188.47: Create a Skill and the Skill Fuser show every skill - the original 1-374 too - by name, in the

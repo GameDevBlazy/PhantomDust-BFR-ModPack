@@ -139,6 +139,10 @@ static INT64 ad_native(int op, INT64 *args);                    // v5.64 cwo_ars
 static INT64 lt_native(int op, INT64 *args);
 static INT64 mask6_native(int op, INT64 *args);                 // cwo_schoolcheck.inl (included later)
 static INT64 mask6_icon_native(INT64 *args);                   // cwo_schoolcheck.inl
+static INT64 st_native(int op);
+static INT64 el_native(int op);                                 // cwo_effectlab.inl (included later)                                 // cwo_stagetheme.inl (included later)
+static int st_next();
+static const char *st_name(int t);
 static INT64 __fastcall forge_native(INT64 *args) {
     int op = 0;
     __try { op = args ? (int)args[0] : 0; } __except (EXCEPTION_EXECUTE_HANDLER) { op = 0; }
@@ -162,6 +166,8 @@ static INT64 __fastcall forge_native(INT64 *args) {
     if (op == 55 || op == 56) return lt_native(op, args);         // v5.29 the Xbox Live lobby's game type (build_live_gametype.py)
     if (op >= 80 && op <= 82) return bfr_native(op, args);        // v5.56 the Lab's Battle for Reality rows (build_lab_bfr.py)
     if (op == 116 || op == 117) return bn_pause_lock_native(op);
+    if (op == 126 || op == 127) return el_native(op);   // v5.193.0 the Lab's Effect Lab row / 127: its page hides while it shows                          // v5.193.0 the Lab's Effect Lab row (build_lab_effectlab.py)
+    if (op == 124 || op == 125) return st_native(op);              // v5.192.0 the pause menu's Theme row (build_pause_theme.py)
     if (op == 119) return fb_native(args);                       // v5.154 main menu FEEDBACK / TO-DO LIST (build_mainmenu_feedback.py)
     if (op == 118) return ars_made_native(args);                 // v5.152 the Xbox Live arsenal list: skills you made stay offline (build_live_madeskills.py)   // v5.152 the pause menu's Teammate Lock-on row (build_pause_lockon.py)
     if (op == 113 || op == 114) {                                  // v5.112 split-screen OPTIONS "HUD Faces" (build_vs_faces_row.py)
@@ -1983,13 +1989,20 @@ static void f_press(LONG bits, ULONGLONG ms) {
 // loader's presses through the game's lists go through the pad's reading, which never runs without a pad): with no pad the
 // same presses go the game's own key way - bit n of *0x14054ca48 + held 0x1405ae178[n], the menu buttons read live from the
 // key table 0x1403dcd70: 0 Up, 1 Down, 2 Left, 3 Right, 4 A, 5 B, 7 X, 8 Y, 12 Start (Enter). Worker thread, every step.
+// v5.193.0 test helper (owner 2026-11-22: the game sits on the top monitor while the owner's other work keeps the focus): the
+// auto pad's KEY=<name> presses the game's own key table for 150 ms even with a pad connected (keyboard = player 2 there)
+static volatile LONG g_key_test;
+static volatile LONGLONG g_key_test_until;
 static void f_inject_keys_step() {
     static DWORD set;
-    if (g_pad0) { set = 0; return; }
+    bool test = GetTickCount64() < (ULONGLONG)g_key_test_until;
+    if (g_pad0 && !test && !set) return;
+
     static const struct { LONG wgi; int btn; } M[] = {{0x40, 0}, {0x80, 1}, {0x100, 2}, {0x200, 3}, {0x4, 4}, {0x8, 5},
                                                        {0x10, 7}, {0x20, 8}, {0x1, 12}};
     DWORD want = 0;
-    if (GetTickCount64() < (ULONGLONG)g_inject_until) for (const auto &m : M) if (g_inject & m.wgi) want |= 1u << m.btn;
+    if (!g_pad0 && GetTickCount64() < (ULONGLONG)g_inject_until) for (const auto &m : M) if (g_inject & m.wgi) want |= 1u << m.btn;
+    if (test) for (const auto &m : M) if (g_key_test & m.wgi) want |= 1u << m.btn;
     if (want == set) return;
     __try {
         volatile DWORD *keys = (volatile DWORD *)(g_base + 0x54ca48);
@@ -2128,6 +2141,7 @@ static INT64 edm_native(int op, INT64 *args) {                   // game thread 
         bool go = k >= ED_GO_SINGLE && k <= ED_GO_MUSIC;
         InterlockedExchange(&g_ed_direct, (k >= 0 && k < ED_N) || go ? (LONG)k : -1);
         if (k >= 0 && k < ED_N) { InterlockedExchange(&g_ed_from_opt, 0); logf("CREATE menu: %s chosen", ED_SHORT[k]); }   // v5.188.2
+        el_off("another menu entry chosen");                      // v5.194.0
         if (go) logf("main menu: %s chosen", k == ED_GO_SINGLE ? "SINGLE PLAY" : k == ED_GO_RECORDS ? "Records" : k == ED_GO_VISIONS ? "Visions" : "Stage Music");
         return 1;
     }
@@ -2211,18 +2225,32 @@ static void ed_six_step() {
     // lobby again. The result screens (YOU WIN / LOSE, RESULTS) are left to the player.
     {
         static bool s_played;
-        static ULONGLONG s_tap, s_over;
+        static ULONGLONG s_tap, s_over, s_watch, s_wlast;
         if (st == SP_MATCH) { s_played = true; s_over = 0; }
         else if (s_played && !g_in_match && !g_six_auto) {
             if (!s_over) s_over = now;
             if (st == 0) {
                 s_played = false; s_over = 0;
                 InterlockedExchange(&g_sp_entry, 1);
+                // v5.194.3 (in game 2026-11-22: "lobby check: page open 1, session 0" - the lobby was open but only the game's own
+                // debug stage list showed): the lobby is drawn by the session's screen, and the match had ended the session
+                InterlockedExchange(&g_forge_seen_sp, 1);
+                InterlockedExchange(&g_forge_session, 1);
                 ed_reopen(EDP_LOBBY);
+                if (g_el_restart == 1) InterlockedExchange(&g_el_restart, 2);   // v5.196.0 Effect Lab reload: START GAME again (pad thread)
                 set_status("Back in the SINGLE PLAY lobby");
                 logf("SINGLE PLAY: the match is over - back in the lobby");
+                s_watch = now;                                    // v5.188.49 the redraw check below
             } else if (st != 1 && now - s_tap > 900) { b2m_press(0x8); s_tap = now; logf("SINGLE PLAY: after the match - B on the game's list (state %d)", st); }
             if (s_played && now - s_over > 30000) { s_played = false; s_over = 0; logf("SINGLE PLAY: after the match - the lobby did not come back in 30 s"); }
+        }
+        // v5.188.49 (owner work order 2026-11-21: the lobby is not redrawn after a Single Play match): for 10 s after the
+        // return, once a second, what decides whether the lobby page is drawn (cwo_loader.cpp filtered_read / the draw gate
+        // g_ed_open && g_forge_session && !g_forge_active) - read-only, for the next in-game check
+        if (s_watch && now - s_watch < 10000 && now - s_wlast >= 1000) {
+            s_wlast = now;
+            logf("SINGLE PLAY lobby check +%llus: list state %d, page open %ld, session %ld, editor %ld, in match %d, menu %ld",
+                 (now - s_watch) / 1000, (int)st, (long)g_ed_open, (long)g_forge_session, (long)g_forge_active, (int)g_in_match, (long)g_fmenu);
         }
     }
     if (!g_six_auto) return;
@@ -2358,6 +2386,15 @@ static bool forge_input(WORD b, WORD pressed, bool in_match) {
         g_hide_hud = !g_hide_hud;
         set_status(g_hide_hud ? "HUD hidden (L3: show it)" : "HUD shown (L3: hide it)");
         rumble(1);
+    }
+    // v5.188.49 (owner 2026-11-21): in Create a Skill's test (Keep testing, no menu open) B uses the
+    // skill once, R3 loops it, X / Y undo / redo; Start = the pause menu and L3 = HUD as before. The game does not get B, X,
+    // Y or R3 there (filtered_read); outside the test every button keeps its old job.
+    if (g_ed_mode == 1 && g_ftesting && !g_fmenu) {
+        if (pressed & BTN_B) { InterlockedExchange(&g_sct_play, 1); rumble(1); }
+        if (pressed & BTN_RTHUMB) { sc_preview_toggle(); rumble(1); }
+        if (pressed & BTN_X) { sc_undo(); rumble(1); }
+        if (pressed & BTN_Y) { sc_redo(); rumble(1); }
     }
     if (g_ed_live) {                                         // v3.9 editing the school during the test (it applies at once)
         if (pressed & BTN_B) { InterlockedExchange(&g_ed_live, 0); InterlockedExchange(&g_fmenu_sel, 1); InterlockedExchange(&g_fmenu, 6); return true; }
@@ -2794,7 +2831,7 @@ static void forge_draw() {
         const char *desc = "";
         if (g_fmenu == 6) put(x, y, g_ed_try_page == EDP_SCHOOL ? "SCHOOL CREATOR PAUSE       (Start: close)" : "CHARACTER CREATOR PAUSE    (Start: close)", GOLD);
         else if (g_fmenu == 7) put(x, y, "SKILL CREATOR PAUSE        (Start: close)", GOLD);
-        else if (g_fmenu == 5 && g_ed_mode == 1) put(x, y, "SKILL CREATOR   B play  Start pause  R3 loop  L3 HUD  X undo  Y redo", GOLD);
+        else if (g_fmenu == 5 && g_ed_mode == 1) put(x, y, "SKILL CREATOR   (B: back   R3: preview   X undo   Y redo)", GOLD);   // v5.188.49 the test keys moved to Keep testing
         else if (g_fmenu == 4) put(x, y, g_ftesting ? "STAGE CREATOR PAUSE - testing     (Start: close)" : "STAGE CREATOR PAUSE        (Start: close)", GOLD);
         else if (g_fmenu == 3) put(x, y, "EXACT POSITION AND ANGLE   (B: cancel)", GOLD);
         else if (g_fmenu == 2) put(x, y, "STAGE CREATOR MENU         (B: close)", GOLD);
@@ -2982,7 +3019,8 @@ static void forge_draw() {
         font_text();
         sprintf_s(line, "TESTING SKILL: %.28s   (Start: Skill Creator pause)", g_sc.unsaved ? "new (not saved)" : g_sc_k >= 0 ? g_sc.name : sc_skill_name(g_sc.src));
         put(130, 6, line, GOLD);
-        if (status) put(130, 6 + LINE, st, GREEN);
+        put(130, 6 + LINE, SCT_KEYS, WHITE);                   // v5.188.49 the test keys, on screen while testing only
+        if (status) put(130, 6 + 2 * LINE, st, GREEN);
         char card[5][96];                                      // v4.4 (owner): the skill card stays on screen while testing
         int n = sc_card_want(12, 335) ? 0 : sc_card(card);       // v5.8 the game's own card there when it shows
         for (int i = 0; i < n; i++) put(12, 372 + i * LINE, card[i], i == 0 ? GOLD : WHITE);

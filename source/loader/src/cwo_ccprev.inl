@@ -238,6 +238,54 @@ static ULONG_PTR cc_viewer() {
     return *(ULONG_PTR *)(mode + 0x58);
 }
 
+// v5.188.50 preview watch (owner voice memo 2026-11-21, item 7: "the preview must always appear ... today it sometimes shows only
+// after a match"; the one failure in the log, 2026-11-15 20:23:58: Create an Outfit opened right after a Single Play match, the
+// viewer came up, 4 s later the game was on the title screen - nothing logged what ended it). Read only: while a preview runs,
+// one log line each time the viewer pointer, its load state (+0x48), the mode word (+0x7c), the menu id or the match flag
+// changes, with the time since the preview was asked; and one line when the viewer ends without the player's B.
+struct PvWatch { int seen, mode, state, menu, match, holder, wait; ULONGLONG t0; };   // v5.188.57 + holder set up; v5.188.65 + what it waits on
+static void pv_watch(PvWatch &w, const char *tag, LONG st, ULONGLONG t0) {
+    if (w.t0 != t0) { w = PvWatch{-9, -9, -9, -9, -9, -9, -9, t0}; }   // a new preview: start over
+    __try {
+        ULONG_PTR mode = *(ULONG_PTR *)(g_base + RVA_MODE_OBJ);
+        int mw = mode ? *(int *)(mode + 0x7c) : -1;
+        ULONG_PTR v = cc_viewer();
+        int vs = v ? *(int *)(v + 0x48) : -1;
+        ULONG_PTR hold = v ? *(ULONG_PTR *)(v + 0x110) : 0;        // v5.188.57 FUN_14015cd50: holder +0x28 == 0 = not set up yet
+        int hs = hold ? *(int *)(hold + 0x28) : -1;
+        // v5.188.65 what the holder's set-up (vtable +0x30 = FUN_14024f6c0, Ghidra pass 065) waits on while +0x28 == 0:
+        // +0x12d3c model file asked (FUN_140250f70), +0x12c98 bit 2 model file done, then - while 0x1404bc9d4 != 0 (set by the
+        // viewer) - the fighter's sound bank slot (+0x14) + 3 (FUN_140241a90: sound manager *0x140533748 + 0x1d58 + slot x
+        // 0x160; +0x10 loaded, +0x14 queued, +0x38 bit 2 done; asked by the fighter init FUN_14024e190 -> FUN_1402419b0)
+        int wt = -1, fq_w = -1, fq_r = -1;
+        if (hold && hs == 0) {
+            wt = (*(int *)(hold + 0x12d3c) ? 1 : 0) | ((*(unsigned *)(hold + 0x12c98) & 2) ? 2 : 0);
+            ULONG_PTR snd = *(ULONG_PTR *)(g_base + 0x533748);
+            int sl = *(int *)(hold + 0x14) + 3;
+            if (snd && sl >= 0 && sl < 15) {
+                const int *b = (const int *)(snd + 0x1d58 + (ULONG_PTR)sl * 0x160);
+                wt |= (b[4] ? 4 : 0) | (b[5] ? 8 : 0) | ((b[0xe] & 2) ? 16 : 0);
+            }
+            wt |= *(int *)(g_base + 0x4bc9d4) ? 32 : 0;
+            fq_w = *(int *)(g_base + 0x54c960); fq_r = *(int *)(g_base + 0x54c7d4);
+        }
+        ULONG_PTR menu = *(ULONG_PTR *)(g_base + 0x533c58);
+        int id = menu ? *(short *)(menu + 0x105f4) : -1;
+        int seen = v ? 1 : (w.seen == 1 || w.seen == 2 ? 2 : 0);                   // 0 not yet, 1 up, 2 was up and is gone
+        if (seen != w.seen || mw != w.mode || vs != w.state || id != w.menu || (int)g_in_match != w.match || hs != w.holder || wt != w.wait) {
+            logf("preview watch (%s): +%llu ms step %ld viewer %s, load state %d, holder %s, mode word %d, menu id %d, in match %d", tag,
+                 GetTickCount64() - t0, st, seen == 1 ? "up" : seen == 2 ? "GONE" : "not yet", vs,
+                 hs < 0 ? "none" : hs ? "set up" : "NOT set up", mw, id, (int)g_in_match);
+            if (seen == 2 && w.seen == 1 && st == 2) logf("preview watch (%s): the viewer ended while the preview was still on (not B)", tag);
+            if (wt >= 0)
+                logf("preview watch (%s): holder waits - model asked %d, model file done %d, sound bank loaded %d / queued %d / done %d, bank wait on %d, file queue write %d read %d",
+                     tag, wt & 1, (wt >> 1) & 1, (wt >> 2) & 1, (wt >> 3) & 1, (wt >> 4) & 1, (wt >> 5) & 1, fq_w, fq_r);
+            w.seen = seen; w.mode = mw; w.state = vs; w.menu = id; w.match = (int)g_in_match; w.holder = hs; w.wait = wt;
+        }
+    } __except (EXCEPTION_EXECUTE_HANDLER) {}
+}
+static PvWatch g_cc_pw, g_co_pw;
+
 static void cc_prev_request() {                             // A on "Preview live" (controller thread)
     if (ed_online()) { set_status("Online: no preview"); return; }
     swprintf_s(g_cc_dir, L"%scharsrc\\", g_dir);
@@ -273,6 +321,7 @@ static void cc_prev_step() {                                // game thread (CwoO
             return;
         }
         ULONG_PTR v = cc_viewer();
+        pv_watch(g_cc_pw, "Create a Character", st, g_cc_t);
         if (st == 2) {
             if (!v) {
                 if (now - g_cc_t > 10000) { logf("preview: the viewer did not start - leaving"); InterlockedExchange(&g_cc_prev, 3); }

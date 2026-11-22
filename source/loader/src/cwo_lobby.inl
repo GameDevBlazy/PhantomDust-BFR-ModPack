@@ -343,6 +343,7 @@ static void lob_go_common(const char *what) {                     // the lobby h
     rumble(1);
 }
 static void lob_start() {                                       // v5.152 SINGLE PLAY: by game type
+    if (g_el) { g_sp_type = SP_ONE; g_lob[0].cpu = 0; g_lob[1].cpu = 1; }   // v5.194.0 Effect Lab: you against one target
     g_lob_trio = g_sp_type == SP_TRIO;                         // v5.188.24/26 teams A A B B C C (set on the match's slots, the 3 vs 3 teams kept)
     g_lob_ffa = g_sp_type == SP_ROYALE;                        // v5.188.26 Battle Royale: each alone, until one is left
     // v5.188.29 (in game 02:46: a 3-fighter Battle Royale on Single Play's own 4-fighter battle ended as soon as player 1 went
@@ -474,6 +475,7 @@ static void lob_input(WORD pressed) {
     if (pressed & BTN_B) {
         if (g_sp_entry) {                                       // v5.152 SINGLE PLAY: B leaves to the game's lists (B again: the menu)
             InterlockedExchange(&g_sp_entry, 0);
+            el_off("B on the lobby");                           // v5.194.0
             ed_close(); ed_state_save();
             set_status("SINGLE PLAY closed - back to the main menu ...");
             InterlockedExchange(&g_sp_leave, 1);                // v5.188.31 the game's own list is left for the player (cwo_forge.inl)
@@ -494,7 +496,8 @@ template <class PUT, class BOX> static void lob_draw(PUT &put, BOX &box, int x, 
     auto solid = [&](int px, int py, DWORD col, int w, int h) { box(px, py, col, w, h); box(px, py, col, w, h); };   // twice: opaque
     solid(x - 8, y - 4, BAR, 236, 20);
     char ttl[48];
-    sprintf_s(ttl, "SINGLE PLAY   -   %s", SP_TYPES[g_sp_type]);
+    if (g_el) sprintf_s(ttl, "EFFECT LAB   -   pick a stage");
+    else sprintf_s(ttl, "SINGLE PLAY   -   %s", SP_TYPES[g_sp_type]);
     put(x + 150, y, ttl, WHITE);
     y += 22;
     if (g_lob_opt) {                                           // OPTIONS in the rows' place: a bordered panel, nothing under it

@@ -134,6 +134,46 @@ static void fp_capture() {                                         // a new tick
     }
 }
 
+// v5.192.4 one joint: rotation by quaternion nlerp, axis lengths blended, translation (row 3) as the straight blend already written
+static void fp_m2q(const float *r, float *q) {                    // r: 3 unit rows (stride 4) -> q = x, y, z, w
+    float r00 = r[0], r01 = r[1], r02 = r[2], r10 = r[4], r11 = r[5], r12 = r[6], r20 = r[8], r21 = r[9], r22 = r[10], tr = r00 + r11 + r22, s;
+    if (tr > 0.0f) { s = sqrtf(tr + 1.0f) * 2.0f; q[3] = 0.25f * s; q[0] = (r21 - r12) / s; q[1] = (r02 - r20) / s; q[2] = (r10 - r01) / s; }
+    else if (r00 > r11 && r00 > r22) { s = sqrtf(1.0f + r00 - r11 - r22) * 2.0f; q[3] = (r21 - r12) / s; q[0] = 0.25f * s; q[1] = (r01 + r10) / s; q[2] = (r02 + r20) / s; }
+    else if (r11 > r22) { s = sqrtf(1.0f + r11 - r00 - r22) * 2.0f; q[3] = (r02 - r20) / s; q[0] = (r01 + r10) / s; q[1] = 0.25f * s; q[2] = (r12 + r21) / s; }
+    else { s = sqrtf(1.0f + r22 - r00 - r11) * 2.0f; q[3] = (r10 - r01) / s; q[0] = (r02 + r20) / s; q[1] = (r12 + r21) / s; q[2] = 0.25f * s; }
+}
+static void fp_blend_joint(float *m, const float *mp, const float *mc, float t) {
+    float lp[3], lc[3], up[12], uc[12];
+    for (int r = 0; r < 3; r++) {
+        lp[r] = sqrtf(mp[r * 4] * mp[r * 4] + mp[r * 4 + 1] * mp[r * 4 + 1] + mp[r * 4 + 2] * mp[r * 4 + 2]);
+        lc[r] = sqrtf(mc[r * 4] * mc[r * 4] + mc[r * 4 + 1] * mc[r * 4 + 1] + mc[r * 4 + 2] * mc[r * 4 + 2]);
+        if (lp[r] < 1e-6f || lc[r] < 1e-6f) return;                // degenerate: keep the straight blend
+        for (int k = 0; k < 3; k++) { up[r * 4 + k] = mp[r * 4 + k] / lp[r]; uc[r * 4 + k] = mc[r * 4 + k] / lc[r]; }
+    }
+    auto det = [](const float *u) { return u[0] * (u[5] * u[10] - u[6] * u[9]) - u[1] * (u[4] * u[10] - u[6] * u[8]) + u[2] * (u[4] * u[9] - u[5] * u[8]); };
+    if (det(up) < 0.5f || det(uc) < 0.5f) {                         // mirrored / skewed source: the 5.188.49 length fix only
+        for (int r = 0; r < 3; r++) {
+            float *w = m + r * 4, lb = sqrtf(w[0] * w[0] + w[1] * w[1] + w[2] * w[2]);
+            if (lb > 1e-6f) { float f = (lp[r] + (lc[r] - lp[r]) * t) / lb; w[0] *= f; w[1] *= f; w[2] *= f; }
+        }
+        return;
+    }
+    float qp[4], qc[4], q[4];
+    fp_m2q(up, qp); fp_m2q(uc, qc);
+    float d = qp[0] * qc[0] + qp[1] * qc[1] + qp[2] * qc[2] + qp[3] * qc[3], sg = d < 0.0f ? -1.0f : 1.0f;
+    for (int k = 0; k < 4; k++) q[k] = qp[k] + (sg * qc[k] - qp[k]) * t;
+    float n = sqrtf(q[0] * q[0] + q[1] * q[1] + q[2] * q[2] + q[3] * q[3]);
+    if (n < 1e-6f) return;
+    float x = q[0] / n, y = q[1] / n, z = q[2] / n, ww = q[3] / n;
+    float R[9] = {1 - 2 * (y * y + z * z), 2 * (x * y - z * ww), 2 * (x * z + y * ww),
+                  2 * (x * y + z * ww), 1 - 2 * (x * x + z * z), 2 * (y * z - x * ww),
+                  2 * (x * z - y * ww), 2 * (y * z + x * ww), 1 - 2 * (x * x + y * y)};
+    for (int r = 0; r < 3; r++) {
+        float L = lp[r] + (lc[r] - lp[r]) * t;
+        for (int k = 0; k < 3; k++) m[r * 4 + k] = R[r * 3 + k] * L;
+    }
+}
+
 static void fp_apply(float t, bool restore) {                      // live <- blend(previous, current, t), or <- current
     int c = g_fp_cur, p = c ^ 1;
     for (int i = 0; i < 8; i++) {                                   // v5.146 all 8 (six fighters: 5 and 6 blend too)
@@ -150,6 +190,16 @@ static void fp_apply(float t, bool restore) {                      // live <- bl
             bool flypos = g_flying && i == 0;
             if (restore) { memcpy(bones, F.bones[c], (size_t)nb * 4); memcpy(view, F.view[c], 64); if (!flypos) memcpy(pos, F.pos[c], 12); continue; }
             for (int k = 0; k < nb; k++) bones[k] = F.bones[p][k] + (F.bones[c][k] - F.bones[p][k]) * t;
+            // v5.188.49 (owner 2026-11-20): a straight blend of two rotations shortens each axis (by cos of
+            // half the turn), so between two ticks every joint shrank toward its centre and outer layers (the jacket) sank into the
+            // body on fast turns. Each joint's three axis rows now get back the blended length of the two ticks' own rows
+            // (normalised blend); the translation row stays the straight blend.
+            // v5.192.4 (owner 2026-11-22: Nanashi's jacket "not fully on his character when he's running or when he's jumping",
+            // again after 5.188.49): a number-by-number blend leaves the three axes no longer at right angles (a skew) on fast
+            // turns, which shears outer layers into the body. Each joint's rotation is now blended as a quaternion (shortest way)
+            // and rebuilt as clean axes with the blended lengths; a joint with a mirrored or degenerate matrix keeps the old way.
+            if (t > 0.0f)
+                for (int j = 0; j <= F.nj; j++) fp_blend_joint(bones + j * 16, F.bones[p] + j * 16, F.bones[c] + j * 16, t);
             for (int k = 0; k < 16; k++) view[k] = F.view[p][k] + (F.view[c][k] - F.view[p][k]) * t;
             if (!flypos) for (int k = 0; k < 3; k++) pos[k] = F.pos[p][k] + (F.pos[c][k] - F.pos[p][k]) * t;
         } __except (EXCEPTION_EXECUTE_HANDLER) { F.valid = false; }
@@ -157,6 +207,16 @@ static void fp_apply(float t, bool restore) {                      // live <- bl
 }
 
 static void __fastcall fp_fb_hook(ULONG_PTR frame) {               // the frame builder: drawn blended, then put back
+    // v5.196.0 Effect Lab "Background WHITE" (pdpEffect): the game clears the frame to black just before this (FUN_140021e70:
+    // ClearRenderTargetView(context *0x1404bad40, target *0x1404bad58, {0,0,0,0})); the same call again with white
+    if (g_el_white && g_el && g_in_match) {
+        __try {
+            ID3D11DeviceContext *ctx = *(ID3D11DeviceContext **)(g_base + 0x4bad40);
+            ID3D11RenderTargetView *rtv = *(ID3D11RenderTargetView **)(g_base + 0x4bad58);
+            const float white[4] = {1.0f, 1.0f, 1.0f, 1.0f};
+            if (ctx && rtv) ctx->ClearRenderTargetView(rtv, white);
+        } __except (EXCEPTION_EXECUTE_HANDLER) {}
+    }
     if (!g_fp_on || !g_in_match) { g_fp_fb_orig(frame); return; }
     int tick = *(int *)(g_base + FP_TICKS);
     if (tick != g_fp_last_tick) { g_fp_last_tick = tick; fp_capture(); fp_capture_moving(); }

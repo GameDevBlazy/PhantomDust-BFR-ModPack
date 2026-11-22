@@ -36,7 +36,7 @@ using ABI::Windows::Gaming::Input::IGamepad;
 using ABI::Windows::Gaming::Input::IGamepadStatics;
 using ABI::Windows::Gaming::Input::GamepadVibration;
 
-#define CWO_VERSION "5.188.48"
+#define CWO_VERSION "5.199.0"
 
 static const ULONG_PTR RVA_ACTORS = 0x4bc9d8;
 static const ULONG_PTR RVA_STAGE = 0x3e0304;
@@ -297,6 +297,17 @@ static PFN_READ g_orig_read;
 static void *g_vtbl_copy[16];
 static int g_filter_logged;
 
+static void el_off(const char *why);
+static bool el_game_menu() {                                // v5.194.0 a game menu (pause, Give Up box) is up: its buttons are the game's
+    __try {                                                 // (the battle's menu machine, as forge_poll: FUN_140167580 modes 9..14)
+        if (*(int *)(g_base + 0x533744) != 3) return true;
+        ULONG_PTR bm = *(ULONG_PTR *)(g_base + 0x4c0130);
+        return bm && *(int *)(bm + 0x50) >= 9;
+    } __except (EXCEPTION_EXECUTE_HANDLER) { return false; }
+}
+static volatile LONG g_el_lt, g_el_rt;                       // v5.198.0 Effect Lab: the triggers (x1000), read from the pad
+static volatile LONG g_el_white, g_el_restart;               // v5.196.0 Effect Lab: white background / reload the match (cwo_effectlab.inl)
+static volatile LONG g_el, g_el_panel;                      // v5.194.0 the Effect Lab is on / its panel has the buttons (cwo_effectlab.inl)
 static void dp_pad(ABI::Windows::Gaming::Input::GamepadReading *r);   // v5.123 cwo_dreamprobe.inl
 static HRESULT STDMETHODCALLTYPE filtered_read(void *self, ABI::Windows::Gaming::Input::GamepadReading *r) {
     HRESULT hr = g_orig_read(self, r);
@@ -304,6 +315,7 @@ static HRESULT STDMETHODCALLTYPE filtered_read(void *self, ABI::Windows::Gaming:
         r->RightThumbstickX = g_ap_rx / 1000.0;                                   // right stick (camera turn checks)
         r->RightThumbstickY = g_ap_ry / 1000.0;
         if (g_ap_lx || g_ap_ly) { r->LeftThumbstickX = g_ap_lx / 1000.0; r->LeftThumbstickY = g_ap_ly / 1000.0; }   // v5.122
+        if (g_ap_lt || g_ap_rt) { r->LeftTrigger = g_ap_lt / 1000.0; r->RightTrigger = g_ap_rt / 1000.0; }          // v5.198.0 test pad triggers
     }
     static UINT32 ed_latch;                                     // buttons held when the chooser closed: kept back until released
     if (SUCCEEDED(hr) && r && ((g_ed_open && g_forge_session && !g_forge_active) || (g_vt_shown && g_ed_open) || g_cc_prev == 2 || g_co_prev == 2 || g_db_state == 1 || g_th_popup == 2 || g_ml_open || g_fb_open || (g_tbv_show && !g_in_match))) {   // v3.7: + the preview, v5.11 + Download Battle
@@ -331,6 +343,10 @@ static HRESULT STDMETHODCALLTYPE filtered_read(void *self, ABI::Windows::Gaming:
         r->LeftTrigger = r->RightTrigger = 0.0;
     }
     if (SUCCEEDED(hr) && r && g_co_stick) g_co_rx = (float)r->RightThumbstickX;   // v5.69
+    if (SUCCEEDED(hr) && r && g_el && g_in_match && !g_forge_session) {   // v5.198.0 Effect Lab: LT / RT = the pace (pdpEffect's RTRIGGER)
+        InterlockedExchange(&g_el_lt, (LONG)(r->LeftTrigger * 1000.0)); InterlockedExchange(&g_el_rt, (LONG)(r->RightTrigger * 1000.0));
+        if (g_el_panel) { r->LeftTrigger = 0.0; r->RightTrigger = 0.0; }
+    }
     if (SUCCEEDED(hr) && r && g_in_match && g_fc_on) {           // v5.9 free camera: the pad is the camera's, Start the game's
         g_fc_axis[0] = (float)r->LeftThumbstickX; g_fc_axis[1] = (float)r->LeftThumbstickY;
         g_fc_axis[2] = (float)r->RightThumbstickX; g_fc_axis[3] = (float)r->RightThumbstickY;
@@ -345,7 +361,8 @@ static HRESULT STDMETHODCALLTYPE filtered_read(void *self, ABI::Windows::Gaming:
         UINT32 bt = (UINT32)r->Buttons, hide = 0;
         if (g_pinned && !g_forge_session && !cwo_story_match()) hide |= GB_CREATOR | (g_game_view ? 0 : GB_VIEW);   // panel on: every creator button is the loader's
         if (g_forge_active && !g_game_menu) {
-            if (g_ftesting) hide |= 0x1 | (g_ed_mode == 1 ? 0x1000u : 0u);   // testing: buttons play, Start = menu (v5.33 L3 = HUD in Create a Skill)
+            if (g_ftesting) hide |= 0x1 | (g_ed_mode == 1 ? 0x1000u : 0u)   // testing: buttons play, Start = menu (v5.33 L3 = HUD in Create a Skill)
+                                    | (g_ed_mode == 1 && !g_fmenu ? 0x2038u : 0u);   // v5.188.49 B play, X undo, Y redo, R3 loop are the test's
             else {                                              // building: every button is the editor's
                 hide |= GB_FORGE | 0x1;
                 r->LeftTrigger = 0.0;
@@ -363,6 +380,7 @@ static HRESULT STDMETHODCALLTYPE filtered_read(void *self, ABI::Windows::Gaming:
         if ((bt & GB_VIEW) && !g_game_view && (since == 0 || GetTickCount64() - (ULONGLONG)since < 700)) hide |= GB_VIEW;
         if ((bt & GB_VIEW) && (bt & 0x400)) hide |= 0x400;      // v3.5 View + LB: the CPU switch, not the game's LB
         if ((bt & GB_VIEW) && (bt & 0x800)) hide |= 0x800;      // v5.9 View + RB: the free camera, not the game's lock-on
+        if (g_el && !g_forge_session && !el_game_menu()) hide |= g_el_panel ? 0x3FFEu : 0x2002u;   // v5.194.0 Effect Lab: the list has the buttons (Start and the sticks stay the game's)
         r->Buttons = (ABI::Windows::Gaming::Input::GamepadButtons)(bt & ~hide);
     }
     if (SUCCEEDED(hr) && r && !g_in_match && ((UINT32)r->Buttons & 0x300u) && ars_list_focused())   // v5.9 D-pad Left / Right:
@@ -1395,6 +1413,7 @@ static int cpu_level_pick();
 #include "cwo_colorbar.inl"                              // v5.88 COLORS moved into the left black bar
 #include "cwo_visions.inl"                               // v5.86 Edgar's Dream > Visions
 #include "cwo_vault.inl"                                 // v5.133 the Skill Vault (View Stock: Back + Y)
+#include "cwo_discord.inl"                               // v5.188.49 Join our Discord (MOD LIST: Y)
 #include "cwo_modlist.inl"                               // v5.80 MOD LIST on the main menu
 #include "cwo_realistic.inl"                             // v5.81 Realistic Mode
 #include "cwo_cpurevive.inl"                             // v5.86 CPUs revive downed teammates
@@ -1407,12 +1426,20 @@ static int cpu_level_pick();
 #include "cwo_redmoon.inl"                               // v5.188.23 the Red Moon skill (BFR 434)
 #include "cwo_fxsize.inl"                                // v5.148.1 effect size per skill (CwoFxSize.txt)
 #include "cwo_lowgrav.inl"                               // v5.121 low gravity stages (Driftstone Sanctum)
+#include "cwo_trainrec.inl"                              // v5.188.51 Train a CPU part 1: record a match (CwoTrainRecord.txt)
+#include "cwo_trainplay.inl"                             // v5.188.52 Train a CPU part 2: replay as a CPU (CwoTrainPlay.txt)
 #include "cwo_dreamprobe.inl"                            // v5.123 Edgar's Dream CREATE editor: input probe
 #include "cwo_ui.inl"                                    // v5.124 the CREATE editor's own UI renderer (Present hook)
 #include "cwo_fps60.inl"                                 // v5.138 60 FPS display (30 Hz logic, blended extra frame)
 #include "cwo_intro.inl"                                 // v5.71 intro poses at the countdown
+#include "cwo_emote.inl"                                 // v5.188.55 emotes: View + D-pad in offline matches (MODS)
+#include "cwo_daynight.inl"                              // v5.188.58 day and night during a match (CwoDayNight.txt, MODS)
+#include "cwo_ultrawide.inl"                             // v5.189.0 ultrawide: the 3D view fills screens wider than 16:9 (MODS, offline)
+#include "cwo_campaign.inl"                              // v5.190.0 campaign rules: CwoCampaign.txt (MODS, offline)
+#include "cwo_stagetheme.inl"                            // v5.191.0 visual themes: CwoStageTheme.txt (MODS, offline)
 #include "cwo_rating.inl"                                // v5.148.9 map rating (CwoMapRatings.txt)
 #include "cwo_fusion.inl"                               // v5.17 the Skill Fuser
+#include "cwo_effectlab.inl"                            // v5.193.0 the Lab's Effect Lab (the game's Character viewer, skill page)
 #include "cwo_records.inl"                              // v5.21 Records
 #include "cwo_feedback.inl"                             // v5.154 FEEDBACK, YOUR FEEDBACK, TO-DO LIST, INBOX
 #include "cwo_music.inl"                                // v5.23 Stage Music
@@ -1462,6 +1489,7 @@ extern "C" __declspec(dllexport) void CwoOverlayFrame() {
         ed_set_step();                                           // v5.165 Create a Skill / TEST: your own arsenal set
         sr_step();                                               // v5.166 Edit Arsenal's picker: six school icons
         cc_prev_step();                                          // v3.7 Create a Character live preview
+        el_step();                                               // v5.193.0 the Effect Lab
         co_prev_step();                                          // v5.61 Create an Outfit preview
         cu_step();                                               // v5.35 the character in use, built for the select cell
         slot_step();                                             // v4.1 the select screen's created-character cell
@@ -1491,10 +1519,17 @@ extern "C" __declspec(dllexport) void CwoOverlayFrame() {
         hud_step();                                              // v5.65 HUD presets
         hf_cache_step();                                         // v5.67 HUD faces: the character rows' models
         in_step();                                               // v5.71 intro poses at the countdown
+        em_step();                                               // v5.188.55 emotes
+        dn_step();                                               // v5.188.58 day and night
+        uw_step();                                               // v5.189.0 ultrawide
+        cp_step();                                               // v5.190.0 campaign rules
+        st_step();                                               // v5.191.0 visual themes
         th_step();                                               // v5.74 holiday themes
         ofx_live();                                              // v5.79 the effect editor's rows
         rm_step();                                               // v5.81 Realistic Mode
         lg_step();                                               // v5.121 low gravity stages
+        tr_step();                                               // v5.188.51 Train a CPU: record (offline, read only)
+        tp_step();                                               // v5.188.52 Train a CPU: replay (offline)
         dp_frame();                                              // v5.123 Dream input probe
         kb_pages_frame();                                        // v5.188.36 keyboard on the loader's menu pages
         shield_live_test();                                      // v5.163.0 crash shield in-game proof (test file only)
@@ -1514,7 +1549,7 @@ extern "C" __declspec(dllexport) void CwoOverlayFrame() {
         dp_draw();                                               // v5.123.3 the Dream probe draws in every session (CREATE is its own full-screen session)
         if (g_forge_session && (!(g_dp_on && g_ui_state == 1) || g_fmenu)) forge_draw();   // v5.127 an open pad menu shows in the viewport   // v5.124.1 the CREATE screen replaces the old creator panel
         else if (g_cc_prev == 2 || g_co_prev == 2) cc_prev_draw();
-        else { draw_panel(); ed_match_draw(); sn_draw(); spx_pop_draw(); ed_six_banner(); slot_draw(); dbtl_draw(); if (!ti_active()) { th_banner(); th_draw(); } sel_draw(); ml_draw(); fb_draw(); tb_draw(); hp_draw(); ti_draw(); }   // v5.188.25 title intro on top
+        else { draw_panel(); ed_match_draw(); sn_draw(); spx_pop_draw(); ed_six_banner(); slot_draw(); dbtl_draw(); if (!ti_active()) { th_banner(); th_draw(); } sel_draw(); ml_draw(); fb_draw(); tb_draw(); hp_draw(); ti_draw(); el_draw(); }   // v5.188.25 title intro on top
     } __except (EXCEPTION_EXECUTE_HANDLER) {
         InterlockedExchange(&g_ready, 0);                      // never touch the game's text again this session
     }
@@ -1548,6 +1583,11 @@ static void autopad_poll() {
         if (!_strnicmp(t, "LT=", 3)) lt = (LONG)(atof(t + 3) * 1000.0);     // v5.188.20 left / right trigger, 0..1
         if (!_strnicmp(t, "RT=", 3)) rt = (LONG)(atof(t + 3) * 1000.0);
         if (!_stricmp(t, "LOADER")) self = true;
+        if (!_strnicmp(t, "KEY=", 4)) {                         // v5.193.0 the agent's test: the game's key table (no focus needed)
+            static const struct { const char *n; LONG b; } KB[] = {{"ENTER", 0x1}, {"UP", 0x40}, {"DOWN", 0x80}, {"LEFT", 0x100}, {"RIGHT", 0x200}, {"A", 0x4}, {"B", 0x8}, {"X", 0x10}, {"Y", 0x20}};
+            for (const auto &k : KB) if (!_stricmp(t + 4, k.n)) { InterlockedExchange(&g_key_test, k.b); InterlockedExchange64(&g_key_test_until, (LONGLONG)(GetTickCount64() + 150)); logf("auto pad: key %s on the game's key table (test)", k.n); }
+        }
+        if (!_strnicmp(t, "EMOTE=", 6)) { InterlockedExchange(&g_em_req, atol(t + 6)); logf("auto pad: emote %ld asked (test)", atol(t + 6)); }   // v5.192.3 the agent's emote test
         for (const auto &b : B) if (!_stricmp(t, b.name)) bits |= b.bit;
     }
     if ((rx || ry || lx || ly || lt || rt) && ms > 0) {
@@ -1693,6 +1733,8 @@ static DWORD WINAPI worker(LPVOID) {
             g_last_moved = -1;
         }
         if (g_cc_prev == 2) { cc_input(b, pressed); continue; } // v3.7: the preview owns the controller
+        if (g_el_restart == 2 && !in_match) { InterlockedExchange(&g_el_restart, 0); lob_start(); continue; }   // v5.196.0 Effect Lab reload: the lobby is back
+        if (g_el && in_match && !g_fc_on && !g_forge_session && !g_ed_open && !el_game_menu()) { if (el_input(b, pressed)) continue; }   // v5.194.0 the Effect Lab match
         if (g_co_prev == 2) { co_input(b, pressed); continue; } // v5.69 the outfit preview too
         if (g_epg_on && g_ed_page == EDP_OUTFIT && !in_match) {   // v5.101.1 the game-style page gets one press per press:
             static ULONGLONG rep_t;                                    // holding L / R on Effect size / speed repeats here
@@ -1808,6 +1850,19 @@ static DWORD WINAPI worker(LPVOID) {
         // v5.9 (owner): View + RB = the free camera; while it
         // is on, B ends it, Y goes to the next fighter, X shows / hides the HUD (cwo_freecam.inl, on the game thread)
         if (in_match && (b & BTN_BACK) && (pressed & BTN_RB)) { InterlockedExchange(&g_fc_req, 1); rumble(1); continue; }
+        // v5.188.55 emotes (owner voice memo 2026-11-21): View + D-pad while standing; offline, MODS only (cwo_emote.inl).
+        // v5.188.64: Up our own Look around (slot 1), Right our own Wave, Left our own Bow, Down the game's poses in turn
+        // (victory 132, intro 130, second intro 131). (5.188.62-63 had Wave / Bow on View + X / Y - those are the marker
+        // tool's delete / log buttons in a match, so they went back to it.)
+        // v5.192.4 (owner 2026-11-22; "why dont we switch it to rb instead?"): hold RB
+        // and press the D-pad while standing - Up intro pose (EXMOT0, slot 130), Right second intro (EXMOT1, 131), Down victory
+        // (EXMOT2, 132), Left third intro (EXMOT4, 134). RB is the game's lock-on switch (FUN_1402531d0, MODLOG 2026-10-2x): no
+        // move, no jump. View is the quick panel only again.
+        if (in_match && !g_fc_on && !g_bfr_edition && !ed_online() && (b & BTN_RB) && !(b & BTN_BACK) && (pressed & (BTN_UP | BTN_DOWN | BTN_LEFT | BTN_RIGHT))) {
+            LONG req = (pressed & BTN_UP) ? 130 : (pressed & BTN_RIGHT) ? 131 : (pressed & BTN_DOWN) ? 132 : 134;
+            InterlockedExchange(&g_em_req, req);
+            rumble(1); continue;
+        }
         if (in_match && g_fc_on) {
             if (pressed & BTN_B) InterlockedExchange(&g_fc_req, 1);
             if (pressed & BTN_Y) InterlockedExchange(&g_fc_next, 1);
@@ -2061,6 +2116,21 @@ static HANDLE WINAPI h_CreateFile2(LPCWSTR f, DWORD a, DWORD s, DWORD c, LPCREAT
     { char st[8]; int ok_k;                                 // v5.63 an outfit 5-15 the game has no file for: built first
       if (g_store_mode && c == OPEN_EXISTING && of_parse(f, st, &ok_k)) { __try { of_ensure(f, st, ok_k); } __except (EXCEPTION_EXECUTE_HANDLER) {} } }
     if (g_store_mode && c == OPEN_EXISTING && g_bsh_ready) { __try { bsh_on_open(f); } __except (EXCEPTION_EXECUTE_HANDLER) {} }   // v5.180 body shape
+    if (c == OPEN_EXISTING && g_st_theme > 0) {            // v5.191.0 a visual theme's copy of the file wins (cwo_stagetheme.inl)
+        wchar_t tp[MAX_PATH];
+        bool ok = false;
+        __try { ok = st_theme_path(f, tp); } __except (EXCEPTION_EXECUTE_HANDLER) { ok = false; }
+        if (ok) {
+            HANDLE ht = o_CreateFile2(tp, a, s, c, p);
+            if (ht != INVALID_HANDLE_VALUE) {
+                note_file(f, "theme", 0);
+                __try { st_note_open(f, g_st_theme); } __except (EXCEPTION_EXECUTE_HANDLER) {}   // v5.192.0 live switch
+                if (g_handles) { EnterCriticalSection(&g_file_lock); (*g_handles)[ht] = f; LeaveCriticalSection(&g_file_lock); }
+                return ht;
+            }
+        }
+    }
+    if (c == OPEN_EXISTING) { __try { st_note_open(f, 0); } __except (EXCEPTION_EXECUTE_HANDLER) {} }   // v5.192.0 stock look
     wchar_t ov[MAX_PATH];                                   // v5.38 Store mode: a file in <TEMP>\CwoLoader\game\ wins
     if (sm_redirect(f, ov, MAX_PATH, false)) {
         HANDLE ho = o_CreateFile2(ov, a, s, c, p);

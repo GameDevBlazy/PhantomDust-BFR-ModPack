@@ -75,7 +75,7 @@ enum { FK_NUM, FK_MIN, FK_SCHOOL, FK_HUE, FK_PCT, FK_SKILL, FK_PART, FK_ONOFF, F
        FK_CHARA, FK_CAPS, FK_SHOW, FK_BRAIN, FK_HEAD, FK_SIZE, FK_FROM, FK_SLOT, FK_WEAR, FK_MOVES, FK_VOICE, FK_EVADE, FK_THEME, FK_BPART, FK_DEG, FK_PIECES, FK_PIECE, FK_LAYER, FK_FACE,
        FK_MINNL, FK_RULE, FK_FMT, FK_ENVMODE, FK_ENVSK, FK_SEC, FK_GENDER,
        FK_PIC, FK_QLEVEL, FK_REINF, FK_PARTNER, FK_QRULES, FK_RANK, FK_CHARAN, FK_OUTFIT, FK_KEEP, FK_CREDITS, FK_PLAYAS,
-       FK_OCHAR, FK_SKINT, FK_OCOL, FK_OSLOT, FK_OSTOCK, FK_OFX, FK_OFXPL, FK_OFXPCT, FK_OFXSPD, FK_OFXSHOW };   // v5.79 the effect editor   // v5.61 Create an Outfit   // v5.13 Create a Quest v2   // v5.10 the male / female base   // v4.8 Create a Mode
+       FK_OCHAR, FK_SKINT, FK_OCOL, FK_OSLOT, FK_OSTOCK, FK_OFX, FK_OFXPL, FK_OFXPCT, FK_OFXSPD, FK_OFXSHOW, FK_QAFTER };   // v5.79 the effect editor   // v5.61 Create an Outfit   // v5.13 Create a Quest v2   // v5.10 the male / female base   // v4.8 Create a Mode
 struct EdField { const char *label; int kind, lo, hi, step, def; const char *help; };
 struct EdItem { char name[24]; int v[40]; };
 struct EdCreator {
@@ -197,7 +197,7 @@ static const char *CHAR_H[] = {"CREATE A CHARACTER - how to use", "1  Base: Male
 // values keep their place (older saves); 13_Independent_Research_Tools/quest_writer.py writes them (field facts in its
 // header and CAMPAIGN_QUEST_SPEC_BATCH023-025.md section 9)
 static const EdField QUEST_F[] = {
-    {"Replaces quest", FK_QUEST, 0, 255, 1, 1, "The campaign quest this one takes the place of"},
+    {"Replaces quest", FK_QUEST, 0, 255, 1, 1, "The quest it replaces; an (unused) slot = a NEW quest"},
     {"Stage", FK_STAGE, 1, 34, 1, 2, "Where it is fought"},
     {"Time limit", FK_MIN, 1, 30, 1, 10, "Minutes"},
     {"Rounds", FK_NUM, 1, 3, 1, 1, "Rounds to win"},
@@ -228,12 +228,15 @@ static const EdField QUEST_F[] = {
     {"Your life", FK_NUM, 5, 99, 5, 20, "Life you start this quest with (game: 20)"},
     // v5.14.1 (owner)
     {"Play as", FK_PLAYAS, -1, 24, 1, -1, "Yourself, or any character (model, moves, voice)"},
-    {"  your outfit", FK_OUTFIT, 0, 31, 1, 0, "That character's outfit"}};
-static const int QUEST_ORDER[] = {0, 1, 8, 9, 25, 2, 3, 4, 5, 10, 13, 6, 11, 14, 7, 12, 15, 16, 28, 29, 30, 17, 18, 19, 20, 21, 22, 23, 24,
-                                  26, 27};
+    {"  your outfit", FK_OUTFIT, 0, 31, 1, 0, "That character's outfit"},
+    // v5.190.0 (owner 2026-11-21: own quests in the campaign): a new quest in an empty slot comes onto the quest list at once
+    // or after you clear this quest (the installer writes the rule into CwoCampaign.txt; cwo_campaign.inl applies it)
+    {"Opens after quest", FK_QAFTER, -1, 255, 1, -1, "New quest: on the list at once, or after you clear this quest"}};
+static const int QUEST_ORDER[] = {0, 31, 1, 8, 9, 25, 2, 3, 4, 5, 10, 13, 6, 11, 14, 7, 12, 15, 16, 28, 29, 30, 17, 18, 19, 20, 21, 22, 23,
+                                  24, 26, 27};
 static const char *QUEST_A[] = {"Save (written into the campaign at the quest install)", "Add the ready-made Training quest", "Back"};
 static const char *QUEST_H[] = {"CREATE A QUEST - how to use", "1  Name it: that becomes the quest title", "2  Pick the quest it replaces",
-                                "2b An '(unused)' quest is an empty slot: the game never offers it",
+                                "2b An '(unused)' slot makes a NEW quest; Opens after quest = when",
                                 "3  Stage, picture, rank, time, rounds; opponents: who, outfit, level",
                                 "4  Life, reinforcements, partner, an ally who follows you",
                                 "5  Win rules: its own, or another quest's (objectives + events)",
@@ -310,8 +313,8 @@ static const EdField OUTFIT_F[] = {
     {"Outfit", FK_NUM, 1, 15, 1, 1, "The outfit slot it starts from (1-15; 5 = the OG outfit)"},
     {"Skin tone", FK_SKINT, 0, 15, 1, 0, "Face and hands"},
     {"Head accessory", FK_HEAD, -1, 10, 1, -1, "Another character's hair, hat or glasses on top"},
-    {"Jacket color", FK_OCOL, 0, 41, 1, 0, "Jacket, shirt, sleeves"},
-    {"Pants color", FK_OCOL, 0, 41, 1, 0, "Pants, belts, boots"},
+    {"Jacket color", FK_OCOL, 0, 41, 1, 0, "Jacket and shirt (and sleeves unless set)"},
+    {"Pants color", FK_OCOL, 0, 41, 1, 0, "Pants and belts (and boots unless set)"},
     {"Save to slot", FK_OSLOT, 0, 15, 1, 0, "Where Save and apply puts it: its own slot, or 1-15"},   // v5.69
     {"Outfit stock", FK_OSTOCK, 0, 50, 1, 0, "Saved outfits (up to 50); Apply puts one in the slot"},
     {"Outfit effect", FK_OFX, 0, 7, 1, 0, "Any skill's effect (L/R; hold to run), then the presets"},   // v5.75 / v5.101
@@ -323,7 +326,14 @@ static const EdField OUTFIT_F[] = {
     {"Effect size", FK_OFXPCT, 25, 300, 1, 100, "Expand or shrink it: L/R 1 % (hold to run), RT held 25 %"},   // v5.101 1 % steps
     {"Effect speed", FK_OFXSPD, 0, 300, 1, 100, "Slower or faster (L/R 1 %, RT held 25 %); 0 = paused"},
     {"Effect shows", FK_OFXSHOW, 0, 2, 1, 0, "Always, at aura level 10, or growing with the aura"},   // v5.82
-    {"Aura color", FK_OCOL, 0, 41, 1, 0, "This outfit's aura in battle: the school's, or a color"}};
+    {"Aura color", FK_OCOL, 0, 41, 1, 0, "This outfit's aura in battle: the school's, or a color"},
+    // v5.188.59 (owner voice memo 2026-11-21, item 10: per-part colours): last, so saved outfits keep their values
+    {"Sleeves color", FK_OCOL, 0, 41, 1, 0, "Both arms; 'the outfit's own' = the jacket color"},
+    {"Boots color", FK_OCOL, 0, 41, 1, 0, "Both feet; 'the outfit's own' = the pants color"},   // v5.188.60
+    {"Gloves color", FK_OCOL, 0, 41, 1, 0, "Both hands (bare skin stays skin); 'the outfit's own' = the sleeves color"}};   // v5.188.61
+// v5.188.61: the rows are SHOWN with the colours together (stored order unchanged, so saved outfits keep their values);
+// 5.188.59 / 60 had left the page's field count at 17, so Sleeves / Boots were not on the page - fixed (count 20)
+static const int OUTFIT_ORDER[] = {0, 1, 2, 3, 4, 17, 19, 5, 18, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 // v5.101 (owner 2026-11-03; then "ALSO THE PREVIEW MODE IS MISSING?"): the entry is back, the preview shows the
 // model alone (cwo_ccprev.inl cc_prev_draw, v5.101.2)
 static const char *OUTFIT_A[] = {"Preview live (turning model)", "Save and apply to the slot", "Save to the outfit stock",
@@ -339,10 +349,10 @@ static EdCreator g_edc[EDP_N] = {
     {},
     {"CREATE A SCHOOL", "CwoSchools.txt", "School", 29, SCHOOL_F, SCHOOL_A, 5, SCHOOL_H},
     {"CREATE A CHARACTER", "CwoCharacters.txt", "Character", CH_NF, CHAR_F, CHAR_A, 7, CHAR_H},
-    {"CREATE A QUEST", "CwoQuests.txt", "Quest", 31, QUEST_F, QUEST_A, 3, QUEST_H},
+    {"CREATE A QUEST", "CwoQuests.txt", "Quest", 32, QUEST_F, QUEST_A, 3, QUEST_H},
     {"CREATE A MODE", "CwoModes.txt", "Mode", 19, MODE_F, MODE_A, 6, MODE_H},
     {"SPECTATOR", "CwoSpectator.txt", "Setup", 2, SPECT_F, SPECT_A, 1, SPECT_H},
-    {"CREATE AN OUTFIT", "CwoOutfits.txt", "Outfit", 17, OUTFIT_F, OUTFIT_A, 9, OUTFIT_H}};   // v5.93 + Aura color; v5.101.2 Preview live back
+    {"CREATE AN OUTFIT", "CwoOutfits.txt", "Outfit", 20, OUTFIT_F, OUTFIT_A, 9, OUTFIT_H}};   // v5.93 + Aura color; v5.101.2 Preview live back
 
 static volatile LONG g_ed_page, g_ed_row, g_ed_help, g_ed_kb;   // page, row on it, help card shown, keyboard open
 // v5.35 (owner 2026-10-28): Create a Character opens on a list of every saved character (g_ed_cat); A plays as it now
@@ -408,6 +418,7 @@ static int ed_fld(int page, int row) {                          // v3.9 the fiel
     if (page == EDP_SCHOOL && k >= 0 && k < (int)(sizeof(SCHOOL_ORDER) / sizeof(*SCHOOL_ORDER))) return SCHOOL_ORDER[k];
     if (page == EDP_CHAR && k >= 0 && k < (int)(sizeof(CHAR_ORDER) / sizeof(*CHAR_ORDER))) return CHAR_ORDER[k];
     if (page == EDP_QUEST && k >= 0 && k < (int)(sizeof(QUEST_ORDER) / sizeof(*QUEST_ORDER))) return QUEST_ORDER[k];
+    if (page == EDP_OUTFIT && k >= 0 && k < (int)(sizeof(OUTFIT_ORDER) / sizeof(*OUTFIT_ORDER))) return OUTFIT_ORDER[k];   // v5.188.61
     return k;
 }
 
@@ -613,6 +624,9 @@ static void ed_value(int page, int fi, int v, char *out, size_t n) {
     case FK_QLEVEL: sprintf_s(out, n, "%s", ED_QLEVELS[v >= 0 && v < 5 ? v : 0]); break;
     case FK_REINF: sprintf_s(out, n, "%s", ED_REINF[v >= 0 && v < 3 ? v : 0]); break;
     case FK_PARTNER: sprintf_s(out, n, "%s", ED_PARTNERS[v >= 0 && v < 13 ? v : 0]); break;
+    case FK_QAFTER:                                            // v5.190.0
+        if (v < 0) { sprintf_s(out, n, "at once"); break; }
+        ed_read_quests(); sprintf_s(out, n, "%d %.24s", v, g_ed_qtitle[v & 255][0] ? g_ed_qtitle[v & 255] : "(unused)"); break;
     case FK_QRULES:
         if (v < 0) { sprintf_s(out, n, "its own"); break; }
         ed_read_quests(); sprintf_s(out, n, "%d %.24s", v, g_ed_qtitle[v & 255][0] ? g_ed_qtitle[v & 255] : "(unused)"); break;
@@ -1634,7 +1648,7 @@ static void ed_change(int page, int row, int dir) {
         return;
     }
     int fi = ed_fld(page, row);
-    if (page == EDP_OUTFIT && fi >= 8) InterlockedExchange(&g_ofx_dirty, 1);   // v5.79 an effect row: shown at once
+    if (page == EDP_OUTFIT && fi >= 8 && fi <= 16) InterlockedExchange(&g_ofx_dirty, 1);   // v5.79 an effect row: shown at once
     if (row < 2 || fi < 0 || fi >= c.nf) return;
     const EdField &fd = c.f[fi];
     int &v = c.item[c.cur].v[fi];
@@ -2432,7 +2446,7 @@ static int ed_self_test() {
 
 static int ed_quest_self_test() {                              // v5.13 Create a Quest v2: order, values, pictures, outfits, old saves
     const EdCreator &qc = g_edc[EDP_QUEST];
-    bool order = qc.nf == 31 && (int)(sizeof(QUEST_ORDER) / sizeof(*QUEST_ORDER)) == qc.nf;
+    bool order = qc.nf == 32 && (int)(sizeof(QUEST_ORDER) / sizeof(*QUEST_ORDER)) == qc.nf;   // v5.190.0: 32
     for (int f = 0; order && f < qc.nf; f++) {
         int seen = 0;
         for (int r = 0; r < qc.nf; r++) seen += QUEST_ORDER[r] == f;

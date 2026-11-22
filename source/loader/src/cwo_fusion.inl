@@ -202,6 +202,10 @@ static void fu_live_step(FxGame &g, bool in_match) {
                 int req = prof > 0 ? g.effect_of(prof, add) : 0;
                 ULONG_PTR fighter = *(ULONG_PTR *)(p.action + 0xbd0);
                 if (req <= 0 || !fighter || g_fu_live_n >= 16) drop = true;
+                else if (!g_fu_test_gs && !fx_loaded(req)) {      // v5.194.2 asked for at the use (as the game does for a card)
+                    typedef INT64(__fastcall * PFN_FX_LOAD)(ULONG_PTR, int, int);
+                    if (p.tries == 1) { ((PFN_FX_LOAD)(g_base + 0x189e80))(g.mgr, req, 0); logf("Skill Fuser: skill %d - the added effect %d asked for at its use", p.id, req); }
+                }
                 else {
                     // v5.116 any skill: part 0 (hand / body during the move); a skill without one (a shot, a status) its
                     // projectile part (1), then its hit part (3) - each tried ~0.5 s (the pack may still be loading)
@@ -227,10 +231,50 @@ static void fu_live_step(FxGame &g, bool in_match) {
         }
     } __except (EXCEPTION_EXECUTE_HANDLER) { g_fu_live_n = g_fu_pend_n = 0; }
 }
+// v5.192.2 (owner 2026-11-21; his
+// log 22:36:28: "effect load during the fight: request 101" then thousands of "crash shield: a freed effect texture"): the added
+// skill's effect was first loaded when the fusion was cast, mid-fight. The game's effect load FUN_140189e80 makes room by
+// evicting the least-recently-used resident effect (FUN_14018cf80; recorded 2026-11-13, cwo_stagefx.inl v5.148.11) - here the
+// fusion's own base effect, whose projectile was flying: its textures were freed and drawn blank. Now, as for the stage
+// effects: when a match starts (match state *0x1404bc950 0 -> 1..5, before the fight, no particles yet) every fusion's added
+// effect is loaded at once (those in an arsenal first, 12 at most), so nothing is loaded while the fight is on.
+static bool fu_in_an_arsenal(int id);
+static void fu_preload(FxGame &g) { (void)g; }
+// v5.194.2 (in game 2026-11-22, Effect Lab match): an effect loaded AHEAD of its use (5.192.2-5.194.1: at the match start, at
+// the fight's first frame, three at once or one at a time) drew freed textures at its first use - Double Lasers' effect 45,
+// loaded 30 s before, 4 runs out of 4 - while effects asked for right at the use (Laser 42, Auto Shell 46: asked, loaded in
+// ~30 ms, used) were clean, 3 out of 3. So nothing is loaded ahead any more: the added effect is asked for when the fusion's
+// move starts (fu_live_step) and started once the game's table shows it loaded.
+// v5.192.5 diagnosis (in game 2026-11-22: 698 in the deck, fresh game - the 2nd cast still frees effect textures, no mid-fight
+// load logged): while the fight is on (*0x1404bc950 == 6) log every change of the game's effect loader table (entries 0x88 at
+// *(loader + 0xC0), count +0xC8: +0 kind (short), +8 request, +0x14 last use, +0x18 data) - read only, 80 lines a session
+static void fu_fxtable_watch() {
+    static int last_req[2048], last_kind[2048]; static ULONG_PTR last_data[2048]; static unsigned last_cnt; static bool armed; static int said;
+    int ph = 0; __try { ph = *(int *)(g_base + 0x4bc950); } __except (EXCEPTION_EXECUTE_HANDLER) { return; }
+    if (ph != 6) { armed = false; return; }
+    __try {
+        ULONG_PTR ld = *(ULONG_PTR *)(g_base + RVA_FX_LOADER);
+        char *ent = ld ? *(char **)(ld + 0xC0) : NULL;
+        unsigned cnt = ld ? *(unsigned *)(ld + 0xC8) : 0;
+        if (!ent || cnt > 2048) return;
+        for (unsigned e = 0; e < cnt; e++) {
+            int k = *(short *)(ent + 0x88 * e), r = *(int *)(ent + 0x88 * e + 8); ULONG_PTR dt = *(ULONG_PTR *)(ent + 0x88 * e + 0x18);
+            if (armed && (e >= last_cnt || k != last_kind[e] || r != last_req[e] || dt != last_data[e]) && said < 80) {
+                said++;
+                logf("effect table (fight): slot %u request %d -> %d, kind %d -> %d, data %p -> %p", e, e < last_cnt ? last_req[e] : -1, r,
+                     e < last_cnt ? last_kind[e] : -1, k, (void *)(e < last_cnt ? last_data[e] : 0), (void *)dt);
+            }
+            last_req[e] = r; last_kind[e] = k; last_data[e] = dt;
+        }
+        if (armed && cnt < last_cnt && said < 80) { said++; logf("effect table (fight): count %u -> %u", last_cnt, cnt); }
+        last_cnt = cnt; armed = true;
+    } __except (EXCEPTION_EXECUTE_HANDLER) {}
+}
 static void fu_step(bool in_match) {                            // CwoOverlayFrame
     fu_records_step();
+    fu_fxtable_watch();
     FxGame g;
-    if (fx_game(&g)) fu_live_step(g, in_match);
+    if (fx_game(&g)) { fu_preload(g); fu_live_step(g, in_match); }
 }
 
 // ---- the detour: placed at load, before any game code runs (all or nothing)
