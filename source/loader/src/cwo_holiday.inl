@@ -25,6 +25,7 @@ static int g_th_on = -1;                                         // the holiday 
 static int g_th_until_m, g_th_until_d;
 static bool g_th_forced;
 static unsigned char g_th_keep[12], g_th_lights_keep[2 * 0x70];
+static unsigned char g_th_wrote_s1[12], g_th_wrote_l1[2 * 0x70];   // v5.201.1 what the holiday wrote last frame
 static bool g_th_applied;
 static ULONGLONG g_th_cfg_t, g_th_popup_t;
 // g_th_popup (cwo_loader.cpp): 0 not yet, 1 greeting, 4 waiting for the main menu, 2 what's new, 3 done
@@ -92,7 +93,15 @@ static void th_lights(bool on) {
         unsigned char *s1 = (unsigned char *)(g_base + RVA_TH_SETS) + 0x58;
         unsigned char *l1 = (unsigned char *)(g_base + RVA_TH_LIGHTS) + 0x48 * 0x70;
         if (on) {
-            if (!g_th_applied) { memcpy(g_th_keep, s1, 12); memcpy(g_th_lights_keep, l1, sizeof(g_th_lights_keep)); g_th_applied = true; }
+            // v5.201.1 (owner 2026-11-23, Thanksgiving week: every fighter BLACK on every stage): set 1 is also the fighters'
+            // light. A stage's light script writes it while the stage loads - still "menus" here - and the match start used to
+            // put back the menu values kept before, over the stage's own set 1. Now: whenever set 1 / its light constants are not
+            // what the holiday wrote last frame, the GAME wrote them (a light script) - they become the values to put back.
+            if (!g_th_applied || memcmp(s1, g_th_wrote_s1, 12) || memcmp(l1, g_th_wrote_l1, sizeof(g_th_wrote_l1))) {
+                static ULONGLONG s_said;
+                if (g_th_applied && GetTickCount64() - s_said > 10000) { s_said = GetTickCount64(); logf("holiday theme: the game set light set 1 again (a stage light) - kept for the match"); }
+                memcpy(g_th_keep, s1, 12); memcpy(g_th_lights_keep, l1, sizeof(g_th_lights_keep)); g_th_applied = true;
+            }
             const Holiday &h = HOLIDAYS[g_th_on];
             s1[0] = h.bgr[0]; s1[1] = h.bgr[1]; s1[2] = h.bgr[2];
             s1[8] = h.bgr2[0] / 3; s1[9] = h.bgr2[1] / 3; s1[10] = h.bgr2[2] / 3;
@@ -102,6 +111,7 @@ static void th_lights(bool on) {
                 float r = h.bgr[2] * k / sum, g = h.bgr[1] * k / sum, b = h.bgr[0] * k / sum;
                 for (int o = 0; o <= 0x10; o += 0x10) { *(float *)(l1 + o) = r; *(float *)(l1 + o + 4) = g; *(float *)(l1 + o + 8) = b; }
             }
+            memcpy(g_th_wrote_s1, s1, 12); memcpy(g_th_wrote_l1, l1, sizeof(g_th_wrote_l1));
         } else if (g_th_applied) {
             memcpy(s1, g_th_keep, 12); memcpy(l1, g_th_lights_keep, sizeof(g_th_lights_keep)); g_th_applied = false;
         }
