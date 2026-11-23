@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.81
+# BFR mod pack 1.50.82
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,11 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.82**: loader 5.203.0: holidays keep their greeting but no longer change any colours (menus, title, panels).
+  EFFECT LAB: see-through panel; B = back everywhere; SETUP > Target: stands still / fights back / none (no CPU, hidden);
+  LT freezes the fight and hands the sticks to the free camera (fly while frozen; LB play / freeze, D-pad speed, B back);
+  every control is written on screen.
+  Pack check-in: once per gamertag on a PC (no repeats after re-installs or updates).
 - **1.50.81**: loader 5.201.1: FIX - during a holiday week (the holiday menu colours) every fighter drew black on every stage;
   the fighters now keep the stage's own light in matches.
 - **1.50.80**: loader 5.201.0: DAY AND NIGHT - the pause menu's Day and Night row (A = on / off, at once) or MOD LIST L3: in
@@ -508,7 +513,7 @@ page; when there is a newer version it downloads only the files that changed and
   menu (BFR MOD PACK x.y.z) show which version you are on.
 
 ## What the pack sends
-- **Pack check-in**: once per install and after each pack update, the pack sends your Xbox gamertag, the edition and the
+- **Pack check-in**: once per gamertag (the first time it plays this pack on a PC; not again after a re-install or an update), the pack sends your Xbox gamertag, the edition and the
   pack version to the pack's author, so the pack's author can see who plays the pack. Nothing else is sent with it.
 - **FEEDBACK** (main menu, next to MOD LIST): only when you send a message there - your message and its category, with your
   gamertag, the pack version and the last stage and mode you played. The page shows this before you send. With Category

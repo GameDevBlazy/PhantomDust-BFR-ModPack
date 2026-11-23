@@ -2652,8 +2652,9 @@ static PFN_PLAYER_DRAW o_player_draw;
 
 static volatile ULONG_PTR g_mr_hide_actor;                    // v5.34 the Mirror's parked double (cwo_mirror.inl)
 static volatile ULONG_PTR g_ho_hide_actor;                    // v5.131 the Hologram's parked double (cwo_hologram.inl)
+static volatile ULONG_PTR g_el_hide_actor;                    // v5.203.0 the Effect Lab's target with "none (hidden)"
 static void __fastcall player_draw(void *self) {
-    if (self && ((g_fhide_player && g_forge_active && (ULONG_PTR)self == f_actor(0)) || (g_mr_hide_actor && (ULONG_PTR)self == g_mr_hide_actor) || (g_ho_hide_actor && (ULONG_PTR)self == g_ho_hide_actor))) {
+    if (self && ((g_fhide_player && g_forge_active && (ULONG_PTR)self == f_actor(0)) || (g_mr_hide_actor && (ULONG_PTR)self == g_mr_hide_actor) || (g_ho_hide_actor && (ULONG_PTR)self == g_ho_hide_actor) || (g_el_hide_actor && (ULONG_PTR)self == g_el_hide_actor))) {
         int *cap = (int *)((char *)self + PLAYER_CAPTURED_BY);
         int keep = *cap;
         *cap = -2;

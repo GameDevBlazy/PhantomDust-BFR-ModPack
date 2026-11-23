@@ -22,6 +22,10 @@ static const Holiday HOLIDAYS[] = {
 static const int HOL_N = (int)(sizeof(HOLIDAYS) / sizeof(HOLIDAYS[0]));
 static const ULONG_PTR RVA_TH_SETS = 0x3e8a40, RVA_TH_LIGHTS = 0x5a6a40;
 static int g_th_on = -1;                                         // the holiday in use (-1 none)
+// v5.202.0 (owner 2026-11-23): the holidays keep their
+// words (greeting panel, title banner, What's New) and change no colour - no menu light tint, no post-pass palette, the
+// panels' accent stays the normal one, the banner is white
+static const bool TH_COLOURS = false;
 static int g_th_until_m, g_th_until_d;
 static bool g_th_forced;
 static unsigned char g_th_keep[12], g_th_lights_keep[2 * 0x70];
@@ -135,7 +139,7 @@ static void ut_cfg() {                                           // every 5 s
 static void th_step() {                                          // CwoOverlayFrame
     th_cfg();
     bool menus = !g_in_match && !g_co_prev && !g_cc_prev;
-    th_lights(g_th_on >= 0 && menus);
+    th_lights(TH_COLOURS && g_th_on >= 0 && menus);
     // v5.74.4 (owner): the greeting stays on the start screen; What's New waits
     // for the main menu (menu id, *(*0x140533c58 + 0x105f4); logged once per change) and holds the pad until OK
     int mid = -1;
@@ -144,7 +148,7 @@ static void th_step() {                                          // CwoOverlayFr
     if (mid != last_mid) { logf("holiday theme: menu id %d", mid); last_mid = mid; }
     // v5.78 the post pass (cwo_post.inl); v5.78.5 the title and main menu only (in game 15:47 it also turned the select
     // portraits' greens - character art - to the holiday colours)
-    g_pp_mode_want = g_th_on >= 0 && menus && (mid == 7 || mid == TH_MAIN_MENU_ID) ? 1 + g_th_on + (mid == 7 ? 64 : 0) : 0;
+    g_pp_mode_want = TH_COLOURS && g_th_on >= 0 && menus && (mid == 7 || mid == TH_MAIN_MENU_ID) ? 1 + g_th_on + (mid == 7 ? 64 : 0) : 0;
     ut_cfg();                                                     // v5.134 the white theme: title + main menu, no holiday palette
     // v5.134.1 (in game 06:49: the title's background movie came out inverted) - the main menu in full;
     // v5.135 (owner): every other menu (not the title, not a match) - only the
@@ -285,7 +289,7 @@ static int th_self_test() {                                      // the date win
 // While a holiday is on, the game's reads of Menu\StMenu.alr are served a copy with that texture in the holiday's colour
 // (each texel: the colour with the texel's own shading, co_tint), built once per holiday into <data>\holiday\<name>\.
 static bool th_menu_path(LPCWSTR f, wchar_t *out) {
-    if (g_th_on < 0 || !f) return false;
+    if (!TH_COLOURS || g_th_on < 0 || !f) return false;          // v5.202.0 the menu clouds keep their own colour
     size_t n = wcslen(f);
     static const wchar_t tail[] = L"menu\\stmenu.alr";
     const size_t t = sizeof(tail) / sizeof(wchar_t) - 1;

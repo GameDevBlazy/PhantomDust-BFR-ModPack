@@ -19,7 +19,9 @@
 // g_el (the Effect Lab is on: lobby + match) and g_el_panel (its panel has the buttons) are defined in cwo_loader.cpp.
 static const char *EL_SCHOOL[7] = {"Aura", "Psycho", "Optical", "Nature", "Ki", "Faith", "Illusion"};
 static const char *EL_PART[6] = {"START", "SHOT", "HIT", "HITEFFECT", "DEFENCE", "DESTROY"};
-static const char *EL_DUMMY[2] = {"stands still", "fights back"};
+// v5.203.0 (owner 2026-11-23; the log: B on the skill list had turned the target to "fights back"): three target modes, chosen only in SETUP
+// (B is now "back" everywhere in the panel): 0 stands still, 1 fights back, 2 none = the CPU stands and is not drawn
+static const char *EL_DUMMY[3] = {"stands still", "fights back", "none (hidden)"};
 static volatile LONG g_el_skill = 45, g_el_slot, g_el_loop, g_el_fire, g_el_dummy, g_el_refill = 1;
 // v5.195.0 the MOTION page (pdpEffect's MotionIndex: the fighter plays a chosen motion) and the map switch (pdpEffect's
 // "Map display"): L3 switches the list between SKILLS and MOTIONS; on MOTIONS A plays animation slot N through the game's
@@ -112,7 +114,7 @@ static void el_cfg_load() {
         if (!strcmp(k, "loop")) g_el_loop = v != 0;
         if (!strcmp(k, "grid")) g_el_grid = v != 0;
         if (!strcmp(k, "white")) g_el_white = v != 0;
-        if (!strcmp(k, "target")) g_el_dummy = v != 0;
+        if (!strcmp(k, "target")) g_el_dummy = v >= 0 && v <= 2 ? v : 0;
         if (!strcmp(k, "part") && v >= -1 && v <= 5) g_el_part = v;
         if (!strcmp(k, "motfire")) g_el_mot_fire = v != 0;
         if (!strcmp(k, "prerender")) g_el_prerender = v != 0;
@@ -266,8 +268,11 @@ static void el_step() {                                         // game thread (
         if (tg && *(int *)(tg + 0x30) == 0) {
             if (g_el_target != tg) { g_el_target = tg; g_el_brain = 0; }
             int br = *(int *)(tg + 0x142d0);
-            if (!g_el_dummy && br) { g_el_brain = br; *(int *)(tg + 0x142d0) = 0; logf("Effect Lab: the target stands (brain %d kept aside)", br); }
-            if (g_el_dummy && !br && g_el_brain) { *(int *)(tg + 0x142d0) = g_el_brain; logf("Effect Lab: the target fights (brain back)"); }
+            bool fights = g_el_dummy == 1;
+            if (!fights && br) { g_el_brain = br; *(int *)(tg + 0x142d0) = 0; logf("Effect Lab: the target stands (brain %d kept aside)", br); }
+            if (fights && !br && g_el_brain) { *(int *)(tg + 0x142d0) = g_el_brain; logf("Effect Lab: the target fights (brain back)"); }
+            ULONG_PTR hide = g_el_dummy == 2 ? tg : 0;
+            if (g_el_hide_actor != hide) { g_el_hide_actor = hide; logf("Effect Lab: the target is %s", hide ? "hidden (no CPU)" : "shown"); }
         }
         if (g_el_refill) {                                      // nobody runs out: life back to full, your aura full
             for (int i = 0; i < 2; i++) {
@@ -322,6 +327,12 @@ static void el_step() {                                         // game thread (
             if (pause && rt_new) step_tick = tick;
             if (step_tick >= 0 && (tick != step_tick || !pause)) step_tick = -1;
             if (pause) ph_want(step_tick < 0, 0); else ph_want(false, sp);
+            // v5.203.0 (owner 2026-11-23):
+            // freezing hands the sticks to the free camera at once; the freeze stays on in it (LB there plays / freezes,
+            // D-pad Up / Down the speed, B back to the lab, which lets the fight run again)
+            static bool lt_was;
+            if (pause && !lt_was) InterlockedExchange(&g_fc_req, 1);
+            lt_was = pause;
             if (pause || sp || g_el_paused || g_el_speed < 1.0f) ph_step(false, 0);
             g_el_paused = pause; g_el_speed = pause ? 0.0f : (sp == 0 ? 1.0f : sp == 1 ? 0.5f : sp == 2 ? 0.25f : 0.1f);
         }
@@ -472,7 +483,7 @@ static bool el_input(WORD b, WORD pressed) {
         if (pressed & BTN_A) InterlockedExchange(&g_el_fire, 1);
         if (pressed & BTN_X) InterlockedExchange(&g_el_stopall, 1);
         if (pressed & BTN_Y) InterlockedExchange(&g_el_loop, !g_el_loop);
-        if (pressed & BTN_B) InterlockedExchange(&g_el_dummy, !g_el_dummy);
+        if (pressed & BTN_B) { InterlockedExchange(&g_el_panel, 0); rumble(1); }   // v5.203.0 B = back to play
         return true;
     }
     if (g_el_page == 2) {                                        // SETUP: Up / Down a row, Left / Right its value, A reload
@@ -488,7 +499,7 @@ static bool el_input(WORD b, WORD pressed) {
             if (r == 3) InterlockedExchange(&g_el_grid, !g_el_grid);
             if (r == 4) InterlockedExchange(&g_el_white, !g_el_white);
             if (r == 5) InterlockedExchange(&g_el_loop, !g_el_loop);
-            if (r == 6) InterlockedExchange(&g_el_dummy, !g_el_dummy);
+            if (r == 6) InterlockedExchange(&g_el_dummy, (g_el_dummy + 3 + d) % 3);
             if (r == 7) InterlockedExchange(&g_el_part, ((g_el_part + 1 + d) % 7 + 7) % 7 - 1);
             if (r == 8) InterlockedExchange(&g_el_mot_fire, !g_el_mot_fire);
             if (r == 9) InterlockedExchange(&g_el_prerender, !g_el_prerender);
@@ -504,6 +515,7 @@ static bool el_input(WORD b, WORD pressed) {
             set_status("Effect Lab: reloading with the new character / map ...");
             logf("Effect Lab: reload asked (character / map changed)");
         }
+        if (pressed & BTN_B) { InterlockedExchange(&g_el_panel, 0); rumble(1); }   // v5.203.0 B = back to play
         return true;
     }
     if (g_el_page == 1) {                                        // MOTIONS
@@ -515,8 +527,8 @@ static bool el_input(WORD b, WORD pressed) {
         InterlockedExchange(&g_el_motion, m);
         if (pressed & BTN_A) InterlockedExchange(&g_el_mfire, 1);
         if (pressed & BTN_Y) InterlockedExchange(&g_el_mloop, !g_el_mloop);
-        if (pressed & BTN_B) InterlockedExchange(&g_el_map, !g_el_map);
-        if (pressed & BTN_X) InterlockedExchange(&g_el_dummy, !g_el_dummy);
+        if (pressed & BTN_X) InterlockedExchange(&g_el_map, !g_el_map);   // v5.203.0 X stage on / off, B = back
+        if (pressed & BTN_B) { InterlockedExchange(&g_el_panel, 0); rumble(1); }
         return true;
     }
     if (pressed & BTN_UP) InterlockedExchange(&g_el_skill, el_step_skill(g_el_skill, -1));
@@ -535,7 +547,7 @@ static bool el_input(WORD b, WORD pressed) {
     if (pressed & BTN_A) InterlockedExchange(&g_el_fire, 1);
     if (pressed & BTN_X) InterlockedExchange(&g_el_slot, (g_el_slot + 1) & 3);
     if (pressed & BTN_Y) InterlockedExchange(&g_el_loop, !g_el_loop);
-    if (pressed & BTN_B) InterlockedExchange(&g_el_dummy, !g_el_dummy);
+    if (pressed & BTN_B) { InterlockedExchange(&g_el_panel, 0); rumble(1); }   // v5.203.0 B = back to play (the target is in SETUP)
     return true;
 }
 
@@ -566,9 +578,11 @@ static void el_draw() {                                         // render thread
     __try {
         tiny();
         if (g_fc_on) {                                           // CAMERA MODE (pdpEffect): the camera's Pos / Rot
-            box(40, 455, 600, 20, 0xD0000810);
-            sprintf_s(line, "CAMERA MODE  Pos (%.0f %.0f %.0f)  Rot (%.0f %.0f)   sticks move   B: player move mode",
-                      g_fc_pos[0], g_fc_pos[1], g_fc_pos[2], g_fc_yaw * 57.2958f, g_fc_pitch * 57.2958f);
+            box(40, 455, 600, 20, 0x38000810);
+            box(40, 433, 600, 20, 0x38000810);
+            put(50, 439, "L stick fly  R stick look  LT/RT down/up  A fast  LB freeze/play  D-pad speed  Y next fighter  X HUD  B back", WHITE);
+            sprintf_s(line, "CAMERA MODE  Pos (%.0f %.0f %.0f)  Rot (%.0f %.0f)   %s",
+                      g_fc_pos[0], g_fc_pos[1], g_fc_pos[2], g_fc_yaw * 57.2958f, g_fc_pitch * 57.2958f, g_ph_pause ? "FROZEN" : "PLAYING");
             put(50, 461, line, GOLD);
             memcpy(rgba, s_rgba, sizeof(s_rgba));
             *space = s_space; *gap = s_gap; *fh = s_h; *fw = s_w; *x0 = s_x0;
@@ -593,11 +607,11 @@ static void el_draw() {                                         // render thread
             tiny();
         }
         if (!g_el_panel) {                                       // play: one quiet line
-            box(40, 455, 300, 20, 0xB0000000);
-            put(50, 461, "EFFECT LAB  View: lists  R3: free camera  RB + D-pad: poses", GOLD);
+            box(40, 455, 300, 20, 0x38000810);
+            put(50, 461, "EFFECT LAB  View: lists  R3: free camera  LT: freeze + camera  RT: slow  RB + D-pad: poses", GOLD);
         } else {                                                 // the game's text queue holds 1000 glyphs: the panel stays under ~480
             const int X = 22, Y = 30, W = 200, LN = 13;
-            box(X - 8, Y - 6, W + 20, 330, 0xD0000810);
+            box(X - 8, Y - 6, W + 20, 330, 0x38000810);
             put(X, Y, "EFFECT LAB", GOLD);
             if (g_el_page == 3) {                                // EFFECTS: every effect of the game's index
                 put(X + 70, Y, "- EFFECTS", GOLD);
@@ -621,8 +635,8 @@ static void el_draw() {                                         // render thread
                 sprintf_s(line, "Loop %s  %s", g_el_loop ? "ON" : "OFF", g_el_paused ? "PAUSED" : g_el_speed < 1.0f ? "SLOW" : "");
                 put(X, y + 2, line, BLUE);
                 if (g_el_note[0]) put(X, y + 2 + LN, g_el_note, GOLD);
-                box(40, 455, 600, 20, 0xD0000810);
-                put(50, 461, "Up/Down 1  L/R 10  LB/RB 100  A play  X stop all  Y loop  RT slow  LT freeze  L3 next", WHITE);
+                box(40, 455, 600, 20, 0x38000810);
+                put(50, 461, "Up/Down 1  L/R 10  LB/RB 100  A play  X stop all  Y loop  B back  L3 next list  R3 camera", WHITE);
             } else if (g_el_page == 2) {                         // SETUP (pdpEffect's settings panel)
                 put(X + 70, Y, "- SETUP", GOLD);
                 char stn[64] = "";
@@ -631,7 +645,7 @@ static void el_draw() {                                         // render thread
                 sprintf_s(wv[0], "%ld", (long)g_el_wind_s);
                 for (int k = 0; k < 3; k++) sprintf_s(wv[k + 1], "%+ld", (long)g_el_wind[k] - 50);
                 const char *val[EL_ROWS] = {g_lob_nch > 0 ? g_lob_ch[g_lob[0].ch].name : "-", stn, g_el_map ? "ON" : "OFF", g_el_grid ? "ON" : "OFF",
-                                            g_el_white ? "WHITE" : "BLACK", g_el_loop ? "ON" : "OFF", EL_DUMMY[g_el_dummy ? 1 : 0],
+                                            g_el_white ? "WHITE" : "BLACK", g_el_loop ? "ON" : "OFF", EL_DUMMY[g_el_dummy % 3],
                                             g_el_part < 0 ? "ALL (the skill)" : EL_PART[g_el_part], g_el_mot_fire ? ED_ANIM[g_el_motion] : "OFF",
                                             g_el_prerender ? "ON" : "OFF", wv[0], wv[1], wv[2], wv[3], g_el_camera ? "CAMERA" : "PLAYER MOVE"};
                 static const char *lab[EL_ROWS] = {"Character", "Map", "Map display", "Grid display", "Background", "Force loop", "Target",
@@ -646,8 +660,8 @@ static void el_draw() {                                         // render thread
                 if (g_el_white && g_el_map) { put(X, y, "(seen with Map display OFF)", GREY); y += LN; }
                 sprintf_s(line, "Pos %.0f %.0f %.0f  Rot %.0f", g_el_pos[0], g_el_pos[1], g_el_pos[2], g_el_pos[3]);
                 put(X, y, line, GREY);
-                box(40, 455, 600, 20, 0xD0000810);
-                put(50, 461, "Up/Down row  Left/Right value  A reload (character / map)  L3 skills  R3 camera  View play", WHITE);
+                box(40, 455, 600, 20, 0x38000810);
+                put(50, 461, "Up/Down row  Left/Right value (Target: with / without CPU)  A reload  B back  L3 next  R3 camera", WHITE);
             } else if (g_el_page == 1) {                         // MOTIONS
                 put(X + 70, Y, "- MOTIONS", GOLD);
                 int cm = g_el_motion;
@@ -659,11 +673,11 @@ static void el_draw() {                                         // render thread
                 int y = Y + 16 + 9 * LN + 8;
                 sprintf_s(line, "Loop %s", g_el_mloop ? "ON" : "OFF"); put(X, y, line, BLUE); y += LN;
                 sprintf_s(line, "Stage %s", g_el_map ? "shown" : "hidden"); put(X, y, line, BLUE); y += LN;
-                sprintf_s(line, "Target %s", EL_DUMMY[g_el_dummy ? 1 : 0]); put(X, y, line, BLUE); y += LN;
+                sprintf_s(line, "Target %s", EL_DUMMY[g_el_dummy % 3]); put(X, y, line, BLUE); y += LN;
                 sprintf_s(line, "Pos %.0f %.0f %.0f  Rot %.0f", g_el_pos[0], g_el_pos[1], g_el_pos[2], g_el_pos[3]);
                 put(X, y, line, GREY);
-                box(40, 455, 600, 20, 0xD0000810);
-                put(50, 461, "D-pad motion  A play  Y loop  B stage on/off  X target  L3 skills  R3 camera  View play", WHITE);
+                box(40, 455, 600, 20, 0x38000810);
+                put(50, 461, "D-pad motion  A play  Y loop  X stage on/off  B back  L3 next list  R3 camera", WHITE);
             } else {
             put(X + 70, Y, "- SKILLS", GOLD);
             int cur = g_el_skill, ids[7], n = 0, id = cur;
@@ -713,13 +727,13 @@ static void el_draw() {                                         // render thread
             y += 4 * LN + 2;
             sprintf_s(line, "Loop %s   Speed %s", g_el_loop ? "ON" : "OFF", g_el_paused ? "PAUSED (RT: step)" : g_el_speed >= 1.0f ? "100%" : g_el_speed >= 0.5f ? "50%" : g_el_speed >= 0.25f ? "25%" : "10%");
             put(X, y, line, BLUE); y += LN;
-            sprintf_s(line, "Target %s", EL_DUMMY[g_el_dummy ? 1 : 0]);
+            sprintf_s(line, "Target %s", EL_DUMMY[g_el_dummy % 3]);
             put(X, y, line, BLUE); y += LN;
             sprintf_s(line, "Pos %.0f %.0f %.0f  Rot %.0f", g_el_pos[0], g_el_pos[1], g_el_pos[2], g_el_pos[3]);
             put(X, y, line, GREY); y += LN;
             if (g_el_note[0]) put(X, y, g_el_note, GOLD);
-            box(40, 455, 600, 20, 0xD0000810);
-            put(50, 461, "D-pad skill  LB/RB school  A play  X slot  Y loop  B target  RT slow  LT freeze  L3 next  View play", WHITE);
+            box(40, 455, 600, 20, 0x38000810);
+            put(50, 461, "D-pad skill  LB/RB school  A play  X slot  Y loop  B back  L3 next list  R3 camera  (target: SETUP)", WHITE);
             }
         }
     } __except (EXCEPTION_EXECUTE_HANDLER) {}

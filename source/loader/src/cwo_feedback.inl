@@ -149,6 +149,15 @@ static void fb_version(char *out, size_t n) {
 static void fb_open(int page);                                   // below
 static int g_ty_answer = -2;                                      // -2 not read, -1 not asked yet, 0 no, 1 yes
 static char g_ty_sent[80];
+// v5.204.0 (owner 2026-11-23):
+// each gamertag is checked in ONCE on this PC, ever - not again after a re-install or a pack update. The gamertags already
+// sent are kept on the 3rd line of CwoCheckIn.txt ("tags|a|b|..."); the edition / version key (line 2) is still recorded.
+static char g_ty_tags[1024];
+static bool ty_tag_sent(const char *who) {
+    char k[FB_NAME_MAX + 3]; sprintf_s(k, "|%s|", who);
+    char all[1100]; sprintf_s(all, "%s|", g_ty_tags);
+    return who[0] && strstr(all, k) != NULL;
+}
 static void ty_key(char *out, size_t n) {                         // the pack: edition + pack version (MODS: once per install)
     wchar_t p[MAX_PATH]; fb_path("pack_version.txt", p);
     FILE *f = NULL; char v[40] = "";
@@ -176,6 +185,8 @@ static void ty_read() {
     if (cwo_wfopen(&f, p, L"r") != 0 || !f) return;
     if (fgets(a, sizeof(a), f)) g_ty_answer = !strncmp(a, "yes", 3) || !strncmp(a, "sent", 4) ? 1 : !strncmp(a, "no", 2) ? 0 : -1;
     if (!fgets(g_ty_sent, sizeof(g_ty_sent), f)) g_ty_sent[0] = 0;
+    if (!fgets(g_ty_tags, sizeof(g_ty_tags), f) || strncmp(g_ty_tags, "tags", 4)) g_ty_tags[0] = 0;
+    for (int i = (int)strlen(g_ty_tags) - 1; i >= 0 && (g_ty_tags[i] == '\n' || g_ty_tags[i] == '\r' || g_ty_tags[i] == ' '); i--) g_ty_tags[i] = 0;
     fclose(f);
     fb_clean(g_ty_sent);
     for (int i = (int)strlen(g_ty_sent) - 1; i >= 0 && g_ty_sent[i] == ' '; i--) g_ty_sent[i] = 0;
@@ -183,7 +194,7 @@ static void ty_read() {
 static void ty_write() {
     wchar_t p[MAX_PATH]; fb_path("CwoCheckIn.txt", p);
     FILE *f = NULL;
-    if (cwo_wfopen(&f, p, L"w") == 0 && f) { fprintf(f, "%s\n%s\n", g_ty_answer == 1 ? "sent" : "no", g_ty_sent); fclose(f); }
+    if (cwo_wfopen(&f, p, L"w") == 0 && f) { fprintf(f, "%s\n%s\n%s\n", g_ty_answer == 1 ? "sent" : "no", g_ty_sent, g_ty_tags[0] ? g_ty_tags : "tags"); fclose(f); }
 }
 static void ty_load_name() {                                       // the name typed on FEEDBACK / here before
     if (g_fb_name[0]) return;
@@ -209,6 +220,8 @@ static bool ty_queue() {                                          // one entry f
     fprintf(f, "%s\t%s\t%s\t%s\t%s\t%s\t%s\n", when, who, "Feedback", msg, ver, "-", "-");
     fclose(f);
     strcpy_s(g_ty_sent, key);
+    if (!g_ty_tags[0]) strcpy_s(g_ty_tags, "tags");
+    if (strlen(g_ty_tags) + strlen(who) + 2 < sizeof(g_ty_tags)) { strcat_s(g_ty_tags, "|"); strcat_s(g_ty_tags, who); }
     logf("pack check-in: %s queued (%s) - the launcher sends it at the next start", who, key);
     return true;
 }
@@ -231,6 +244,16 @@ static void ty_step() {                                           // game thread
     if (g_ty_answer == 0 || g_fb_tag_state == 1 || !fb_who()[0]) return;
     char key[80]; ty_key(key, sizeof(key));
     if (!strcmp(key, g_ty_sent)) return;
+    {                                                             // v5.204.0 this gamertag was checked in before: never again
+        char who[FB_NAME_MAX + 1]; strcpy_s(who, fb_who()); fb_clean(who);
+        if (ty_tag_sent(who) || (!g_ty_tags[0] && g_ty_answer == 1 && g_ty_sent[0])) {
+            // (an older CwoCheckIn.txt without a tags line = this PC already checked in: its current name is recorded, not sent)
+            if (!ty_tag_sent(who)) { if (!g_ty_tags[0]) strcpy_s(g_ty_tags, "tags"); strcat_s(g_ty_tags, "|"); strcat_s(g_ty_tags, who); }
+            strcpy_s(g_ty_sent, key); ty_write();
+            logf("pack check-in: %s was checked in before on this PC - not sent again (%s)", who, key);
+            return;
+        }
+    }
     static bool test_logged;
     wchar_t tp[MAX_PATH]; fb_path("CwoTestNoCheckIn.txt", tp);  // the agent's offline test runs: nothing queued
     if (GetFileAttributesW(tp) != INVALID_FILE_ATTRIBUTES) {
@@ -534,7 +557,7 @@ static void fb_draw() {
                                     "THE PACK"};
     put(X, Y, TITLES[g_fb_page], acc);
     if (g_fb_page == 4) {                                          // v5.161 the thank-you list question
-        static const char *T[] = {"Once per install and after each pack update, this pack sends", "your gamertag and the pack version to the pack author.",
+        static const char *T[] = {"Once per gamertag (its first time with this pack), it sends", "your gamertag and the pack version to the pack author.",
                                   "", "Nothing else is sent."};
         int y = Y + 30;
         for (const char *t : T) { put(X, y, t, t[0] == 'A' ? YEL : WHITE); y += 18; }

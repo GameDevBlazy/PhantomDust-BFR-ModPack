@@ -169,7 +169,7 @@ static void fc_start() {
     ULONG_PTR pl = ed_player(0);
     if (!pl || !*(int *)(pl + 0x20)) { set_status("Free camera: no fighter to watch yet"); return; }
     g_fc_made_cpu = false;
-    if (*(int *)(pl + 0x30) != 0) {                             // you are playing: the CPU fights on for you
+    if (*(int *)(pl + 0x30) != 0 && !g_el) {                    // you are playing: the CPU fights on for you (v5.203.0 not in the Effect Lab: you stand)
         if (!ed_spec_cpu(pl, true)) return;                     // (it says why on screen)
         g_fc_made_cpu = true;
     }
@@ -187,7 +187,7 @@ static void fc_start() {
     QueryPerformanceCounter(&g_fc_last);
     fc_write();
     InterlockedExchange(&g_fc_on, 1);
-    ph_end();
+    if (!g_el) ph_end();                                        // v5.203.0 the Effect Lab's freeze / slow carries into the camera
     set_status("FREE CAMERA: sticks fly, LT/RT down/up, A fast, Y next fighter, X HUD, LB pause, D-pad speed, B back");
     logf("free camera: on at (%.1f, %.1f, %.1f)%s", g_fc_pos[0], g_fc_pos[1], g_fc_pos[2], g_fc_made_cpu ? ", player 1 handed to the CPU" : "");
 }

@@ -40,7 +40,7 @@ static const MlMod ML_BUILTIN[] = {
     {"Skill Vault", "Lab > View Skill Vault: a skill you don't own takes the copies of one you own that is in none of your arsenals."},   // v5.180.1 in BFR too
     {"FEEDBACK and To-Do List", "Main menu FEEDBACK: send a bug, suggestion or idea to the pack's author, and read what is planned."},   // v5.180.1 in BFR too
     {"Save backup", "Your own saved game (arsenals, ratings, story, wins / losses): X here backs it up before the next start, to desktop > Phantom Dust save backups (the newest 3 are kept). BACKUP MY SAVE.bat does it too."},   // v5.188.10
-    {"Pack check-in", "Once per install and after each pack update: your gamertag and the pack version go to the pack's author, so the pack's author can see who plays the pack."},   // v5.180.1 in BFR too
+    {"Pack check-in", "Once per gamertag (the first time it plays this pack on this PC): your gamertag and the pack version go to the pack's author, so the pack's author can see who plays the pack."},   // v5.180.1 in BFR too
     {"Crash shield", "An effect drawn after its texture was freed no longer closes the game (offline)."},   // v5.180.1 in BFR too
     {"Compact stage list", "One row per stage family in the split-screen STAGE LIST; D-pad left / right for its versions.", 1},   // v5.186.1 BFR: in its Added maps row
     {"Train a CPU (new, test)", "LB here: record your offline matches (CwoTrain folder). RB here: a CPU replays your newest recording, then fights on its own once the match goes differently.", 0},   // v5.188.54

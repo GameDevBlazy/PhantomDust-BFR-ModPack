@@ -381,7 +381,7 @@ static void pp_hook() {                                           // CwoOverlayF
 }
 
 static DWORD th_accent() {                                        // v5.79.2 the greeting's headline: the holiday's light colour
-    if (g_th_on < 0 || g_th_on >= (int)(sizeof(PP_PAL) / sizeof(PP_PAL[0]))) return 0xFF80E0D0;
+    if (!TH_COLOURS || g_th_on < 0 || g_th_on >= (int)(sizeof(PP_PAL) / sizeof(PP_PAL[0]))) return 0xFF80E0D0;   // v5.202.0 no holiday colours
     const PpPalette &pl = PP_PAL[g_th_on];
     return 0xFF000000u | (DWORD)(pl.c[2][0] * 255) << 16 | (DWORD)(pl.c[2][1] * 255) << 8 | (DWORD)(pl.c[2][2] * 255);
 }
@@ -429,7 +429,7 @@ static void th_banner() {
     px = 320 - tw / 2;
     auto mono = [&](int x, int y, DWORD c) { set_rgba(rgba, c); char one[2] = {0, 0}; for (int i = 0; i < len; i++) { if (msg[i] != ' ') { one[0] = msg[i]; text(x, y, one); } x += adv(msg[i]); } };
     mono(px + 2, py + 2, 0xFF000000);
-    mono(px, py, col(2, lvl));                                    // the light colour (red on the red logo glow could not be read)
+    mono(px, py, TH_COLOURS ? col(2, lvl) : 0xFFFFFFFFu);        // v5.202.0 white: the words stay, no holiday colour                                    // the light colour (red on the red logo glow could not be read)
     memcpy(rgba, s_rgba, sizeof(s_rgba));
     *space = s_space; *gap = s_gap; *fh = s_h; *fw = s_w; *x0 = s_x0;
 }
