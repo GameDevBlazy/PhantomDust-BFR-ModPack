@@ -1,6 +1,6 @@
 {
  "name": "BFR mod pack",
- "version": "1.50.83",
+ "version": "1.50.84",
  "game": "Phantom Dust (Microsoft Store) 1.40",
  "files": {
   "launcher/CwoLaunch.exe": "8e3c4882a7cd40f039340c8faefc29bd7827ae67447f899628b2836fc39abda2",
@@ -20,7 +20,7 @@
   "data/patches/Assets/Data/Menu/arsenaledit_en.ssb.cwopatch": "57088f26b651df4c97afbd11f23c99ff8f73a1f6d70138f3ae656e395a368b5c",
   "data/patches/Assets/Data/Menu/livearsel_en.ssb.cwopatch": "a40cc11860f9683cc340327fa046d29afb6eb637874065248283027ab3e4e5a8",
   "data/patches/Assets/Data/Menu/option_en.ssb.cwopatch": "9a5040833cbac6c2ec8094cf122d2215681ae3df3f43f60a064962fd223df64b",
-  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "98c463838f98b8c4b3a70600cea44d47538748f252e76d999cddc28a0ead3a3b",
+  "data/patches/Assets/Data/Menu/mainmenu_en.ssb.cwopatch": "2de6943a5b9158eec295b9c736b6dc931e1077760985b7156e03737153bfa76f",
   "data/patches/Assets/Data/Menu/pausemenu_en.ssb.cwopatch": "88bb8364cf4ead2916a9a7ad59fc4b2c7572ec4b579487a31613000f69289bf5",
   "data/patches/Assets/Data/Menu/vsmenu_en.ssb.cwopatch": "ed22d0c22b62d69ec5ccaf2f97765630d94170688120660fd787f2de1cc84f4d",
   "data/patches/Assets/Data/com/single2.csv.cwopatch": "c0f96437ac2bd304651184211670ed9b631a06fb3848d02aa21eb4b2f97720e3",
@@ -611,10 +611,6 @@
   "data/patches/Assets/Data/Map/mx333.alr.cwofrom": "c46c8b07335f98a3ba7001e2ab8446f770f4188749c9d00f835963998a231ae4",
   "data/patches/Assets/Data/Map/mx333.dat.cwopatch": "3d585c214366babe95dfdc50e4b5b44072d7cd433e05860cc739d737e5378b4f",
   "data/patches/Assets/Data/Map/mx333.dat.cwofrom": "cfcb75d6a63d962ab5b6e82e01eeee537d6908bedcab1237b8f4aab0874d4686",
-  "data/patches/Assets/Data/Map/mx334.alr.cwopatch": "7c4c41bc8864a15728b6892dc3993772d1cab98b9125c174f2e79bf33a7ac655",
-  "data/patches/Assets/Data/Map/mx334.alr.cwofrom": "801c660a0024b98d456485272683c33a2705944bbbe73f09e7e59a85d0c2ea86",
-  "data/patches/Assets/Data/Map/mx334.dat.cwopatch": "933358320e0a30341bd53ed3709e845e5db55d730d8a3b37d3cacbfd9789f003",
-  "data/patches/Assets/Data/Map/mx334.dat.cwofrom": "e995b96569619b62e5393cf455e479b5cbe77f7acec1e0a54816586bd5148465",
   "data/patches/Assets/Data/Map/mx335.alr.cwopatch": "943ef9670579d05c4976e7f4d388f1de4defbe03cb66cdbf881cf878b49f2fea",
   "data/patches/Assets/Data/Map/mx335.alr.cwofrom": "b9b69b4fff9ccbb290fd1eff4cfae5146723872cbc0a2027da1b0ac87955cb15",
   "data/patches/Assets/Data/Map/mx335.dat.cwopatch": "59ea15d422514e46394966556b93593f649f5479bf6caf4c69c975b454c72469",
@@ -659,10 +655,6 @@
   "data/patches/Assets/Data/com/mx333/comdata0.cad.cwofrom": "e3646f162707fbdfd529b16644e638d9d14e1a94b28deb81a96ee401e7a87a6d",
   "data/patches/Assets/Data/com/mx333/comdata1.cad.cwopatch": "c18abcfabda05d8db409ff4ca4d4c8647e3ab2ebddaa0c67d8839399dd452455",
   "data/patches/Assets/Data/com/mx333/comdata1.cad.cwofrom": "9283d578481729a0d874df9201d62560c5985c1743014e228b274d759e89bea9",
-  "data/patches/Assets/Data/com/mx334/comdata0.cad.cwopatch": "34e81f598ceb1f02f0866246ba16419672f2b3b4a12b6c397fdf3d11c7a2440b",
-  "data/patches/Assets/Data/com/mx334/comdata0.cad.cwofrom": "13abbac4399693a28f79c8ebf51a5d479946f2abd73f0e47a39ca57ac34df5a2",
-  "data/patches/Assets/Data/com/mx334/comdata1.cad.cwopatch": "34e81f598ceb1f02f0866246ba16419672f2b3b4a12b6c397fdf3d11c7a2440b",
-  "data/patches/Assets/Data/com/mx334/comdata1.cad.cwofrom": "586097feabfd891faafe023c66687b8a5a0aada653bdfcff408c07820928ff67",
   "data/patches/Assets/Data/com/mx335/comdata0.cad.cwopatch": "f3edf20dd697dde6b2389c8ba20938b1edfa51a12c2caa3e9898883a3b6fa33b",
   "data/patches/Assets/Data/com/mx335/comdata0.cad.cwofrom": "977165a4eb638bdf8b598855ab4f345eacbb3ae58db6f2095dcc89f8716165da",
   "data/patches/Assets/Data/com/mx335/comdata1.cad.cwopatch": "f3edf20dd697dde6b2389c8ba20938b1edfa51a12c2caa3e9898883a3b6fa33b",
@@ -687,6 +679,14 @@
   "data/patches/Assets/Data/com/mx403/comdata0.cad.cwofrom": "4fe0c95993c0a1c350161c9ad4b1360e4b8b44ae4ac078e5ae356432c876d788",
   "data/patches/Assets/Data/com/mx403/comdata1.cad.cwopatch": "de2d523aff9be993e2f5899870779f17bfea021b32920007190018d484aa5495",
   "data/patches/Assets/Data/com/mx403/comdata1.cad.cwofrom": "0d0f05593bc9deb5005e22c84f4513313610ed41ffb97c47a236f4712051842a",
+  "data/patches/Assets/Data/Map/mx334.alr.cwopatch": "649aa535448732fb012c78db36737f6403709075ecad559dc1f74f1dc0038710",
+  "data/patches/Assets/Data/Map/mx334.alr.cwofrom": "801c660a0024b98d456485272683c33a2705944bbbe73f09e7e59a85d0c2ea86",
+  "data/patches/Assets/Data/Map/mx334.dat.cwopatch": "3b53cf0eb4f4bcd5d4dc15d0cf40d8722dc510bd4bda2b89c0325ded9fe61b88",
+  "data/patches/Assets/Data/Map/mx334.dat.cwofrom": "e995b96569619b62e5393cf455e479b5cbe77f7acec1e0a54816586bd5148465",
+  "data/patches/Assets/Data/com/mx334/comdata0.cad.cwopatch": "34e81f598ceb1f02f0866246ba16419672f2b3b4a12b6c397fdf3d11c7a2440b",
+  "data/patches/Assets/Data/com/mx334/comdata0.cad.cwofrom": "13abbac4399693a28f79c8ebf51a5d479946f2abd73f0e47a39ca57ac34df5a2",
+  "data/patches/Assets/Data/com/mx334/comdata1.cad.cwopatch": "34e81f598ceb1f02f0866246ba16419672f2b3b4a12b6c397fdf3d11c7a2440b",
+  "data/patches/Assets/Data/com/mx334/comdata1.cad.cwofrom": "586097feabfd891faafe023c66687b8a5a0aada653bdfcff408c07820928ff67",
   "data/patches/_data/themes/cel/Assets/Data/Map/st02.alr.cwopatch": "d3dc40b23dde52b23daedbaab3df56cbb4e8fe2f661c4fc8a1c1b430f7948742",
   "data/patches/_data/themes/cel/Assets/Data/Map/st02.alr.cwofrom": "a15594877d7c9154b8f3087e0c8503110e38da206e31157ada2f3c07aef51134",
   "data/patches/_data/themes/cel/Assets/Data/Map/st03.alr.cwopatch": "21e4bc87ae60bbdd75b1ff2520e7eb691b42a76662705723e64e8d9128376288",
@@ -1341,7 +1341,7 @@
   "uninstall_bfr.ps1": "fcfea6d1fb477435651b81046354341a33d08ce5e5817ec39fbcabeb6f06e094",
   "INSTALL BFR.bat": "0f85160b0393ab4e30b4f94c4fe67491c3e5cbda4654772a75dc48f4832981ab",
   "UNINSTALL BFR.bat": "b1846c559aafe8fda0c961354cec7dbf21e16d7698ed407c156d22cac3b1c45d",
-  "README.md": "3202cd6373318279fab4b686bb0511ce5f2ef1ce8a4333c5dd2f5196fad596a9"
+  "README.md": "7b65e2dafef3cdd1ab6147a00d9a4eb83492915e5b3fe433dafec3ed4ec78944"
  },
  "patches": [
   {
@@ -1387,7 +1387,7 @@
   {
    "file": "Assets/Data/Menu/mainmenu_en.ssb",
    "clean_sha256": "b9509b5d80a8a7205146c14d08d7532de005c25dbd2b13f3993d7438e660c297",
-   "result_sha256": "5fcdbc09cf42c5739c190a1e8462bcd4b5ed33de8e699174b82d7f70e1905f89",
+   "result_sha256": "2691dbf8c83134ac47effdb3a7354b20ec7ecb5c8e3da34bd8b4dcd5943a3f2f",
    "our_bytes": 6120,
    "copied_from_your_file": 3346,
    "carries": "main menu: EDGAR'S DREAM, MOD LIST (1.43, build_modlist_menu.py) and the BFR MOD PACK line; 1.50.13 EDGAR'S DREAM is CREATE, MULTIPLAYER > Single Play, FEEDBACK and TO-DO LIST"
@@ -4162,40 +4162,6 @@
    "carries": "new stage (1.48, patch format 2)"
   },
   {
-   "file": "Assets/Data/Map/mx334.alr",
-   "made_from": [
-    "Assets/Data/Map/st04.alr",
-    "Assets/Data/Map/st06.alr",
-    "Assets/Data/Map/st02.alr",
-    "Assets/Data/Map/st05.alr",
-    "Assets/Data/Map/st14.alr",
-    "Assets/Data/Map/st12.alr",
-    "Assets/Data/Map/st24.alr",
-    "Assets/Data/Map/st09_07.alr"
-   ],
-   "result_sha256": "c824dee201a2789d7f075297d397855683e1234c8ec1a784b4db5e9b4fca4bfb",
-   "our_bytes": 28376736,
-   "copied_from_your_file": 16181722,
-   "carries": "new stage (1.48, patch format 2)"
-  },
-  {
-   "file": "Assets/Data/Map/mx334.dat",
-   "made_from": [
-    "Assets/Data/Map/st32.dat",
-    "Assets/Data/Map/st04.dat",
-    "Assets/Data/Map/st23.dat",
-    "Assets/Data/Map/st02.dat",
-    "Assets/Data/Map/st03.dat",
-    "Assets/Data/Map/st06.dat",
-    "Assets/Data/Map/st05.dat",
-    "Assets/Data/Map/st25.dat"
-   ],
-   "result_sha256": "35c82d97e54c2df5b1d9627e096c0c39eb86841fc32091f697d6949c3f0fea6d",
-   "our_bytes": 686577,
-   "copied_from_your_file": 110647,
-   "carries": "new stage (1.48, patch format 2)"
-  },
-  {
    "file": "Assets/Data/Map/mx335.alr",
    "made_from": [
     "Assets/Data/Map/st06.alr",
@@ -4524,30 +4490,6 @@
    "carries": "new stage (1.48, patch format 2)"
   },
   {
-   "file": "Assets/Data/com/mx334/comdata0.cad",
-   "made_from": [
-    "Assets/Data/com/st02/comdata0.cad",
-    "Assets/Data/com/st06/comdata0.cad",
-    "Assets/Data/com/st07/comdata0.cad"
-   ],
-   "result_sha256": "2f19616ccd957a701889731069163d630d79f91af42ca1d884b95aefc56c5cc3",
-   "our_bytes": 398350,
-   "copied_from_your_file": 275962,
-   "carries": "new stage (1.48, patch format 2)"
-  },
-  {
-   "file": "Assets/Data/com/mx334/comdata1.cad",
-   "made_from": [
-    "Assets/Data/com/st02/comdata1.cad",
-    "Assets/Data/com/st06/comdata1.cad",
-    "Assets/Data/com/st07/comdata1.cad"
-   ],
-   "result_sha256": "2f19616ccd957a701889731069163d630d79f91af42ca1d884b95aefc56c5cc3",
-   "our_bytes": 398350,
-   "copied_from_your_file": 275962,
-   "carries": "new stage (1.48, patch format 2)"
-  },
-  {
    "file": "Assets/Data/com/mx335/comdata0.cad",
    "made_from": [
     "Assets/Data/com/st02/comdata0.cad",
@@ -4697,6 +4639,64 @@
    "result_sha256": "6225e4e2315b06757efa9cc139216a1ff9c5c733c363f25e094e86f05f53c8f0",
    "our_bytes": 315384,
    "copied_from_your_file": 358928,
+   "carries": "new stage (1.48, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx334.alr",
+   "made_from": [
+    "Assets/Data/Map/st04.alr",
+    "Assets/Data/Map/st06.alr",
+    "Assets/Data/Map/st02.alr",
+    "Assets/Data/Map/st05.alr",
+    "Assets/Data/Map/st14.alr",
+    "Assets/Data/Map/st12.alr",
+    "Assets/Data/Map/st24.alr",
+    "Assets/Data/Map/st09_07.alr"
+   ],
+   "result_sha256": "37cc4a43ba8bae3bd32d4299d45c990e72542747ccc2648731fb57c2f21a064c",
+   "our_bytes": 28515813,
+   "copied_from_your_file": 16197779,
+   "carries": "new stage (1.48, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/Map/mx334.dat",
+   "made_from": [
+    "Assets/Data/Map/st32.dat",
+    "Assets/Data/Map/st04.dat",
+    "Assets/Data/Map/st23.dat",
+    "Assets/Data/Map/st02.dat",
+    "Assets/Data/Map/st03.dat",
+    "Assets/Data/Map/st06.dat",
+    "Assets/Data/Map/st05.dat",
+    "Assets/Data/Map/st25.dat"
+   ],
+   "result_sha256": "fe035fc084f5240c7f1d65580c49d25ab8d74ea960811f20784988d66dc212e0",
+   "our_bytes": 692841,
+   "copied_from_your_file": 110647,
+   "carries": "new stage (1.48, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/com/mx334/comdata0.cad",
+   "made_from": [
+    "Assets/Data/com/st02/comdata0.cad",
+    "Assets/Data/com/st06/comdata0.cad",
+    "Assets/Data/com/st07/comdata0.cad"
+   ],
+   "result_sha256": "2f19616ccd957a701889731069163d630d79f91af42ca1d884b95aefc56c5cc3",
+   "our_bytes": 398350,
+   "copied_from_your_file": 275962,
+   "carries": "new stage (1.48, patch format 2)"
+  },
+  {
+   "file": "Assets/Data/com/mx334/comdata1.cad",
+   "made_from": [
+    "Assets/Data/com/st02/comdata1.cad",
+    "Assets/Data/com/st06/comdata1.cad",
+    "Assets/Data/com/st07/comdata1.cad"
+   ],
+   "result_sha256": "2f19616ccd957a701889731069163d630d79f91af42ca1d884b95aefc56c5cc3",
+   "our_bytes": 398350,
+   "copied_from_your_file": 275962,
    "carries": "new stage (1.48, patch format 2)"
   },
   {

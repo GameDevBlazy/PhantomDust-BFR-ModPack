@@ -1,4 +1,4 @@
-# BFR mod pack 1.50.83
+# BFR mod pack 1.50.84
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
@@ -224,6 +224,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.84**: FIX - Five-Story Building: the stair hall now goes on from the fifth floor up to the roof (an opening in the roof
+  with a railing round it).
 - **1.50.83**: loader 5.204.2: FIX - Effect Lab: R3 and the LT freeze now keep the free camera on (it was switched off again
   at once), so you can fly the camera around a frozen or slowed skill.
 - **1.50.82**: loader 5.203.0: holidays keep their greeting but no longer change any colours (menus, title, panels).
