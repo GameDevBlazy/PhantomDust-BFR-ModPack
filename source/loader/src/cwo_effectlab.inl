@@ -331,7 +331,7 @@ static void el_step() {                                         // game thread (
             // freezing hands the sticks to the free camera at once; the freeze stays on in it (LB there plays / freezes,
             // D-pad Up / Down the speed, B back to the lab, which lets the fight run again)
             static bool lt_was;
-            if (pause && !lt_was) InterlockedExchange(&g_fc_req, 1);
+            if (pause && !lt_was) InterlockedExchange(&g_el_camera, 1);   // v5.204.1 through the Mode row (a direct request was undone by its sync)
             lt_was = pause;
             if (pause || sp || g_el_paused || g_el_speed < 1.0f) ph_step(false, 0);
             g_el_paused = pause; g_el_speed = pause ? 0.0f : (sp == 0 ? 1.0f : sp == 1 ? 0.5f : sp == 2 ? 0.25f : 0.1f);
@@ -466,7 +466,7 @@ static void el_step() {                                         // game thread (
 static bool el_input(WORD b, WORD pressed) {
     (void)b;
     if (pressed & BTN_BACK) { InterlockedExchange(&g_el_panel, !g_el_panel); rumble(1); return true; }
-    if (pressed & BTN_RTHUMB) { InterlockedExchange(&g_fc_req, 1); rumble(1); return true; }   // the free camera (its own keys while on)
+    if (pressed & BTN_RTHUMB) { InterlockedExchange(&g_el_camera, !g_el_camera); rumble(1); return true; }   // the free camera (v5.204.1 through the Mode row: in game 11:25 a direct request was turned off again the next frame)
     if (!g_el_panel) return false;                               // play: every other button is the game's (and RB + D-pad the emotes)
     if (pressed & BTN_LTHUMB) { static const LONG NX[4] = {3, 2, 0, 1}; InterlockedExchange(&g_el_page, NX[g_el_page & 3]); rumble(1); return true; }
     if (g_el_page == 3) {                                        // EFFECTS: any effect of the game

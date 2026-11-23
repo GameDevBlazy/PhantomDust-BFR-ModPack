@@ -188,7 +188,7 @@ static void fc_start() {
     fc_write();
     InterlockedExchange(&g_fc_on, 1);
     if (!g_el) ph_end();                                        // v5.203.0 the Effect Lab's freeze / slow carries into the camera
-    set_status("FREE CAMERA: sticks fly, LT/RT down/up, A fast, Y next fighter, X HUD, LB pause, D-pad speed, B back");
+    if (!g_el) set_status("FREE CAMERA: sticks fly, LT/RT down/up, A fast, Y next fighter, X HUD, LB pause, D-pad speed, B back");   // v5.204.2 the Effect Lab shows its own control lines (the status ran off the screen)
     logf("free camera: on at (%.1f, %.1f, %.1f)%s", g_fc_pos[0], g_fc_pos[1], g_fc_pos[2], g_fc_made_cpu ? ", player 1 handed to the CPU" : "");
 }
 static void ed_freecam_step() {                                 // game thread, every flush
