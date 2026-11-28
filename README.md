@@ -1,10 +1,12 @@
-# BFR mod pack 1.50.84
+# BFR mod pack 1.50.85
 
 A Phantom Dust (Microsoft Store, PC) mod pack for online play with friends. Every player in a match needs this same pack
 and the same skill choice; the pack gives the game its own skill update version (1.42 with the Battle for Reality skills,
 1.43 with the original skills), so Xbox Live only puts BFR players together.
 
 ## How to use it (where everything is)
+Pictures of the features, with where to find each one: [docs/README.md](docs/README.md).
+
 1. Install: close Phantom Dust, run `INSTALL BFR.bat`, start the game with the "Phantom Dust BFR" desktop shortcut (always
    that shortcut - it checks for updates and starts the pack).
 2. Battle for Reality skills: MULTIPLAYER > Split Screen or Xbox Live > Lab > "Enable Battle for Reality skill pack (375+)"
@@ -27,18 +29,18 @@ Everything below is installed with the pack, as it is in this version. "Online" 
 sessions (every player in the match needs this same pack); "offline" = split screen, story and Single Play only.
 
 ### Maps
-- **The stage lists** (Xbox Live LEVEL LIST and split-screen STAGE LIST, online and offline): the game's 17 stages - Lost
+- **The stage lists** *(added 2026-11-02, BFR 1.42.9)* (Xbox Live LEVEL LIST and split-screen STAGE LIST, online and offline): the game's 17 stages - Lost
   Palace, Light Palace, Noble Palace, Spiral Highway, Lightning Highway, Sunlight Highway, Panorama Earthquake, Panorama
   Building, Dawn City, Dusk City, Midnight City, Storm Refinery, Sunset Refinery, Acid Refinery, Twilight Lane, Silent Lane,
   Sein - and after them 11 added maps (built on your PC from your own game files at the first start):
-  - **Grand Panorama** and **Grand Panorama (Sunset)**: one designed map (office-roof plaza, refinery roof, broken highway),
+  - **Grand Panorama** *(added 2026-11-11, BFR 1.49.1)* and **Grand Panorama (Sunset)** *(added 2026-11-11, BFR 1.49.1)*: one designed map (office-roof plaza, refinery roof, broken highway),
     4 lifts, 8 spawns; the Sunset one under Sunset Refinery's sky;
-  - **Sky Ring Highway**, **Highway to the Alley**, **Five-Story Building**, **RoofTop Day** (6 levels of rooftops);
-  - **Jungle Cave**: tree house, bush border, solid tree limbs;
-  - **Ruins**: three roaming tornadoes, ruined buildings at the edge and the desert beyond, no fog;
-  - **Antarctic Outpost**: ice floor, frost mines, Ice Storm drops from the sky, breaking ice and bridges;
-  - **Edgar's Dream: Summit**: the top of Edgar's Dream's stairs (the Demented Freia arena), 4 players;
-  - **Preview Stage**: a plain grid room to show characters.
+  - **Sky Ring Highway** *(added 2026-11-11, BFR 1.48.0)*, **Highway to the Alley** *(added 2026-11-11, BFR 1.48.0)*, **Five-Story Building** *(added 2026-11-11, BFR 1.48.0)*, **RoofTop Day** *(added 2026-11-14, BFR 1.50.20)* (6 levels of rooftops);
+  - **Jungle Cave** *(added 2026-11-11, BFR 1.48.0)*: tree house, bush border, solid tree limbs;
+  - **Ruins** *(added 2026-11-11, BFR 1.48.0)*: ruined buildings at the edge and the desert beyond, no fog;
+  - **Antarctic Outpost** *(added 2026-11-11, BFR 1.48.0)*: ice floor, frost mines, Ice Storm drops from the sky, breaking ice and bridges;
+  - **Edgar's Dream: Summit** *(added 2026-11-02, BFR 1.42.9)*: the top of Edgar's Dream's stairs (the Demented Freia arena), 4 players;
+  - **Preview Stage** *(added 2026-11-02, BFR 1.44.0)*: a plain grid room to show characters.
 - Split-screen STAGE LIST: one row per stage family - D-pad Left / Right picks the version (Palace: Lost / Light / Noble,
   and so on; Sein's row holds Edgar's Dream: Summit). The Xbox Live LEVEL LIST works the same way (1.50.26).
 - The highlighted stage is shown live behind both lists.
@@ -47,68 +49,68 @@ sessions (every player in the match needs this same pack); "offline" = split scr
   Refinery, Twilight Lane A / B) are Create a Stage's starting rooms.
 
 ### Skills
-- **Battle for Reality skill pack** (from 1.50.40): the original Phantom Dust skills 1-374 exactly as the game has them,
+- **Battle for Reality skill pack** *(added 2026-11-02, BFR 1.42)* (from 1.50.40): the original Phantom Dust skills 1-374 exactly as the game has them,
   except that every environment skill lasts 2 minutes, plus the pack's own skills 375-465 (online). Switch it in the Lab:
   "Enable Battle for Reality skill pack (375+)" or "Revert back to OG Phantom Dust skills (0-374)" (Revert also takes the new
   skills out of the stock).
-- **8 more new skills** (online too - every player of the pack has them): Mirror, Hologram, Spiritual Projection (their
+- **8 more new skills** *(added 2026-11-02, BFR 1.42.12)* (online too - every player of the pack has them): Mirror, Hologram, Spiritual Projection (their
   doubles fight in offline matches only), Thunder Punch, Ice Punch, Fiery Tornado, Mega Photon Burst, Giant Meteor. They
   cannot be changed in Create a Skill (a new skill can still be based on them).
-- **Skills you make** (Create a Skill, Skill Fuser) are for story, split screen and Single Play. Online, the Xbox Live
+- **Skills you make** *(added 2026-11-12, BFR 1.50.0)* (Create a Skill, Skill Fuser) are for story, split screen and Single Play. Online, the Xbox Live
   arsenal list refuses an arsenal holding one, and any that still reach a match (Edit Arsenal in the lobby, Download
   Battle) play as Aura Particles for that match only - your saved arsenal is not changed. Saved Create a Stage maps are not
   used online either.
-- **Community skills**: FEEDBACK > Category "Skill to share" sends one skill you made to the pack's author. Skills the
+- **Community skills** *(added 2026-11-14, BFR 1.50.19)*: FEEDBACK > Category "Skill to share" sends one skill you made to the pack's author. Skills the
   author adds come to every player in a pack update (numbers 600-639) and work online.
-- **Lab > View Skill Vault** (and Back + Y on View Stock): swap a skill you don't have into your stock (online too).
+- **Lab > View Skill Vault** *(added 2026-11-11, BFR 1.48.0)* (and Back + Y on View Stock): swap a skill you don't have into your stock (online too).
 - A bigger skill table and stage memory for the added skills and stages.
 
 ### Xbox Live / system link lobby (online)
 - Edit Arsenal and arsenal lists 1-3; this session's wins and losses; the members' portraits in colour.
 - For the host: Change Rule (the game's rules and the BFR rules below), Change Game Type (One-on-One, Tag Team, Battle
   Royale); Create Game Session lists the BFR rules too.
-- **BFR Options**: Teammate Lock-on (each player's own), Next Map (host), Tiebreaker, HUD Preset, Downed Glow (the host
+- **BFR Options** *(added 2026-11-02, BFR 1.42.4)*: Teammate Lock-on (each player's own), Next Map (host), Tiebreaker, HUD Preset, Downed Glow (the host
   switches it for everyone), HUD Faces.
 
 ### Rules and modes
-- **BFR rules** (online and offline; none of them changes your rating - Standard Battle stays rated): Most KOs (decided
+- **BFR rules** *(added 2026-11-03, BFR 1.47.4)* (online and offline; none of them changes your rating - Standard Battle stays rated): Most KOs (decided
   when the clock runs out), First to 5 KOs (the last fighter who did damage scores), Survival (3 revives a fighter), King
   of the Hill, Shrinking Arena, Aura Rush, Sudden Death, Realistic Collision (shots hit whoever is in the way).
 - The KO tally beside each name; a downed fighter's name plate keeps flashing until revived.
-- **Tiebreaker**: teams stay locked for two battles; after 1 win each with the same teams a vote opens (everyone YES = the
+- **Tiebreaker** *(added 2026-11-02, BFR 1.42)*: teams stay locked for two battles; after 1 win each with the same teams a vote opens (everyone YES = the
   tiebreaker round, a NO = the teams are free).
-- **Next Map**: the host's session moves to the next stage after each match.
-- **3 vs 3** and six fighters: the 3 VS 3 LOBBY in split screen, the 3 vs 3 lobby layout online, HUD faces for fighters 5
+- **Next Map** *(added 2026-11-02, BFR 1.42)*: the host's session moves to the next stage after each match.
+- **3 vs 3** *(added 2026-11-02, BFR 1.42)* and six fighters: the 3 VS 3 LOBBY in split screen, the 3 vs 3 lobby layout online, HUD faces for fighters 5
   and 6.
-- **MULTIPLAYER > Single Play** (offline): you and CPU fighters - 1 vs 1, Tag Team, 3 vs 3, Battle Royale, Boss Raid; CPU
+- **MULTIPLAYER > Single Play** *(added 2026-11-13, BFR 1.50.13)* (offline): you and CPU fighters - 1 vs 1, Tag Team, 3 vs 3, Battle Royale, Boss Raid; CPU
   levels with Tough and Brutal rows; CPUs move, fight and revive their downed teammates.
-- **Download Battle** (Scoreboard): your stage, character, opponent and arsenal; line-ups 1 vs 1, 1 vs 2, 1 vs 3 or 2 vs 2
+- **Download Battle** *(added 2026-11-02, BFR 1.42)* (Scoreboard): your stage, character, opponent and arsenal; line-ups 1 vs 1, 1 vs 2, 1 vs 3 or 2 vs 2
   with a CPU ally; the free camera. Download Battles send no rating or win count.
-- **Create a Mode** modes in split screen's Change Rule (offline): Standard, 3 vs 3, Long fight, Quick KO, My Mode 5.
+- **Create a Mode** *(added 2026-11-02, BFR 1.42)* modes in split screen's Change Rule (offline): Standard, 3 vs 3, Long fight, Quick KO, My Mode 5.
 
 ### HUD and look
-- **HUD faces** (online too): every fighter's face beside their name and life bar - hurt at life 10 / 5 / 3, a red pulse at
+- **HUD faces** *(added 2026-11-02, BFR 1.42.16)* (online too): every fighter's face beside their name and life bar - hurt at life 10 / 5 / 3, a red pulse at
   1, KO at 0, a flash on each hit, faces for poison, freeze, paralysis, reversed controls, invisible and power / speed /
   recovery up (CwoFaces.txt moves it).
-- **HUD presets** (OPTIONS > HUD Preset with a preview, or the lobby's BFR Options; display only): 0 the game's own, 1 Split
+- **HUD presets** *(added 2026-11-02, BFR 1.42.12)* (OPTIONS > HUD Preset with a preview, or the lobby's BFR Options; display only): 0 the game's own, 1 Split
   Look, 2 Wide Bars, 3 Centre Stage, 4 Low Profile, 5 Mirror, 6 Minimal.
 - Split screen: every fighter's own panel (life bar, hand, deck, aura and face) under each player's panel.
-- **Downed Glow** on every downed fighter until revived (online too, the host's switch).
-- **Intro poses** at the 3-second countdown (online too); the winners' victory pose, and the losing pose for everyone
+- **Downed Glow** *(added 2026-11-03, BFR 1.47.5)* on every downed fighter until revived (online too, the host's switch).
+- **Intro poses** *(added 2026-11-02, BFR 1.43.0)* at the 3-second countdown (online too); the winners' victory pose, and the losing pose for everyone
   standing at a time-out draw (offline).
-- **Visions** graphics presets (OPTIONS > Visions, CwoVisions.txt); the 60 FPS display for fighters, effects and
+- **Visions** *(added 2026-11-02, BFR 1.44.0)* graphics presets (OPTIONS > Visions, CwoVisions.txt); the 60 FPS display for fighters, effects and
   projectiles (CwoFps.txt: 60 / off).
-- **Holiday themes** on the title screen and main menu (CwoTheme.txt); the white menu theme (CwoUiTheme.txt: white / off,
+- **Holiday themes** *(added 2026-11-02, BFR 1.43.0)* on the title screen and main menu (CwoTheme.txt); the white menu theme (CwoUiTheme.txt: white / off,
   off as shipped); the title-screen music at 70 % until you leave the title screen.
 
 ### Characters and outfits
-- **15 outfits** for every playable and enemy fighter: the 5th is the OG outfit, then Neon Circuit, Royal Gold, Angelic,
+- **15 outfits** *(added 2026-11-02, BFR 1.42.5)* for every playable and enemy fighter: the 5th is the OG outfit, then Neon Circuit, Royal Gold, Angelic,
   Street, Field Ops, Inferno, Frostbite, Hazard, Galaxy, Two-Tone Tide, Crimson Shadow (built from your own game files the
   first time one is picked); Edgar's outfit 6 as the pack's author saved it.
-- **Create an Outfit** (CREATE, offline): a turning preview, color and skin sliders, an Aura color per outfit, outfit
+- **Create an Outfit** *(added 2026-11-02, BFR 1.42.3)* (CREATE, offline): a turning preview, color and skin sliders, an Aura color per outfit, outfit
   effects (a skill's flames, ice, thunder, psychic or vibration on the body: place, size, speed, when it shows), Save into
   any of the 15 slots, an outfit stock of up to 50 per character.
-- **Character selects** (split screen and Xbox Live, display only): new faces for every player, monster portraits on X, the
+- **Character selects** *(added 2026-11-02, BFR 1.43.0)* (split screen and Xbox Live, display only): new faces for every player, monster portraits on X, the
   portrait follows the outfit highlighted in COLORS (COLOR 1-15, opened in the left black bar). The NPC cell (split screen)
   and COMING SOON on the monster page are decoration and cannot be highlighted.
 - Mission select: the new character portraits.
@@ -120,13 +122,13 @@ sessions (every player in the match needs this same pack); "offline" = split scr
   (keyboard and mouse).
 
 ### Menus
-- **Main menu** (8 rows): SCENARIO MODE, MULTIPLAYER MODE (Xbox Live, Split Screen, Single Play), OPTIONS MODE, CREATE,
+- **Main menu** *(added 2026-11-02, BFR 1.43.0)* (8 rows): SCENARIO MODE, MULTIPLAYER MODE (Xbox Live, Split Screen, Single Play), OPTIONS MODE, CREATE,
   MOD LIST (every mod, What's New at the top), FEEDBACK, TO-DO LIST, HOW TO PLAY; the BFR MOD PACK version line.
-- **OPTIONS**: HUD Preset, Records, Visions, Stage Music.
-- **Pause menu** (offline match / 2P VS): Teammate Lock-on row.
-- **Arsenal lists**: the title shows its number; Y > ARSENAL OPTIONS: Add Arsenal (a full list of 16 sends it to the next
+- **OPTIONS** *(added 2026-11-03, BFR 1.45.1)*: HUD Preset, Records, Visions, Stage Music.
+- **Pause menu** *(added 2026-11-13, BFR 1.50.13)* (offline match / 2P VS): Teammate Lock-on row.
+- **Arsenal lists** *(added 2026-11-02, BFR 1.42.6)*: the title shows its number; Y > ARSENAL OPTIONS: Add Arsenal (a full list of 16 sends it to the next
   list), Erase Arsenal, Reset All Arsenals, Acquire All Skills.
-- **Arsenal Data**: Y switches the Xbox Live results between All and each stage.
+- **Arsenal Data** *(added 2026-11-02, BFR 1.42.7)*: Y switches the Xbox Live results between All and each stage.
 
 Automatic updates, what the pack sends and what stays offline: see the sections after the version history.
 
@@ -224,6 +226,8 @@ Automatic updates, what the pack sends and what stays offline: see the sections 
   fighters is off (real life bars are a work in progress, as Battle Royale and the CPUs in split screen); What's New updated.
 - **1.47.8**: loader 5.106.0: JD's colour 4 select portrait shows JD (it still showed the old Mac face); no Edgar's Dream quick
   panel on View / Back in this edition.
+- **1.50.85**: FIX - Ruins: the three roaming tornadoes are gone (their wind sound played through the whole match). This
+  README now shows when each feature first came into the pack (added DATE, BFR VERSION).
 - **1.50.84**: FIX - Five-Story Building: the stair hall now goes on from the fifth floor up to the roof (an opening in the roof
   with a railing round it).
 - **1.50.83**: loader 5.204.2: FIX - Effect Lab: R3 and the LT freeze now keep the free camera on (it was switched off again
